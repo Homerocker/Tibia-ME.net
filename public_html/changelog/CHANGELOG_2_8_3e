@@ -1,0 +1,7 @@
+../classes/gamecontent.class.php
+* parse_spell_amount() is compatible with more values
+
+../gamecontent_xls/
+* updated data
+
+Released on Sep 22, 2015.

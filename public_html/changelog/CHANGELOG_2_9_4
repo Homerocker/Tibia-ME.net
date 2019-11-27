@@ -1,0 +1,10 @@
+../classes/auth.class.php
+* Auth:set_token() $user_id param removed
+
+../config.php
+../templates/settings.tpl.php
+../templates/
+* added ICONS_DIR
+* added GameContent::get_icon_path()
+
+Update merged with 2.10.0
