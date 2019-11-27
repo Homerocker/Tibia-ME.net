@@ -103,14 +103,10 @@ if ($_SESSION['user_id']) {
 }
 $gc_overview = (new GameCodes)->get_overview();
 $platinum_discount = max(array_map(function ($arr) use ($gc_overview) {
-            return ((isset($gc_overview['platinum'][array_search($arr, Pricing::$pricing['platinum'])])
-                    || GameCodes::get_platinum_sum($gc_overview) >= array_search($arr, Pricing::$pricing['platinum']))
+            return ((isset($gc_overview[array_search($arr, Pricing::$pricing)])
+                    || GameCodes::get_total($gc_overview) >= array_search($arr, Pricing::$pricing))
                         ? $arr['discount_pct'] : 0);
-        }, Pricing::$pricing['platinum']));
-$premium_discount = max(array_map(function ($arr) use ($gc_overview) {
-            return (isset($gc_overview['premium'][array_search($arr, Pricing::$pricing['premium'])])
-                        ? $arr['discount_pct'] : 0);
-        }, Pricing::$pricing['premium']));
+        }, Pricing::$pricing));
 $document->assign(array(
     'screenshots_total' => $screenshots_total[0],
     'screenshots_new' => $screenshots_new[0],
@@ -126,7 +122,6 @@ $document->assign(array(
     'char_id' => $char_id,
     'guild_name' => $guild_name,
     'news_official' => TibiameComParser::fetch_news(),
-    'premium_discount' => $premium_discount,
     'platinum_discount' => $platinum_discount
 ));
 
