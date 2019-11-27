@@ -1,0 +1,32 @@
+/classes/scores.class.php
+* Scores::__construct(): fetch vocation for "top hunters" if it's not specified by user
+* Scores::__construct(): fetch vocation for "achievements" highscores if it's not specified by user
+* Scores::__construct(): "top 100": don't fetch rank if world is not specified (rank is calculated by amount of EP instead)
+* Scores::__construct(): fetch vocation for "top 100" highscores if it's not specified by user
+* Scores::__construct(): fetch level and vocation for "pvp"
+* Scores::__construct(): use Scores::date() instead of direct reading of .lastupdate.dat
+
+/templates/highscores_hunters.tpl.php
+/templates/highscores_pvp.tpl.php
+/templates/highscores_top100.tpl.php
+* display character vocation and level icons
+
+/tibia-me.net/update_2_3_20.php
+* added lastupdate field to scores_characters to keep character last update date
+
+/tibia-me.net/scores/updater.php
+* check and update character vocation (fixes vocation bug caused by nickname change)
+* set character last update date (reserved for further updates)
+* replaced global $db with $GLOBALS['db']
+* replaced require_once with require
+
+/templates/page_header.tpl.php
+* fixed markup
+
+/templates/highscores_achievements.tpl.php
+* display character vocation icons
+
+/templates/highscores_pvp.tpl.php
+* added level
+
+Released on Sept 24, 2013.

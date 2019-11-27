@@ -1,0 +1,11 @@
+Order deny,allow
+deny from all
+<Files ~ "\.(png|jpg|jpeg|bmp|gif)$">
+    allow from all
+</Files>
+<Files "rating.png">
+    ForceType application/x-httpd-php
+</Files>
+<Files "rating.php">
+	allow from all
+</Files>

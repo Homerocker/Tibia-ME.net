@@ -1,0 +1,13 @@
+../classes/gamecontent.class.php
+./cp/sync.php
+./gamecontent/spells.php
+../templates/game_content_spells.tpl.php
+/DB
+* redesigned spells storage to be compatible with new spells types
+* [fix] correctly detect and handle percentile values
+(fixed bug with "280%" converting to "2.8" and displaying as "2%")
+* sort spell damage range from min to max
+* added GameContent::spell_getFilterByColTitle()
+* create lock when syncing game data to prevent multiple instances of sync from running simultaneously
+
+Released on Dec 22, 2016.

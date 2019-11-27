@@ -1,0 +1,4 @@
+../classes/gamecontent.class.php
+* corrected wrong reset of pets parsed data (missing pets fix)
+
+Released on Dec 8, 2014.

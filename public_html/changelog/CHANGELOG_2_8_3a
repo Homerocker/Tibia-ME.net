@@ -1,0 +1,16 @@
+../classes/forum.class.php
+* fixed fonts for quoted messages
+
+../templates/forum_viewtopic.tpl.php
+./style/brown/style.css
+./style/default/style.css
+* more compact layout for topic view, especially for moderators
+
+../classes/banishments.class.php
+* replaced $db with $GLOBALS['db']
+(fixed everything)
+
+../classes/screenshots.class.php
+* correctly remove likes from DB when removing screenshot
+
+Released on July 24, 2015.

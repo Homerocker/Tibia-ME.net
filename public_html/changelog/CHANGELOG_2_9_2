@@ -1,0 +1,18 @@
+../gamecontent_xls/*
+* added 39 Marketplace armours
+
+../classes/images.class.php
+* Images::compress() will preserve original filenames, image renaming is already handled by Uploader
+
+../classes/TochkiSuParser.class.php
+../classes/TibiameHexatComParser.class.php
+* game icons from external websites are compressed losslessly,
+reducing icons' filesize by over 75% and actual encyclopedia pages size by 10-80%
+
+../classes/filesystem.class.php
+* added Filesystem::mkdir()
+
+../classes/gamecontent.class.php
+* additionally sort items by name
+
+Released on Aug 20, 2017.

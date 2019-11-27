@@ -1,0 +1,8 @@
+../classes/scores.class.php
+* cache Scores::date() results to greatly reduce database load
+(database queries are over 99.9% faster on average page load)
+
+../classes/TibiameComParser.class.php
+* retry on some fetching errors (implemented DOMDocumentX)
+
+Released on June 20, 2015.

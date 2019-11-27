@@ -1,0 +1,13 @@
+../classes/auth.class.php
+* Auth::verify_token() doesn't need parameters
+* added Auth::touch_token() to update last activity time
+* Auth::remove_token() will remove token cookie only if currently used token is being removed
+
+../config.php
+* [fix] fixed bug that created new token when authorizing user via existing token
+(did not affect anything but spammed database with unused tokens)
+* update token last usage timestamp on each page load
+* [fix] check if AGREEMENT_ACCEPTED is defined before defining it
+* [fix] set $SERVER_LANGUAGES before first reference to it
+
+Released on May 18, 2016.

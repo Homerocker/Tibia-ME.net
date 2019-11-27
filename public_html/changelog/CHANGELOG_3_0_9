@@ -1,0 +1,4 @@
+../core.php
+* encrypt() and decrypt() is based on openssl rather than deprecated mcrypt now
+
+Released on May 15, 2019.

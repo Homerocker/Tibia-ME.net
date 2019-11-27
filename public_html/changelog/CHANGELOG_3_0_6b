@@ -1,0 +1,23 @@
+../classes/db.class.php
+../classes/db_stmt.class.php
+* DB::prepared_query() removed
+* added DB::prepare() which returns DB_stmt
+* DB_stmt correctly extends mysqli_stmt
+* added DB_stmt::execute()
+* mysqli_stmt::bind_param() $types can now be passed to DB::prepare() or be automatically detected in DB::execute() if no $types were passed
+* DB_stmt::execute() will return DB_stmt object if statement produces result set (similar to mysqli::query() behavior)
+
+../classes/highscoresupdater.class.php
+* implemented DB_stmt
+* store daily scores file in permanent folder to be able to fix scores manually if update was started but failed
+* fixed rare case of character daily exp gain not being updated if previous hour exp did not update
+* check if highscoresupdater is already running and exit if it is
+* guilds update performance slighty improved
+
+Test results:
+* up to 120% performance loss for single queries, compared to DB::query()
+* up to 12% performance gain for multiple prepared queries in loop, compared to DB::query()
+DB_stmt should be used for SQL requests that are executed in loops, and was primarily designed for highscores updater.
+For single queries DB::query() is still preferred for performance reasons, however performace loss is not that notable due to queries only be executed once, e.g. 1.25 ms vs 0.5 ms, while being 150% slower is actually only 0.75 ms slower and doesn't affect overall performance much. However "only" 12% gain for queries that run in loop (e.g. in highscoresupdater) can result in dozens of seconds saved.
+
+Released on Aug 11, 2018.

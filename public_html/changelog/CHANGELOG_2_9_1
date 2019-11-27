@@ -1,0 +1,22 @@
+./index.php
+../core.php
+* icons_shuffle() deprecated
+
+../classes/TibiameHexatComParser.class.php
+../classes/gamecontent.class.php
+../classes/TochkiSuParser.class.php
+* added GameContent::sanitize_filename()
+* TibiameHexatComParser::get_armour_icon() deprecated
+* added TibiameHexatComParser::get_icon()
+* added TochkiSuParser::get_food_icon()
+* TochkiSuParser::get_icon() deprecated
+
+../gamecontent_xls/*
+* corrected "Scorpion" pet typo
+* corrected "Tiharakatana" weapon typo
+
+../templates/game_content_food.tpl.php
+../classes/gamecontent.class.php
+* fixed special food description
+
+Released on Aug 17, 2017.

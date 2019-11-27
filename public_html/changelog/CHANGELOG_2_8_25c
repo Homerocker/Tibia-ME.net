@@ -1,0 +1,21 @@
+../core.php
+../classes/ExchangerRuParser.class.php
+../classes/TibiameComParser.class.php
+../classes/facebook.class.php
+../classes/filesystem.class.php
+../classes/geo.class.php
+../classes/profile.class.php
+../classes/vkapi.class.php
+../classes/browscap.class.php
+* file_get_contents_eb() deprecated, use curl_get_contents()
+(fixed recent issue that didn't allow pages to load while browscap website was down)
+
+../classes/cache.class.php
+* Cache::write() and Cache::read() will serialize files with .dat extension
+* Cache::touch() will not create file if it doesn't exist
+* added Cache::exists()
+
+../classes/browscap.class.php
+* fixed/improved caching, version detection, and updater
+
+Released on May 29, 2017.

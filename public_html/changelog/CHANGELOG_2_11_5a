@@ -1,0 +1,9 @@
+../classes/scores.class.php
+../classes/highscoresupdater.class.php
+../templates/highscores_viewscores.tpl.php
+../templates/highscores_guild.tpl.php
+* added Scores::KEEP_HOURLY_DATA_DAYS
+* delete hourly hunting statistics older than 30 days
+* database optimizations
+
+Released on Apr 20, 2018.

@@ -1,0 +1,21 @@
+Requirements and 3rd-party software:
+
+#PHP 5.3 or higher (PHP 5.2 was used before but became incompatible coz of its broken mime_content_type(), 5.1 does not support some zip operations and was never used, later many 5.3+ only feature were implemented)
+#PHP 5.4 or higher since version 2.7.1 (function array dereferencing and more (what more?))
+#PHP 7 since version 2.8.5
+PHP 7.2 since version 3.0.1 (replaced Imagick with imagecreatefrombmp())
+MySQL 5.5.3 or higher since version 2.7.2 (utf8mb4 support)
+GD2 for thumbnails and other image operations
+fileinfo to recognize files mime types
+gettext for translations
+curl for Facebook (if JS disabled)
+openssl for facebook integration (with JS)
+zlib with enabled zip support for highscores updater
+libxml for highscores updater and "Tibia-ME.net Parser"
+mysqli for database (replaced mysql since version 2.3)
+php-browscap for tokens info
+php_imagick for BMP support since 2.8.25
+php_exif
+Intl since version 2.9.0c
+PHPExcel
+ZURB Foundation 6.4.3

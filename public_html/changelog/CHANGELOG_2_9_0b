@@ -1,0 +1,4 @@
+./index.php
+* [fix] link to guild highscores did not display if character is not in highscores list but guild is manually set in profile
+
+Released on Jul 28, 2017.

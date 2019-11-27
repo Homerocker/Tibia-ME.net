@@ -1,0 +1,30 @@
+../classes/domdocumentx.class.php
+* replaced DOMDocument::saveXML() with DOMDocument::saveHTML() in DOMElement::innerHTML()
+
+../classes/forum.class.php
+* Forum::topic_exists() will return false for moved topics copies
+(do not treat redirect entries for moved topics like real topics)
+
+../classes/likes.class.php
+* Likes::target_exists() removed in favour of Likes::get_target_owner_id()
+("likes" performance slightly improved)
+
+../classes/scores.class.php
+../templates/highscores_viewscores.tpl.php
+* added global rank to character profile
+
+./forum/posting.php
+../templates/forum_quote.tpl.php
+../templates/forum_postedit.tpl.php
+* fixed user not being redirected to correct page when quoting or editing forum posts
+
+../classes/forum.class.php
+* fixed user not being redirected to latest forum topic page correctly in some cases when posting new message
+
+../classes/document.class.php
+* Document::s_get_page() page detection reworked
+
+../classes/api.class.php
+* chat will correctly load only last 200 messages on initiation
+
+Released on Aug 29, 2018.

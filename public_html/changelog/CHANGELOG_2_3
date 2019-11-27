@@ -1,0 +1,26 @@
+This change log does not include file names as most of code has been redesigned and it is easier to update all files at once.
+This version is a part of 2.2.04, which was never released. Version number changed due to new MySQL API.
+
+* MySQL API changed from mysql to mysqli, code redesigned
+
+* User::get_id() can toggle mysqli::real_escape_string() for nickname, enabled by default; Auth::get_user_id() is deprecated now
+
+* Friendlist::get_status() crash fixed
+
+* "My themes" link fixed (hotfixed in 2.2.03)
+
+* Remove theme screenshot if theme upload fails (fixes "screenshot had been uploaded" error)
+
+* get_redirect() introduced, all manual operations with $_REQUEST['redirect'] (previously $_GET['redirect']) are deprecated
+
+* Friendlist::get_status() will not try to parse $friend_id if it contains illegal characters (will return false instead of crash with error)
+
+* Auth::get_user_data() replaced with User::get_data(), illegal characters detection algorithm improved to avoid crashes
+
+* Memberlist pages navigation links fixed for search results
+
+* PvP rank fixed in characters info
+
+* mysqli::close() and ob_end_flush() removed from Document::__destruct() as those functions are called automatically
+
+Released on 7 dec 2012.

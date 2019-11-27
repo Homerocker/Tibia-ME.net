@@ -1,0 +1,250 @@
+MM/DD/YY
+[f] - fix
+[+] - new feature
+[*] - changes
+
+
+9/5/12
+[f] facebook link/unlink button did not work
+[*] memory_limit increased to work with larger images
+
+<..........>
+
+1/29/12
+[f] existing screenshots were marked as non-existing in some cases
+
+1/26/12
+[f] "hide email" and "hide age" fields in profile were not editable
+
+1/25/12
+[f] thumbnails of BMP images were crashing page in some cases
+
+1/23/12
+[f] forum threads could not be edited
+
+1/19/12
+[f] forum read/unread icons corrected
+[f] moved threads icons fixed
+[f] forum posts date and time depend on user timezone
+
+1/17/12
+[f] Document::s_get_page() was counting pages incorrectly in some cases
+[f] relationship status field in profile could not be edited
+
+1/15/12
+[f] Notifications will not be displayed if photo, theme, screenshot or forum thread had been removed
+
+1/14/12
+[f] banishments expire correctly
+[*] Images class replaced with Uploader class to handle file uploads
+[f] permissions validation fixed when attempting to edit profile
+
+1/11/12
+[*] artworks max file size set to 3mb
+
+1/10/12
+[+] comments added to artworks section
+
+1/9/12
+[f] profile info should be saved correctly now
+[+] artworks section added
+
+1/7/12
+[*] CheckEmail() replaced with filter_var() to validate emails
+[*] user permissions validation fixed
+[f] generating thumbnails for BMP files fixed
+[f] screenshots can be downloaded by clicking on their thumbnails
+[f] photo albums sorted by comments are displayed correctly now
+
+1/6/12
+[+] moderators are able to move forum threads
+[f] last uploaded photo is displayed as album cover when albums are sorted by owner nickname or last update
+[f] last commented photo is displayed as album cover when albums are sorted by lastest comment
+[*] website core updated, with some technical changes and bug fixes
+[*] photo album engine rewritten
+
+12/30/11
+[f] some notifications are marked as viewed correctly now
+
+12/28/11
+[f] correctly switch languages for not authorized users
+
+12/27/11
+[f] __desctuct() replaced by exit() to prevent outputting page footer twice in some cases
+
+12/25/11
+[f] page loading does not fail if incorrect $_GET['page'] parameter were sent
+
+12/24/11
+[*] framework has been updated
+
+12/19/11
+[f] workaround to mark notifications on new album comments as viewed
+
+12/16/11
+[*] Images->upload() is now used to parse uploads at photo album and screenshots sections,
+    image type validation improved and does not depend on file extension now
+[f] higscores search should find correct characters now if full nickname is specified
+
+12/12/11
+[*] Notifications system extended
+
+12/9/11
+[+] screenshot capturing software added to screenshots section
+[+] TibiaME updates countdown added
+
+12/3/11
+[f] "Likes": urlencode() is used for correct redirects
+[*] moderators' permissions system changed
+
+26/11/11
+[f] "comments" link fixed at screenshots section
+
+25/11/11
+[f] profile engine rewritten, few bugs fixed
+
+11/16/11
+[f] letters module: html codes in message subject and body will not be parsed by browsers now.
+
+11/15/11
+[+] skills section added
+[+] spells section added
+[+] achievements section added
+[f] icons at table section should be displayed correctly now
+
+10/29/11
+[f] Security update: html tags are no longer allowed in forum titles
+
+10/18/11
+[f] photos rotating fixed
+
+09/17/11
+[f] Themes' screenshots uploader fixed
+
+08/28/11
+[f] Forum threads fixed
+
+08/27/11
+[*] Performance improvements
+
+08/22/11
+[*] Polish language removed
+[*] Malay language removed
+[f] Russian translation improved
+[f] Moderators are able to edit users' photo albums now
+[f] Photo albums' names and threads' titles which contain special characters are correctly displayed now
+[f] Some common functions improved
+[*] Photo album navigation links changed
+[*] Categories removed from photo album
+
+07/22/11
+[f] forum posts are quoted correctly now
+
+07/20/11
+[+] "Likes" system added
+
+07/19/11
+[+] forum thread remove function added for moderators
+
+07/15/11
+[f] hidden forum threads are no longer displayed among search results if user does not have enough permissions
+[f] forum search query cannot contain spaces only
+[f] notifications are now correctly removed if you stop watching forum topic for replies
+
+07/11/11
+[f] users are now correctly redirected to their newly created threads
+
+07/10/11
+[+] "watch for replies" button added to forum threads
+[f] forum post edit function fixed
+[f] thread edit function fixed
+[f] notifications fixed
+
+07/06/11
+[f] HTML codes are not allowed in messages now
+
+07/03/11
+[f] Guilds' info is displayed correctly now
+
+07/02/11
+[+] worlds' EP gain statistics added
+[+] new site theme added
+[*] news moved to dedicated forum section
+
+06/22/11
+[f] Friendlist page navigation links fixed
+
+06/21/11
+[f] notifications fixed
+[f] page navigation links fixed at photo album (comments.php)
+
+06/18/11
+[f] [url] bbcode did not work with quotes ([url=""])
+
+06/06/11
+[+] apple-touch-icon for iOS shortcuts added
+
+06/03/11
+[+] character hunting statistics shortcut added to home page
+
+06/01/11
+[*] highscores search engine improved
+[f] forum search results highlight fixed (not case-sensitive anymore)
+
+05/31/11
+[f] achievements top 100 display order fixed
+
+05/28/11
+[+] Most of monsters drop info added
+[+] Notifications feature published
+
+05/27/11
+[+] Monsters table added
+
+05/26/11
+[f] guestbook navigation links fixed
+
+05/23/11
+[+] notifications system alpha test started
+
+05/13/11
+[*] Simple list of users online added
+[*] user search engine improved
+[f] List of friend requests fixed
+
+05/12/11
+[f] "Album with this title already exists" error occured when you tried to edit your photo album without renaming it.
+[+] Simple list of friends online added.
+
+05/10/11
+[f] mutual friends counter fixed
+[*] User rank info removed from all pages except profile, as nickname prefixes replace it (e.g. "MO-", "WM-")
+[f] Users cannot send letters to themselves now
+[f] Some special characters could be displayed incorrectly when editing forum thread
+[f] banishments counter in profile fixed
+[*] toolbar icons compressed, user menu changed
+
+05/06/11
+[+] "mutual friends" added
+[+] "friends online" counter added
+
+05/05/11
+[f] photo album and avatars thumbnails fixed (in some cases they did not appear)
+
+04/30/11
+[f] bbcodes fixed
+[+] [color] bbcode added
+[+] "Beige" theme added
+[+] forum search engine added
+[f] post edits counter fixed
+[f] photo album search results counter fixed
+
+04/27/11
+[+] for moderators: auto attaching forum post to banishment info by clicking "ban" link near forum post
+
+04/26/11
+[+] [url] bbcode added
+[f] [quote] bbcode fixed
+
+04/25/11
+[*] website staff got special prefixes in nicknames (e.g. "MO-Nady", "WM-Molodoy")

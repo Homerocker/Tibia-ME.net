@@ -1,0 +1,9 @@
+../templates/platinum.tpl.php
+../templates/payment_method.tpl.php
+../templates/payment_product.tpl.php
+../templates/payment_confirm.tpl.php
+./payment.php
+
+* Added more payment options (testing)
+
+Released on Sept 22, 2016.

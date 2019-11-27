@@ -1,0 +1,15 @@
+../core.php
+../classes/TibiameHexatComParser.class.php
+../classes/gamecontent.class.php
+* added TibiameHexatComParser::get_armour_icon() to get missing icons
+
+../gamecontent_xls/*
+* fixed upgraded Hell Breastplate name
+
+../templates/calc.tpl.php
+* fixed locale bug that prevented switching between warrior and wizard sets if language is other than English
+
+???
+* fixed some weird wrong stats bugs in armour calculator
+
+Released on May 21, 2016.

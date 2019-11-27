@@ -1,0 +1,26 @@
+../templates/platinum.tpl.php
+../templates/premium.tpl.php
+* prices layout fix
+
+../dropbox-sdk/*
+* updated Dropbox API to version 1.1.6
+
+./images/404_image.png
+./getfile.php
+* added 404 image
+
+../classes/gamecodes.class.php
+./cp/gamecodes.php
+../templates/cp_gamecodes.tpl.php
+../templates/cp_gamecodes_activate_confirm.tpl.php
+* redesigned gamecodes activation engine:
+- Gamecodes::product_available() removed
+- added Gamecodes::get_mode()
+- added multiplier (allows activation of multiple game codes for a single character in 1 click)
+- lock tables to prevent errors when multiple users activate game codes at the same time
+- [fixed] preserve input data when errors occur
+
+./.htaccess
+* increased max upload file size from 2 to 3 MB
+
+Released on April 30, 2016.

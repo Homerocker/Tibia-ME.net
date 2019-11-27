@@ -1,0 +1,10 @@
+../core.php
+* [fix] curl_get_contents(): CURL for some reason does not return correct http response code when making HEAD request
+(fixed VK account not being linked correctly)
+* curl_get_contents() will make request without GET params when checking URL availability
+(fixed VK oauth where access code only works for a single request, thus availability check was breaking actual request)
+
+../classes/domdocumentx.class.php
+* DOMDocumentX::loadHTMLFile() will use curl_get_contents() for remote files
+
+Released on May 31, 2017.

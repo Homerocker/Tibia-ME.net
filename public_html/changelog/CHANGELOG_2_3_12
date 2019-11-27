@@ -1,0 +1,38 @@
+/core.php
+* Bot(): list of bots updated
+* deprecated UserOnlineStatus() removed
+
+/classes/ranks.class.php
+* added Ranks::get_id_by_name()
+
+/classes/user.class.php
+* added User::fetch_by_rank()
+
+/templates/staff.tpl.php
+/tibia-me.net/staff.php
+/templates/index.tpl.php
+* added list of moderators
+
+/classes/album.class.php
+/classes/artworks.class.php
+/classes/auth.class.php
+/classes/comments.class.php
+/classes/document.class.php
+/classes/encyclopedia.class.php
+/classes/forum.class.php
+/classes/letters.class.php
+/classes/profile.class.php
+/classes/screenshots.class.php
+/classes/themes.class.php
+/classes/user.class.php
+/tibia-me.net/scores/viewscores.php
+* do not use empty() with ctype_digit() (fixed in PHP 5.3)
+
+/classes/document.class.php
+/templates/pages_bottom.tpl.php
+* correctly pass $_GET params when switching page via html form
+
+/templates/user_permissions.tpl.php
+* pass user id
+
+Released on Feb 1, 2013.

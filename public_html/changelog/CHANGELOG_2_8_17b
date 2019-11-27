@@ -1,0 +1,5 @@
+../classes/highscoresupdater.class.php
+* HighscoresUpdater::parse() will force refresh of Scores::date() cache
+(should fix worlds highscores bug that caused "No data.", applies on next game server save)
+
+Released on Aug 8, 2016.

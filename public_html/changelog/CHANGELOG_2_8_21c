@@ -1,0 +1,12 @@
+/DB
+../classes/gamecontent.class.php
+* fixed food and potions values
+
+/DB
+../classes/scores.class.php
+* Scores::date() performance improvement (~100000%) which allowed to stop using cache
+
+../classes/document.class.php
+* Document::msg() will attempt to start/resume session if it's not active
+
+Released on Jan 8, 2017.

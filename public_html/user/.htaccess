@@ -1,0 +1,2 @@
+DirectoryIndex profile.php
+Redirect /user/index.php http://wap.tibia-me.net/user/profile.php

@@ -1,0 +1,193 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700|Droid+Sans:700);
+
+body {
+    font-family: 'Droid', serif;
+    width: 100%;
+}
+
+.title-bar, .title-bar a, .top-bar, .top-bar ul, .top-bar a {
+    background-color: #0A64A4;
+    color: white;
+}
+
+.comment-wrapper {
+    word-wrap: break-word;
+    height: 100%;
+}
+
+.signature {
+    font-style: italic;
+    padding-top: 3em;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.signature hr {
+    width: 20%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.label {
+    display: inline;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+    font-size: .7rem;
+    color: white !important;
+    padding: .15rem;
+    -webkit-align-self: center;
+    align-self: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.text-small {
+    font-size: 0.85rem;
+}
+
+.display-none, ul.submenu {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.card {
+    max-width: 20em;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+.dropdown.menu .is-active > a {
+    color: white;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    border-color: white transparent transparent;
+}
+
+.break-word {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+@media screen and (max-width: 28em) {
+    .text-small-for-small-only {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    table.stack-for-small thead {
+        display: none;
+    }
+
+    table.stack-for-small tfoot {
+        display: none;
+    }
+
+    table.stack-for-small td, table.stack-for-small th, table.stack-for-small tr {
+        display: block;
+    }
+
+    table.stack-for-small td {
+        border-top: 0;
+    }
+}
+
+.red {
+    color: #BB0000;
+}
+
+.green {
+    color: #00AB00;
+}
+
+.blue {
+    color: blue;
+}
+
+.orange {
+    color: orange;
+}
+
+.grey {
+    color: grey;
+}
+
+.cal-event {
+    border-color: #c9ccae;
+    background-color: #faffc8;
+}
+
+.search_result_highlight {
+    background-color: #ffff66;
+}
+
+.like_voted {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 1px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    padding: 0.2rem;
+}
+
+.like {
+    padding: 0;
+}
+
+.padding-x {
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+}
+
+img.avatar {
+    border-color: green;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.inline-flex {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+.input-group-field:not(:last-child), .input-group-label:not(:last-child) {
+    border-right: none;
+}
+
+div::-webkit-scrollbar {
+    width: 10px;
+    background: #fff;
+}
+
+div::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: #fff;
+    border: 1px solid #aaa;
+}
+
+.chat-sending {
+    opacity: .5;
+    color: grey;
+}

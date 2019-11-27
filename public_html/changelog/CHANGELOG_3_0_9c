@@ -1,0 +1,5 @@
+../classes/db.class.php
+* removed unused DB::$stmt
+* log mysqli_stmt::prepare() errors
+
+Released on Aug 16, 2019.

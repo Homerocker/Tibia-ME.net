@@ -1,0 +1,15 @@
+../config.php
+* default timezone changed to Europe/Berlin
+* sync MySQL and PHP timezones
+
+../classes/date.class.php
+* added Date::get_timezone_transition()
+
+../templates/highscores_viewscores.tpl.php
+* removed "UTC" label
+
+../classes/scores.class.php
+* UTC dates in SQL queries replaced with current timezone dates
+* DATEDIFF() replaced with TIMESTAMPDIFF(), 'lastupdate' calculation simplified
+
+Released on Jul 2, 2018.

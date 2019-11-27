@@ -1,0 +1,4119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tibia-ME.net\n"
+"POT-Creation-Date: 2013-07-16 22:31+0300\n"
+"PO-Revision-Date: 2013-07-16 22:39+0300\n"
+"Last-Translator: Molodoy <molodoy3561@gmail.com>\n"
+"Language-Team: Molodoy <molodoy@tibia-me.net>\n"
+"Language: Lithuanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\Documents\\www\n"
+
+#: D:\Documents\www/core.php:189 D:\Documents\www/tibia-me.net/cp/album.php:4
+#: D:\Documents\www/tibia-me.net/cp/ranks.php:4
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:5
+#: D:\Documents\www/tibia-me.net/user/permissions.php:5
+msgid "Access denied."
+msgstr ""
+
+#: D:\Documents\www/update_schedule.php:3
+msgid "Episode 1"
+msgstr ""
+
+#: D:\Documents\www/update_schedule.php:4
+msgid "Episode 2"
+msgstr ""
+
+#: D:\Documents\www/update_schedule.php:5
+msgid "Episode 3"
+msgstr ""
+
+#: D:\Documents\www/update_schedule.php:6
+msgid "Episode 4"
+msgstr ""
+
+#: D:\Documents\www/update_schedule.php:7
+msgid "Episode 5"
+msgstr ""
+
+#: D:\Documents\www/update_schedule.php:8
+msgid "Episode 6"
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:523
+msgid "Title is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:526
+msgid "No title specified."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:532
+#: D:\Documents\www/classes/album.class.php:599
+#: D:\Documents\www/classes/encyclopedia.class.php:418
+#: D:\Documents\www/classes/encyclopedia.class.php:470
+#: D:\Documents\www/classes/encyclopedia.class.php:504
+msgid "Description is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:541
+#: D:\Documents\www/classes/album.class.php:650
+msgid "Password contains illegal characters."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:544
+#: D:\Documents\www/classes/album.class.php:653
+#: D:\Documents\www/classes/auth.class.php:161
+msgid "Password is too short."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:546
+#: D:\Documents\www/classes/album.class.php:656
+msgid "Password is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:568
+#: D:\Documents\www/classes/artworks.class.php:167
+#: D:\Documents\www/classes/encyclopedia.class.php:538
+#: D:\Documents\www/classes/encyclopedia.class.php:565
+#: D:\Documents\www/classes/encyclopedia.class.php:874
+#: D:\Documents\www/classes/forum.class.php:763
+#: D:\Documents\www/classes/friendlist.class.php:253
+#: D:\Documents\www/classes/letters.class.php:313
+#: D:\Documents\www/classes/profile.class.php:184
+#: D:\Documents\www/classes/profile.class.php:486
+#: D:\Documents\www/classes/themes.class.php:256
+#: D:\Documents\www/tibia-me.net/album/photos.php:113
+#: D:\Documents\www/tibia-me.net/cp/ranks.php:20
+#: D:\Documents\www/tibia-me.net/forum/posting.php:134
+#: D:\Documents\www/tibia-me.net/user/permissions.php:12
+#: D:\Documents\www/tibia-me.net/user/settings.php:51
+msgid "Changes saved."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:588
+msgid "Album title is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:593
+msgid "Album title not specified."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:640
+msgid "Album created."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:696
+msgid "Rotated image had been already uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:739
+#: D:\Documents\www/tibia-me.net/album/photos.php:20
+msgid "You don't have permission to delete this album."
+msgstr ""
+
+#: D:\Documents\www/classes/album.class.php:758
+msgid "Album has been deleted."
+msgstr ""
+
+#: D:\Documents\www/classes/artworks.class.php:86
+#: D:\Documents\www/classes/artworks.class.php:108
+#: D:\Documents\www/tibia-me.net/artworks/upload.php:10
+msgid "You don't have permission to edit this artwork."
+msgstr ""
+
+#: D:\Documents\www/classes/artworks.class.php:158
+msgid "Artwork has been uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:21
+#: D:\Documents\www/classes/auth.class.php:143
+msgid "Invalid nickname."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:24
+#: D:\Documents\www/classes/auth.class.php:146
+msgid "Invalid world."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:36
+#: D:\Documents\www/tibia-me.net/user/banishments.php:80
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:14
+#: D:\Documents\www/tibia-me.net/user/profile.php:14
+msgid "User not found."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:39
+msgid ""
+"Incorrect password was entered too many times. Please use password recovery."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:45
+#: D:\Documents\www/tibia-me.net/album/photos.php:175
+msgid "Incorrect password."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:150
+#: D:\Documents\www/classes/auth.class.php:154
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:18
+msgid "Invalid email."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:168
+msgid "This nickname is already in use."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:178
+#, php-format
+msgid "Your account has been just created, %s!"
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:184
+msgid "This page is only for non-authorized users."
+msgstr ""
+
+#: D:\Documents\www/classes/auth.class.php:186
+msgid "You must be logged in to view this page."
+msgstr ""
+
+#: D:\Documents\www/classes/banishments.class.php:7
+#: D:\Documents\www/tibia-me.net/user/banishments.php:89
+msgid "Spam"
+msgstr ""
+
+#: D:\Documents\www/classes/banishments.class.php:9
+#: D:\Documents\www/tibia-me.net/user/banishments.php:90
+msgid "Offensive statements"
+msgstr ""
+
+#: D:\Documents\www/classes/banishments.class.php:11
+#: D:\Documents\www/tibia-me.net/user/banishments.php:91
+msgid "Rules violation"
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:144
+#: D:\Documents\www/templates/invalid_request.tpl.php:2
+#: D:\Documents\www/tibia-me.net/album/photos.php:7
+#: D:\Documents\www/tibia-me.net/album/photos.php:29
+#: D:\Documents\www/tibia-me.net/album/photos.php:60
+#: D:\Documents\www/tibia-me.net/album/photos.php:92
+#: D:\Documents\www/tibia-me.net/album/photos.php:156
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:38
+#: D:\Documents\www/tibia-me.net/scores/guild.php:4
+#: D:\Documents\www/tibia-me.net/scores/viewscores.php:5
+#: D:\Documents\www/tibia-me.net/scores/viewscores.php:13
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:15
+#: D:\Documents\www/tibia-me.net/themes/download.php:4
+#: D:\Documents\www/tibia-me.net/themes/edit.php:5
+msgid "Invalid request."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:291
+msgid "Comment deleted."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:380
+msgid "You don't have permission to delete this comment."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:396
+msgid "Invalid confirmation code."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:410
+msgid "This comment had been already posted."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:431
+msgid "Your comment has been posted."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:460
+msgid "You will be notified on new comments."
+msgstr ""
+
+#: D:\Documents\www/classes/comments.class.php:484
+msgid "You will no longer be notified on new comments."
+msgstr ""
+
+#: D:\Documents\www/classes/document.class.php:42
+#, php-format
+msgid "Maintenance work. Come back in %d minute."
+msgid_plural "Maintenance work. Come back in %d minutes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/classes/document.class.php:45
+#, php-format
+msgid "Updating highscores. Come back in %d minute."
+msgid_plural "Updating highscores. Come back in %d minutes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/classes/document.class.php:83
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:53
+#, php-format
+msgid "%d notification"
+msgid_plural "%d notifications"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/classes/document.class.php:83
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:51
+msgid "No notifications"
+msgstr ""
+
+#: D:\Documents\www/classes/document.class.php:97
+#, php-format
+msgid "You have been banished until %s"
+msgstr ""
+
+#: D:\Documents\www/classes/document.class.php:110
+#: D:\Documents\www/classes/document.class.php:131
+#: D:\Documents\www/classes/user.class.php:71
+#: D:\Documents\www/templates/memberlist.tpl.php:42
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:61
+msgid "Online"
+msgstr ""
+
+#: D:\Documents\www/classes/document.class.php:132
+#, php-format
+msgid "%d registered user"
+msgid_plural "%d registered users"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/classes/document.class.php:133
+#, php-format
+msgid "%d guest"
+msgid_plural "%d guests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/classes/document.class.php:134
+msgid "Total users"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:164
+#: D:\Documents\www/classes/encyclopedia.class.php:885
+msgid "No name specified."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:168
+#: D:\Documents\www/classes/encyclopedia.class.php:890
+msgid "Invalid name."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:170
+#: D:\Documents\www/classes/encyclopedia.class.php:892
+#: D:\Documents\www/classes/profile.class.php:268
+msgid "Name is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:187
+#: D:\Documents\www/classes/encyclopedia.class.php:904
+msgid "Monster with this name already exists."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:190
+#: D:\Documents\www/classes/encyclopedia.class.php:907
+msgid "Item with this name already exists."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:193
+#: D:\Documents\www/classes/encyclopedia.class.php:910
+msgid "Skill with this name already exists."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:196
+#: D:\Documents\www/classes/encyclopedia.class.php:913
+msgid "Spell with this name already exists."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:199
+#: D:\Documents\www/classes/encyclopedia.class.php:916
+msgid "Achievement with this name already exists."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:213
+#: D:\Documents\www/classes/encyclopedia.class.php:345
+#: D:\Documents\www/classes/encyclopedia.class.php:461
+#: D:\Documents\www/classes/encyclopedia.class.php:940
+msgid "Invalid level."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:223
+#: D:\Documents\www/classes/encyclopedia.class.php:732
+msgid "Invalid exp."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:233
+#: D:\Documents\www/classes/encyclopedia.class.php:742
+msgid "Invalid HP."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:243
+#: D:\Documents\www/classes/encyclopedia.class.php:752
+msgid "Invalid speed."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:254
+#: D:\Documents\www/classes/encyclopedia.class.php:763
+msgid "Invalid spell."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:265
+#: D:\Documents\www/classes/encyclopedia.class.php:774
+msgid "Invalid skill."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:272
+#: D:\Documents\www/classes/encyclopedia.class.php:278
+#: D:\Documents\www/classes/encyclopedia.class.php:781
+#: D:\Documents\www/classes/encyclopedia.class.php:787
+msgid "Invalid attack."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:298
+#: D:\Documents\www/classes/encyclopedia.class.php:807
+msgid "Invalid hit sensivity."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:301
+#: D:\Documents\www/classes/encyclopedia.class.php:810
+msgid "Invalid fire sensivity."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:304
+#: D:\Documents\www/classes/encyclopedia.class.php:813
+msgid "Invalid ice sensivity."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:307
+#: D:\Documents\www/classes/encyclopedia.class.php:816
+msgid "Invalid energy sensivity."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:310
+#: D:\Documents\www/classes/encyclopedia.class.php:819
+msgid "Invalid holy sensivity."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:321
+#: D:\Documents\www/classes/encyclopedia.class.php:330
+#: D:\Documents\www/classes/encyclopedia.class.php:830
+#: D:\Documents\www/classes/encyclopedia.class.php:839
+msgid "Invalid drop."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:355
+#: D:\Documents\www/classes/encyclopedia.class.php:451
+msgid "Invalid mana."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:364
+#: D:\Documents\www/classes/encyclopedia.class.php:433
+msgid "Invalid type."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:372
+#: D:\Documents\www/classes/encyclopedia.class.php:403
+#: D:\Documents\www/classes/encyclopedia.class.php:442
+#: D:\Documents\www/classes/profile.class.php:403
+msgid "Invalid vocation."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:382
+msgid "Invalid data."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:394
+msgid "Invalid school."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:483
+msgid "Invalid element."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:495
+msgid "Invalid points."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:575
+msgid "Monster has been removed from the list."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:577
+msgid "Item has been removed from the list."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:579
+msgid "Skill has been removed from the list."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:581
+msgid "Spell has been removed from the list."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:583
+msgid "Achievement has been removed from the list."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:588
+msgid "Are you sure you want to delete this monster from the list?"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:591
+msgid "Are you sure you want to delete this item from the list?"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:594
+msgid "Are you sure you want to delete this skill from the list?"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:597
+msgid "Are you sure you want to delete this spell from the list?"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:600
+msgid "Are you sure you want to delete this achievement from the list?"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:607
+#: D:\Documents\www/templates/album_delete.tpl.php:6
+#: D:\Documents\www/templates/album_photos.tpl.php:45
+#: D:\Documents\www/templates/album_photos_delete.tpl.php:8
+#: D:\Documents\www/templates/artworks_index.tpl.php:11
+#: D:\Documents\www/templates/artworks_index.tpl.php:46
+#: D:\Documents\www/templates/comments.tpl.php:28
+#: D:\Documents\www/templates/comments_delete.tpl.php:9
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:175
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:244
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:422
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:442
+#: D:\Documents\www/templates/forum_postdelete.tpl.php:8
+#: D:\Documents\www/templates/forum_topicdelete.tpl.php:7
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:49
+#: D:\Documents\www/templates/letters_delete.tpl.php:13
+#: D:\Documents\www/templates/letters_view.tpl.php:44
+#: D:\Documents\www/templates/screenshots_delete.tpl.php:16
+#: D:\Documents\www/templates/screenshots_index.tpl.php:53
+#: D:\Documents\www/templates/themes_comments.tpl.php:21
+#: D:\Documents\www/templates/themes_edit.tpl.php:52
+#: D:\Documents\www/tibia-me.net/cp/album.php:28
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:86
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:90
+#: D:\Documents\www/tibia-me.net/user/profile.php:33
+#: D:\Documents\www/UI_shared/comments.php:33
+msgid "Delete"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:611
+#: D:\Documents\www/templates/album_create.tpl.php:26
+#: D:\Documents\www/templates/album_delete.tpl.php:12
+#: D:\Documents\www/templates/album_edit.tpl.php:19
+#: D:\Documents\www/templates/album_move.tpl.php:22
+#: D:\Documents\www/templates/album_password.tpl.php:15
+#: D:\Documents\www/templates/album_photos_delete.tpl.php:15
+#: D:\Documents\www/templates/album_rotate.tpl.php:17
+#: D:\Documents\www/templates/album_set_avatar.tpl.php:17
+#: D:\Documents\www/templates/artworks_index.tpl.php:17
+#: D:\Documents\www/templates/comments_delete.tpl.php:16
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:23
+#: D:\Documents\www/templates/forum_postdelete.tpl.php:15
+#: D:\Documents\www/templates/forum_postedit.tpl.php:13
+#: D:\Documents\www/templates/forum_quote.tpl.php:21
+#: D:\Documents\www/templates/forum_topicdelete.tpl.php:13
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:47
+#: D:\Documents\www/templates/forum_topicmove.tpl.php:19
+#: D:\Documents\www/templates/friendlist_accept.tpl.php:14
+#: D:\Documents\www/templates/friendlist_add.tpl.php:15
+#: D:\Documents\www/templates/friendlist_decline.tpl.php:14
+#: D:\Documents\www/templates/friendlist_edit.tpl.php:14
+#: D:\Documents\www/templates/friendlist_remove.tpl.php:13
+#: D:\Documents\www/templates/letters_compose.tpl.php:56
+#: D:\Documents\www/templates/letters_delete.tpl.php:21
+#: D:\Documents\www/templates/letters_save.tpl.php:18
+#: D:\Documents\www/templates/screenshots_delete.tpl.php:29
+#: D:\Documents\www/templates/user_permissions.tpl.php:57
+#: D:\Documents\www/tibia-me.net/user/banishments.php:159
+#: D:\Documents\www/tibia-me.net/user/profile.php:37
+msgid "Cancel"
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:622
+#: D:\Documents\www/classes/encyclopedia.class.php:632
+msgid "Invalid requirements."
+msgstr ""
+
+#: D:\Documents\www/classes/encyclopedia.class.php:679
+#: D:\Documents\www/classes/encyclopedia.class.php:986
+#: D:\Documents\www/classes/uploader.class.php:50
+#: D:\Documents\www/classes/uploader.class.php:169
+#: D:\Documents\www/classes/uploader.class.php:181
+msgid "Unknown error."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:92
+#: D:\Documents\www/classes/forum.class.php:93
+msgid "wrote"
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:323
+msgid "This message had been already posted."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:553
+msgid "You don't have permission to access this forum."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:633
+msgid "You will be notified on new replies in this thread."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:652
+msgid "You will no longer be notified on new replies in this thread."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:742
+msgid "This thread is closed, you cannot edit posts."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:769
+msgid "You don't have permission to create new threads here."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:775
+msgid "Please specify topic title."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:781
+msgid "Please specify topic message."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:787
+#: D:\Documents\www/tibia-me.net/forum/posting.php:116
+msgid "You cannot create more than 5 sticky topics in this forum."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:807
+#: D:\Documents\www/tibia-me.net/forum/posting.php:101
+msgid "Topic with this name already exists."
+msgstr ""
+
+#: D:\Documents\www/classes/forum.class.php:839
+msgid "Thread created."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:61
+#: D:\Documents\www/templates/album_index.tpl.php:28
+#: D:\Documents\www/templates/album_search.tpl.php:31
+#: D:\Documents\www/templates/friendlist.tpl.php:15
+#: D:\Documents\www/templates/friendlist_mutual.tpl.php:15
+#: D:\Documents\www/templates/friendlist_online.tpl.php:14
+#: D:\Documents\www/templates/profile.tpl.php:482
+msgid "Send letter"
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:63
+#: D:\Documents\www/classes/friendlist.class.php:65
+#: D:\Documents\www/templates/friendlist.tpl.php:25
+#: D:\Documents\www/templates/friendlist_mutual.tpl.php:16
+#: D:\Documents\www/templates/friendlist_online.tpl.php:15
+#: D:\Documents\www/templates/memberlist.tpl.php:55
+#: D:\Documents\www/templates/profile.tpl.php:480
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:27
+msgid "Remove friend"
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:67
+#: D:\Documents\www/templates/friendlist.tpl.php:17
+#: D:\Documents\www/templates/memberlist.tpl.php:47
+#: D:\Documents\www/templates/profile.tpl.php:478
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:22
+msgid "Add friend"
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:70
+#, php-format
+msgid "%s wants to be your friend."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:72
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:6
+#: D:\Documents\www/templates/forum_postedit.tpl.php:3
+#: D:\Documents\www/templates/forum_quote.tpl.php:4
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:5
+#: D:\Documents\www/templates/friendlist_add.tpl.php:7
+#: D:\Documents\www/templates/friendlist_edit.tpl.php:5
+#: D:\Documents\www/templates/friendlist_requests_in.tpl.php:16
+#: D:\Documents\www/templates/friendlist_requests_out.tpl.php:16
+#: D:\Documents\www/templates/letters_compose.tpl.php:32
+#: D:\Documents\www/templates/letters_edit.tpl.php:19
+#: D:\Documents\www/templates/letters_edit.tpl.php:28
+#: D:\Documents\www/tibia-me.net/user/banishments.php:101
+#: D:\Documents\www/tibia-me.net/user/banishments.php:146
+msgid "Message"
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:78
+#: D:\Documents\www/templates/agreement.tpl.php:57
+#: D:\Documents\www/templates/friendlist_accept.tpl.php:8
+#: D:\Documents\www/templates/friendlist_requests_in.tpl.php:18
+msgid "Accept"
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:84
+#: D:\Documents\www/templates/agreement.tpl.php:60
+#: D:\Documents\www/templates/friendlist_decline.tpl.php:8
+#: D:\Documents\www/templates/friendlist_requests_in.tpl.php:19
+msgid "Decline"
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:199
+msgid "You cannot add yourself to your friendlist."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:204
+msgid "You are already friends with this user."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:208
+msgid "Friend request had been already sent to this user."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:228
+msgid "Friend request has been sent."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:241
+#: D:\Documents\www/classes/friendlist.class.php:267
+#: D:\Documents\www/classes/friendlist.class.php:286
+#: D:\Documents\www/classes/friendlist.class.php:307
+msgid "Request not found."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:276
+msgid "Request declined."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:297
+msgid "Request accepted."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:317
+msgid "Request cancelled."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:396
+msgid "This user is not in your friendlist."
+msgstr ""
+
+#: D:\Documents\www/classes/friendlist.class.php:407
+msgid "User has been removed from your friendlist."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:251
+msgid "Letter not found."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:291
+msgid "You don't have permission to edit this letter."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:294
+msgid "This letter had been delivered. You cannot edit it."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:324
+#: D:\Documents\www/templates/letters_folder.tpl.php:5
+#: D:\Documents\www/templates/letters_view.tpl.php:5
+#: D:\Documents\www/tibia-me.net/user/letters.php:32
+#: D:\Documents\www/tibia-me.net/user/letters.php:36
+msgid "Inbox"
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:325
+#: D:\Documents\www/templates/letters_folder.tpl.php:8
+#: D:\Documents\www/templates/letters_view.tpl.php:8
+#: D:\Documents\www/tibia-me.net/user/letters.php:20
+msgid "Outbox"
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:326
+#: D:\Documents\www/templates/letters_folder.tpl.php:11
+#: D:\Documents\www/templates/letters_view.tpl.php:11
+#: D:\Documents\www/tibia-me.net/user/letters.php:24
+msgid "Sentbox"
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:327
+#: D:\Documents\www/templates/letters_folder.tpl.php:14
+#: D:\Documents\www/templates/letters_view.tpl.php:14
+#: D:\Documents\www/tibia-me.net/user/letters.php:28
+msgid "Savebox"
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:371
+msgid "This letter has been removed from Savebox."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:373
+#: D:\Documents\www/classes/letters.class.php:393
+msgid "Could not delete this letter."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:383
+msgid "This letter has been deleted from your Inbox."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:386
+msgid "This letter has been deleted from your Outbox."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:389
+msgid "This letter has been deleted from your Sentbox."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:407
+msgid "Letter has been saved."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:407
+msgid "Could not save letter."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:418
+msgid "You cannot send letters to youself."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:422
+#: D:\Documents\www/classes/letters.class.php:477
+#: D:\Documents\www/classes/letters.class.php:481
+msgid "Invalid recipient."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:439
+msgid "You cannot send letters to yourself."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:508
+msgid "Letter has been sent."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:527
+#: D:\Documents\www/classes/letters.class.php:535
+msgid "No subject specified."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:542
+msgid "Subject is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:562
+#: D:\Documents\www/classes/letters.class.php:570
+msgid "No message specified."
+msgstr ""
+
+#: D:\Documents\www/classes/letters.class.php:577
+msgid "Message is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/notifications.class.php:285
+msgid "New Private Message has arrived"
+msgstr ""
+
+#: D:\Documents\www/classes/notifications.class.php:286
+#, php-format
+msgid ""
+"Hello %s,\n"
+"\n"
+"You have received a new private message to your account on Tibia-ME.net and "
+"you have requested that you be notified on this event. You can view your new "
+"message by clicking on the following link:\n"
+"http://wap.tibia-me.net/user/letters.php\n"
+"\n"
+"Remember that you can always choose not to be notified of new messages by "
+"changing the appropriate setting in your profile.\n"
+"http://wap.tibia-me.net/user/settings.php\n"
+"\n"
+"Kind Regards,\n"
+"Tibia-ME.net Support\n"
+"http://wap.tibia-me.net"
+msgstr ""
+
+#: D:\Documents\www/classes/notifications.class.php:289
+msgid "Password recovery confirmation"
+msgstr ""
+
+#: D:\Documents\www/classes/notifications.class.php:290
+#, php-format
+msgid ""
+"Hello %s,\n"
+"\n"
+"You have requested a new password for your account on Tibia-ME.net.\n"
+"\n"
+"Click the following link to continue new password activation:\n"
+"http://wap.tibia-me.net/user/lostpassword.php?user=%d&v=%s\n"
+"\n"
+"If you did not request a new password, just ignore this message.\n"
+"\n"
+"Kind Regards,\n"
+"Tibia-ME.net Support\n"
+"http://wap.tibia-me.net"
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:164
+msgid "Avatar removed."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:218
+msgid "Invalid birth day."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:224
+#: D:\Documents\www/classes/profile.class.php:230
+msgid "Invalid birth month."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:280
+msgid "Invalid gender."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:304
+msgid "Location is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:320
+msgid "Invalid rank."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:332
+msgid "MSN is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:334
+msgid "Invalid MSN."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:346
+msgid "Invalid ICQ."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:358
+msgid "Yahoo ID is too short."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:360
+msgid "Yahoo ID is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:372
+msgid "Skype ID is too short."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:374
+msgid "Skype ID is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:391
+msgid "Invalid relationship status."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:414
+msgid "Signature is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:426
+msgid "Invalid E-mail."
+msgstr ""
+
+#: D:\Documents\www/classes/profile.class.php:456
+msgid "Guild name is too long."
+msgstr ""
+
+#: D:\Documents\www/classes/themes.class.php:226
+msgid "Theme has been deleted."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:27
+#: D:\Documents\www/classes/uploader.class.php:129
+#: D:\Documents\www/classes/uploader.class.php:137
+msgid "No file specified."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:54
+#, php-format
+msgid "Invalid MIME type (%s)."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:62
+#, php-format
+msgid "Image resolution should be %s."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:74
+msgid "This photo had been already uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:77
+msgid "This screenshot had been already uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:80
+msgid "This artwork had been already uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:83
+msgid "This theme had been already uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:86
+msgid "This file had been already uploaded."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:96
+msgid "File is too large."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:100
+#, php-format
+msgid "Unknown error (errorcode: %d)."
+msgstr ""
+
+#: D:\Documents\www/classes/uploader.class.php:163
+msgid "Server error."
+msgstr ""
+
+#: D:\Documents\www/classes/user.class.php:73
+#: D:\Documents\www/templates/memberlist.tpl.php:44
+msgid "Offline"
+msgstr ""
+
+#: D:\Documents\www/classes/user.class.php:110
+#: D:\Documents\www/templates/album_search.tpl.php:4
+#: D:\Documents\www/templates/forum_search.tpl.php:4
+#: D:\Documents\www/templates/highscores_search_results.tpl.php:4
+#: D:\Documents\www/templates/memberlist.tpl.php:26
+msgid "Your search returned no results."
+msgstr ""
+
+#: D:\Documents\www/classes/user.class.php:114
+#: D:\Documents\www/classes/user.class.php:118
+#: D:\Documents\www/classes/user.class.php:122
+#: D:\Documents\www/templates/album_search.tpl.php:6
+#: D:\Documents\www/templates/forum_search.tpl.php:6
+#: D:\Documents\www/templates/highscores_search_results.tpl.php:8
+#: D:\Documents\www/templates/memberlist.tpl.php:28
+#, fuzzy, php-format
+msgid "Your search returned %d result."
+msgid_plural "Your search returned %d results."
+msgstr[0] ""
+"#-#-#-#-#  1extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  2extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  4extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  5extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  6extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+msgstr[1] ""
+"#-#-#-#-#  1extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  2extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  4extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  6extracted.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: D:\Documents\www/templates/about.tpl.php:2
+#: D:\Documents\www/templates/index.tpl.php:32
+#: D:\Documents\www/tibia-me.net/about.php:3
+#: D:\Documents\www/tibia-me.net/about.php:6
+msgid "What is TibiaME?"
+msgstr ""
+
+#: D:\Documents\www/templates/about.tpl.php:5
+msgid ""
+"TibiaME is the first massively multiplayer online role-playing game for "
+"mobile devices. Come together with hundreds of players and experience "
+"adventures in a colourful virtual world! Along with your friends you explore "
+"the mysterious land of TibiaME, fight your way through hordes of evil "
+"creatures and solve ancient riddles to find untold treasures. With every "
+"monster you defeat you will grow in strength and power. TibiaME is based on "
+"the successful online role-playing game Tibia which attracts thousands of "
+"players every day."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:2
+#: D:\Documents\www/templates/index.tpl.php:86
+msgid "User agreement"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:5
+#: D:\Documents\www/templates/settings.tpl.php:3
+msgid "General"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:6
+msgid ""
+"All TibiaME rules are valid on this fansite. Please check FAQ section on wap."
+"tibiame.com."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:7
+msgid "Accounts"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:8
+msgid "You are only allowed to use your real character nickname and gameworld."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:9
+msgid ""
+"Once you create an account, you will not be able to rename or remove it."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:10
+msgid ""
+"CipSoft staff and resellers should let us know about their accounts names to "
+"get a special status and nickname prefix, otherwise your account might be "
+"considered as fake and blocked."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:11
+msgid "You are not allowed to share your account data (password) with anyone."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:12
+#: D:\Documents\www/templates/index.tpl.php:35
+#: D:\Documents\www/templates/settings.tpl.php:47
+#: D:\Documents\www/tibia-me.net/album/albums.php:29
+#: D:\Documents\www/tibia-me.net/album/albums.php:32
+#: D:\Documents\www/tibia-me.net/album/comments.php:4
+#: D:\Documents\www/tibia-me.net/album/index.php:12
+#: D:\Documents\www/tibia-me.net/album/index.php:23
+#: D:\Documents\www/tibia-me.net/album/photos.php:187
+#: D:\Documents\www/tibia-me.net/album/photos.php:190
+#: D:\Documents\www/tibia-me.net/album/search.php:10
+msgid "Photo album"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:13
+msgid ""
+"Screenshots are not allowed in photo album. Please upload them to "
+"Screenshots section."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:14
+msgid "Tibia-ME.net staff may remove any photo if they find it offensive."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:15
+#: D:\Documents\www/templates/index.tpl.php:39
+#: D:\Documents\www/tibia-me.net/scores/guild.php:19
+#: D:\Documents\www/tibia-me.net/scores/search.php:8
+#: D:\Documents\www/tibia-me.net/scores/viewscores.php:18
+msgid "Highscores"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:16
+msgid "Listed characters"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:17
+msgid ""
+"Top 100 wizards and top 100 warriors by total experience from each game "
+"world are listed."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:18
+msgid "Characters with PvP rank 100 or higher are listed."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:19
+msgid ""
+"Top 100 wizards and top 100 warriors by achievement points from each game "
+"world are listed."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:20
+msgid "Other characters are not listed and we cannot add them at this time."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:21
+msgid "Data reliability"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:22
+msgid "Highscores are updated daily in 10 minutes after game server save."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:23
+msgid ""
+"Highscores data are provided by tibiame.com and Tibia-ME.net is not "
+"responsible for its reliability."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:24
+msgid ""
+"Worlds' statistics as well as Top Hunters data are only based on characters "
+"that are listed on this website (see 4.1.)."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:25
+#: D:\Documents\www/templates/index.tpl.php:34
+#: D:\Documents\www/templates/profile.tpl.php:431
+#: D:\Documents\www/templates/profile.tpl.php:433
+#: D:\Documents\www/tibia-me.net/screenshots/comments.php:4
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:69
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:73
+msgid "Screenshots"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:26
+msgid "Only TibiaME screenshots are allowed at Screenshots section."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:27
+msgid "Artworks are not allowed."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:28
+msgid ""
+"Screenshots should not contain any non-game areas, e.g. computer desktop and "
+"emulator window."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:29
+#: D:\Documents\www/templates/artworks_index.tpl.php:2
+#: D:\Documents\www/templates/index.tpl.php:38
+#: D:\Documents\www/tibia-me.net/artworks/comments.php:4
+#: D:\Documents\www/tibia-me.net/artworks/index.php:11
+#: D:\Documents\www/tibia-me.net/artworks/index.php:14
+#: D:\Documents\www/tibia-me.net/artworks/upload.php:12
+#: D:\Documents\www/tibia-me.net/artworks/upload.php:15
+msgid "Artworks"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:30
+msgid "Artworks should be related to TibiaME."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:31
+msgid "You are only allowed to upload your own artworks."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:32
+msgid "Edited screenshots should be uploaded to Screenshots section."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:33
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:3
+#: D:\Documents\www/templates/index.tpl.php:36
+#: D:\Documents\www/templates/settings.tpl.php:58
+#: D:\Documents\www/tibia-me.net/forum/index.php:10
+#: D:\Documents\www/tibia-me.net/forum/index.php:14
+#: D:\Documents\www/tibia-me.net/forum/search.php:15
+#: D:\Documents\www/tibia-me.net/forum/viewforum.php:22
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:25
+msgid "Forum"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:34
+msgid ""
+"Use search engine before asking a question or posting new thread - you "
+"probably will find the answer."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:35
+msgid "Privacy"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:36
+msgid ""
+"Tibia-ME.net never shares your hidden data (e.g. email, birth date) with "
+"anyone."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:37
+msgid ""
+"Tibia-ME.net does not store your IP address or browser info. Google might "
+"collect some information about Tibia-ME.net users (e.g. IP address, browser "
+"info, provider name). Facebook might collect some data if you choose to link "
+"your Facebook account with your Tibia-ME.net profile."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:38
+msgid ""
+"Your passwords are encrypted and cannot be viewed by anyone, including Tibia-"
+"ME.net sfaff."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:39
+msgid ""
+"Tibia-ME.net Admin may use your data to contact you (e.g. email, Yahoo ID, "
+"Skype ID, including hidden data)."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:40
+msgid "Copyrights"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:41
+msgid ""
+"TibiaME is a trademark of CipSoft GmbH, tibiame.com is the only official "
+"TibiaME website."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:42
+msgid ""
+"Tibia-ME.net logos, source code and its name are property of Tibia-ME.net "
+"and you are not allowed to use them without permission."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:43
+msgid ""
+"Any icons provided by CipSoft are copyrighted by CipSoft. You may use any "
+"TibiaME icons from this website."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:44
+msgid ""
+"Any icons and logos provided by CipSoft and edited by Tibia-ME.net should be "
+"only used with our permission."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:45
+msgid "System requirements"
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:46
+msgid ""
+"This fansite was developed for mobile browsers and should be correctly "
+"displayed on most of modern mobile devices."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:47
+msgid "Cookies should be enabled in your browser."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:48
+msgid ""
+"Javascript is not required by default. If you know your browser supports "
+"Javascript - it can be enabled in your settings."
+msgstr ""
+
+#: D:\Documents\www/templates/agreement.tpl.php:49
+msgid "Opera Mini&trade; is recommended."
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:5
+msgid "You have no albums."
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:7
+msgid "This user has no albums."
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:23
+#: D:\Documents\www/templates/album_create.tpl.php:17
+#: D:\Documents\www/templates/album_edit.tpl.php:6
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:294
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:414
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:434
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:65
+#: D:\Documents\www/tibia-me.net/user/banishments.php:93
+#: D:\Documents\www/tibia-me.net/user/banishments.php:144
+msgid "Description"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:25
+msgid "Access"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:27
+msgid "by password"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:29
+msgid "friends only"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:31
+msgid "everyone"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:34
+#: D:\Documents\www/templates/album_create.tpl.php:19
+#: D:\Documents\www/templates/album_edit.tpl.php:8
+#: D:\Documents\www/templates/login.tpl.php:14
+#: D:\Documents\www/templates/register.tpl.php:14
+msgid "Password"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:37
+msgid "no photos"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:39
+#: D:\Documents\www/templates/album_index.tpl.php:25
+#: D:\Documents\www/templates/album_search.tpl.php:21
+#: D:\Documents\www/templates/login_welcome.tpl.php:39
+#, php-format
+msgid "%d photo"
+msgid_plural "%d photos"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:42
+msgid "comments disallowed"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:44
+#: D:\Documents\www/templates/album_index.tpl.php:26
+#: D:\Documents\www/templates/album_search.tpl.php:25
+#: D:\Documents\www/templates/themes_index.tpl.php:39
+msgid "no comments"
+msgstr ""
+
+#: D:\Documents\www/templates/album_albums.tpl.php:46
+#: D:\Documents\www/templates/album_index.tpl.php:26
+#: D:\Documents\www/templates/album_search.tpl.php:27
+#: D:\Documents\www/templates/index.tpl.php:19
+#: D:\Documents\www/templates/themes_index.tpl.php:41
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/album_create.tpl.php:15
+#: D:\Documents\www/templates/album_edit.tpl.php:4
+msgid "Title"
+msgstr ""
+
+#: D:\Documents\www/templates/album_create.tpl.php:20
+#: D:\Documents\www/templates/album_edit.tpl.php:9
+msgid "leave empty for free access"
+msgstr ""
+
+#: D:\Documents\www/templates/album_create.tpl.php:22
+#: D:\Documents\www/templates/album_edit.tpl.php:11
+msgid "For friends only"
+msgstr ""
+
+#: D:\Documents\www/templates/album_create.tpl.php:23
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:17
+msgid "Create"
+msgstr ""
+
+#: D:\Documents\www/templates/album_delete.tpl.php:2
+#, php-format
+msgid "Are you sure you want to delete album \"%s\"?"
+msgstr ""
+
+#: D:\Documents\www/templates/album_edit.tpl.php:13
+#: D:\Documents\www/templates/album_rotate.tpl.php:10
+#: D:\Documents\www/templates/album_set_avatar.tpl.php:10
+#: D:\Documents\www/templates/artworks_upload.tpl.php:14
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:168
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:238
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:314
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:417
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:437
+#: D:\Documents\www/templates/forum_postedit.tpl.php:7
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:40
+#: D:\Documents\www/templates/friendlist_edit.tpl.php:8
+#: D:\Documents\www/templates/letters_save.tpl.php:11
+#: D:\Documents\www/templates/letters_view.tpl.php:39
+#: D:\Documents\www/templates/profile.tpl.php:454
+#: D:\Documents\www/templates/settings.tpl.php:98
+#: D:\Documents\www/templates/themes_edit.tpl.php:55
+#: D:\Documents\www/templates/user_permissions.tpl.php:51
+#: D:\Documents\www/tibia-me.net/cp/ranks.php:45
+#: D:\Documents\www/tibia-me.net/user/letters.php:92
+#: D:\Documents\www/tibia-me.net/user/letters.php:125
+msgid "Save"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:3
+msgid "Sort"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:5
+msgid "by nickname"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:6
+msgid "by last update"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:7
+msgid "by comments"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:9
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:3
+#: D:\Documents\www/templates/highscores_guilds.tpl.php:3
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:4
+#: D:\Documents\www/templates/highscores_pvp.tpl.php:3
+#: D:\Documents\www/templates/highscores_searchbox.tpl.php:5
+#: D:\Documents\www/templates/highscores_top100.tpl.php:3
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:3
+#: D:\Documents\www/templates/letters_compose.tpl.php:17
+#: D:\Documents\www/templates/letters_edit.tpl.php:16
+#: D:\Documents\www/templates/login.tpl.php:5
+#: D:\Documents\www/templates/memberlist.tpl.php:7
+#: D:\Documents\www/templates/profile.tpl.php:44
+#: D:\Documents\www/templates/register.tpl.php:5
+#: D:\Documents\www/tibia-me.net/scores/worlds.php:85
+#: D:\Documents\www/tibia-me.net/user/banishments.php:86
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:58
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:76
+msgid "World"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:10
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:4
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:14
+#: D:\Documents\www/templates/highscores_guilds.tpl.php:4
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:5
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:14
+#: D:\Documents\www/templates/highscores_pvp.tpl.php:4
+#: D:\Documents\www/templates/highscores_top100.tpl.php:4
+#: D:\Documents\www/templates/highscores_top100.tpl.php:14
+#: D:\Documents\www/templates/memberlist.tpl.php:7
+msgid "all"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:24
+#: D:\Documents\www/templates/album_search.tpl.php:20
+#, php-format
+msgid "%d album"
+msgid_plural "%d albums"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:26
+#: D:\Documents\www/templates/album_photos.tpl.php:28
+#: D:\Documents\www/templates/album_search.tpl.php:23
+msgid "comments disabled"
+msgstr ""
+
+#: D:\Documents\www/templates/album_index.tpl.php:27
+#: D:\Documents\www/templates/album_search.tpl.php:30
+msgid "View profile"
+msgstr ""
+
+#: D:\Documents\www/templates/album_move.tpl.php:2
+#, php-format
+msgid "You are going to move %d photos."
+msgstr ""
+
+#: D:\Documents\www/templates/album_move.tpl.php:5
+#: D:\Documents\www/templates/forum_topicmove.tpl.php:3
+msgid "Move to"
+msgstr ""
+
+#: D:\Documents\www/templates/album_move.tpl.php:15
+#: D:\Documents\www/templates/album_photos.tpl.php:42
+#: D:\Documents\www/templates/forum_topicmove.tpl.php:13
+msgid "Move"
+msgstr ""
+
+#: D:\Documents\www/templates/album_password.tpl.php:4
+msgid "Please enter password to access this album."
+msgstr ""
+
+#: D:\Documents\www/templates/album_password.tpl.php:9
+msgid "Confirm"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:4
+msgid "This album is empty."
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:23
+#: D:\Documents\www/templates/screenshots_index.tpl.php:47
+#, php-format
+msgid "File size: %dkb"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:24
+#: D:\Documents\www/templates/artworks_index.tpl.php:38
+msgid "Resolution"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:26
+#: D:\Documents\www/templates/artworks_index.tpl.php:40
+#: D:\Documents\www/templates/screenshots_index.tpl.php:48
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:86
+#: D:\Documents\www/UI_shared/comments.php:17
+#: D:\Documents\www/UI_shared/comments.php:32
+#: D:\Documents\www/UI_shared/comments.php:50
+msgid "Comments"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:33
+msgid "Rotate left"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:34
+msgid "Rotate right"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos.tpl.php:35
+msgid "Set as avatar"
+msgstr ""
+
+#: D:\Documents\www/templates/album_photos_delete.tpl.php:3
+msgid "Are you sure you want to delete this photo?"
+msgstr ""
+
+#: D:\Documents\www/templates/album_rotate.tpl.php:3
+msgid ""
+"Are you sure you want to save rotated photo? This may slightly reduce image "
+"quality."
+msgstr ""
+
+#: D:\Documents\www/templates/album_searchbox.tpl.php:3
+#: D:\Documents\www/templates/highscores_pvp.tpl.php:15
+#: D:\Documents\www/templates/highscores_searchbox.tpl.php:3
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:2
+#: D:\Documents\www/templates/letters_compose.tpl.php:15
+#: D:\Documents\www/templates/letters_edit.tpl.php:14
+#: D:\Documents\www/templates/login.tpl.php:3
+#: D:\Documents\www/templates/memberlist.tpl.php:3
+#: D:\Documents\www/templates/register.tpl.php:3
+#: D:\Documents\www/tibia-me.net/user/banishments.php:84
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:56
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:74
+msgid "Nickname"
+msgstr ""
+
+#: D:\Documents\www/templates/album_searchbox.tpl.php:5
+#: D:\Documents\www/templates/forum_searchbox.tpl.php:4
+#: D:\Documents\www/templates/highscores_searchbox.tpl.php:18
+#: D:\Documents\www/templates/memberlist.tpl.php:18
+#: D:\Documents\www/tibia-me.net/album/search.php:5
+#: D:\Documents\www/tibia-me.net/album/search.php:11
+#: D:\Documents\www/tibia-me.net/forum/search.php:9
+#: D:\Documents\www/tibia-me.net/forum/search.php:16
+#: D:\Documents\www/tibia-me.net/scores/achievements.php:9
+#: D:\Documents\www/tibia-me.net/scores/guilds.php:9
+#: D:\Documents\www/tibia-me.net/scores/pvp.php:9
+#: D:\Documents\www/tibia-me.net/scores/search.php:5
+#: D:\Documents\www/tibia-me.net/scores/search.php:9
+#: D:\Documents\www/tibia-me.net/scores/top100.php:8
+msgid "Search"
+msgstr ""
+
+#: D:\Documents\www/templates/album_set_avatar.tpl.php:4
+msgid "Are you sure you want to set this photo as avatar?"
+msgstr ""
+
+#: D:\Documents\www/templates/album_upload.tpl.php:2
+msgid "Add photos"
+msgstr ""
+
+#: D:\Documents\www/templates/album_upload.tpl.php:12
+#: D:\Documents\www/templates/artworks_index.tpl.php:54
+#: D:\Documents\www/templates/artworks_upload.tpl.php:14
+#: D:\Documents\www/templates/screenshots_index.tpl.php:18
+#: D:\Documents\www/templates/themes_index.tpl.php:56
+#: D:\Documents\www/templates/themes_upload.tpl.php:11
+#: D:\Documents\www/tibia-me.net/artworks/upload.php:16
+#: D:\Documents\www/tibia-me.net/themes/upload.php:46
+msgid "Upload"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_comments.tpl.php:5
+#: D:\Documents\www/templates/comments.tpl.php:17
+#: D:\Documents\www/templates/themes_comments.tpl.php:12
+msgid "No one has commented yet."
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_comments.tpl.php:17
+#: D:\Documents\www/templates/comments.tpl.php:41
+#: D:\Documents\www/templates/themes_comments.tpl.php:29
+msgid "Comment"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_comments.tpl.php:22
+#: D:\Documents\www/templates/comments.tpl.php:48
+#: D:\Documents\www/templates/forum_quote.tpl.php:15
+#: D:\Documents\www/templates/letters_compose.tpl.php:50
+#: D:\Documents\www/templates/themes_comments.tpl.php:36
+msgid "Send"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_comments.tpl.php:26
+#: D:\Documents\www/templates/comments.tpl.php:53
+#: D:\Documents\www/templates/themes_comments.tpl.php:40
+msgid "Log in to post your comments."
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:5
+msgid "Are you sure you want to delete this artwork?"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:22
+msgid "No artworks available."
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:32
+#: D:\Documents\www/templates/forum_search.tpl.php:23
+#: D:\Documents\www/templates/forum_viewforum.tpl.php:8
+#: D:\Documents\www/templates/screenshots_index.tpl.php:46
+#: D:\Documents\www/templates/themes_edit.tpl.php:22
+msgid "Author"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:34
+msgid "File size"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:36
+msgid "mb"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:37
+msgid "kb"
+msgstr ""
+
+#: D:\Documents\www/templates/artworks_index.tpl.php:57
+msgid "Log in to upload artworks."
+msgstr ""
+
+#: D:\Documents\www/templates/comments.tpl.php:8
+msgid "Watch for new comments"
+msgstr ""
+
+#: D:\Documents\www/templates/comments.tpl.php:10
+msgid "Stop watching for new comments"
+msgstr ""
+
+#: D:\Documents\www/templates/comments_delete.tpl.php:3
+msgid "Are you sure you want to delete this comment?"
+msgstr ""
+
+#: D:\Documents\www/templates/contacts.tpl.php:2
+#: D:\Documents\www/templates/index.tpl.php:96
+#: D:\Documents\www/tibia-me.net/contacts.php:3
+#: D:\Documents\www/tibia-me.net/contacts.php:6
+msgid "Contacts"
+msgstr ""
+
+#: D:\Documents\www/templates/emoticons.tpl.php:2
+#: D:\Documents\www/templates/index.tpl.php:82
+#: D:\Documents\www/tibia-me.net/emoticons.php:3
+#: D:\Documents\www/tibia-me.net/emoticons.php:6
+msgid "Emoticons"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:23
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:183
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:250
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:320
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:428
+#: D:\Documents\www/templates/profile.tpl.php:117
+msgid "Name"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:31
+msgid "Classic icon"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:42
+msgid "HiRes icon"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:48
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:222
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:374
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:10
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:62
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:115
+msgid "Level"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:51
+#: D:\Documents\www/templates/highscores_guild.tpl.php:20
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:7
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:39
+msgid "EP"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:54
+msgid "HP"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:57
+msgid "Speed"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:70
+#: D:\Documents\www/templates/encyclopedia_monster.tpl.php:23
+msgid "Spell"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:84
+#: D:\Documents\www/templates/encyclopedia_monster.tpl.php:27
+msgid "Skill"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:98
+#: D:\Documents\www/templates/encyclopedia_monster.tpl.php:10
+msgid "Attack"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:108
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:229
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:385
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:387
+msgid "energy"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:110
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:231
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:391
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:393
+msgid "fire"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:112
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:233
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:397
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:399
+msgid "hit"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:114
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:235
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:403
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:405
+msgid "holy"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:116
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:237
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:409
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:411
+msgid "ice"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:120
+msgid "Sensivity"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:124
+msgid "Hit"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:127
+msgid "Fire"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:130
+msgid "Ice"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:133
+msgid "Energy"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:136
+msgid "Holy"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:151
+#: D:\Documents\www/templates/encyclopedia_monster.tpl.php:30
+msgid "Drop"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:191
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:258
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:328
+msgid "Icon"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:197
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:334
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:37
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:90
+#: D:\Documents\www/tibia-me.net/user/banishments.php:106
+msgid "Type"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:199
+msgid "weapon"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:201
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:203
+msgid "armour"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:206
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:208
+msgid "other"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:211
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:264
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:358
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:17
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:13
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:13
+#: D:\Documents\www/templates/highscores_top100.tpl.php:13
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:4
+#: D:\Documents\www/templates/profile.tpl.php:62
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:45
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:49
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:102
+msgid "Vocation"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:225
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:377
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:59
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:112
+msgid "Mana"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:269
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:271
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:363
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:365
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:19
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:4
+#: D:\Documents\www/templates/profile.tpl.php:68
+#: D:\Documents\www/templates/profile.tpl.php:79
+#: D:\Documents\www/templates/profile.tpl.php:82
+#: D:\Documents\www/templates/profile.tpl.php:93
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:47
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:51
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:104
+msgid "warrior"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:275
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:277
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:369
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:371
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:21
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:4
+#: D:\Documents\www/templates/profile.tpl.php:70
+#: D:\Documents\www/templates/profile.tpl.php:86
+#: D:\Documents\www/templates/profile.tpl.php:89
+#: D:\Documents\www/templates/profile.tpl.php:95
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:49
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:53
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:106
+msgid "wizard"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:280
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:9
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:37
+msgid "School"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:284
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:286
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:348
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:350
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:11
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:39
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:39
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:92
+msgid "attack"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:289
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:291
+msgid "defence"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:297
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:25
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:53
+msgid "Requirements"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:338
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:340
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:43
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:96
+msgid "buff"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:343
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:345
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:45
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:98
+msgid "debuff"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:353
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:355
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:41
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:94
+msgid "heal"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:380
+msgid "Element"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_edit.tpl.php:431
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:22
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:34
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:61
+msgid "Points"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_monster.tpl.php:16
+msgid "Weakness"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_monsters.tpl.php:2
+#: D:\Documents\www/templates/index.tpl.php:61
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:18
+#: D:\Documents\www/tibia-me.net/encyclopedia/monsters.php:18
+#: D:\Documents\www/tibia-me.net/encyclopedia/monsters.php:23
+msgid "Monsters"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_monsters.tpl.php:7
+msgid "This section is empty."
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:13
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:41
+msgid "defense"
+msgstr ""
+
+#: D:\Documents\www/templates/encyclopedia_skills.tpl.php:34
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:48
+#: D:\Documents\www/templates/letters_view.tpl.php:42
+#: D:\Documents\www/templates/themes_index.tpl.php:48
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:40
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:64
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:44
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:66
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:115
+#: D:\Documents\www/tibia-me.net/encyclopedia/monsters.php:28
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:62
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:69
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:118
+#: D:\Documents\www/tibia-me.net/themes/edit.php:14
+#: D:\Documents\www/tibia-me.net/user/letters.php:77
+msgid "Edit"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:4
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:3
+msgid "Topic title"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:8
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:7
+msgid "Topic type"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:9
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:10
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:12
+msgid "Normal"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:12
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:16
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:18
+msgid "Sticky"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_createtopic.tpl.php:14
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:22
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:24
+msgid "Announcement"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_index.tpl.php:2
+msgid "Forums"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_no_post_mode.tpl.php:2
+msgid "No post mode specified."
+msgstr ""
+
+#: D:\Documents\www/templates/forum_postdelete.tpl.php:3
+msgid "Are you sure you want to delete this post?"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_topicdelete.tpl.php:2
+msgid "Are you sure you want to delete this thread?"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:28
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:30
+msgid "Close topic"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_topicedit.tpl.php:34
+#: D:\Documents\www/tibia-me.net/forum/posting.php:209
+msgid "Delete topic"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewforum.tpl.php:10
+#, php-format
+msgid "Views: %d"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:10
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:31
+#, php-format
+msgid "<b>Posts</b>: %d"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:17
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:38
+#, php-format
+msgid "Edited by %1$s on %2$s;<br/>edited %3$d times in total"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:20
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:41
+msgid "Quote"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:51
+#: D:\Documents\www/templates/profile.tpl.php:468
+msgid "Ban"
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:61
+#: D:\Documents\www/tibia-me.net/forum/posting.php:64
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:18
+msgid "This thread is closed, you cannot post here."
+msgstr ""
+
+#: D:\Documents\www/templates/forum_viewtopic.tpl.php:68
+#: D:\Documents\www/templates/letters_view.tpl.php:36
+msgid "Reply"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist.tpl.php:4
+msgid "Friendlist is empty."
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist.tpl.php:19
+#: D:\Documents\www/templates/memberlist.tpl.php:49
+msgid "Your friend request is pending."
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist.tpl.php:20
+#: D:\Documents\www/templates/friendlist_requests_out.tpl.php:19
+#: D:\Documents\www/templates/memberlist.tpl.php:50
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:66
+msgid "Cancel request"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist.tpl.php:22
+#: D:\Documents\www/templates/memberlist.tpl.php:52
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:32
+msgid "Accept request"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist.tpl.php:23
+#: D:\Documents\www/templates/memberlist.tpl.php:53
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:37
+msgid "Decline request"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_accept.tpl.php:3
+#, php-format
+msgid "Are you sure you want to accept friend request from %s from world %d?"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_add.tpl.php:3
+#, php-format
+msgid "Are you sure you want to send friend request to %s from world %d?"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_add.tpl.php:7
+#: D:\Documents\www/tibia-me.net/user/banishments.php:93
+msgid "optional"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_add.tpl.php:10
+msgid "Send request"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_cancel.tpl.php:3
+#, php-format
+msgid ""
+"Are you sure you want to cancel your friend request to %s from world %d?"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_cancel.tpl.php:8
+msgid "Yes"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_cancel.tpl.php:14
+msgid "No"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_decline.tpl.php:3
+#, php-format
+msgid "Are you sure you want to decline friend request from %s from world %d?"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_edit.tpl.php:4
+#: D:\Documents\www/templates/friendlist_requests_out.tpl.php:14
+#: D:\Documents\www/templates/letters_folder.tpl.php:37
+#: D:\Documents\www/templates/letters_folder.tpl.php:41
+#: D:\Documents\www/templates/letters_view.tpl.php:25
+msgid "To"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_mutual.tpl.php:4
+msgid "No mutual friends."
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_online.tpl.php:4
+msgid "No friends online."
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_remove.tpl.php:3
+#, php-format
+msgid "Are you sure you want to remove %s from world %d from your friendlist?"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_remove.tpl.php:8
+msgid "Remove"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_requests_in.tpl.php:5
+#: D:\Documents\www/templates/friendlist_requests_out.tpl.php:5
+msgid "No pending friend requests."
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_requests_in.tpl.php:14
+#: D:\Documents\www/templates/letters_folder.tpl.php:33
+#: D:\Documents\www/templates/letters_folder.tpl.php:40
+#: D:\Documents\www/templates/letters_view.tpl.php:24
+msgid "From"
+msgstr ""
+
+#: D:\Documents\www/templates/friendlist_requests_out.tpl.php:18
+msgid "Edit message"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:15
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:15
+#: D:\Documents\www/templates/highscores_top100.tpl.php:15
+msgid "warriors"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:16
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:16
+#: D:\Documents\www/templates/highscores_top100.tpl.php:16
+msgid "wizards"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:22
+msgid "Character"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_achievements.tpl.php:27
+#: D:\Documents\www/templates/highscores_guild.tpl.php:18
+#: D:\Documents\www/templates/highscores_guilds.tpl.php:17
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:38
+#: D:\Documents\www/templates/highscores_top100.tpl.php:25
+#: D:\Documents\www/tibia-me.net/scores/worlds.php:40
+msgid "No data."
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:2
+#, php-format
+msgid "Guild: %s"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:3
+#, php-format
+msgid "World: %d"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:6
+#, php-format
+msgid "Rank: %d"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:7
+#, php-format
+msgid "EP: %d"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:10
+msgid "Some of guild members"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:20
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:36
+msgid "Date"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_guild.tpl.php:20
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:15
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:36
+#: D:\Documents\www/templates/profile.tpl.php:103
+msgid "Rank"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:19
+msgid "Period"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:20
+msgid "overall"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:21
+#: D:\Documents\www/tibia-me.net/index.php:38
+msgid "today"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:22
+msgid "yesterday"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:23
+msgid "2 days ago"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:25
+msgid "Filter"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:26
+msgid "gain"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:27
+msgid "loss"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:33
+#: D:\Documents\www/templates/index.tpl.php:50
+#: D:\Documents\www/tibia-me.net/scores/guild.php:20
+#: D:\Documents\www/tibia-me.net/scores/guilds.php:5
+#: D:\Documents\www/tibia-me.net/scores/guilds.php:8
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:21
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:27
+msgid "Guilds"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_hunters.tpl.php:33
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:22
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:26
+msgid "Characters"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_pvp.tpl.php:15
+msgid "Quota"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_searchbox.tpl.php:7
+msgid "any"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_search_results.tpl.php:8
+#, php-format
+msgid "Your search returned %d results."
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:13
+msgid "Next level"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:20
+#: D:\Documents\www/templates/profile.tpl.php:47
+msgid "Guild"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:29
+#: D:\Documents\www/tibia-me.net/scores/worlds.php:88
+msgid "Max gain"
+msgstr ""
+
+#: D:\Documents\www/templates/highscores_viewscores.tpl.php:31
+#: D:\Documents\www/tibia-me.net/scores/worlds.php:90
+msgid "Min gain"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:3
+msgid "Next update"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:14
+msgid "Latest news"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:20
+msgid "all news"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:33
+#: D:\Documents\www/templates/themes_index.tpl.php:45
+#: D:\Documents\www/tibia-me.net/download/index.php:3
+#: D:\Documents\www/tibia-me.net/download/index.php:6
+msgid "Download"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:37
+#: D:\Documents\www/templates/profile.tpl.php:437
+#: D:\Documents\www/templates/profile.tpl.php:439
+#: D:\Documents\www/tibia-me.net/themes/comments.php:4
+#: D:\Documents\www/tibia-me.net/themes/edit.php:10
+#: D:\Documents\www/tibia-me.net/themes/edit.php:13
+#: D:\Documents\www/tibia-me.net/themes/index.php:22
+#: D:\Documents\www/tibia-me.net/themes/index.php:27
+#: D:\Documents\www/tibia-me.net/themes/index.php:32
+#: D:\Documents\www/tibia-me.net/themes/index.php:37
+#: D:\Documents\www/tibia-me.net/themes/upload.php:45
+msgid "Themes"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:46
+#: D:\Documents\www/tibia-me.net/scores/top100.php:4
+#: D:\Documents\www/tibia-me.net/scores/top100.php:7
+msgid "TOP 100"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:47
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:14
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:17
+msgid "Hunters"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:49
+#: D:\Documents\www/templates/index.tpl.php:65
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:11
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:17
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:22
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:26
+#: D:\Documents\www/tibia-me.net/scores/achievements.php:5
+#: D:\Documents\www/tibia-me.net/scores/achievements.php:8
+msgid "Achievements"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:51
+msgid "Worlds"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:53
+msgid "Payment"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:55
+#: D:\Documents\www/tibia-me.net/platinum.php:7
+#: D:\Documents\www/tibia-me.net/premium.php:4
+#: D:\Documents\www/tibia-me.net/premium.php:8
+msgid "Premium"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:56
+#: D:\Documents\www/tibia-me.net/platinum.php:4
+#: D:\Documents\www/tibia-me.net/platinum.php:8
+#: D:\Documents\www/tibia-me.net/premium.php:7
+msgid "Platinum"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:59
+msgid "Encyclopedia"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:62
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:20
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:12
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:18
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:23
+msgid "Items"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:63
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:22
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:11
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:17
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:22
+msgid "Skills"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:64
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:24
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:11
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:17
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:22
+msgid "Spells"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:68
+msgid "Community"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:71
+#: D:\Documents\www/tibia-me.net/user/memberlist.php:12
+msgid "Memberlist"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:72
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:77
+msgid "Friendlist"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:73
+#: D:\Documents\www/templates/page_header.tpl.php:87
+#: D:\Documents\www/templates/page_header.tpl.php:89
+#: D:\Documents\www/templates/page_header.tpl.php:91
+#: D:\Documents\www/tibia-me.net/user/letters.php:76
+#: D:\Documents\www/tibia-me.net/user/letters.php:91
+#: D:\Documents\www/tibia-me.net/user/letters.php:124
+#: D:\Documents\www/tibia-me.net/user/letters.php:137
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:22
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:24
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:26
+msgid "Letters"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:74
+#: D:\Documents\www/templates/page_header.tpl.php:84
+#: D:\Documents\www/tibia-me.net/user/permissions.php:18
+#: D:\Documents\www/tibia-me.net/user/profile.php:27
+#: D:\Documents\www/tibia-me.net/user/profile.php:50
+#: D:\Documents\www/tibia-me.net/user/profile.php:55
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:16
+msgid "Profile"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:75
+#: D:\Documents\www/templates/page_header.tpl.php:95
+#: D:\Documents\www/tibia-me.net/user/settings.php:54
+#: D:\Documents\www/tibia-me.net/user/settings.php:57
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:30
+msgid "Settings"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:76
+#: D:\Documents\www/templates/page_header.tpl.php:96
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:31
+msgid "Log out"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:78
+#: D:\Documents\www/templates/login.tpl.php:17
+#: D:\Documents\www/templates/page_header.tpl.php:120
+#: D:\Documents\www/tibia-me.net/user/login.php:15
+#: D:\Documents\www/tibia-me.net/user/login.php:18
+#: D:\Documents\www/tibia-me.net/user/register.php:31
+msgid "Log in"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:79
+#: D:\Documents\www/templates/page_header.tpl.php:121
+#: D:\Documents\www/templates/register.tpl.php:25
+#: D:\Documents\www/tibia-me.net/user/login.php:22
+#: D:\Documents\www/tibia-me.net/user/register.php:27
+#: D:\Documents\www/tibia-me.net/user/register.php:30
+msgid "Register"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:80
+#: D:\Documents\www/templates/page_header.tpl.php:122
+#: D:\Documents\www/tibia-me.net/user/login.php:23
+msgid "Recover password"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:84
+msgid "Banlist"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:87
+#: D:\Documents\www/templates/staff.tpl.php:2
+#: D:\Documents\www/tibia-me.net/staff.php:5
+#: D:\Documents\www/tibia-me.net/staff.php:8
+msgid "Moderators"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:89
+msgid "Related sites"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:94
+msgid "Contact us"
+msgstr ""
+
+#: D:\Documents\www/templates/index.tpl.php:100
+msgid ""
+"Tibia and TibiaME are trademarks of <a href=\"http://www.cipsoft.com"
+"\">CipSoft GmbH</a>, Germany."
+msgstr ""
+
+#: D:\Documents\www/templates/letters_compose.tpl.php:11
+#: D:\Documents\www/templates/letters_edit.tpl.php:11
+msgid "Recipient"
+msgstr ""
+
+#: D:\Documents\www/templates/letters_compose.tpl.php:35
+#: D:\Documents\www/templates/letters_edit.tpl.php:24
+#: D:\Documents\www/templates/letters_view.tpl.php:26
+msgid "Subject"
+msgstr ""
+
+#: D:\Documents\www/templates/letters_compose.tpl.php:37
+msgid "Text"
+msgstr ""
+
+#: D:\Documents\www/templates/letters_delete.tpl.php:3
+msgid "Are you sure you want to delete this letter?"
+msgstr ""
+
+#: D:\Documents\www/templates/letters_edit.tpl.php:31
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:67
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:81
+msgid "Submit"
+msgstr ""
+
+#: D:\Documents\www/templates/letters_folder.tpl.php:22
+msgid "This folder is empty."
+msgstr ""
+
+#: D:\Documents\www/templates/letters_save.tpl.php:2
+msgid "Are you sure you want to save this letter?"
+msgstr ""
+
+#: D:\Documents\www/templates/letters_view.tpl.php:31
+msgid "This letter is saved."
+msgstr ""
+
+#: D:\Documents\www/templates/likes.tpl.php:6
+#: D:\Documents\www/templates/likes.tpl.php:9
+#: D:\Documents\www/templates/likes.tpl.php:12
+msgid "Like"
+msgstr ""
+
+#: D:\Documents\www/templates/likes.tpl.php:6
+#: D:\Documents\www/templates/likes.tpl.php:9
+#: D:\Documents\www/templates/likes.tpl.php:12
+msgid "Dislike"
+msgstr ""
+
+#: D:\Documents\www/templates/likes.tpl.php:6
+#: D:\Documents\www/templates/likes.tpl.php:12
+msgid "Unvote"
+msgstr ""
+
+#: D:\Documents\www/templates/login.tpl.php:7
+#: D:\Documents\www/templates/register.tpl.php:7
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:60
+msgid "select world"
+msgstr ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:2
+#, php-format
+msgid "Hello, %s."
+msgstr ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:4
+#, php-format
+msgid "Last time you was here on %s."
+msgstr ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:12
+msgid "What's new"
+msgstr ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:17
+msgid "No news since your previous visit."
+msgstr ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:30
+#, php-format
+msgid "%d artwork"
+msgid_plural "%d artworks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:33
+#, php-format
+msgid "%d letter"
+msgid_plural "%d letters"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:36
+#, php-format
+msgid "%d news"
+msgstr ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:42
+#, php-format
+msgid "%d theme"
+msgid_plural "%d themes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/login_welcome.tpl.php:45
+#, php-format
+msgid "%d topic"
+msgid_plural "%d topics"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:5
+msgid "No notifications."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:9
+#: D:\Documents\www/tibia-me.net/user/notifications.php:4
+#: D:\Documents\www/tibia-me.net/user/notifications.php:7
+msgid "Notifications"
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:19
+#, php-format
+msgid "%s posted at <a href=\"%s\">forum</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:21
+#, php-format
+msgid "%s and %s posted at <a href=\"%s\">forum</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:23
+#, php-format
+msgid "%s and %d other user posted at <a href=\"%s\">forum</a>."
+msgid_plural "%s and %d other users posted at <a href=\"%s\">forum</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:28
+#, php-format
+msgid "%s commented on <a href=\"%s\">photo</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:30
+#, php-format
+msgid "%s and %s commented on <a href=\"%s\">photo</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:32
+#, php-format
+msgid "%s and %d other user commented on <a href=\"%s\">photo</a>."
+msgid_plural "%s and %d other users commented on <a href=\"%s\">photo</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:37
+#, php-format
+msgid "%s commented on <a href=\"%s\">screenshot</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:39
+#, php-format
+msgid "%s and %s commented on <a href=\"%s\">screenshot</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:41
+#, php-format
+msgid "%s and %d other user commented on <a href=\"%s\">screenshot</a>."
+msgid_plural ""
+"%s and %d other users commented on <a href=\"%s\">screenshot</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:46
+#, php-format
+msgid "%s commented on <a href=\"%s\">theme</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:48
+#, php-format
+msgid "%s and %s commented on <a href=\"%s\">theme</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:50
+#, php-format
+msgid "%s and %d other user commented on <a href=\"%s\">theme</a>."
+msgid_plural "%s and %d other users commented on <a href=\"%s\">theme</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:55
+#, php-format
+msgid "%s likes your <a href=\"%s\">screenshot</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:57
+#, php-format
+msgid "%s and %s like your <a href=\"%s\">screenshot</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:59
+#, php-format
+msgid "%s and %d other user like your <a href=\"%s\">screenshot</a>."
+msgid_plural "%s and %d other users like your <a href=\"%s\">screenshot</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:64
+#, php-format
+msgid "%s likes your <a href=\"%s\">photo</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:66
+#, php-format
+msgid "%s and %s like your <a href=\"%s\">photo</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:68
+#, php-format
+msgid "%s and %d other user like your <a href=\"%s\">photo</a>."
+msgid_plural "%s and %d other users like your <a href=\"%s\">photo</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:73
+#, php-format
+msgid "%s likes your <a href=\"%s\">theme</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:75
+#, php-format
+msgid "%s and %s like your <a href=\"%s\">theme</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:77
+#, php-format
+msgid "%s and %d other user like your <a href=\"%s\">theme</a>."
+msgid_plural "%s and %d other users like your <a href=\"%s\">theme</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:82
+#, php-format
+msgid "%s accepted your friend request."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:84
+#, php-format
+msgid "%s and %s accepted your friend requests."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:86
+#, php-format
+msgid "%s and %d other user accepted your friend requests."
+msgid_plural "%s and %d other users accepted your friend requests."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:94
+#, php-format
+msgid "%s commented on <a href=\"%s\">artwork</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:96
+#, php-format
+msgid "%s and %s commented on <a href=\"%s\">artwork</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:98
+#, php-format
+msgid "%s and %d other user commented on <a href=\"%s\">artwork</a>."
+msgid_plural "%s and %d other users commented on <a href=\"%s\">artwork</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:103
+#, php-format
+msgid "%s likes your <a href=\"%s\">artwork</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:105
+#, php-format
+msgid "%s and %s like your <a href=\"%s\">artwork</a>."
+msgstr ""
+
+#: D:\Documents\www/templates/notifications.tpl.php:107
+#, php-format
+msgid "%s and %d other user like your <a href=\"%s\">artwork</a>."
+msgid_plural "%s and %d other users like your <a href=\"%s\">artwork</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/pages_bottom.tpl.php:6
+msgid "prev"
+msgstr ""
+
+#: D:\Documents\www/templates/pages_bottom.tpl.php:8
+msgid "next"
+msgstr ""
+
+#: D:\Documents\www/templates/pages_bottom.tpl.php:93
+msgid "Goto page"
+msgstr ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:57
+#: D:\Documents\www/templates/page_header.tpl.php:64
+msgid "Ads"
+msgstr ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:74
+msgid ""
+"Your browser does not support Javascript. Please disable it at settings."
+msgstr ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:83
+#: D:\Documents\www/tibia-me.net/about.php:5
+#: D:\Documents\www/tibia-me.net/advertisement.php:22
+#: D:\Documents\www/tibia-me.net/contacts.php:5
+#: D:\Documents\www/tibia-me.net/emoticons.php:5
+#: D:\Documents\www/tibia-me.net/openbeta.php:8
+#: D:\Documents\www/tibia-me.net/platinum.php:6
+#: D:\Documents\www/tibia-me.net/premium.php:6
+#: D:\Documents\www/tibia-me.net/staff.php:7
+#: D:\Documents\www/tibia-me.net/translate.php:5
+#: D:\Documents\www/tibia-me.net/album/albums.php:31
+#: D:\Documents\www/tibia-me.net/album/index.php:22
+#: D:\Documents\www/tibia-me.net/album/photos.php:189
+#: D:\Documents\www/tibia-me.net/album/search.php:9
+#: D:\Documents\www/tibia-me.net/artworks/index.php:13
+#: D:\Documents\www/tibia-me.net/artworks/upload.php:14
+#: D:\Documents\www/tibia-me.net/download/index.php:5
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:15
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:77
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:42
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:16
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:128
+#: D:\Documents\www/tibia-me.net/encyclopedia/monsters.php:22
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:15
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:15
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:131
+#: D:\Documents\www/tibia-me.net/forum/index.php:13
+#: D:\Documents\www/tibia-me.net/forum/search.php:14
+#: D:\Documents\www/tibia-me.net/forum/viewforum.php:21
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:24
+#: D:\Documents\www/tibia-me.net/scores/achievements.php:7
+#: D:\Documents\www/tibia-me.net/scores/guild.php:18
+#: D:\Documents\www/tibia-me.net/scores/guilds.php:7
+#: D:\Documents\www/tibia-me.net/scores/hunters.php:16
+#: D:\Documents\www/tibia-me.net/scores/pvp.php:7
+#: D:\Documents\www/tibia-me.net/scores/search.php:7
+#: D:\Documents\www/tibia-me.net/scores/top100.php:6
+#: D:\Documents\www/tibia-me.net/scores/viewscores.php:17
+#: D:\Documents\www/tibia-me.net/scores/worlds.php:132
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:71
+#: D:\Documents\www/tibia-me.net/themes/edit.php:12
+#: D:\Documents\www/tibia-me.net/themes/index.php:23
+#: D:\Documents\www/tibia-me.net/themes/upload.php:44
+#: D:\Documents\www/tibia-me.net/user/agreement.php:23
+#: D:\Documents\www/tibia-me.net/user/banishments.php:238
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:80
+#: D:\Documents\www/tibia-me.net/user/letters.php:72
+#: D:\Documents\www/tibia-me.net/user/login.php:17
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:52
+#: D:\Documents\www/tibia-me.net/user/memberlist.php:19
+#: D:\Documents\www/tibia-me.net/user/moderators.php:73
+#: D:\Documents\www/tibia-me.net/user/notifications.php:6
+#: D:\Documents\www/tibia-me.net/user/permissions.php:17
+#: D:\Documents\www/tibia-me.net/user/profile.php:49
+#: D:\Documents\www/tibia-me.net/user/profile.php:54
+#: D:\Documents\www/tibia-me.net/user/register.php:29
+#: D:\Documents\www/tibia-me.net/user/settings.php:56
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:15
+#: D:\Documents\www/UI_shared/comments.php:19
+msgid "Home"
+msgstr ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:94
+#: D:\Documents\www/templates/profile.tpl.php:425
+#: D:\Documents\www/templates/profile.tpl.php:427
+msgid "Photos"
+msgstr ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:98
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:35
+#, php-format
+msgid "%d new letter"
+msgid_plural "%d new letters"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:101
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:42
+#, php-format
+msgid "%d friend request"
+msgid_plural "%d friend requests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:116
+msgid "Menu"
+msgstr ""
+
+#: D:\Documents\www/templates/page_header.tpl.php:119
+msgid "You are not authorized."
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:2
+msgid "What is Platinum?"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:5
+msgid "Included"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:7
+#: D:\Documents\www/templates/premium.tpl.php:6
+msgid "+50% Experience"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:8
+#: D:\Documents\www/templates/premium.tpl.php:10
+msgid "Possibility to get listed in the Highscores"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:9
+#: D:\Documents\www/templates/premium.tpl.php:14
+msgid "Always get online, even when the game server is full"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:11
+msgid "Buyable"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:13
+msgid "Life insurance with 50%, 80% or 100% of EP loss protection upon death"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:14
+msgid "Full access to individual islands"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:15
+#: D:\Documents\www/templates/premium.tpl.php:9
+msgid "Portal usage"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:16
+msgid "Up to 40 additional friendlist slots"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:17
+msgid "Up to 40 additional mailbox slots"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:18
+msgid "Up to 20 trade offers"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:19
+msgid "Up to 6 additional depot pages"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:20
+msgid "Additional Rerolls"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:21
+#: D:\Documents\www/templates/premium.tpl.php:11
+msgid "Guild founding"
+msgstr ""
+
+#: D:\Documents\www/templates/platinum.tpl.php:24
+msgid "You can order Platinum at www.tibiame.com."
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:2
+msgid "What is Premium?"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:7
+msgid ""
+"Life insurance with 50% of EP loss protection upon death (can be upgraded to "
+"80% or 100%)"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:8
+msgid "Full access to all islands"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:12
+msgid "More entries in your friends and ignorelist (20 instead of 10)"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:13
+msgid "Receive up to 20 letters in your inbox (instead of 10)"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:15
+msgid "10 trade offers"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:16
+msgid ""
+"8 Platinum per day of your Premium Time (Example: 30 days * 8 Platinum = 240 "
+"Platinum)"
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:19
+#, php-format
+msgid "50% experience bonuses from Premium and Platinum do not stack."
+msgstr ""
+
+#: D:\Documents\www/templates/premium.tpl.php:21
+msgid "You can order Premium at www.tibiame.com."
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:34
+msgid "Remove avatar"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:40
+msgid "Banned"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:76
+#: D:\Documents\www/templates/profile.tpl.php:97
+#: D:\Documents\www/templates/profile.tpl.php:129
+#: D:\Documents\www/templates/profile.tpl.php:154
+#: D:\Documents\www/templates/profile.tpl.php:162
+#: D:\Documents\www/templates/profile.tpl.php:223
+#: D:\Documents\www/templates/profile.tpl.php:297
+msgid "not specified"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:126
+msgid "Gender"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:132
+#: D:\Documents\www/templates/profile.tpl.php:135
+#: D:\Documents\www/templates/profile.tpl.php:148
+msgid "Male"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:139
+#: D:\Documents\www/templates/profile.tpl.php:142
+#: D:\Documents\www/templates/profile.tpl.php:151
+msgid "Female"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:159
+msgid "Relationship status"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:165
+#: D:\Documents\www/templates/profile.tpl.php:205
+msgid "Single"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:168
+#: D:\Documents\www/templates/profile.tpl.php:171
+#: D:\Documents\www/templates/profile.tpl.php:208
+msgid "In relationship"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:175
+#: D:\Documents\www/templates/profile.tpl.php:178
+#: D:\Documents\www/templates/profile.tpl.php:211
+msgid "Engaged"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:182
+#: D:\Documents\www/templates/profile.tpl.php:185
+#: D:\Documents\www/templates/profile.tpl.php:214
+msgid "Married"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:189
+#: D:\Documents\www/templates/profile.tpl.php:192
+#: D:\Documents\www/templates/profile.tpl.php:217
+msgid "It's complicated"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:196
+#: D:\Documents\www/templates/profile.tpl.php:199
+#: D:\Documents\www/templates/profile.tpl.php:220
+msgid "Actively searching"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:228
+msgid "Birthday"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:247
+msgid "January"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:250
+msgid "February"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:253
+msgid "March"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:256
+msgid "April"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:259
+msgid "May"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:262
+msgid "June"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:265
+msgid "July"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:268
+msgid "August"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:271
+msgid "September"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:274
+msgid "October"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:277
+msgid "November"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:280
+msgid "December"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:293
+msgid "Hide age"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:300
+msgid "Age"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:308
+#: D:\Documents\www/templates/profile.tpl.php:312
+msgid "Location"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:317
+msgid "Joined"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:321
+msgid "Before 27th of August, 2009"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:325
+msgid "Last visit"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:329
+msgid "no data"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:333
+msgid "Total online time"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:334
+#, php-format
+msgid "%dh %dmin %dsec"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:344
+#: D:\Documents\www/templates/register.tpl.php:20
+#: D:\Documents\www/templates/settings.tpl.php:31
+msgid "Hide email"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:412
+#: D:\Documents\www/templates/profile.tpl.php:417
+msgid "Signature"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:413
+msgid "will be attached to your messages"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:422
+msgid "Posts at forum"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:443
+#: D:\Documents\www/templates/profile.tpl.php:445
+msgid "Friends"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:449
+#: D:\Documents\www/templates/profile.tpl.php:451
+#: D:\Documents\www/tibia-me.net/user/banishments.php:65
+msgid "Banishments"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:461
+#: D:\Documents\www/tibia-me.net/user/permissions.php:14
+#: D:\Documents\www/tibia-me.net/user/permissions.php:23
+msgid "Permissions"
+msgstr ""
+
+#: D:\Documents\www/templates/profile.tpl.php:473
+msgid "Delete all posts"
+msgstr ""
+
+#: D:\Documents\www/templates/register.tpl.php:16
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:80
+msgid "at least 5 characters"
+msgstr ""
+
+#: D:\Documents\www/templates/register.tpl.php:19
+msgid "this field is not required and you may fill it later"
+msgstr ""
+
+#: D:\Documents\www/templates/screenshots_delete.tpl.php:3
+msgid "Are you sure you want to delete this screenshot?"
+msgstr ""
+
+#: D:\Documents\www/templates/screenshots_index.tpl.php:3
+msgid "Please log in to upload screenshots."
+msgstr ""
+
+#: D:\Documents\www/templates/screenshots_index.tpl.php:24
+msgid "Download software"
+msgstr ""
+
+#: D:\Documents\www/templates/screenshots_index.tpl.php:32
+msgid "You don't have any screenshots yet."
+msgstr ""
+
+#: D:\Documents\www/templates/screenshots_index.tpl.php:34
+msgid "This user doesn't have any screenshots yet."
+msgstr ""
+
+#: D:\Documents\www/templates/screenshots_index.tpl.php:36
+msgid "No screenshots..."
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:7
+msgid "Timezone"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:32
+#: D:\Documents\www/templates/settings.tpl.php:35
+#: D:\Documents\www/templates/settings.tpl.php:51
+#: D:\Documents\www/templates/settings.tpl.php:54
+#: D:\Documents\www/templates/user_permissions.tpl.php:42
+#: D:\Documents\www/templates/user_permissions.tpl.php:44
+msgid "yes"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:33
+#: D:\Documents\www/templates/settings.tpl.php:36
+#: D:\Documents\www/templates/settings.tpl.php:52
+#: D:\Documents\www/templates/settings.tpl.php:55
+#: D:\Documents\www/templates/user_permissions.tpl.php:40
+msgid "no"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:34
+msgid "Notify on letters"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:37
+msgid "Language"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:50
+msgid "Allow comments"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:53
+msgid "Notify on comments"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:61
+msgid "Posts per page"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:63
+msgid "Topics per page"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:67
+msgid "Performance"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:70
+msgid "Style"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:84
+msgid "Icons"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:91
+msgid ""
+"enable only if your browser supports it, otherwise some of website features "
+"may be unavailable"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:93
+msgid "disabled"
+msgstr ""
+
+#: D:\Documents\www/templates/settings.tpl.php:94
+msgid "enabled"
+msgstr ""
+
+#: D:\Documents\www/templates/staff.tpl.php:15
+msgid "Translators"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:4
+msgid "You don't have permission to edit this theme."
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:24
+#: D:\Documents\www/templates/themes_index.tpl.php:35
+#, php-format
+msgid "Downloads: %d"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:25
+#: D:\Documents\www/templates/themes_index.tpl.php:19
+msgid "Status"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:28
+#: D:\Documents\www/templates/themes_edit.tpl.php:36
+#: D:\Documents\www/templates/themes_index.tpl.php:22
+msgid "On moderation"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:29
+#: D:\Documents\www/templates/themes_edit.tpl.php:39
+#: D:\Documents\www/templates/themes_index.tpl.php:25
+msgid "Checked"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:30
+#: D:\Documents\www/templates/themes_edit.tpl.php:42
+#: D:\Documents\www/templates/themes_index.tpl.php:28
+msgid "Tested"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:47
+#: D:\Documents\www/ranks.dict:5
+msgid "Moderator"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_edit.tpl.php:49
+msgid "Replace screenshot"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_index.tpl.php:4
+msgid "No themes to display."
+msgstr ""
+
+#: D:\Documents\www/templates/themes_index.tpl.php:18
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_index.tpl.php:33
+#, php-format
+msgid "Moderator: %s"
+msgstr ""
+
+#: D:\Documents\www/templates/themes_upload.tpl.php:2
+msgid ""
+"You are only allowed to replace .mbm files in your theme. Themes with .r01, ."
+"app or other files will be removed."
+msgstr ""
+
+#: D:\Documents\www/templates/themes_upload.tpl.php:9
+msgid "Screenshot"
+msgstr ""
+
+#: D:\Documents\www/templates/translate.tpl.php:4
+msgid "  "
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:8
+msgid "Moderate album"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:11
+msgid "Ban users"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:14
+msgid "Moderate forum"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:17
+msgid "Access to hidden forum"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:20
+msgid "Edit profiles"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:23
+msgid "Moderate screenshots"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:26
+msgid "Edit signatures"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:29
+msgid "Edit tables"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:32
+msgid "Moderate themes"
+msgstr ""
+
+#: D:\Documents\www/templates/user_permissions.tpl.php:35
+msgid "Moderate artworks"
+msgstr ""
+
+#: D:\Documents\www/templates/viewonline.tpl.php:2
+msgid "Who's online"
+msgstr ""
+
+#: D:\Documents\www/templates/viewonline.tpl.php:7
+msgid "No registered users online."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/advertisement.php:3
+#: D:\Documents\www/tibia-me.net/advertisement.php:7
+msgid "For advertisers"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/advertisement.php:11
+msgid ""
+"Have a mobile website and would like to promote it? We could help you out "
+"with that for a little fee. Contact us to learn more."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/error_handler.php:7
+#, php-format
+msgid "You don't have permission to access <i>%s</i> on this server."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/error_handler.php:11
+#, php-format
+msgid "File <i>%s</i> not found on this server."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/error_handler.php:16
+#: D:\Documents\www/tibia-me.net/forum/posting.php:218
+msgid "Error"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/error_handler.php:19
+msgid "Internal Server Error"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/error_handler.php:20
+msgid ""
+"This error may be caused by inccorrect server configuration or application "
+"error."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/index.php:40
+#, php-format
+msgid "%d day left"
+msgid_plural "%d days left"
+msgstr[0] ""
+msgstr[1] ""
+
+#: D:\Documents\www/tibia-me.net/translate.php:3
+#: D:\Documents\www/tibia-me.net/translate.php:6
+msgid "Translate"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/albums.php:37
+#: D:\Documents\www/tibia-me.net/album/index.php:24
+#: D:\Documents\www/tibia-me.net/album/photos.php:192
+#: D:\Documents\www/tibia-me.net/album/search.php:12
+#: D:\Documents\www/tibia-me.net/user/toolbar/toolbar.php:29
+msgid "My photos"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/albums.php:45
+msgid "Create album"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/albums.php:72
+#: D:\Documents\www/tibia-me.net/album/photos.php:265
+msgid "Delete album"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:24
+msgid "Photo has been deleted."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:43
+msgid "You don't have permission to rotate this photo."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:54
+msgid "Photo has been rotated."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:75
+msgid "You don't have permission to move this photo."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:79
+msgid "Please specify new folder."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:82
+msgid "Invalid folder."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:87
+msgid "Photo has been moved."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:105
+msgid "You don't have permission to set this photo as avatar."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:121
+msgid "You don't have permission to upload photos to this album."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:150
+msgid "File uploaded"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:169
+msgid "You don't have permission to view this album."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:203
+msgid "Delete photo"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:228
+msgid "Set avatar"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/album/photos.php:264
+msgid "Edit album"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/artworks/index.php:6
+#: D:\Documents\www/tibia-me.net/artworks/index.php:19
+msgid "You don't have permission to delete this artwork."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/artworks/index.php:9
+msgid "Artwork has been deleted."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/cp/album.php:19
+msgid "Control panel"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/cp/ranks.php:22
+#: D:\Documents\www/tibia-me.net/cp/ranks.php:54
+msgid "Control Panel"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/cp/ranks.php:28
+msgid "Ranks"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/encyclopedia/achievements.php:24
+#: D:\Documents\www/tibia-me.net/encyclopedia/edit.php:44
+#: D:\Documents\www/tibia-me.net/encyclopedia/items.php:25
+#: D:\Documents\www/tibia-me.net/encyclopedia/monsters.php:32
+#: D:\Documents\www/tibia-me.net/encyclopedia/skills.php:24
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:24
+msgid "Add"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:55
+#: D:\Documents\www/tibia-me.net/encyclopedia/spells.php:108
+msgid "both"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/index.php:15
+msgid "Mark all as read"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:24
+msgid "This thread is closed, you cannot delete posts."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:35
+msgid "Sorry, this message cannot be deleted."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:38
+msgid "The message has been deleted."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:52
+msgid "Post not found."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:60
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:6
+msgid "Thread not found."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:80
+#: D:\Documents\www/tibia-me.net/forum/posting.php:238
+msgid "You don't have permission to edit this thread."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:90
+msgid "Please specify topic title and message."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:93
+msgid "This thread is closed, you cannot edit it."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:141
+#: D:\Documents\www/tibia-me.net/forum/posting.php:313
+msgid "You don't have permission to delete this thread."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:144
+msgid "Thread removed."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:175
+msgid "Topic has been moved."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:184
+#: D:\Documents\www/tibia-me.net/forum/posting.php:199
+msgid "Create topic"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:192
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:36
+msgid "Edit topic"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:195
+msgid "Edit post"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:202
+#: D:\Documents\www/tibia-me.net/forum/posting.php:212
+msgid "Quote message"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:205
+msgid "Delete post"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:215
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:34
+msgid "Move topic"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:263
+msgid "You don't have permission to post new threads here."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/posting.php:318
+msgid "You don't have permission to move this thread."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/viewforum.php:11
+#: D:\Documents\www/tibia-me.net/forum/viewforum.php:15
+msgid "Forum not found."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/viewforum.php:19
+#, php-format
+msgid "Forum: %s"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/viewforum.php:27
+msgid "Post new topic"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:21
+#, php-format
+msgid "Viewtopic: %s"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:44
+msgid "Watch for replies"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/forum/viewtopic.php:46
+msgid "Stop watching"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/myadmin/pmd_relation_new.php:66
+msgid "General relation features"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/myadmin/pmd_relation_new.php:66
+msgid "Disabled"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/myadmin/libraries/common.inc.php:625
+msgid ""
+"This usually means there is a syntax error in it, please check any errors "
+"shown below."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/scores/guild.php:14
+msgid "Guild not found."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:25
+msgid "Screenshot not found."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:28
+msgid "You don't have permission to delete this screenshot."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:32
+msgid "The screenshot has been deleted."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:62
+msgid "Screenshot has been uploaded."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:79
+#: D:\Documents\www/tibia-me.net/screenshots/index.php:94
+msgid "My screenshots"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/themes/index.php:28
+#: D:\Documents\www/tibia-me.net/themes/index.php:33
+#: D:\Documents\www/tibia-me.net/themes/index.php:39
+msgid "My themes"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/themes/upload.php:40
+msgid "Your theme has been successfully uploaded."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/themes/upload.php:42
+msgid "Upload theme"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/agreement.php:7
+msgid "Agreement accepted."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/agreement.php:21
+#: D:\Documents\www/tibia-me.net/user/agreement.php:24
+msgid "User Agreement"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:17
+#: D:\Documents\www/tibia-me.net/user/banishments.php:19
+#: D:\Documents\www/tibia-me.net/user/banishments.php:29
+#: D:\Documents\www/tibia-me.net/user/banishments.php:31
+msgid "Please specify correct expiration time."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:42
+#: D:\Documents\www/tibia-me.net/user/banishments.php:52
+#: D:\Documents\www/tibia-me.net/user/banishments.php:57
+#, php-format
+msgid "%s has been banished."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:76
+msgid "This user has an active banishment."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:87
+#: D:\Documents\www/tibia-me.net/user/banishments.php:140
+#: D:\Documents\www/tibia-me.net/user/banishments.php:189
+msgid "Reason"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:108
+msgid "Temporal"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:110
+msgid "minutes"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:111
+msgid "hours"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:112
+msgid "days"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:114
+msgid "Permanent"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:117
+msgid "Banish"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:126
+msgid "Banishment not found."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:137
+#: D:\Documents\www/tibia-me.net/user/banishments.php:220
+msgid "Expired"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:138
+#: D:\Documents\www/tibia-me.net/user/banishments.php:222
+msgid "Active"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:139
+#, php-format
+msgid "<b>Banned by</b>:<br>%s"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:147
+#: D:\Documents\www/tibia-me.net/user/banishments.php:190
+msgid "Expires"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:149
+#, php-format
+msgid "<b>Unbanned by</b>:<br>%s"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:152
+msgid "Are you sure you want to deactivate this banishment?"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:155
+#: D:\Documents\www/tibia-me.net/user/banishments.php:164
+msgid "Unban"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:175
+msgid "There are no banished users."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:191
+msgid "more..."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:201
+msgid "You have no banishments."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:203
+#, php-format
+msgid "%s has no banishments."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/banishments.php:237
+msgid "Back"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:44
+msgid "Mutual friends"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:50
+msgid "Friends online"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:54
+msgid "Requests"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:62
+msgid "Your requests"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:71
+msgid "Edit request"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:85
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:88
+#, php-format
+msgid "Friends: %d"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:92
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:95
+#, php-format
+msgid "Mutual: %d"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:100
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:106
+#: D:\Documents\www/tibia-me.net/user/memberlist.php:21
+#, php-format
+msgid "Online: %d"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:103
+msgid "Online: 0"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:111
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:113
+#, php-format
+msgid "Requests: %d"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:117
+msgid "Requests: 0"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:122
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:126
+#, php-format
+msgid "Your requests: %d"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/friendlist.php:132
+msgid "Your requests: 0"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/letters.php:49
+msgid "Delete letter"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/letters.php:55
+msgid "Saving letter"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/letters.php:59
+msgid "Edit letter"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/letters.php:62
+#: D:\Documents\www/tibia-me.net/user/letters.php:104
+msgid "Reading letter"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/letters.php:66
+#: D:\Documents\www/tibia-me.net/user/letters.php:138
+#: D:\Documents\www/tibia-me.net/user/letters.php:158
+msgid "Compose"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/login.php:15
+msgid "Welcome"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/login.php:28
+msgid "Continue"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:5
+msgid "You are already authorized."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:16
+msgid "This account cannot be recovered as it has no email set."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:28
+msgid "Confirmation code has been sent to your email."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:30
+msgid ""
+"We could not send you confirmation code, please send us a mail to "
+"support@tibia-me.net."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:38
+msgid "Invalid confirmation key."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:41
+msgid "Your new password should contain at least 5 characters."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:44
+msgid "Your password has been changed."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:46
+msgid "User not found or email is incorrect."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:50
+msgid "Password recovery"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/lostpassword.php:78
+msgid "New password"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/memberlist.php:8
+msgid "Users online"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/memberlist.php:20
+#, php-format
+msgid "Users: %d"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/profile.php:30
+#, php-format
+msgid "Are you sure you want to delete all posts and topics by this user (%s)?"
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/register.php:7
+msgid "Please read and accept our User Agreement."
+msgstr ""
+
+#: D:\Documents\www/tibia-me.net/user/register.php:22
+msgid "Incorrect confirmation code."
+msgstr ""
+
+#: D:\Documents\www/ranks.dict:2
+msgid "User"
+msgstr ""
+
+#: D:\Documents\www/ranks.dict:3
+msgid "Assistant"
+msgstr ""
+
+#: D:\Documents\www/ranks.dict:4
+msgid "Creator"
+msgstr ""

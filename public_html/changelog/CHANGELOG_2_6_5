@@ -1,0 +1,60 @@
+../classes/auth.class.php
+./user/register.php
+./user/agreement.php
+../templates/register.tpl.php
+../templates/agreement.tpl.php
+../templates/user_toolbar.tpl.php
+* added redirect to initial page after registering or logging in
+
+../classes/user.class.php
+[hotfix] User::set_locale() will try to enforce UTF-8 first
+(fixed broken encoding in some localized strings, like Russian dates at highscores)
+
+../classes/document.class.php
+* added Document::require_js()
+
+./update_2_6_5.php
+* added is_upgraded to game_content_weapons (boolean)
+* added upgraded to game_content_armours (either boolean or string with upgrade type)
+* removed (+) from name in game_content_armours and game_content_weapons
+@todo should we re-enable search for upgraded items in gamecontent section?
+* added game_content_monsters_islands
+* fixed indexes for game_content_armours and game_content_weapons
+
+../classes/gamecontent.class.php
+../gamecontent_xls/allitems_community_AU2014.xls
+../gamecontent_xls/community_allmosters_AU2014.xls
+../templates/game_content_monsters.tpl.php
+* GameContent::sync() will set is_upgraded for weapons and armours
+* GameContent::parse_name() will strip (+) from names
+* added GameContent::parse_armour_name() that returns name without (+) and upgrade info
+* GameContent::add_armour() and GameContent::add_weapon() will store upgrade info
+* link GameContent::$sync_files to new data files
+* added GameContent::parse_island()
+* updated GameContent::$sync_cell_types to work with islands and GameContent::parse_armour_name()
+* GameContent::add_monster() will add islands
+* GameContent::fetch() fetch islands for monsters
+* display islands in monsters stats
+
+../gamecontent_xls/items.xls
+../gamecontent_xls/community_allmosters_2014.xls
+* removed obsolete data files
+
+../classes/domdocumentx.class.php
+* added DOMDocumentX::backoff()
+* added DOMDocumentX::loadHTMLFile() with exponential backoff
+
+../classes/TibiameComParser.class.php
+../templates/download.tpl.php
+* [hotfix] fixed missing news during tibiame.com maintenance
+* [hotfix] display cached version of download section during tibiame.com maintenance (fixed broken links)
+* [hotfix] display error message rather than broken links if cached version of download section is unavailable
+
+../templates/game_content_armours.tpl.php
+../templates/game_content_weapons.tpl.php
+* display upgrade status
+
+../classes/db.class.php
+* DB::prepare_value() will return value without quotes only if both is_int() and ctype_digit((string)) return true
+
+Released on Dec 4, 2014.

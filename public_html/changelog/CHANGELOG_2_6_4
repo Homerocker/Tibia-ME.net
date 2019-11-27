@@ -1,0 +1,87 @@
+../config.php
+* mb_internal_encoding() set to 'UTF-8'
+
+./update_2_6_4.php
+../classes/geo.class.php
+./user/profile.php
+../templates/profile.tpl.php
+../classes/profile.class.php
+../locale/en_US -> 777
+../locale/ru_RU -> 777
+../locale/.htaccess -> 644
+./cp/index.php
+../templates/cp_index.tpl.php
+./cp/.htaccess
+* added countries list to profile
+* added geo data locales updater to CP
+* attempt to convert user specified locations into new format (around 75% locations parsed)
+
+../classes/ExchangerRuParser.class.php
+* [hotfix] updated to work with new Exchanger.ru interface
+(fixed Platinum and Premium pages crash if Russian language is selected)
+* [hotfix] UPD: use Exchanger XML Interface rather than parse its pages
+* implemented Cache
+
+../templates/index.tpl.php
+* added official website link
+
+../classes/vkapi.class.php
+* implemented failed requests retry with exponential backoff
+
+../templates/page_footer.tpl.php
+./js/jquery.blockUI.js
+* added blockUI (used in unreleased section)
+
+../classes/TibiameComParser.class.php
+* [hotfix] do not update cache if fetching data failed
+(fixed broken news and download section when tibiame.com is down)
+
+../classes/user.class.php
+../templates/user_toolbar.tpl.php
+../templates/index.tpl.php
+../templates/album_index.tpl.php
+./user/profile.php
+* changed users name+world display format
+
+../templates/letters_view.tpl.php
+* display date and time when viewing message
+
+../templates/user_toolbar.php
+./user/toolbar/
+* replaced images with text links
+* removed obsolete toolbar and its icons
+
+../locale/ru_RU/LC_MESSAGES/default.mo
+* updated Russian translations
+
+../config.php
+../user.class.php
+* added DEFAULT_LOCALE to replace hardcoded 'en_US'
+
+../classes/TibiameComParser.class.php
+../templates/download.tpl.php
+* [hotfix] added Windows 8 client
+
+./cp/selftest.php
+../templates/cp_index.tpl.php
+* added basic configuration diagnosis
+
+../core.php
+./index.php
+../templates/index.tpl.php
+* icons_shuffle() rewritten and implemented
+
+../templates/page_header.tpl.php
+../templates/page_footer.tpl.php
+* moved most of JS code to footer
+
+./changelog/COPYRIGHT
+* updated list of 3rd-party software
+
+../templates/profile.tpl.php
+* removed excess line break after rank select box (that ugly empty line only seen by admins)
+
+./fangames.php
+* updated Flappy Wizard and Flying Wizard games
+
+Released on October 25, 2014.

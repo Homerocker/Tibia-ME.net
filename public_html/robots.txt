@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /changelog
+Disallow: /cp
+Disallow: /system
+Disallow: /uploads/photos
+Disallow: /cache/photos
+Disallow: /images/icons
+Disallow: /user/fblink.php

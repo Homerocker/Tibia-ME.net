@@ -1,0 +1,8 @@
+/classes/themes.class.php
+* fixed undefined theme id in Themes::fetch_edit(),
+allow theme owner to download and edit theme before it had been checked by moderator
+
+/classes/images.class.php
+* Images::thumbnail() will check variable returned by BMP2GD::createFromBMP() with is_resource() before using it with imagejpeg()
+
+Released on Jan 19, 2013.

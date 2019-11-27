@@ -1,0 +1,210 @@
+../classes/gettextextramessages.class.php
+* GettextExtraMessages::__destruct() will remove duplicates before writing to file
+
+./robots.txt
+* disallow /images/icons
+
+./index.php
+./.htaccess
+* home page will now handle http errors to correctly send http error responses
+(dedicated to Google)
+
+./error_handler.php
+* removed
+
+../templates/profile.tpl.php
+* fixed spacing after name when it's empty
+* removed unsupported language attribute from script tag
+
+../classes/document.class.php
+* Document::msg() can accept arrays
+
+../templates/index.tpl.php
+* fixed missing a end tags
+* minor changes to layout
+* newItemsCounter replaced with green
+
+../templates/page_header.tpl.php
+* applied overflow:hidden to Google ads (fixed page scaling in Opera Mini and probably some other browsers)
+* changed Google ads size and style
+
+../style/default/style.css
+../style/brown/style.css
+* removed static font sizes, let browser decide
+* increased links padding and margin
+* added .sp
+* .small font-size set in em
+
+../templates/page_header.tpl.php
+../templates/page_footer.tpl.php
+../style/default/style.css
+../style/brown/style.css
+../templates/index.tpl.php
+../templates/user_toolbar.tpl.php
+../templates/album_index.tpl.php
+../templates/album_searchbox.tpl.php
+../templates/forum_searchbox.tpl.php
+../templates/highscores_viewscores.tpl.php
+../templates/highscores_guild.tpl.php
+../templates/memberlist.tpl.php
+* replaced br spacing between div containers with margin to keep markup valid
+
+../classes/scores.class.php
+* fixed Scores::ep_format(), again
+
+../templates/user_toolbar.tpl.php
+* removed Home link from authorized users toolbar
+
+../config.php
+* set locale before applying gettext settings
+
+../templates/forum_viewtopic.tpl.php
+* break long words (wider than the page, often spam)
+* minor markup fix
+
+../classes/notifications.class.php
+./update_2_7_3.php
+* correctly remove comments notifications
+(fix unremovable notifications when target comment deleted before notification viewed)
+
+../classes/screenshots.class.php
+./update_2_7_3.php
+* correctly remove likes from database when screenshot removed
+(didn't affect user experience)
+
+../classes/gamecontentset.class.php
+* cleaned GameContentSet::filter_items(), it will also try to pick item with max secondary stats sum
+* GREATLY improved performance of everything related to GameContentSet::$filtered_items when less than 5 stats selected (the less stats the greater improvement)
+
+./scores/search.php
+* use get_world() in case world param not sent
+
+../core.php
+../classes/TibiameComParser.class.php
+../classes/profile.class.php
+../templates/profile.tpl.php
+* added file_get_contents_eb()
+
+../classes/ExchangerRuParser.class.php
+../classes/pricing.class.php
+* fixed incorrect subscription prices
+
+../classes/user.class.php
+../classes/ranks.class.php
+./cp/ranks.php
+../templates/cp_ranks_*.tpl.php
+./style/default/style.css
+./style/default/style.css
+* ranks system rewritten
+
+../ranks.dat
+* removed
+
+../classes/uploader.class.php
+* check images data integrity before uploading
+
+../classes/forum.class.php
+* minor markup fix
+
+../core.php
+../classes/user.class.php
+../templates/profile.tpl.php
+* UserRank() replaced with User::rank()
+
+../templates/pages_bottom.tpl.php
+* removed extra div
+
+../templates/page_header.tpl.php
+../templates/page_footer.tpl.php
+../style/default/style.css
+../style/brown/style.css
+* removed excessive div container, applied its settings to body
+
+../classes/perms.class.php
+./update_2_7_3.php
+../config.php
+../classes/album.class.php
+../classes/comments.class.php
+./album/photos.php
+../templates/album_photos.tpl.php
+./user/banishments.php
+../templates/banishments_view.tpl.php
+../templates/forum_viewtopic.tpl.php
+../templates/index.tpl.php
+../templates/profile.tpl.php
+../classes/forum.class.php
+./forum/posting.php
+./forum/viewtopic.php
+./user/profile.php
+../templates/forum_topicedit.tpl.php
+./forum/viewforum.php
+../classes/profile.class.php
+../classes/screenshots.class.php
+./screenshots/index.php
+../classes/themes.class.php
+./themes/index.php
+../templates/themes_edit.tpl.php
+../classes/artworks.class.php
+./artworks/index.php
+./artworks/upload.php
+../templates/artworks_index.tpl.php
+* implemented new permissions controller, permissions are now bound to ranks rather than users
+
+../classes/auth.class.php
+* update user last visit info as soon as user logs in
+(lastvisit didn't update at welcome page)
+* do not set permissions at welcome page (they are not needed there)
+* removed Auth::set_permissions(), Auth::get_permissions(), Auth::$permissions, Auth::$default_permissions and one more reference to old permissions
+
+./user/profile.php
+* don't pass unused 'permissions_edit' to Document::assign()
+
+./user/permissions.php
+../templates/user_permissions.tpl.php
+* removed
+
+./update_2_7_3.php
+* user_permissions removed
+
+../classes/cp.class.php
+../classes/document.class.php
+../classes/forum.class.php
+../classes/profile.class.php
+../config.php
+./cp/album.php
+./forum/posting.php
+./forum/viewtopic.php
+./forum/viewforum.php
+./themes/index.php
+./user/profile.php
+../templates/index.tpl.php
+../templates/profile.tpl.php
+* replaced $_SESSION['user_admin'], $_SESSION['user_mod'] and $_SESSION['user_id'] === 1 with Perms::get()
+
+../classes/cp.class.php
+* CP::auth() accepts optional additional perm id to check
+
+../classes/gamecontent.class.php
+../templates/game_content_spells.tpl.php
+* added health per second values for heal spells
+
+../classes/pricing.class.php
+* removed WMB prices, WMB is no longer accepted due to new Belarus federal law enforcements
+* convert currency codes from WM to ISO 4217
+
+../templates/platinum.tpl.php
+../templates/premium.tpl.php
+* in return, accepting PayPal now
+
+./premium.php
+./platinum.php
+* display our reselling prices for all locales
+
+./fangames.php
+* updated Running Mummy
+
+./cp/selftest.php
+* do not test ../ranks.dat, ../ranks.dict and ./scores/data
+* check Perms IDs for duplicates
+
+Released on March 28, 2015.

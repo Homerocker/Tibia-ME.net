@@ -1,0 +1,9 @@
+* Document->navi(): empty elements at the end of arrays can be skipped now
+
+* Highscores updater will delete unused characters from the database (currently those are characters which not updated longer than 30 days)
+
+* Javascript option added to settings
+
+* Highscores search fixed
+
+* constant 'VALID' removed

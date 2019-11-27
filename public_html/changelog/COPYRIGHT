@@ -1,0 +1,29 @@
+Tibia and TibiaME are trademarks of CipSoft GmbH, Germany.
+
+Tibia-ME.net source code is copyrighted by Molodoy. Molodoy is the only owner of this project.
+Any exceptions will be mentioned below.
+
+Third-party content we used:
+
+BMP2GD class (partial bitmap image support), provided by Mehmet Emin Akyüz and licensed under the GNU GPL.
+(replaced by Imagemagick in 2.8.24)
+
+Some of icons may be copyrighted by CipSoft and used with permission.
+
+Excanvas, licensed under Apache License 2.0.
+
+jQuery with extensions - Flot and BlockUI. (@todo Do we still use Flot and BlockUI?)
+
+PHPExcel, licensed under GNU Library General Public License (LGPL).
+
+Dropbox Developer Platform.
+
+Facebook SDK and API.
+
+VK.com API.
+
+Browscap by Browser Capabilities Project.
+
+Localized country lists and ISO 3166 codes provided by SAŠA STAMENKOVIĆ (https://github.com/umpirsky).
+
+ZURB Foundation (MIT licensed).

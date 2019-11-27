@@ -1,0 +1,4 @@
+../classes/cache.class.php
+* fixed $timeout check in Cache::read() (affects official news refresh on home page)
+
+Released on May 1, 2014.

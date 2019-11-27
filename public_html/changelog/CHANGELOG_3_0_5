@@ -1,0 +1,36 @@
+../templates/premium.tpl.php
+../templates/platinum.tpl.php
+../templates/game_content_weapons.tpl.php
+../templates/game_content_armours.tpl.php
+* minor layout redesign
+
+../classes/forum.class.php
+../templates/forum_index.tpl.php
+../templates/forum_viewforum.tpl.php
+* removed ugly margins after titles in forums and topics listings
+* added 'hidden' label to hidden forum board
+* redesigned forum counters
+* fixed long topic titles overflow
+
+../classes/highscoresupdater.class.php
+* keep sessions in database until expired
+
+../config.php
+* increased session id complexity
+
+./api.php
+../classes/api.class.php
+./foundation/js/app.js
+../templates/index.tpl.php
+./notification.mp3
+./foundation/css/app.css
+* added chat
+
+../classes/perms.class.php
+../templates/cp_ranks_edit_add.tpl.php
+* added "moderate chat" permission
+
+./foundation/js/app.js
+* adsense() removed
+
+Released on Jul 29, 2018.

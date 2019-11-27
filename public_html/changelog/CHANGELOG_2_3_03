@@ -1,0 +1,7 @@
+/classes/notifications.class.php
+* attempt to fix Notifications::create(), replaced notifications_updater sql procedure with php function
+
+/templates/notifications.tpl.php
+* "invalid request" fixed when viewing screenshot notifications
+
+Released on Dec 26 2012

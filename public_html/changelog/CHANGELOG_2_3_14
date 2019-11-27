@@ -1,0 +1,44 @@
+/classes/letters.class.php
+/classes/notifications.class.php
+* enabled email notifications for new letters (toggle in settings)
+
+/classes/documents.class.php
+* Document::pages(): do not ignore $params2 if it's set to 'name'
+
+/classes/images.class.php
+* Images::thumbnail(): removed str_replace() workaround
+(performance optimization and correct path detection)
+* Images::thumbnail(): do not create temporary jpeg image when parsing bmp files,
+work directly with bmp image resource instead
+(could be huge performance optimization for large BMP images)
+* removed file_exists() and filesize() for source file from Images::thumbnail()
+
+/classes/images.class.php
+/classes/album.class.php
+/classes/artworks.class.php
+/classes/comments.class.php
+/classes/screenshots.class.php
+/classes/themes.class.php
+/templates/profile.tpl.php
+/tibia-me.net/album/photos.php
+/tibia-me.net/cp/album.php
+/tibia-me.net/screenshots/index.php
+* paths relative to document root should be used with Images::thumbnail()
+
+/classes/document.class.php
+/UI_shared/comments.php
+/tibia-me.net/album/albums.php
+/tibia-me.net/album/photos.php
+/tibia-me.net/forum/viewforum.php
+/tibia-me.net/forum/viewtopic.php
+/tibia-me.net/scores/hunters.php
+/tibia-me.net/user/login.php
+/tibia-me.net/user/permissions.php
+/tibia-me.net/screenshots/index.php
+/tibia-me.net/themes/index.php
+/tibia-me.net/user/friendlist.php
+/tibia-me.net/user/letters.php
+* Document::navi visibility set to private,
+use Document::navi() with $output param set to false to preset any links
+
+Released on Feb 28, 2013.

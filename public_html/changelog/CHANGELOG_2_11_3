@@ -1,0 +1,16 @@
+../classes/scores.class.php
+../templates/highscores_viewscores.tpl.php
+../templates/highscores_hunters_guilds.tpl.php
+../templates/highscores_hunters_characters.tpl.php
+../templates/highscores_guilds.tpl.php
+../templates/highscores_guild.tpl.php
+../classes/highscoresupdater.class.php
+./scores/hunters.php
+* changed gained EXP representation, slightly redesigned storage and updater,
+deleted ~10mil entries prior to Feb 10 due to performance issues during update
+
+./js/core.js
+../templates/highscores_viewscores.tpl.php
+* added simple expand-collapse indicator
+
+Released on March 10, 2018.

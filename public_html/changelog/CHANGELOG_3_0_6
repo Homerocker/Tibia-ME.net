@@ -1,0 +1,18 @@
+../classes/db.class.php
+* added DB::prepared_query() which is more readable and faster than DB::query() with DB::quote() for complex queries
+* DB::quote() deprecated
+
+../classes/highscoresupdater.class.php
+* [cancelled] implemented DB::prepared_query()
+
+../core.php
+* curl_get_contents(): adjusted exponential backoff for better compatibility with tibiame.com
+(still doesn't work correctly sometimes due to tibiame.com bug or agressive ddos protection)
+* curl_get_contents() will dinamically increase max_execution_time when necessary to prevent timeout
+
+../classes/DOMDocumentX.class.php
+../classes/TibiameComParser.class.php
+* TibiameComParser::get_client_version_iphone() deprecated
+* TibiameComParser::get_client_versions() reliability improved, much less chance for empty download links to appear
+
+Released on Aug 7, 2018.

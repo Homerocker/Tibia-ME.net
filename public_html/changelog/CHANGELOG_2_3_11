@@ -1,0 +1,10 @@
+/classes/images.class.php
+/tibia-me.net/images/no_preview.gif
+* replaced error image
+
+/templates/themes_index.tpl.php
+/tibia-me.net/images/no_preview.gif
+/templates/themes_edit.tpl.php
+* added "no preview" image
+
+Released on Jan 21, 2013.

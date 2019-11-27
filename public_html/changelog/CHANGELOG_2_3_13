@@ -1,0 +1,9 @@
+/classes/forum.class.php
+/tibia-me.net/forum/posting.php
+/templates/forum_createtopic.tpl.php
+* do not reset data entered into html form if topic creation fails
+
+/classes/forum.class.php
+* Forum::MessageHandler(): use file_put_contents() to generate smilies cache file
+
+Released on Feb 22, 2013.

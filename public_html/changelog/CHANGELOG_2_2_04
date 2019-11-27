@@ -1,0 +1,39 @@
+/classes/friendlist.class.php
+/tibia-me.net/album/photos.php
+/tibia-me.net/user/friendlist.php
+* Friendlist::is_friend(), Friendlist::RequestExists() and Friendlist::UserIsFriend() replaced with Friendlist::get_status() which provides more info about friend requests
+
+/core.php
+* mime_content_type() is no longer a part of get_mime_type()
+* icons_shuffle() is now used to generate random icons
+
+/templates/premium.tpl.php
+/tibia-me.net/premium.php
+* premium page redesigned, info corrected
+
+/templates/platinum.tpl.php
+/tibia-me.net/platinum.php
+* platinum info added
+
+/classes/forum.class.php
+/tibia-me.net/forum/posting.php
+/templates/forum_postedit.tpl.php
+* post edit function fixed (hotfixed in 2.2.03)
+
+/classes/friendlist.class.php
+/tibia-me.net/user/friendlist.php
+/templates/friendlist.tpl.php
+/templates/friendlist_requests_in.tpl.php
+/templates/friendlist_requests_out.tpl.php
+/templates/friendlist_mutual.tpl.php
+/templates/friendlist_online.tpl.php
+* friendlist redesigned, search function temporary removed
+
+/templates/agreement.tpl.php
+* highscores info changed to be more clear
+
+/classes/auth.class.php
+/classes/user.class.php
+* Auth::get_user_id() replaced with User::get_id()
+
+This version was not released, due to lot of technical changes development continues as version 2.3.

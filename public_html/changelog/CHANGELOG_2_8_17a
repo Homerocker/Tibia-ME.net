@@ -1,0 +1,4 @@
+../classes/gamecontent.class.php
+* fixed bug that didn't allow sync pets stats (pets stats did not display)
+
+Released on Aug 2, 2016.

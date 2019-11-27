@@ -1,0 +1,9 @@
+./foundation/js/app.js
+* toggle() will also toggle elements by class
+
+../templates/highscores_viewscores.tpl.php
+../templates/game_content_skills.tpl.php
+./foundation/css/app.css
+* layout adjustments
+
+Released on Jan 29, 2019.

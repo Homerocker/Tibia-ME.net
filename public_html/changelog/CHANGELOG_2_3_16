@@ -1,0 +1,12 @@
+/classes/notifications.class.php
+* lostpassword section added to Notifications::mail()
+
+/tibia-me.net/user/lostpassword.php
+* use Notifications::mail() to send password recovery confirmation codes
+
+/classes/encyclopedia.class.php
+/classes/system.class.php
+/classes/uploader.class.php
+* use pathinfo() to get file extensions
+
+Released on May 8, 2013.

@@ -1,0 +1,29 @@
+./style/default/rating_bar_style.php
+./style/default/rating_bar_style.php
+./style/default/style.css
+./style/brown/style.css
+./style/core.css
+../templates/artworks_index.tpl.php
+../templates/screenshots_index.tpl.php
+../templates/themes_index.tpl.php
+../templates/album_index.tpl.php
+./images/rating.php
+../core.php
+../templates/likes.tpl.php
+./style/default/like.png
+./style/default/dislike.png
+./style/brown/like.png
+./style/brown/dislike.png
+* redesigned likes bar and layout of pages containing it
+* redesigned some links
+
+../classes/images.class.php
+* [fix] Images::thumbnail() will not cause Apache restart when source image does not exist
+
+./js/core.js
+* fixed ads breaking layout on small resolutions (width below 320px)
+
+./calendar.php
+* [fix] fixed calendar events not marked when month not selected manually
+
+Released on Feb 3, 2018.

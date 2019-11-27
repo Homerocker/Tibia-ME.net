@@ -1,0 +1,8 @@
+../classes/user.class.php
+* added setlocale(LC_NUMERIC, null) to User::set_locale()
+to set all decimal separators to "." and avoid lot of headache with Russian float numbers
+
+This behavior may change in future, thus it is now recommended to cast all numeric values to int/float and call DB::quote() before sending them to DB.
+This way it will be easy to do required formatting in DB::quote().
+
+Released on Dec 9, 2016.

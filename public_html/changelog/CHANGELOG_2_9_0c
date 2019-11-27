@@ -1,0 +1,25 @@
+../locale/pt_PT/*
+../config.php
+* prepared for Portuguese language support
+
+../templates/staff.tpl.php
+* credits to Cheilong, our new translator to Português
+
+../classes/user.class.php
+* improved setlocale() reliability
+* improved locale detection for unauthorized users
+
+../config.php
+./cp/selftest.php
+../classes/geo.class.php
+../classes/user.class.php
+../templates/page_header.tpl.php
+../templates/settings.tpl.php
+* added LOCALES AND LOCALES_ALIASES
+* removed $SERVER_LANGUAGES
+* added User::get_header_locale()
+
+../templates/page_header.tpl.php
+* language selector is shown on all pages for unauthorized users
+
+Released on Aug 14, 2017.

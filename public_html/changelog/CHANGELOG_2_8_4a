@@ -1,0 +1,4 @@
+../classes/forum.class.php
+* bug fixes for Forum::count_unread() and Forum::count_unread_thread()
+
+Released on Sep 30, 2015.

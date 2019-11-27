@@ -1,0 +1,7 @@
+../config.php
+* do not attempt to redirect user to User Agreement when viewing banishment info,
+this caused infinite redirection loop and users with expired banishment could not use their accounts.
+To use such accounts again you have to click on banishment message to mark it as viewed.
+This is a temporal hotfix. User toolbar, User Agreement and banishment systems interaction is to be redesigned.
+
+Released on Apr 25, 2014.

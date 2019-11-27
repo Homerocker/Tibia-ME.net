@@ -1,0 +1,22 @@
+./update_2_5_3.sql
+../scores/highscoresupdater.class.php
+* removed scores_characters.lastupdate
+
+../classes/scores.class.php
+../templates/highscores_viewscores.tpl.php
+* display last update info
+* display achievements info
+
+../classes/highscoresupdater.class.php
+* guilds update performance slightly improved
+
+../classes/highscoresupdater.class.php
+./update_2_5_3.sql
+* add guilds that are not in top 100 to database
+(fixed "guild not found" when clicking on guild name in character profile,
+fix only applies to characters/guilds updated after 2.5.3 release)
+
+./images/icons/defense.gif
+* added missing icon for spells list
+
+Released on Feb 12, 2014.

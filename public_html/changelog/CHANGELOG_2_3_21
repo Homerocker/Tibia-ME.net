@@ -1,0 +1,14 @@
+../classes/TibiameComParser.class.php
+* added class to fetch data from tibiame.com
+
+../classes/Clientsversion.class.php
+* moved to TibiameComParser
+
+../core.php
+* added strtolower() exception for TibiameComParser to class_loader()
+* fixed markup in CP_Permissions()
+
+./download/index.php
+* replaced Clientsversion with TibiameComParser::get_clients_version()
+
+Released on Nov 4, 2013.

@@ -1,0 +1,5 @@
+./scores/updater.php
+* do not trigger highscores update if XML file is outdated
+(fixes wrong data at Highscores section due to outdated files on tibiame.com)
+
+Released on Oct 19, 2013.

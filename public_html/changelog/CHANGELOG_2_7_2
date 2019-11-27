@@ -1,0 +1,97 @@
+./error_handler.php
+* fixed displayed paths
+
+../config.php
+./.htaccess
+* use ini_set() to set some php values
+
+./uploads/.htaccess
+* redirect deprecated URLs to new file locations
+
+../classes/album.class.php
+./getfile.php
+* added Album::get_filename_owner_id()
+* additional redirect for old photos URLs (new paths include user ID)
+
+../locales/ru_RU/LC_MESSAGES/default.mo
+* updated Russian translation
+
+../config.php
+./cp/selftest.php
+../classes/geo.class.php
+../classes/user.class.php
+../templates/page_header.tpl.php
+../templates/settings.tpl.php
+* SERVER_LANGUAGES is no longer serialize()'d
+* changed const SERVER_LANGUAGES to $SERVER_LANGUAGES ($GLOBALS['SERVER_LANGUAGES']) for backward compatibility
+
+../classes/letters.class.php
+* display correct date and time in letters
+
+../classes/notifications.class.php
+* fixed some possible issues with email notifications
+(only those that work via Notifications::mail(), other emails may or may not be still broken)
+
+../templates/game_content_weapons.tpl.php
+* weapons level maxlength increased to 3
+
+./update_2_7_2.sql
+../config.php
+* changed database charset and collation to utf8mb4 and utf8mb4_general_ci
+
+../classes/gamecontent.class.php
+* GameContent::parse_icon(): workaround for weird purple background at Fouldrake icon
+(can damage other icons if they have same color tho)
+* truncate game_content_monsters_islands before syncing monsters
+(fixed duplicate entry warnings and possible outdated info)
+* correctly filter armours list when defense type specified
+
+../classes/scores.class.php
+* Scores::date() fetches latest date from the database
+* Scores::ep_format() will correctly display "0" when exp gain is 0 and "?" when exp gain is unknown
+* added Scores::KEEP_DATA_DAYS, increased characters exp history timeout from 30 to 60 days
+
+../classes/highscoresupdater.class.php
+./scores/updater.php
+* HighscoresUpdater::fetch() downloads data to system temp dir
+* HighscoresUpdater::set_lastupdate_date(), HighscoresUpdater::check_local_file(), HighscoresUpdater::hashXML(), HighscoresUpdater::compareXML() removed
+* HighscoresUpdater::extractXML() renamed to HighscoresUpdater::setXML()
+* HighscoresUpdater::setXML(), HighscoresUpdater::parse() will read XML content directly from archive (do not extract zip contents)
+* performance optimizations
+
+./scores/data
+* removed
+
+./scores/image.php
+* code optimization
+
+../templates/highscores_pvp.tpl.php
+* removed "all" option from world select box
+
+./index.php
+../templates/index.tpl.php
+* added shortcut to guild highscores phofile
+
+../classes/album.class.php
+../classes/db.class.php
+../classes/gamecontent.class.php
+../classes/gamecontentpets.class.php
+../classes/highscoresupdater.class.php
+* DB::prepare_value() renamed to DB::quote()
+
+./update_2_7_2.sql
+* deprecated scores_top-gains removed
+
+../classes/gamecontentset.class.php
+../classes/gamecontentitem.class.php
+./gamecontent/calc
+./js/jquery.blockUI.js
+../templates/index.tpl.php
+* armour calc is now beta
+
+../classes/comments.class.php
+* removed duplicate Comments::$user_id (use Comments::$item_owner_id)
+* added Comments::$item_owner_id to photos thumbnails paths
+(fixed broken photo album thumbnails at comments section)
+
+Released on Feb 23, 2015.

@@ -1,0 +1,13 @@
+../classes/gamecontent.class.php
+* GameContent::parse_icon() added support for PHPExcel_Worksheet_Drawing (seems to be used since Excel 2007)
+
+../classes/gamecontent.class.php
+../gamecontent_xls/*
+* updated game data
+
+../classes/gamecontent.class.php
+../PHPExcel/PHPExcel/Cell.php
+* changed GameContent::rowspan($cell) to PHPExcel_Cell::getRowspan()
+* changed GameContent::colspan($cell) to PHPExcel_Cell::getColspan()
+
+Released on Jan 29, 2016.

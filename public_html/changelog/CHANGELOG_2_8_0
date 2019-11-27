@@ -1,0 +1,51 @@
+../templates/*
+./styles/default/style.css
+./styles/brown/style.css
+* redesigned UI for touch screens
+
+../classes/document.class.php
+* Document::s_get_page() and Document::$pages always return integer now
+* don't display user toolbar at login page
+* Document::navi() won't pass unused links to bottom navigation panel
+* use array_values() to reassign keys to navigation links array
+
+../classes/album.class.php
+* fixed album password regex (invalid password errors)
+
+./album/albums.php
+./album/search.php
+* fixed navigation links
+
+../classes/album.class.php
+../templates/album_*.tpl.php
+* use Document::msg() to display error messages
+
+../classes/user.class.php
+* added User::get_display_name()
+* User::get_link() deprecated
+
+../config.php
+* increased thumbnails width to 320px
+
+./album/albums.php
+* don't pass last_key
+
+../templates/forum_search.tpl.php
+* [security] added missing htmlspecialchars()
+
+../classes/forum.class.php
+* Forum::TopicBlock() deprecated
+
+../classes/friendlist.class.php
+* Friendlist::FriendBlock() deprecated
+
+../classes/images.class.php
+* Images::thumbnail() limit thumbnail height to 400px
+
+../classes/scores.class.php
+* minor markup fix
+
+../core.php
+* updated paths in GenderIcon()
+
+Released on July 5, 2015.

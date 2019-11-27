@@ -1,0 +1,78 @@
+../classes/gamecontent.class.php
+* added GameContent::parse_name() to parse items names with '(+)'
+
+../classes/TochkiSuParser.class.php
+* updated TochkiSuParser::format_name() to work with upgraded items names (containing '(+)')
+* added optional $is_spell param to TochkiSuParser::get_icon() and TochkiSuParser::format_name()
+
+../classes/highscoresupdater.class.php
+./scores/updater.php
+* [hotfix] remove maintenance message in HighscoresUpdater::cleanup() (how did this work in v2.4? o_O)
+
+./scores/worlds.php
+* pass 'limit' to suppress errors
+
+../core.php
+* removed obsolete code from get_mime_type() (PHP < 5.3)
+
+../classes/gamecontent.class.php
+* GameContent::set_slot(): corrected slots names (fixed search by slot)
+* GameContent::sync() will truncate table before sync
+
+./scores/worlds.php
+../templates/highscores_worlds.tpl.php
+../classes/scores.class.php
+* fixed worlds stats
+
+../core.php
+../classes/TibiameComParser.class.php
+../classes/comments.class.php
+../classes/highscoresupdater.class.php
+../classes/images.class.php
+../classes/letters.class.php
+../classes/notifications.class.php
+../classes/scores.class.php
+../classes/uploader.class.php
+../classes/gamecontent.class.php
+./user/profile.php
+* use debug_backtrace() to get file and line info in log_error()
+
+../classes/letters.class.php
+* fixed replies counter ('[Re:1]')
+* don't declare $_POST and $_GET vars as global (LOL)
+
+./update_2_5_1.sql
+../classes/gamecontent.class.php
+./gamecontent/spells.php
+../templates/gamecontent_spells.tpl.php
+../gamecontent_xls/spells.xls
+../templates/index.tpl.php
+./images/icons/hp.gif
+* added spells list
+
+../classes/gamecontent.class.php
+* fixed search with several "types" specified
+
+./cp/sync.php
+../templates/cp_index.tpl.php
+* added 'Sync spells' to CP
+
+../templates/game_content_armours.tpl.php
+../templates/game_content_weapons.tpl.php
+* minor correction to filter default values
+
+./update_2_5_1.sql
+./images/icons/holy.gif -> ./images/icons/soul.gif
+../classes/TochkiSuParser.class.php
+../classes/gamecontent.class.php
+../core.php
+../templates/game_content_armours.tpl.php
+../templates/game_content_monsters.tpl.php
+../templates/game_content_weapons.tpl.php
+./index.php
+* implemented new standards for damage type names: 'soul' (not holy) and 'energy' (not lightning)
+
+./update_2_5_1.sql
+* changed type from int to tinyint and smallint where possible for game_content_* tables
+
+Released on Feb 4, 2014.

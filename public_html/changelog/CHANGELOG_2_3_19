@@ -1,0 +1,18 @@
+/classes/user.class.php
+* added User::set_locale()
+* User::get_link(): added colors for mods and admins
+
+/classes/auth.class.php
+* use User::set_locale() in Auth::login() to set display language when logging in
+(fixed welcome page language)
+* Auth::set_permissions(): fetch correct user permissions
+
+/config.php
+* use User::set_locale() to set interface language
+
+/classes/forum.class.php
+* do not display error messages before forum topic creation form is submitted
+* parse topic message with Forum::MessageHandler()
+(fix bbcodes, smileys and few other issues for topic first message)
+
+Released on August 6 2013.

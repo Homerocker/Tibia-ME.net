@@ -1,0 +1,106 @@
+../classes/forum.class.php
+* implemented Cache in Forum::MessageHandler()
+
+../config.php
+../classes/auth.class.php
+../templates/page_header.tpl.php
+../classes/notifications.class.php
+../templates/settings.tpl.php
+./user/settings.php
+./platinum.php
+./premium.php
+../core.php
+../classes/user.class.php
+./update_2_6_3.sql
+* renamed $_SESSION['user_language'] to $_SESSION['locale']
+* updated User::set_locale()
+* Language() replaced with User::set_locale()
+* messy code related to locale replaced with single User::set_locale() in config.php
+* added User::get_xml_lang() to get xml:lang value based on user locale
+* fixed invalid default locale value in database
+
+../config.php
+* correctly log out when User Agreement declined
+* removed unused $_SESSION['user_GMT']
+* further code optimization
+
+../config.php
+../classes/auth.class.php
+* added AGREEMENT_ACCEPTED for authorized users
+
+../classes/document.class.php
+../templates/page_header.tpl.php
+../templates/user_notification.tpl.php
+../templates/user_toolbar.tpl.php
+../templates/user_banishment.tpl.php
+* moved user toolbar, notifications and banishment message to separate template files
+* do not display user toolbar if agreement is not accepted
+* Document::__construct() optimized
+
+./style/default/forum/*
+./style/default/brown/*
+./style/default/icons.conf
+./style/brown/icons.conf
+../config.php
+./index.php
+../templates/index.tpl.php
+../templates/forum_index.tpl.php
+../templates/forum_viewforum.tpl.php
+* forum icons moved to parent folders, current folders removed
+* icons.conf removed
+
+../classes/comments.class.php
+* fixed 10 min time limit to delete comment
+
+../classes/auth.class.php
+../classes/forum.class.php
+../classes/friendlist.class.php
+../classes/highscoresupdater.class.php
+../classes/spreadsheet_excel_reader.class.php
+../classes/themes.class.php
+../classes/user.class.php
+../classes/vkapi.class.php
+../config.php
+../facebook/base_facebook.php
+../facebook/facebook.php
+../templates/forum_viewtopic.tpl.php
+./forum/posting.php
+./index.php
+./screenshots/index.php
+./system/weekly.php
+./user/banishments.php
+./user/toolbar/toolbar.php
+* replaced time() with $_SERVER['REQUEST_TIME'] (minor(?) performance improvement)
+
+../templates/error.tpl.php
+../classes/document.class.php
+* added Document::error()
+
+./user/banishments.php
+../templates/banishments_view.tpl.php
+../templates/banishments_unban.tpl.php
+../templates/banishments_list.tpl.php
+../templates/banishments_banform.tpl.php
+../classes/banishments.class.php
+* banishments interface and few functions rewritten
+
+../classes/TibiameComParser.class.php
+./download/index.php
+../templates/download.tpl.php
+* do not try to guess clients URLs, fetch them from tibiame.com
+* use iTunes Lookup to fetch actual iPhone client version (tibiame.com says it's 2.17 when it's 2.19 on iTunes)
+
+../classes/screenshots.class.php
+../templates/screenshots_index.tpl.php
+../classes/themes.class.php
+../templates/themes_index.tpl.php
+../templates/album_photos.tpl.php
+../templates/artworks_index.tpl.php
+* added upload dates to 4 sections
+
+../config.php
+./update_2_6_3.sql
+./images/en_US.png
+* corrected en_EN typo to en_US
+
+Released on Jul 1, 2014.

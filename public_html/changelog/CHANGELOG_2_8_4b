@@ -1,0 +1,8 @@
+../classes/forum.class.php
+* correctly display "unread" icon for new topics without replies
+* correctly mark topics as read on each view
+
+./forum/viewforum.php
+* fixed missing bottom navigation bar
+
+Released on Oct 26, 2015.

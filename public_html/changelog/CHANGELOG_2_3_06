@@ -1,0 +1,50 @@
+/tibia-me.net/user/notifications.php
+* set page count with Document::get_page() to display page navigation links
+
+/classes/notifications.class.php
+/tibia-me.net/user/toolbar/toolbar.php
+/DB
+* Notifications::create() rewritten
+* notifications database redesigned
+* do not update notification again if same user triggers it more than once (fixed incorrect users counter)
+* fixed bug that was resetting users list (2nd user did not display when it should)
+* removed duplicate users from database, reset users counters to correct values
+
+/classes/forum.class.php
+/templates/notifications.tpl.php
+* code redesigned to work with new database
+
+/classes/album.class.php
+/classes/artworks.class.php
+/classes/screenshots.class.php
+/classes/forum.class.php
+/classes/themes.class.php
+/classes/notifications.class.php
+* added Notifications::remove() to handle purge of notifications
+
+/core.php
+* deprecated Notifications_Update() removed
+
+/classes/comments.class.php
+* added $this->item_owner_id required by notifications
+* enabled notifications for all comments
+
+/classes/artworks.class.php
+* added Artworks::get_owner_id()
+
+/classes/screenshots.class.php
+* Screenshots::get_owner_id() can now accept unsafe screenshot ID
+
+/classes/themes.class.php
+* added Themes::get_owner_id()
+
+/classes/album.class.php
+* Album::get_photo_owner_id() can now accept unsafe photo ID
+
+/classes/notifications.class.php
+* fixed forum notifications, aka "watch for replies" feature (they didn't create/update in most cases)
+* do not update existing forum notifications twice (harmless bug)
+* $target_owner_id is now required by Notifications::create(), its default value has been removed
+* Notifications::fetch() sets Notifications::$pages to 0 if there are no notifications (fixed broken page navigation links)
+
+Released on Jan 12, 2013.

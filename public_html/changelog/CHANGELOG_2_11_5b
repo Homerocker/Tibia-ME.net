@@ -1,0 +1,13 @@
+../classes/scores.class.php
+../classes/highscoresupdater.class.php
+../templates/highscores_guild.tpl.php
+* (temporary?) disabled hourly exp gain history for guilds as it is not implemented on tibiame.com
+* rollback some database optimizations (still testing)
+* fixed "+" sign before exp numbers
+* fixed very rare case of guilds daily exp gain not updating if previous update failed
+
+../classes/scores.class.php
+../templates/highscores_viewscores.tpl.php
+* added level info to daily and hourly exp info on character highscores page
+
+Released on Apr 21, 2018.

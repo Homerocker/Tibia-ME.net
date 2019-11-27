@@ -1,0 +1,40 @@
+../classes/images.class.php
+* Images::imagecreate() will use GD imagecreatefrombmp() rather than Imagick for BMP images
+* Images::imagecreatefromstring() removed as unused
+
+./foundation/vendor/app.css
+* partial workaround for navigation bar appearing expanded before javascript libraries are loaded
+
+../config.php
+* removed token workaround, slight performance improvement
+* default website address changed to "tibia-me.net"
+"wap.tibia-me.net" is no longer actual
+
+../classes/calendar.class.php
+* fixed one-day events that start (and end) in previous month incorrectly displayed in current month calendar
+
+../classes/date.class.php
+* Date::modify() default $day_offset is 0
+* Date::modify() will return unchanged date if $day_offset is 0
+* Date::modify() will return null if empty date passed
+
+../classes/scores.class.php
+* Scores::date() uses Date::modify() for date offsets
+
+../classes/images.class.php
+* Images::thumbnail() default $max_width set to 360
+
+../config.php
+../classes/forum.class.php
+* added BBCODE_IMG_MAX_WIDTH = 360
+
+../classes/scores.class.php
+./scores/viewscores.php
+../templates/highscores_viewscores.tpl.php
+* added hunting stats for last 7, 30, 90, 180 days
+
+../classes/filesystem.class.php
+* Filesystem::get_doc_root_path() with return unmodified path if realpath() fails (e.g. when path is not absolute),
+fixes invalid icons paths in encyclopedia section
+
+Released on Jun 9, 2018.

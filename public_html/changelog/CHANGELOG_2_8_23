@@ -1,0 +1,16 @@
+../classes/browscap.class.php
+../classes/auth.class.php
+./cp/selftest.php
+* Browscap auto-update
+
+./cp/selftest.php
+* test Browscap config
+
+../config.php
+* test INI config
+
+../config.php
+./.htaccess
+* HTTPS support
+
+Released on Jan 20, 2017.

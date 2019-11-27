@@ -1,0 +1,40 @@
+../templates/index.tpl.php
+* slightly redesigned home page:
+categories are highlighted, icons removed, some links were merged to save space
+
+./update_2_8_4.sql
+../classes/forum.class.php
+./index.php
+../templates/index.tpl.php
+* forum unread messages counter revamp:
+- counts last 24h messages for guests
+- unread messages for authorized users
+- includes both new topics and messages
+- works with hidden sections
+
+./update_2_8_4.sql
+* added `attribute` to `forums`
+* added `vocation` to unique index `name` in game_content_armours
+(allow duplicate item names if vocation is different)
+* added some indexes for performance improvement
+* removed invalid entries from `forumTopicsRead`
+* removed invalid entries from `forumPosts`
+
+../gamecontent_xls/*
+* updated Excel lists with new and corrected data:
+- added 10 weapons
+- added 26 armors
+- added 7 monsters
+- added 3 spells
+
+../classes/gamecontent.class.php
+* GameContent::parse_icon() returns local relative path
+* compatible with new Excel lists
+
+../classes/TochkiSuParser.class.php
+* fixed array to string conversion error when incorrectly using TochkiSuParser::format_name()
+
+../classes/profile.class.php
+* use Forum::topic_remove() in Profile::delete_forum_posts() to clean removed forum topic data
+
+Released on Sept 27, 2015.

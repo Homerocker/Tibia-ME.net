@@ -1,0 +1,20 @@
+../gamecontent_xls/allitems_community_SU2016.xls
+* corrected Tiharakatana typo
+* corrected missing "(mtx)" parentheses
+* corrected Conflagator typo
+* corrected Cutting Leafs typo
+
+../gamecontent_xls/allitems_community_SU2016.xls
+* corrected "Hell Breastplate" typo
+* corrected "Frost Legplates" typo
+
+../classes/gamecontent.class.php
+../classes/TochkiSuParser.class.php
+* TochkiSuParser::get_icon() supports mtx items and warrior/wizard items with same name
+* added workaround for "Splatter stick"
+
+../classes/gamecontent.class.php
+* GameContent::parse_icon() will sort icons by size
+(correctly merge monster and skull icons)
+
+Released on Mar 7, 2017.

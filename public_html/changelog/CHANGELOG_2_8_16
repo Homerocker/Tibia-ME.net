@@ -1,0 +1,9 @@
+../classes/profile.class.php
+../templates/profile.tpl.php
+* replaced deprecated MSN info with WhatsApp
+
+../gamecontent_xls/allitems_community_2016.xls
+* upgraded Frost Helmet icon fixed
+* upgraded Force Guards stats fixed
+
+Released on July 8, 2016.

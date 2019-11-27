@@ -1,0 +1,16 @@
+../templates/index.tpl.php
+../templates/cp_index.tpl.php
+./cp/sync.php
+./gamecontent/pets.php
+../classes/gamecontentpets.class.php
+../templates/game_content_pets.tpl.php
+./update_2_6_6.sql
+../classes/gamecontent.class.php
+../gamecontent_xls/community_pets_AU2014.xls
+* added pets list
+
+../classes/db.class.php
+* DB::query() will log MySQL errors
+* implemented DB::insert(), DB::insert_multi(), DB::truncate()
+
+Released on Dec 7, 2014.

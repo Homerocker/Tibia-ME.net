@@ -1,0 +1,4 @@
+Updated scores_highscores.exp data type to store large numbers.
+The fix will apply after next game server save.
+
+Released on Feb 11, 2016.

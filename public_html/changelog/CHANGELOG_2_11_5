@@ -1,0 +1,12 @@
+./scores/hunters.php
+../templates/highscores_hunters_characters.tpl.php
+../classes/scores.class.php
+* fixed top hunters sorting
+* top hunters can be sorted by total exp (aka by level)
+
+../classes/forum.class.php
+./js/core.js
+* images posted with [img] tags are now clickable, allowing to open original image
+* added [spoiler] tag
+
+Released on Mar 27, 2018.

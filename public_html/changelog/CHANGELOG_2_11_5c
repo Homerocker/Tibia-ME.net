@@ -1,0 +1,6 @@
+../classes/gamecontentset.class.php
+../templates/calc.tpl.php
+../templates/calc_nojs.tpl.php
+* fixed missing icons (incorrect paths)
+
+Released on Apr 30, 2018.

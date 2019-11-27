@@ -1,0 +1,5 @@
+../classes/db.class.php
+../config.php
+* testing fix to automatic reconnection if MySQL link was timed out
+
+Released on Nov 20, 2019

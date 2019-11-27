@@ -1,0 +1,91 @@
+Tibia-ME.net 2.2 CHANGELOG
+
+The main aim of this release was to rewrite website markup from HTML to XHTML MP.
+I also thought it's the right time to implement templates system
+that's why a lot of functions and pages have been rewritten.
+This also means you will encounter lot of new bugs.
+
+Some of technical changes:
+
+* Document->assign() and Document->display() are shortcuts
+for Document->template->assign() and Document->template->display()
+
+* markup changed from HTML 4 to XHTML Mobile Profile 1.2
+
+* Document->navi visibility set to public
+and it can be used to add navigation links
+before call of Document->navi()
+
+* Photo album comments counters are not displayed if user has disallowed commenting
+
+* Dicument->navi() will ignore empty arrays
+
+* Default extension for JPEG files changed from .jpeg to .jpg
+.jpeg will not be used anywhere
+
+* Auth::get_u() can accept optional parameter which value will be returned instead of current user ID
+in case no user ID was sent by client
+
+* Auth::get_u() parses $_REQUEST instead of $_GET to provide $_POST support (wtf?)
+
+* Screenshots::screenshot_exists() was returning false always
+(this fix was applied in previous version as it is important)
+
+* require_once() replaced with require() where possible
+
+* $document->pages visibility set from public to private
+
+* Smileys borders smoothed
+
+* Highscores are cached to decrease server load
+
+* highscores lastupdate.dat contains date in the same format as the database
+
+* Document->pages() receives array with vars names and values
+it can also parse a pair of params (name, value) in case there's just 1 variable
+additionally, it does not parse 'page' but automatically adds it to urls
+
+* ScoresDate() replaced with Scores::date(), which relies on lastupdate.dat
+
+* deprecated function Pages() removed
+
+* Auth::RequireLogin() can receive 1 parameter
+if it is set to false, it will forbid access for authorized users
+default is true - forbids access for guests
+
+* get_world() will parse $_REQUEST['world']
+
+* class Common removed
+
+* ScreenshotExists() removed
+
+* Scores::next_level() replaced NextLevel()
+
+* Auth::check_world() checks world with empty()
+
+* ICQ number validation improved at profile
+
+* Auth::CheckNickname() will also check if nickname has correct length (2-10)
+
+* after lot of headache and little bit investigation it was decided to control all comments with a separate class
+
+* comments order changed: latest first
+
+* User() replaced with User::get_link()
+
+* due to specific password encode algorythm password was getting invalid after nickname change
+password hash does not depend on nickname now but more complex encryption is used to keep security on the same level
+
+* session.auto_start switched off, session_start() is called in config.php instead
+
+* $output parameter added to Document->navi()
+when set to false function won't output anything
+default is 1
+
+* Encyclopedia->setPosition() removed
+
+* Guild field added to Profile
+
+* Forum->forum_icon() and Forum->board_icon() fixed to ignore moved topics "shadows" and display correct read/unread icon
+
+Lot of other changes are not listed here

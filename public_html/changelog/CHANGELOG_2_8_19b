@@ -1,0 +1,17 @@
+/DB
+* added 4 new Doratia items and 1 spell
+
+../templates/calc.tpl.php
+./js/core.js
+../templates/calc_nojs.tpl.php
+../classes/gamecontentset.class.php
+* [fix] "no icon" icon did not display with javascript disabled
+* group items stats to fit our 320px min screen width standard
+
+../core.php
+* some tweaks to file_get_contents_eb() for SSL3 compatibility
+(fixed problems loading some pages)
+* reduced retry attempts for file_get_contents_eb()
+(when unable to load remote data give up sooner and show user old data or error rather than long loading page)
+
+Released on Nov 22, 2016.

@@ -1,0 +1,59 @@
+Includes multiple important fixes for files handling.
+
+./js/jquery.min.js
+./js/jquery.blockUI.js
+* updated/compressed
+
+../config.php
+* timezone fix
+
+../core.php
+* LetterExists() removed
+* UserSignature() removed
+* get_language() removed
+* array_key_last() removed
+* file_get_contents_eb() removed
+
+../classes/images.class.php
+* added Images::rotate()
+* [F] fixed corrupt preview for animated GIF, Images::thumbnail() will attempt to generate thumbnail of a single frame
+
+../templates/album_rotate.tpl.php
+* pass page number after rotating photo
+
+../classes/document.class.php
+* check $_REQUEST rather than $_GET for current page number
+
+../classes/album.class.php
+../classes/images.class.php
+../classes/artworks.class.php
+../classes/comments.class.php
+../classes/screenshots.class.php
+../classes/themes.class.php
+./album/photos.php
+./album/album.php
+./screenshots/index.php
+../templates/beta.tpl.php
+../templates/profile.tpl.php
+../templates/update.tpl.php
+* Images::thumbnail() accepts absolute path as 1st agrument
+
+../classes/album.class.php
+* [F] fixed photo rotation
+* removed excessive database query from Album::rotate()
+* show 10 photos per page (increased from 5)
+
+./album/photos.php
+../templates/album_photos.tpl.php
+* [F] disabled rotation of animated GIF
+
+../classes/uploader.class.php
+* [F] fixed uploaded images empty extension on Linux
+* [F] fixed bug that tried to apply image compression to all uploaded files (even if it's not an image)
+
+../classes/artworks.class.php
+../classes/album.class.php
+../classes/themes.class.php
+* correctly delete unused Likes when deleting user stuff
+
+Released on Aug 24, 2017.

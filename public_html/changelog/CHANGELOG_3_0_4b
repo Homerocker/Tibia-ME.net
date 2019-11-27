@@ -1,0 +1,4 @@
+../classes/highscoresupdater.class.php
+* fixed characters min gain exp not being updated in some cases
+
+Released on Jul 13, 2018.

@@ -1,0 +1,184 @@
+../templates/index.tpl.php
+./index.php
+* removed obsolete game update countdown
+
+../update_schedule.php
+* removed
+
+../core.php
+* obsolete UserID() removed
+* added minutes/hours switch to set_maintenance() timer
+* updated get_maintenance_message() to work with new set_maintenance()
+* added remote_file_exists() which is based on cURL and relies on HTTP response
+* added strtolower() ExchangerRuParser exception to class_loader()
+* mysqli_prepare_value() will perform is_array() test before ctype_digit()
+
+../classes/user.class.php
+* User::get_id() can now accept nickname with rank prefix
+* removed some obsolete function
+
+../classes/letters.class.php
+* check if user is sending letter to himself/herself again after specifying recipient ID
+
+../classes/scores.class.php
+./scores/worlds.php
+../templates/highscores_worlds.tpl.php
+* redesigned code and HTML markup, fixed translations
+
+../classes/highscoresupdater.class.php
+* [hotfix] replaced "ZipArchive::open() === false" with "ZipArchive::open() !== true" as it returns error message string rather than false on failure
+* updated to work with new set_maintenance()
+
+./scores/updater.php
+* [hotfix] clean highscores cache even if update fails (display "no data" rather than outdated scores)
+
+./index.php
+* performance improvement for icons shuffling
+
+./cp/*
+* removed obsolete Control Panel files
+
+../classes/cp.class.php
+* added CP class for Control Panel
+
+../templates/index.tpl.php
+../templates/cp*.tpl.php
+./cp/*
+* redesigned Control Panel, added link to home page
+
+../core.php
+../classes/cp.class.php
+* replaced CP_Permissions() with CP::auth()
+
+./update_2_4_1.sql
+* updated database for new set_maintenance() and get_maintenance_message()
+* altered game_content_armours.slot possible values
+* added loot columns to game_content_monsters
+* made `name` primary in all game_content_* tables
+* `fire`, `hit`, `energy`, `holy` and `ice` fields in `game_content_armours` can't be null, default value is '0' now
+
+../core.php
+../classes/gamecontent.class.php
+* renamed mysql_prepare_value() to mysqli_prepare_value() as it actually works with mysqli API
+
+../templates/settings.tpl.php
+./update_2_4_1.sql
+* temporary disable hires icons
+
+../templates/navigation_bottom.tpl.php
+* display text instead of link if url is not set
+
+../classes/document.class.php
+* minor fix for online users counter (don't wait for 5min timeout if user logged out manually)
+* Document now extends Templates, removed Document::assign() and Document::display() shortcuts
+
+../templates/cp_index.tpl.php
+./cp/style_preview.php
+* added page to preview styles
+
+./styles/brown/*
+* added new test style
+
+./images/404.gif
+./images/404_image.gif
+* fixed transparency
+
+./styles/default/style.css
+* removed duplicates
+
+../classes/comments.class.php
+* Comments::fetch(): removed some unused vars
+* Comments::fetch(): don't set table name in $thumbnail but use Comments::$table_name
+
+../classes/comments.class.php
+../templates/comments.tpl.php
+../UI_shared/comments.php
+* renamed some vars and redesigned code
+
+../classes/spreadsheet_excel_reader.class.php
+* added class to parse excel files
+
+../classes/gamecontent.class.php
+../classes/TochkiSuParser.class.php
+../gamecontent_xls/
+* added GameContent::sync() and various parsers to fetch data from xls files
+* added TochkiSuParser::get_weapon_mana()
+* added GameContent::get_monster_extra_data() to fetch missing data from old xls
+* changed GameContent::add_armour(), GameContent::add_weapon() and GameContent::add_monster() visibility from 'protected' to 'private'
+* added TochkiSuParser::get_icon()
+* marked TochkiSuParser::sync() and 2 related methods as deprecated
+* TochkiSuParser no longer extends GameContent
+* added TochkiSuParser::get_monster_spell_elements()
+* GameContent::add_weapon() and GameContent::add_armour() accept one array with all parameters now
+
+../UI_shared/comments.php
+../classes/facebook.class.php
+../classes/templates.class.php
+../classes/user.class.php
+../config.php
+../core.php
+../facebook/base_facebook.php
+* replaced dirname(__FILE__) with __DIR__
+
+../templates/highscores_achievements.tpl.php
+* removed useless $world test
+
+./forum/viewtopic.php
+* fixed "watch for replies"
+
+../classes/forum.class.php
+./forum/viewtopic.php
+* moved Document::reload_msg() from Forum:watch() to viewtopic.php
+* Forum::watch() returns new watch state as boolean now
+* use Forum::watch() in Forum::topic_create()
+
+../classes/scores.class.php
+* Scores::format_ep() replaced with improved Scores::ep_format()
+
+../templates/highscores_guilds.tpl.php
+../templates/highscores_guild.tpl.php
+../templates/highscores_viewscores.tpl.php
+../templates/highscores_worlds.tpl.php
+../templates/highscores_top100.tpl.php
+* use Scores::ep_format() to format displayed exp
+
+../UI_shared/comments.php
+* mark new comment notification as viewed before displaying page
+(fixed minor notifications counter bug/annoying behavior)
+
+../classes/ExchangerRuParser.class.php
+* parse exchanger.ru for currency rates
+
+../classes/pricing.class.php
+* added Pricing::get_prices() to calculate Premium and Platinum prices
+
+./premium.php
+../templates/premium.tpl.php
+./platinum.php
+../templates/platinum.tpl.php
+* added prices to Russian interface
+
+../templates/premium.tpl.php
+* temporary (hope so) replaced '&percnt;' and '%' with '&#37;' to solve translation and xhtml parse errors
+
+../classes/profile.class.php
+../templates/profile.tpl.php
+* reliable age calculation
+
+../templates/game_content_armours.tpl.php
+* replaced 'isset($item[$element])' with '$item[$element] != 0' due to changes in database
+
+../templates/agreement.tpl.php
+* copyrights updated
+
+../locale/ru_RU/LC_MESSAGES/default.mo
+* updated Russian translation
+
+../templates/cp_index.tpl.php
+./cp/sync.php
+* added encyclopedia sync buttons to Control Panel
+
+../config.php
+* libxml_use_internal_errors(true) to suppress parsing errors
+
+Released on Jan 23, 2014.

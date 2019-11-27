@@ -1,0 +1,16 @@
+/tibia-me.net/scores/search.php
+* undefined variable when searching invalid nickname fixed
+
+/templates/notifications.tpl.php
+* enabled marking accepted friend requests notifications as viewed
+
+/classes/documents.class.php
+* removed workaround that was skipping page number passed to Document::pages()
+
+/tibia-me.net/.htaccess
+* php_value request_order set to "GP"
+
+/classes/system.class.php
+* added functions to delete unused entries from screenshots database and filesystem
+
+Released on 31 Dec 2012

@@ -1,0 +1,9 @@
+../Facebook/*
+../classes/profile.class.php
+./user/profile.php
+./user/fblink.php
+../templates/profile.tpl.php
+../classes/facebook.class.php
+* updated Facebook SDK
+* fixed Facebook account linking
+Released on Jun 21, 2018.

@@ -1,0 +1,15 @@
+../classes/date.class.php
+* Date::get_timezone_transition() returns transition timestamp and offset
+
+../classes/highscoresupdater.class.php
+* max/min gain for characters and worlds will not update on 25h days when DST shifts
+
+../config.php
+* older browsers compatibility improvement for redirects when website accessed via subdomain
+(e.g. wap.tibia-me.net)
+
+../templates/index.tpl.php
+* [testing] cosmetic adjustments to counters
+
+Released on Jul 6, 2018.
+

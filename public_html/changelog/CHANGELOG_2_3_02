@@ -1,0 +1,25 @@
+/tibia-me.net/album/photos.php
+* "Edit album" link was not visible for moderators
+
+/classes/album.class.php
+/tibia-me.net/album/photos.php
+/tibia-me.net/album/albums.php
+/templates/album_delete.tpl.php
+* "Delete album" function added
+
+/tibia-me.net/album/photos.php
+* Navigation links fixed
+
+/classes/document.class.php
+* to add a single link Document::navi() can now parse single-dimensional array with link data instead of two-dimensional array required before
+
+/locale/ru_RU/LC_MESSAGES/default.mo
+* Russian translations, 99%
+
+/templates/agreement.tpl.php
+* minor changes to user agreement
+
+/tibia-me.net/forum/posting.php
+* do not remove forum thread if its last post has been removed
+
+Released on 24 Dec 2012

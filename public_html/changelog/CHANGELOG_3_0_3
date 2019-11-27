@@ -1,0 +1,23 @@
+../classes/calendar.class.php
+* fixed incorrect year calculation result in last year events displaying for current year
+
+../config.php
+* Polish language enabled
+
+../templates/staff.tpl.php
+* credits to our translator to Polish
+
+../classes/document.class.php
+* fixed friends counter in navbar
+
+../classes/forum.class.php
+* smilies are case-insensitive
+
+../templates/calc.tpl.php
+* fixed missing translations for armour slots names
+
+../classes/forum.class.php
+./index.php
+* fixed forum total posts and total unread posts counters
+
+Released on Jun 4, 2018.

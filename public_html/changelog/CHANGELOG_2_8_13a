@@ -1,0 +1,4 @@
+../classes/auth.class.php
+* [hotfix] Auth::set_env_vars() will fetch user nickname and world if they are not passed in params
+
+Released on May 23, 2016.

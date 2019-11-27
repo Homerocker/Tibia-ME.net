@@ -1,0 +1,66 @@
+../classes/user.class.php
+../classes/document.class.php
+* minor fix for online users list and counter in User::memberlist() and Document::__construct()
+
+../classes/document.class.php
+* removed obsolete reference to Templates
+
+../templates/page_header.tpl.php
+* removed noarchive tags
+
+../templates/page_header.tpl.php
+../templates/page_footer.tpl.php
+* including jquery and core.js in header
+
+../classes/gamecontent.class.php
+* [hotfix] some entries didn't import to database (missing high level warrior weapons)
+* added GameContent::convert_spell_amount_modifier2pct() to convert modifiers to percentages
+
+../classes/letters.class.php
+* Letters::set_subject() and Letters::set_message() rewritten
+* [hotfix] when replying message for the first time, 'replyto' ID wasn't correctly set and message could not be sent
+
+../classes/gamecontent.class.php
+../templates/game_content_spells.tpl.php
+* very slight performance improvement for spells list
+
+../core.php
+../classes/db.class.php
+../config.php
+../classes/gamecontent.class.php
+../classes/highscoresupdater.class.php
+* added class DB that extends mysqli and using it instead of direct calls to mysqli now
+* moved mysqli_prepare_value() to DB::prepare_value()
+
+../classes/gettextextramessages.class.php
+../gettextextras/
+../classes/gamecontent.class.php
+../templates/game_content_spells.tpl.php
+* added GettextExtraMessages to translate spells and skills descriptions, which are stored in database and were not accessible by Poedit (this will be useful outside of encyclopedia too)
+
+../gamecontent_xls/items.xls
+../gamecontent_xls/skills.xls
+* corrected some typos
+
+./gamecontent/skills.php
+../templates/game_content_skills.tpl.php
+./js/core.js
+../templates/index.tpl.php
+* added skills list
+
+../classes/gamecontent.class.php
+./gamecontent/armours.php
+../templates/game_content_armours.tpl.php
+./gamecontent/monsters.php
+../templates/game_content_monsters.tpl.php
+./gamecontent/spells.php
+../templates/game_content_spells.tpl.php
+./gamecontent/weapons.php
+../templates/game_content_weapons.tpl.php
+* don't use GameContent::$count to detect borders
+* changed GameContent::$count visibility from public to private
+
+../locale/ru_RU/LC_MESSAGES/default.mo
+* translated skills and spells
+
+Released on 23 Mar, 2014.

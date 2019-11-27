@@ -1,0 +1,20 @@
+../classes/gamecontent.class.php
+* GameContent::parse_name() will correctly convert names to lower case
+* GameContent::parse_loot() replaced with GameContent::parse_name()
+
+../templates/highscores_hunters.tpl.php
+* format exp with Scores::ep_format()
+
+../classes/gamecontent.class.php
+../templates/game_content_monsters.tpl.php
+./update_2_5_2.sql
+./gamecontent/weapons.php
+./gamecontent/armours.php
+../templates/game_content_armours.tpl.php
+../templates/game_content_weapons.tpl.php
+* redesigned and enabled loot lists
+
+./update_2_5_2.sql
+* changed game_content_monsters.name and game_content_armours.name from 'primary' to 'index'
+
+Released on Feb 10, 2014.

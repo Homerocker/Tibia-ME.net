@@ -1,0 +1,9 @@
+../classes/browscap.class.php
+* disabled browscap autoupdate which caused fansite to be unresponsive when browscap website is down
+requests to all remote websites should be reworked
+
+../config.php
+* increased memory_limit to 256M
+* limited max_execution_time by 30 seconds
+
+Released on May 28, 2017.

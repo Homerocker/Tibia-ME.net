@@ -1,0 +1,8 @@
+../classes/date.class.php
+../classes/calendar.class.php
+../templates/calendar.tpl.php
+* [fix] fixed calendar events not displaying
+* cast to int Date::listmonthsfromrange() params
+* fixed date check for one-day events
+
+Released on Feb 9, 2018.

@@ -1,0 +1,9 @@
+* migrated to PHP 7
+
+../config.php
+* temporary (or not) removed session_save_path() due to its weird behavior after PHP upgrade
+
+../classes/images.class.php
+* removed imagefill() from Images::thumbnail()
+
+Released on Jan 12, 2016. 

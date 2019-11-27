@@ -1,0 +1,10 @@
+./js/core.js
+* if $(window).width() is larger than screen.width (which happens in mobile Firefox), adsense() will use screen.width as maximum ads width
+(fixed horizontal scrolling in Firefox)
+
+../config.php
+../templates/page_header.tpl.php
+../templates/calc.tpl.php
+* added VIEWPORT_WIDTH
+
+Released on Aug 23, 2015.

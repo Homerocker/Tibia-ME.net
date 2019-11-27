@@ -1,0 +1,4 @@
+../core.php
+* set_maintenance() will reconnect to MySQL if connection was lost (possible fix to highscores update message not being reset correctly)
+
+Released on Nov 6, 2019.

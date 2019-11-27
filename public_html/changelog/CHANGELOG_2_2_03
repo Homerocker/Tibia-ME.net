@@ -1,0 +1,57 @@
+classes/album.class.php
+* "Invalid multibyte sequence" in album_title_navi_format() fixed (correctly display album title in navigation links)
+
+classes/uploader.class.php
+* upload() returns correct file size now
+
+templates/notifications.tpl.php
+* reference to deprecated function, disabled
+
+/tibia-me.net/album/photos.php
+* photo album moderators can access friends-only and password-protected albums
+
+/tibia-me.net/forum/viewtopic.php
+/tibia-me.net/forum/viewforum.php
+* Forum navigation links fixed
+
+/tibia-me.net/user/login.php
+/templates/login.tpl.php
+* captcha removed from login page
+
+/tibia-me.net/about.php
+/templates/about.tpl.php
+* content and html markup changed
+
+/locale/ru_RU/LC_MESSAGES/default.mo
+* 99% translated
+
+/classes/user.class.php
+* gender_icon() icon path fixed
+
+/templates/profile.tpl.php
+/classes/profile.class.php
+* use JS to fetch Facebook info if enabled, performance tweak
+
+/templates/memberlist.tpl.php
+/templates/viewonline.tpl.php
+/tibia-me.net/user/memberlist.php
+/classes/user.class.php
+* memberlist redesigned
+
+/config.php
+/core.php
+* __autoload() replaced with spl_autoload_register()
+
+/templates/album_edit.tpl.php
+* design fixed
+
+/classes/album.class.php
+/tibia-me.net/album/albums.php
+/templates/album_edit.tpl.php
+* album edit function fixed
+
+/classes/friendlist.class.php
+/core.php
+* friends-only albums fixed
+
+Released on 27 oct 2012

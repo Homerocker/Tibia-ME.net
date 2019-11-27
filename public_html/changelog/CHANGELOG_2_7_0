@@ -1,0 +1,111 @@
+../classes/gamecontent.class.php
+* fixed incorrect condition in GameContent::sync() that didn't allow to sync anything except pets
+
+../PHPExcel
+../classes/gamecontent.class.php
+* fetch monsters icons from Excel file
+
+./update_2_7_0.php
+* changed PRIMARY(name, upgraded) to UNIQUE in game_content_armours
+* added PRIMARY(id) to game_content_armours
+
+../locale/ru_RU/LC_MESSAGES/default.mo
+* fixed few embarrassing typos in Russian translation
+
+../core.php
+* class_loader() will skip classes in Dropbox namespace and classes which name starts with "PHPExcel_", allowing Dropbox and PHPExcel autoloaders to pick them
+
+../Google
+../google-api-php-client
+../classes/googledrive.class.php
+* removed
+
+./cp/index.php
+../templates/cp_index.tpl.php
+* added disk usage info to CP
+
+./images/bar.png
+* used for disk usage bars in Filesystem::usage_bar()
+
+../gamecontent_xls/allitems_community_AU2014.xls
+../gamecontent_xls/community_allmonsters_AU2014.xls
+../gamecontent_xls/community_pets_AU2014.xls
+* updated encyclopedia data
+
+../classes/gamecontent.class.php
+./update_2_7_0.php
+* added level up exp info for pets
+
+../classes/gamecontent.class.php
+* do not log MySQL errors since DB::query() logs them
+
+./scores/image.php
+../classes/scores.class.php
+../classes/album.class.php
+../classes/cache.class.php
+../classes/images.class.php
+* check if cache subfolder folder exists and attempt to create one recursively if it does not
+(CACHE_DIR subfolders can be safely removed now and will be restore automatically)
+
+../classes/images.class.php
+* Images::thumbnail(): added $dbx param
+* Images::thumbnail(): use hash stored in source image name as thumbnail name rather than re-hash it
+(assuming source image name is in <hash>.<extension> format,
+huge performance improvement for Dropbox files, minor imp. for local files);
+* Images::thumbnail(): cache images smaller than 15k bytes if they are stored in Dropbox
+(huge performance improvement for Dropbox files, local files smaller than 15k are not cached)
+
+../classes/images.class.php
+../classes/album.class.php
+* Images::create_resource() renamed to Images::imagecreate()
+
+../classes/artworks.class.php
+../classes/themes.class.php
+../classes/screenshots.class.php
+../classes/album.class.php
+../classes/uploader.class.php
+../templates/themes_index.tpl.php
+../templates/screenshots_index.tpl.php
+../templates/profile.class.php
+./themes/download.php
+../templates/artworks_index.tpl.php
+../templates/album_photos.tpl.php
+../UI_shared/comments.php
+../templates/themes_comments.tpl.php
+../templates/page_header.tpl.php
+./update_2_7_0.php
+./getfile.php
+./screenshots/index.php
+./cp/album.php
+./album/photos.php
+../templates/profile.tpl.php
+../classes/comments.class.php
+../classes/images.class.php
+../themes/upload.php
+../config.php
+* integrated Dropbox
+
+../classes/system.class.php
+* removed
+
+../classes/highscoresupdater.class.php
+* use Filesystem::emptydir() to clean cache
+
+../dropbox-sdk
+../classes/dropbox.class.php
+* Dropbox SDK 1.1.4
+
+../classes/db.class.php
+* added $ping param to DB::query() to prevent "MySQL gone away" error during long update
+* DB::log_error() will also log error file and line
+
+../classes/filesystem.class.php
+* filesystem functions
+
+./changelog/COPYRIGHT
+* updated list of used 3rd party software
+
+./themes/index.php
+* themes didn't delete correctly from filesystem
+
+Released on Jan 15, 2015.

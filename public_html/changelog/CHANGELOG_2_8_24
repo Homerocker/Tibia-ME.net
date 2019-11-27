@@ -1,0 +1,8 @@
+../classes/images.class.php
+* Images::imagecreate() and Images::imagecreatefromstring() will use command-line mogrify for BMP images
+(fixed corrupt thumbnails for some of BMP images, also seems to be faster)
+
+../classes/bmp2gd.class.php
+* removed (completely replaced by Imagemagick)
+
+Released on Jan 25, 2017.

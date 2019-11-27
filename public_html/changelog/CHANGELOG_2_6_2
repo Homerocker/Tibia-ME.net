@@ -1,0 +1,54 @@
+../classes/album.class.php
+../classes/artworks.class.php
+../classes/comments.class.php
+../classes/screenshots.class.php
+../classes/themes.class.php
+./album/comments.php
+./artworks/comments.php
+./screenshots/comments.php
+./themes/comments.php
+../UI_shared/comments.php
+../templates/comments.tpl.php
+../templates/comments_delete.tpl.php
+./update_2_6_2.sql
+* renamed/removed some variables
+* added Comments::delete() and using it to delete comments
+* removed comments_watch.id
+* (comments_watch.user_id, comments_watch.target_type, comments_watch.target_id) is primary now
+
+../gamecontent_xls/skills.xls
+* corrected some typos
+
+../templates/game_content_skills.tpl.php
+* [hotfix] HTML markup fixed
+
+../classes/gamecontent.class.php
+./gamecontent/skills.php
+../templates/game_content_skills.tpl.php
+* expand function emulation if JS is disabled (makes skills list 5 times shorter)
+
+../classes/cache.class.php
+* added cache controller
+
+../classes/domdocumentx.class.php
+* added DOMDocumentX - an extension to DOMDocument
+* added DOMElement::innerHTML() (hello from Javascript)
+
+../classes/TibiameComParser.class.php
+./index.php
+../templates/index.tpl.php
+* implemented Cache
+* finished TibiameComParser::fetch_news()
+* implemented DOMDocumentX
+* added official news to home page, updated with 10m interval
+
+./js/core.js
+* added toggle_news_official()
+
+./styles/default/style.css
+* changed header text and link colors
+
+../templates/album_edit.tpl.php
+* fixed Cancel button at "Edit album" page, it now redirect to current album rather than list of albums
+
+Released on Apr 20, 2014.

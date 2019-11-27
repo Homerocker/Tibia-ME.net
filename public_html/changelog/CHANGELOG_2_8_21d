@@ -1,0 +1,10 @@
+../classes/document.class.php
+./forum/posting.php
+../templates/user_notification.tpl.php
+* notifications are now stored in array, duplicates are ignored
+
+../classes/dropbox.class.php
+* Dropbox NetworkIO and ServerError Exceptions will now give user appropriate error message
+(fixed page crash on Dropbox server error or network timeout)
+
+Released on Jan 14, 2017.

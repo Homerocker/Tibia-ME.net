@@ -1,0 +1,10 @@
+../classes/profile.class.php
+../classes/facebook.class.php
+../classes/vkapi.class.php
+../templates/profile.tpl.php
+../Facebook/*
+* VK JS API disabled as it did not display data for users not authorized on VK
+* Facebook SDK updated to the latest version
+* VKAPI::vkapi() renamed to VKAPI::__construct()
+
+Released on June 23, 2016.

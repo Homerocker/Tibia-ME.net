@@ -1,0 +1,22 @@
+../templates/page_header.tpl.php
+* upgraded markup to XHTML Basic 1.1
+
+../templates/index.tpl.php
+../classes/TibiameComParser.class.php
+../classes/forum.class.php
+* open external links in new tab
+
+./js/core.js
+../templates/page_header.tpl.php
+../templates/page_footer.tpl.php
+../templates/user_toolbar.tpl.php
+../templates/navigation_bottom.tpl.php
+* cleaned adsense code
+
+../templates/page_header.tpl.php
+* added viewport for correct page scaling on modern mobile browsers
+
+../templates/agreement.tpl.php
+* Opera Mini is no longer recommended for modern devices due to its limited Javascript
+
+Released on June 14, 2015.

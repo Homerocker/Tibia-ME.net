@@ -1,0 +1,41 @@
+/UI_shared/comments.php
+* add required $_GET params to page switch links (fixed comments page navigation; hotfixed in 2.3.06)
+
+/classes/comments.class.php
+* added Comments::watch() to trigger watch-for-comments feature
+* added support for comments watch status to Comments::fetch()
+* Comments::post() marks thread as watched for replies
+
+/classes/notifications.class.php
+/DB
+* added support for watch-for-comments feature
+
+/DB
+/classes/document.class.php
+/classes/notifications.class.php
+/tibia-me.net/user/toolbar/toolbar.php
+* removed deprecated hidden flag and all notifications which had it enabled from database
+* as long as we don't have hidden notifications, `users_count` can be 1 by default, and NULL support is not required for it
+* sql code that was referring to `hidden` field redesigned
+
+/templates/comments.tpl.php
+/UI_shared/comments.php
+* added Likes bar and links to comments pages
+* added watch/unwatch links to comments pages
+
+/DB
+/tibia-me.net/screenshots/index.php
+/tibia-me.net/themes/upload.php
+/classes/artworks.class.php
+/tibia-me.net/album/photos.php
+* automatically watch for new comments on all user uploaded files (both new and already existing)
+
+/classes/notifications.class.php
+* Notifications::remove() will also remove entry from `comments_watch`
+* fixed accepted friend requests notifications
+* likes and accepted friend requests notifications fixed
+
+/tibia-me.net/user/profile.php
+* removed deprecated and unstable friend add/remove features, these are controlled by friendlist class but not profile
+
+Released on Jan 15, 2013.

@@ -1,0 +1,13 @@
+../classes/gamecontent.class.php
+../classes/TibiameHexatComParser.class.php
+* added $stats argument to TibiameHexatComParser::get_armour_icon()
+(stats check workaround for 2 Frost Helmets which have same name but different icons)
+
+../gamecontent_xls/*
+../classes/gamecontent.class.php
+* updated game data (added 8 monsters and 3 items)
+
+../classes/TibiameHexatComParser.class.php
+* TibiameHexatComParser::get_armour_icon() will copy icons to local path to significantly speed up further updates
+
+Released on Dec 20, 2016.

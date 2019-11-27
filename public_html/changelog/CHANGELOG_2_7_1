@@ -1,0 +1,26 @@
+../classes/dropbox.class.php
+* Dropbox::download() removed $to_file param, file can be only returned as string now
+* Dropbox::download() and Dropbox::getFileMimeType use tmpfile() to create and automatically delete temp file
+(fixed CACHE_DIR overflow)
+
+../classes/images.class.php
+* added Images::imagecreatefromstring()
+* Images::imagecreate() uses Images::imagecreatefromstring()
+
+../classes/images.class.php
+../classes/album.class.php
+* implemented Images::imagecreatefromstring()
+
+../config.php
+* added date_default_timezone_set('Europe/Moscow')
+
+../classes/domdocumentx.class.php
+* DOMDocumentX::loadHTMLFile() declaration made compatible with DOMDocument::loadHTMLFile($source, $options = NULL)
+
+../classes/comments.class.php
+* temporary disable broken thumbnails for photos at comments section, real fix coming later
+
+../classes/bmp2gd.class.php
+* BMP2GD::createFromBMP() renamed to BMP2GD::imagecreatefrombmpstring() and now accepts image string rather than file path as param
+
+Released on Jan 21, 2015.

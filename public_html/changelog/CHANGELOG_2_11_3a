@@ -1,0 +1,5 @@
+../classes/images.class.php
+* Images::thumbnail() supports remote files as source
+(hotfix to show you update teaser screenshots!)
+
+Released on Mar 12, 2018.

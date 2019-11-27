@@ -1,0 +1,7 @@
+../classes/scores.class.php
+../classes/highscoresupdater.class.php
+../classes/profile.class.php
+./index.php
+* fixed some highscores tables names
+
+Released on March 13, 2016.

@@ -1,0 +1,5 @@
+../classes/scores.class.php
+* cache Scores::date() to reduce database load
+
+../classes/TibiameComParser.class.php
+* retry on some fetching errors (implemented DOMDocumentX)

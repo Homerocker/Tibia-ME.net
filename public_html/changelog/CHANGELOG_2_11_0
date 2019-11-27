@@ -1,0 +1,61 @@
+UPDATE SUMMARY:
+- highscores hunting statistics (exp gains) will update hourly for characters and guilds
+- highscores daily statistics reset time changed to 00:10 UTC
+- deep-level optimizations for highscores
+- minor bug fixes and improvements
+
+../classes/screenshots.class.php
+* Screenshots::remove() will correctly remove screenshot from filesystem
+
+../classes/highscoresupdater.class.php
+* [hotfix] HighscoresUpdater::parse() will modify incorrect EXP for characters which should have above 2147M EXP
+* reduced maintenance message time from 10 to 1 minute
+
+../templates/highscores_worlds.tpl.php
+../classes/scores.class.php
+* removed deprecated parameters from Scores::date()
+
+../classes/scores.class.php
+../templates/highscores_*.tpl.php
+* added Scores:dateg()
+* completely reworked all highscores functions, cleaned code, disabled caching
+
+../config.php
+../core.php
+* __autoload() renamed to autoload() for compatibility reasons
+
+../classes/highscoresupdater.class.php
+/DB
+* highscores will be updated hourly rather than daily now
+* highscores will use UTC rather than German timezone (avoid issues caused by daylight saving time shift)
+
+./style/core.css
+* added .hidden
+* added .pointer
+* added .left and .right
+* added .margin-top
+
+./js/core.js
+* added toggle()
+
+../config.php
+* default timezone is UTC
+
+./images/icons/armour_warrior.png
+./images/icons/armour_wizard.png
+./images/icons/ep.png
+./images/icons/level.png
+* added png alternatives for some icons
+
+../classes/document.class.php
+* added Document::slice_data() to get portion of data to display on current page
+* Document::get_page() is deprecated
+
+../classes/document.class.php
+../templates/pages_bottom.tpl.php
+* Document::pages() will encode special chars used in URLs and form values
+
+../classes/date.class.php
+* added Date::modify()
+
+Released on Jan 13 - Jan 15, 2018.

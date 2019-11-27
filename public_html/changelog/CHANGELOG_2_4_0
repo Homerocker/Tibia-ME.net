@@ -1,0 +1,108 @@
+../classes/TochkiSuParser.class.php
+* parse Tochki.su/TibiaME Encyclopedia
+
+../core.php
+* added strtolower() exception for TochkiSuParser to class_loader()
+* added set_maintenance() and get_maintenance_message()
+* removed SkillExists() and ItemExists() - parts of old encyclopedia
+* added mysql_prepare_value() to format variables to be used in mysql query
+
+../classes/gamecontent.class.php
+../templates/game_content_weapons.tpl.php
+../templates/game_content_armours.tpl.php
+./gamecontent/
+../templates/index.tpl.php
+./index.php
+../templates/game_content_monsters.tpl.php
+* replaced old encyclopedia
+
+../classes/TibiaMEComParser.class.php
+* added fetch_news() (for future updates)
+
+./update_2_4.sql
+* updated `maintenance` to work with set_maintenance() and get_maintenance_message()
+* old encyclopedia tables removed
+* `notifications_old` (notifications backup) removed
+* added `vk` field to `user_profile`
+* [fix] removed unsigned attribute from scores_worlds.gain to store negative exp
+(worlds with negative exp gain didn't appear on stats)
+* [fix] manually added w31 to highscores stats
+(it was missing due to new worlds handling bug in old updater.php, which is fixed in new highscoresupdater class as mentioned below)
+* create new encyclopedia tables and import data previously fetched from tochki.su
+
+./scores/updater.php
+./cp/maintenance.php
+* implemented set_maintenance()
+
+../classes/document.class.php
+../templates/page_header.tpl.php
+* implemented get_maintenance_message()
+
+../config.php
+* set user agent for our bot
+* [fix] update guests activity each time they load a page rather than on first visit only
+(fixed guests online counter - it counted new guests only instead of all guests active over past 5 minutes,
+however due to cookies mechanics counter will not update on first visit now (if cookies not set or expired) - in this case counter will update on next page load)
+* [fix] do not update guest activity if browser didn't accept cookies
+(fixed guests online counter - users without cookies won't be counted but at least they won't increase counter to incredible value, another downside is mentioned above)
+
+P.S. although there still are technical conflicts between our guests counter and cookies the new counter is much more fair
+
+../classes/highscoresupdater.class.php
+./scores/updater.php
+* parser rewritten with DOM and various performance optimizations
+* clean achievements, characters-guilds dependencies and pvp rankings even if update fails
+* [fix] more reliable detection of new game worlds
+* [fix] generate all new game worlds stats correctly if more than 1 game world added
+(only last game world would be generated before (ex.: missing w31))
+* implemented set_maintenance()
+
+../classes/encyclopedia.class.php
+../templates/encyclopedia_*
+* removed obsolete encyclopedia files
+
+../templates/agreement.tpl.php
+* updated copyrights
+
+../classes/profile.class.php
+* do not attempt to fetch Facebook data if user id is not set (null)
+* stop script execution when user gets redirected (in other words stop loading page when user leaves it)
+
+../classes/vkapi.class.php
+* added API to communicate with VK.com
+
+../classes/profile.class.php
+../templates/profile.tpl.php
+* added VK.com to profile
+* optimized/fixed Facebook code
+* HTML markup redesigned
+* Javascript redesigned (fixed HTML parsing errors when Javascript is turned on but not supported by browser)
+
+../classes/auth.class.php
+* obsolete Auth::get_user_id() removed
+
+../classes/templates.class.php
+* Templates::display(): replaced $name and $value with $tpl_var_name and $tpl_var_value respectively as those would conflict with other vars passed to templates
+
+../locale/ru_RU/LC_MESSAGES/default.mo
+* updated Russian translation for v2.4
+
+../templates/premium.tpl.php
+* replaced '%' with '&percnt;' in translations (fixed parsing error when compiling .mo file)
+
+../templates/page_header.tpl.php
+* HTML markup fix
+
+../classes/forum.class.php
+./forum/posting.php
+* allow several topics with the same name at news section
+
+../classes/forum.class.php
+* set topic type to 'normal' by default when creating new topic
+
+../templates/login_welcome.tpl.php
+* fixed English translation
+
+./images/icons/gold.gif
+
+Released on 5 Dec, 2013.

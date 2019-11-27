@@ -1,0 +1,13 @@
+../classes/ExchangerRuParser.class.php
+../classes/gamecodes.class.php
+../classes/pricing.class.php
+./payment.php
+../templates/payment_*
+./index.php
+../templates/platinum.tpl.php
+* Testing WebMoney Merchant payments
+
+./index.php
+* additional redirect after 403/404 error to rewrite url and avoid further errors due to invalid relative paths
+
+Released on Sept 5, 2016.

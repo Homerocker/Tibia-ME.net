@@ -1,0 +1,15 @@
+./.htaccess
+* [security] enabled session.use_strict_mode
+
+../classes/auth.class.php
+* Auth::hash_pwd() removed
+* [security] password hashing algorithm changed
+
+../classes/auth.class.php
+../config.php
+./user/out.php
+./user/login.php
+../templates/login.tpl.php
+* implemented tokens, allowing to stay logged in "forever" (as long as cookies are not cleared)
+
+Released on May 14, 2016.

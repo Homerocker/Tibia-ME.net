@@ -1,0 +1,7 @@
+../templates/download.tpl.php
+* layout corrections
+
+../classes/forum.class.php
+* [spoiler] tag should be fixed
+
+Released on Jul 7, 2018.

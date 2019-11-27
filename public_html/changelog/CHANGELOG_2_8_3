@@ -1,0 +1,37 @@
+../templates/comments.tpl.php
+* minor layout fix
+
+../classes/comments.class.php
+../templates/comments.tpl.php
+* removed captcha
+
+../classes/comments.class.php
+* fixed empty comments detection
+
+../templates/register.tpl.php
+* fixed false incorrect captcha error
+
+../classes/user.class.php
+* User::is_js_full() removed
+* Added User::is_opera_mini()
+
+./gamecontent/calc/index.php
+* Javascript version of Calc is disabled for Opera Mini only
+Latest Opera Mobile with Opera Turbo enabled passed tests
+Although UC Mini has limited Javascript support (like Opera mini) it also seems to work correctly
+
+/DB
+* Javascript is enabled for new users by default
+* Enabled Javascript for all existing users, it can be disabled again in settings
+
+./config.php
+* Javascript is enabled for non-authorized users
+
+../gamecontent_xls/allitems_community_AU2014.xls
+* added Forcebender Ring (thx Omgvag w13)
+* fixed Eye Patch stats
+
+../UI_shared/comments.php
+* fixed album navi link
+
+Released on July 22, 2015.

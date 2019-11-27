@@ -1,0 +1,19 @@
+../templates/cp_ranks_edit_add.tpl.php
+../classes/perms.class.php
+./gamecodes.sql
+./cp/gamecodes.php
+../templates/cp_gamecodes.tpl.php
+../templates/cp_index.tpl.php
+../classes/gamecodes.class.php
+../classes/TibiameComParser.class.php
+../core.php
+* added game codes interface for fansite staff
+
+../classes/TibiameComParser.class.php
+* remove target attribute from links in official news for XHTML MP validation
+
+../classes/gamecontent.class.php
+../templates/game_content_spells.tpl.php
+* fixed single target spells list
+
+Released on May 6, 2015.

@@ -1,0 +1,6 @@
+../classes/profile.class.php
+../templates/profile.tpl.php
+* removed Facebook fake-Javascript API
+(fixed profile page hang and missing Facebook info when JS is enabled)
+
+Released on Aug 13, 2015.

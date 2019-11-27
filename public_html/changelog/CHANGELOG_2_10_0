@@ -1,0 +1,60 @@
+../classes/calendar.class.php
+./calendar.php
+../templates/calendar.tpl.php
+../templates/calendar_edit.tpl.php
+../templates/index.tpl.php
+* added Events Calendar
+
+../classes/auth.class.php
+* Auth:set_token() $user_id param removed
+
+../config.php
+../templates/*
+../classes/gamecontent.class.php
+../tempalates/calc_nojs.tpl.php
+../classes/gamecontentset.class.php
+gamecontent_weapons.icon
+gamecontent_armours.icon
+../templates/gamecontent_weapons.tpl.php
+* added ICONS_DIR
+* added GameContent::get_icon_path()
+
+../core.php
+* added get_sign()
+* added get_month()
+
+../classes/date.class.php
+* added Date::get_m($offset)
+* added Date::listmonthsfromrange()
+
+../classes/perms.class.php
+./templates/cp_ranks_edit_add.tpl.php
+* added Calendar edit permissions
+
+./style/core.css
+./style/default/style.css
+./style/brown/style.css
+../templates/page_header.tpl.php
+../templates/pages_bottom.tpl.php
+../templates/index.tpl.php
+../templates/navigation_top.tpl.php
+../templates/navigation_bottom.tpl.php
+./style/brown/al.png
+./style/brown/ar.png
+./style/default/al.png
+./style/default/ar.png
+* separated layout from colors stylesheets
+* polished Brown style with some colors corrections
+* fixed missing borders around home page news when Javascript is disabled
+* minor layout corrections
+
+../classes/user.class.php
+./gamecontent/calc/index.php
+* correctly detect latest versions of Opera Mini (fixed no-Javascript workaround for Armour Calc)
+* User::is_opera_mini() deprecated, replaced with warning if Extreme mode is enabled,
+Opera Mini in High mode seems to handle Javascript correctly
+
+../templates/page_header.tpl.php
+* display a warning if user has Javascript enabled and Opera Mini Extreme compression mode is detected
+
+Released on Nov 6, 2017.

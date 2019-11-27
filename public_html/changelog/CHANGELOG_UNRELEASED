@@ -1,0 +1,13 @@
+./guilds/*
+../classes/guilds.class.php
+../templates/guilds_*.tpl.php
+* added guilds section
+
+../UI_shared/comments.php
+../templates/comments_report.tpl.php
+../classes/comments.class.php
+../classes/cp.class.php
+./cp/reported_comments.php
+../templates/cp_reported_comments.tpl.php
+../templates/cp_index.tpl.php
+* added Report Comment feature

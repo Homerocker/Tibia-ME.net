@@ -1,0 +1,8 @@
+../classes/highscoresupdater.class.php
+../classes/scores.class.php
+* worlds daily exp gain should be working again
+
+/DB
+* fixed encodings to support emoji and other unicode characters
+
+Released on Jul 21, 2018.

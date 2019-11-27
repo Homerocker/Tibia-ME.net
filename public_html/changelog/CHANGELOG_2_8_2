@@ -1,0 +1,24 @@
+../classes/TochkiSuParser.class.php
+* TochkiSuParser::format_name(): fixed some unsupported items
+(fixed missing items icons)
+
+../classes/images.class.php
+* Images::thumbnail() don't resize thumbnail if specified width is higher than original image width
+(display higher quality smaller preview images)
+
+../core.php
+* added _get(), _post(), _request(), _session()
+
+../classes/gamecontentset.class.php
+../classes/gamecontentitem.class.php
+../classes/gamecontent.class.php
+./gamecontent/calc/index.php
+./gamecontent/calc/api.php
+../templates/calc.tpl.php
+../templates/calc_nojs.tpl.php
+* added non-Javascript version of Armour Calculator that works in all browsers
+
+../classes/user.class.php
+* added User::is_js_full()
+
+Released on July 18, 2015.

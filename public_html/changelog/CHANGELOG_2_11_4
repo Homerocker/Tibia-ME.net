@@ -1,0 +1,10 @@
+../classes/images.class.php
+* Images::thumbnail() check if thumbnail of remote images exists before sending remote request
+(fixed excessive requests to remote files followed by 403 errors)
+* default background for images with transparency is white
+
+../classes/forum.class.php
+../config.php
+* added support for [img] tag in messages
+
+Released on Mar 14, 2018.

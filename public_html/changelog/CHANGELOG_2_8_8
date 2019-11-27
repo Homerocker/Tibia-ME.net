@@ -1,0 +1,15 @@
+../gamecontent_xls/community_potions&food_2016.xlsx
+* fixed "Sun Sapphire" name typo
+
+../gamecontent_xls/community_potions&food_2016.xlsx
+../classes/gamecontent.class.php
+../templates/cp_index.tpl
+../cp/sync.php
+../templates/index.tpl.php
+../templates/game_content_food.tpl.php
+* added potions and food section to encyclopedia
+
+../classes/TochkiSuParser.class.php
+* improved paths compatibility in TochkiSuParser::get_icon()
+
+Released on March 2, 2016.

@@ -1,0 +1,40 @@
+../classes/gamecontent.class.php
+../gamecontent_xls/community_pets_2016.xlsx
+* support for pets owner level info
+
+../classes/document.class.php
+* Document::get_page() will always convert Document::page to integer
+(fixed forum topics not displaying first message in some cases)
+
+../classes/comments.class.php
+../UI_shared/comments.php
+../templates/comments.tpl.php
+* added link to original image to comments section
+
+../templates/cp_gamecodes.tpl.php
+* use User::date() to format date in history
+(fixed user specified timezone being ignored)
+
+./style/default/style.css
+./style/brown/style.css
+* added overflow:auto to .window
+
+../templates/forum_viewtopic.tpl.php
+* fixed line breaks for long words (e.g. links)
+
+../classes/forum.class.php
+../classes/friendlist.class.php
+* deprecated Forum::TopicBlock() removed
+* deprecated Friendlist::FriendBlock() removed
+
+../templates/banishments_banform.tpl.php
+./user/profile.php
+../templates/forum_viewtopic.tpl.php
+../locale/ru_RU/LC_MESSAGES/default.mo
+../classes/forum.class.php
+* minor layout/translation fix
+
+../classes/forum.class.php
+* Forum::MessageHandler() now supports line breaks
+
+Released on April 3, 2016.

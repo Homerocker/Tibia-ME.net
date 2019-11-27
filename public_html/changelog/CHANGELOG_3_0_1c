@@ -1,0 +1,21 @@
+../classes/highscoresupdater.class.php
+* [testing] workaround for outdated highscores data due to remote file being cached
+
+../classes/profile.class.php
+* fixed redirect loop when adding Facebook account
+
+./user/lostpassword.php
+* fixed password recovery algo
+
+../templates/agreement.tpl.php
+* fixed user agreement could not be accepted
+
+../core.php
+../templates/login.tpl.php
+../templates/login_welcome.tpl.php
+./user/login.php
+./user/register.php
+../templates/agreement.tpl.php
+* attempt to fix redirect URL encoding
+
+Released on Jul 1, 2018.

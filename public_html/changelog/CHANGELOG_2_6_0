@@ -1,0 +1,77 @@
+../classes/profile.class.php
+* Facebook PHP API: do not attempt to display Facebook data when API returns an empty array
+(happens when user disables Facebook profile I guess)
+
+../templates/profile.tpl.php
+* Facebook JS API: file_get_contents() will ignore http response errors but we will check if API returns requested data, and display data if it does
+* converted some html into js to control its content with JS API
+
+../templates/page_footer.tpl.php
+./js/jquery.min.js
+./js/core.js
+* started adding more JS functionality
+
+../classes/letters.class.php
+* [hotfix] letters message and/or subject were empty
+
+../classes/scores.class.php
+../templates/highscores_viewscores.tpl.php
+./js/jquery.flot.min.js
+./js/excanvas.min.js
+../templates/page_footer.tpl.php
+* draw hunting graph with JS if enabled
+
+../classes/gamecontent.class.php
+../classes/TochkiSuParser.class.php
+./update_2_5_4.sql
+../templates/game_content_monsters.tpl.php
+../templates/game_content_spells.tpl.php
+* TochkiSuParser::get_weapon_mana() deprecated, fetching mana info from new xls
+* GameContent::get_monster_extra_data() doesn't return speed, fetching walkspeed info from new xls
+* added GameContent::parse_walkspeed()
+* renamed speed to walkspeed
+* specify files extensions in GameContent::$sync_files instead of hardcoding them in GameContent::sync()
+* GameContent::sync() store spell amount as single number if amount_min is equal to amount_max
+* added 'weapon' type to damaging spells
+* add '%' to spell amount if spell type is 'weapon'
+* added game_content_skills and game_content_potions_food
+* [fix] GameContent::add_monster() should compare loot to 'NULL' rather than null
+
+../classes/scores.class.php
+./scores/guild.php
+../classes/highscoresupdater.class.php
+./update_2_5_4.sql
+../gamecontent_xls/
+* guilds caching performance slightly improved
+* fixed incorrect hunting stats ("0 EP") for guilds that are not in top 100 (displaying "no data" now)
+* do not throw "guild not found" error if guild exists in scores_guilds-characters (guild is not in top 100 but has known members)
+* guilds update performance slightly improved
+* do not add guilds that are not in top 100 to the database (dummy entries without data to suppress "guild not found error")
+* delete existing entries for guilds that are not in top 100 from the database (see above)
+* added game_content_monsters.id and changed game_content_loot.monster_name to game_content_loot.monster_id
+(fixed loot for multiple monster with same name)
+* remove duplicate loot before passing it to GameContent::add_monster()
+
+../UI_shared/comments.php
+./artworks/comments.php
+./album/comments.php
+./screenshots/comments.php
+./themes/comments.php
+* [fix] some of navigation links didn't translate
+
+./cp/sync.php
+../templates/cp_index.tpl.php
+* added 'sync skills' links to CP
+
+../core.php
+* mysqli_prepare_value() will cast input value(s) to string before performing ctype_digit() check
+
+./fangames.php
+../templates/fangames.tpl.php
+../templates/index.tpl.php
+* added flash games
+
+../classes/gamecontent.class.php
+* GameContent::add_armour() will ignore duplicate amulets and rings (they are listed twice, for each vocation)
+
+Released on Feb 27, 2014.

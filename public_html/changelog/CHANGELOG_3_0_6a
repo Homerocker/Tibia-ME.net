@@ -1,0 +1,5 @@
+../classes/db.class.php
+* DB::prepared_query() returns DB_stmt object
+* added DB_stmt::fetch_row(), DB_stmt::fetch_assoc() and DB_stmt::fetch_all() for backward compatibility with DB::query()
+
+Released on Aug 9, 2018.

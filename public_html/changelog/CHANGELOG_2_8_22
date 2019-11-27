@@ -1,0 +1,24 @@
+../classes/geo.class.php
+* geo::getCountries() will return country ID if localized country name not found
+
+../classes/db.class.php
+* DB::insert() and DB::update() rewritten
+
+/DB
+../browscap.ini
+../classes/auth.class.php
+./user/settings.php
+../templates/settings.tpl.php
+* added important security option to view and delete saved devices (when "remember me" option is selected during login) in Settings
+
+./user/lostpassword.php
+* changing password will also remove all saved devices to prevent unauthorized device bypassing password check in case account was hacked
+
+../config.php
+* session.gc_maxlifetime and session.cookie_lifetime set to much lower values to improve security
+Unsaved devices will log out sooner, while saved devices are not affected at all.
+
+../templates/agreement.tpl.php
+* minor agreement update as we now store users' browser name and location for saved devices (only to keep users informed and secured)
+
+Released on Jan 16, 2017.

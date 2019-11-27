@@ -1,0 +1,4 @@
+../classes/forum.class.php
+* do not remove entries from forumtopicsread on reply
+
+Released on Jan 9, 2016.

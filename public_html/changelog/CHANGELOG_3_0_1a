@@ -1,0 +1,4 @@
+../templates/highscores_viewscores.tpl.php
+* fixed characters ranks not being updated hourly on character page
+
+Released on Jun 20, 2018.

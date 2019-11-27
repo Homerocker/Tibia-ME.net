@@ -1,0 +1,17 @@
+./styles/default/style.css
+./styles/brown/style.css
+* removed overflow from .window (was bad idea to alter it)
+
+../classes/scores.class.php
+../templates/highscores_viewscores.tpl.php
+../templates/page_footer.tpl.php
+* replaced Flot with Google Charts to draw charts when Javascript is enabled
+
+../templates/page_header.tpl.php
+* updated Google Analytics code
+
+../templates/contacts.tpl.php
+* added WhatsApp/Viber contact number
+* display email as image (too much spam)
+
+Released on May 9, 2016.

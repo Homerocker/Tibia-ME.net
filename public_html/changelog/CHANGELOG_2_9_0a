@@ -1,0 +1,9 @@
+../gamecontent_xls/*
+../classes/gamecontent.class.php
+* updated ingame data
+- added 2 weapons
+- added 46 armours (including upgraded versions)
+* GameContent::sync() hardcoded separator column indexes replaces with array_search() where possible
+* upgraded armors recognition improved
+
+Released on Jun 20, 2017.

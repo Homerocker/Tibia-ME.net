@@ -1,0 +1,4 @@
+../classes/gamecontent.class.php
+* fixed GameContent::sync() for armours (warrior armours didn't update)
+
+Released on Feb 16, 2014.

@@ -1,0 +1,8 @@
+/tibia-me.net/album/photos.php
+* security fix: do not upload photos if user is not current album owner (hotfixed in 2.3.07)
+
+/classes/images.class.php
+/tibia-me.net/images/image_parse_error.gif
+* display image with error message if image thumbnail generation fails due to corrupt/unsupported image
+
+Released on Jan 17, 2013

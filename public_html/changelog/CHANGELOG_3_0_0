@@ -1,0 +1,20 @@
+../*
+* frontend powered by ZURB Foundation framework
+* layout optimized for both dekstop and mobile devices
+* "style" toggle removed from settings
+* "javascript" toggle removed from settings
+* older browsers are no longer supported and may not work correctly
+* proxy browsers (e.g. Opera Mini in extreme compression mode, UC Browser Mini)
+are not supported and may not work correctly
+* Opera Mini users with extreme compression mode enabled will see a warning
+suggesting to lower compression level in browser settings
+* added is_int_string()
+* added API class
+* added Likes class
+* "liking" and "disliking" stuff does not cause page reload
+* like/dislike backend is slightly faster
+* fixed incorrect screenshot links when editing theme
+* few more minor changes and fixes
+* guilds exp gain rankings should be fixed
+
+Released on May 22, 2018.

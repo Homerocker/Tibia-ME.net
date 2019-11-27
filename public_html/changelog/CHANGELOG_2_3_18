@@ -1,0 +1,6 @@
+/classes/clientsversion.class.php
+/templates/download.tpl.php
+/tibia-me.net/download/index.php
+* fetch recent clients versions from www.tibiame.com with max delay currently set to 10min
+
+Released on July 12 2013.

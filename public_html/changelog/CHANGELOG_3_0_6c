@@ -1,0 +1,11 @@
+../classes/highscoresupdater.class.php
+* dynamically set execution time limit to expire before next highscores update
+* retry highscores data download from tibiame.com every 30 sec for a maximum of 10 attempts
+
+../core.php
+* curl_get_contents() will return false if server responds with codes 403, 404, 500, 502 or 503
+
+../classes/TibiameComParser.class.php
+* check if curl_get_contents() returned false
+
+Released on Aug 17, 2018.

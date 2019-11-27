@@ -1,0 +1,7 @@
+/classes/notifications.class.php
+* fixed comments notifications
+
+/tibia-me.net/user/like.php
+* use Notifications::user_remove() to remove user from Likes notification (part of 2.3.07 update which has been skipped)
+
+Released on Jan 18, 2013

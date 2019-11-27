@@ -1,0 +1,19 @@
+../classes/gamecontentset.class.php
+../templates/calc.tpl.php
+../templates/calc_nojs.tpl.php
+* GameContentSet::__construct() will set empty items to null
+* GameContentSet::get_stats() will ignore null items
+* GameContentSet::__construct() unused $clone param removed
+* check if set returned by API contains "null" items (if no suitable item found),
+fixed JS errors and "Calculating" message hang if null items returned
+* check if armors list exists before attempting to display it
+* display dummy icon if item is null
+* correctly remove item from comparison and item icon and stats when last available item is ignored
+* [fix] fixed bug that didn't let calculator update stats after last available item was added to ignore list
+* unignoring item will add that item to current set if it has better stats than currently selected item,
+or if appropriate slot is empty
+
+../templates/settings.tpl.php
+* [fix] check if style folder is actually a folder
+
+Released on June 9, 2016.

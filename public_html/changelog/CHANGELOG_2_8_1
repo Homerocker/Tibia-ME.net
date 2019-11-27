@@ -1,0 +1,25 @@
+./index.php
+* fixed database query to correctly display link to guild highscores profile
+
+../classes/gamecontent.class.php
+../classes/gamecontentset.class.php
+../classes/gamecontentitem.class.php
+./gamecontent/calc/api.php
+./gamecontent/calc/index.php
+../templates/calc.tpl.php
+./js/jquery.blockUI.js
+./style/default/style.css
+./style/brown/style.css
+../templates/index.tpl.php
+* added "ignore item" feature to armour calculator
+* made blockUI compatible with CSS
+* fixed browser incompatibility that could cause "Calculating" message hang forever in some older browsers
+* armor calculator is no longer Beta
+
+./js/jquery.min.js
+* updated jQuery
+
+../classes/album.class.php
+* correctly delete photos from database when album is deleted
+
+Released on July 11, 2015.

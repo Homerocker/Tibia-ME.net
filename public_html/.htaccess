@@ -1,0 +1,41 @@
+#<RequireAll>
+#Require all granted
+#Require not ip 144.76.167.115
+#</RequireAll>
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Custom ErrorDocument handlers
+#ErrorDocument 403 /?httperror=403
+#ErrorDocument 404 /?httperror=404
+
+# AddType's
+AddType application/vnd.symbian.install .sis
+AddType x-epoc/x-sisx-app .sisx
+AddType application/x-httpd-php .php
+AddType image/png .png
+AddType image/jpeg .jpg .jpeg
+AddType image/gif .gif
+AddType image/bmp .bmp
+
+# Security issues
+<FilesMatch "\.(sql|bak|mwb|bk|dat)$">
+Order allow,deny
+deny from all
+</FilesMatch>
+php_flag register_globals Off
+Options -Indexes
+php_flag allow_url_include Off
+php_flag session.use_strict_mode On
+
+# Additional settings
+DirectoryIndex index.php index.html
+# need this
+php_flag display_errors Off
+AddDefaultCharset utf-8
+php_flag output_buffering Off
+php_flag log_errors On
+php_flag short_open_tag On
+php_value request_order GP
+php_value upload_max_filesize 3M

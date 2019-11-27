@@ -1,0 +1,119 @@
+Some of these changes have been released with previous updates (hotfixes).
+
+UPDATE SUMMARY:
+Dropbox is no longer used as file storage. All files can be accesses much (and I mean MUCH) faster,
+this also resolved an issue that caused website to become unresponsive after user tried to access a file.
+User images are compressed. Thumbnails improved.
++ many other fixes
+
+This changelog may be incomplete, it may change later, also few minor features listed here may be not released yet.
+
+../classes/cache.class.php
+* replaced hardcoded extensions with Cache::get_extension()
+(fixed issue with Cache::write() and Cache::read() referring to different files thus cache not working)
+* added Cache::touch()
+* .dat files contents are always serialized
+
+../classes/browscap.class.php
+* [fix] Browscap::get_version() will read version from browscap.ini
+and "touch" cache file if it's outdated or does not exist
+(don't re-download ini file when not necessary)
+
+../classes/TibiameComParser.class.php
+* TibiameComParser::get_client_url() returns null on error
+
+../classes/geo.class.php
+./cp/index.php
+../templates/cp_index.tpl.php
+./CHANGELOG/COPYRIGHT
+* updated Geo::update_database()
+
+../classes/auth.class.php
+* removed old compatibility hashing method from Auth::login()
+
+/DB
+../classes/uploader.class.php
+./screenshots/index.php
+* Uploader::validate() will return hash and extension rather than filenames
+* Uploader::validate() will use SHA3-256 rather than MD5 for files hashing (reduced collision chance)
+
+../classes/images.class.php
+* CLI mogrify replaced with php_imagick
+
+./CHANGELOG/README
+
+../classes/gamecodes.class.php
+./index.php
+* display available discounts if there IS enough platinum in stock but requested amount is not available as a SINGLE gamecode
+
+./platinum.php
+* fixed incorrectly displayed payment confirmation page when user proceeds to payment with no product selected
+
+../config.php
+* max viewport width increased to 360px (to look good on admin's new 5.5 inch device lol)
+
+../templates/page_header.tpl.php
+* adsense() will rely on VIEWPORT_WIDTH
+(fixed ads not hiding correctly when browser window resized)
+
+../core.php
+* imagerotate() removed (PHP GD has it)
+* GenderIcon() removed (replaced with User::gender_icon())
+
+../classes/uploader.class.php
+../classes/images.class.php
+./album/photos.php
+../config.php
+../classes/artworks.class.php
+../classes/comments.class.php
+./screenshots/index.php
+../classes/screenshots.class.php
+../templates/screenshots_index.tpl.php
+../classes/themes.class.php
+../templates/artworks_index.tpl.php
+* implemented uploaded images compression (Images::compress()):
+1) animated GIF are ignored
+2) non-transparent PNG, BMP, GIF are converted to JPEG when using lossy compression
+3) imagick JPEG quality set to 92% for lossy compression
+4) lossless compression used for artworks section
+5) GIF, BMP are converted to PNG (lossless)
+6) if "compressed" image turns out to be larger than original image, original one is used
+over 23% average filesize reduction without much visual quality loss (I hope)
+
+../classes/filesystem.class.php
+* added Filesystem::get_doc_root_path()
+
+../classes/images.class.php
+* Images::thumbnail() rewritten with Imagick
+(fixed hor/vert black bars around image, almost no difference in average file size (?), slightly better quality (?), more formats support, much cleaner code)
+
+../dropbox-sdk
+../classes/dropbox.class.php
+* removed, files are no longer stored in dropbox
+
+./getfile.php
+* redirect old links to new files locations
+
+./images/like.png
+./images/dislike.png
+../templates/likes.tpl.php
+* replaced like/dislike text with image
+
+../templates/album_photos.tpl.php
+* width replaced with max-width (fixed thumbnails scaling)
+
+../classes/TibiameComParser.class.php
+* TibiameComParser::get_clients_versions() will not fetch clients urls if actual client version and cached one match
+(greately reduced amount of requests to tibiame.com (14->1) and download section load time)
+
+../classes/ExchangerRuParser.class.php
+* ExchangerRuParser::get_rate() returns null on error
+
+../classes/document.class.php
+../templates/page_header.tpl.php
+../templates/page_footer.tpl.php
+../templates/user_toolbar.tpl.php
+./user/login.php
+* added possibility to disable ads on specific pages
+
+Released on Jun 6, 2017.

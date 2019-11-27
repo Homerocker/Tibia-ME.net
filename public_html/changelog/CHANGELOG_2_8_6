@@ -1,0 +1,29 @@
+This update completely replaces outdated "PHPExcelReader" with "PHPExcel".
+Previously we converted .xlsx files to .xls to read them with PHPExcelReader but used PHPExcel to read images,
+which made no sense and had bad impact on performance. 
+
+../config.php
+../core.php
+* load_class() renamed to __autoload()
+
+../core.php
+* added code for PHPExcel specific paths to __autoload()
+
+../PHPExcel/PHPExcel/Autoloader.php
+* PHPExcel_Autoloader::register() disabled, relying on our __autoload()
+
+../classes/gamecontent.class.php
+* code rewritten for PHPExcel (added support for MS Office 2007 and newer formats, improved performance in some cases)
+* removed GameContent::getColNameByNumber()
+* added GameContent::colspan() and GameContent::rowspan() (wrong class though)
+
+../classes/spreadsheet_excel_reader.class.php
+* removed PHPExcelReader
+
+../gamecontent_xls/community_allmonsters_SU2015.xls
+* correctly bound all icons to appropriate cells
+
+../PHPExcel/PHPExcel/Cell.php
+* decrease PHPExcel_Cell::columnIndexFromString() returned value by 1 since columns indexes in PHPExcel start with 0 (bug?)
+
+Released on Jan 27, 2016.

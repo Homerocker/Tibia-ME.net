@@ -1,0 +1,72 @@
+/classes/forum.class.php
+* topics at news section are sorted by creation time instead of last comment time
+
+/tibia-me.net/index.php
+/templates/index.tpl.php
+/classes/scores.class.php
+* highscores shortcut at home page fixed
+
+/classes/themes.class.php
+* theme delete function fixed (hotfixed in 2.3)
+
+/classes/friendlist.class.php
+* fixed add/remove friend link in friendlist (hotfixed in 2.3)
+
+/classes/user.class.php
+* fixed memberlist crash if no search results returned (hotfixed in 2.3)
+* User::get_account_data() removed
+
+/classes/letters.class.php
+/templates/letters_edit.tpl.php
+/tibia-me.net/user/letters.php
+* letter edit function fixed (hotfixed in 2.3)
+
+/tibia-me.net/user/letters.php
+/templates/profile.tpl.php
+/templates/friendlist.tpl.php
+/templates/friendlist_mutual.tpl.php
+/templates/friendlist_online.tpl.php
+* recipient data autofill fixed when clicking "Send letter" link in profile and friendlist (hotfixed in 2.3)
+
+/facebook/
+* facebook SDK updated to latest version
+
+/core.php
+/classes/banishments.class.php
+* Banishments class moved to separate file
+
+/tibia-me.net/encyclopedia/
+/classes/encyclopedia.class.php
+/templates/index.tpl.php
+/templates/encyclopedia_*.tpl.php
+* fixes for encyclopedia
+
+/classes/comments.class.php
+* do not attempt to fetch non-existing photo data (caused error),
+immediately end execution of script and redirect user with error message;
+same fix has been applied for screenshots, themes and artwork sections
+which did not cause any errors but were creating some unused variables
+
+/tibia-me.net/themes/upload.php
+* do not attempt to remove theme screenshot if theme upload fails and screenshot was not specified (remove non-existing file fix)
+
+/templates/index.tpl.php
+* Tochki.su/TibiaME link fixed (hotfixed in 2.3)
+
+/classes/system.class.php
+* System::lock_update() added
+
+/tibia-me.net/scores/updater.php
+references to scores_top-gains removed
+* some performance optimizations
+
+/classes/scores.class.php
+/tibia-me.net/scores/top100.php
+* references to scores_top-gains removed
+
+/Database
+* scores_top-gains table removed, scores_highscores and scores_player-max-min will do its job
+* some changes to encyclopedia tables
+* some performance tweaks for highscores tables
+
+Released on Dec 18, 2012

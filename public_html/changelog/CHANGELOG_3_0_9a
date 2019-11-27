@@ -1,0 +1,4 @@
+../classes/notifications.class.php
+* Notifications::mail() should now correctly restore current user locale after sending email
+
+Released on Jul 20, 2019.
