@@ -277,7 +277,7 @@ class Notifications {
         if ($type == 'letter' && !$sql['letters_notify']) {
             return false;
         }
-        $locale = setlocale('LC_ALL', 0);
+        $locale = setlocale(LC_MESSAGES, 0);
         User::set_locale($sql['locale']);
         switch ($type) {
             case 'letter':
