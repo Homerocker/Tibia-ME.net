@@ -1,0 +1,4 @@
+../classes/nofitications.class.php
+* correctly restore user locale after sending mail notifications
+
+Released on Jan 13, 2020. 
