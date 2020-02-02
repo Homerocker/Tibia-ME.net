@@ -6,7 +6,8 @@
  * @author Molodoy <molodoy3561@gmail.com>
  * @copyright 2012 (c) Tibia-ME.net
  */
-class Letters {
+class Letters
+{
 
     /**
      * @var array $data fetched data
@@ -46,7 +47,8 @@ class Letters {
      * Fetches folder data
      * @param string $folder folder name
      */
-    public function fetch_folder($folder, $limit = 20) {
+    public function fetch_folder($folder, $limit = 20)
+    {
         switch ($folder) {
             case 'inbox':
                 $this->pages = $GLOBALS['db']->query('
@@ -166,7 +168,7 @@ class Letters {
                     FROM `letters`
                     WHERE `replyto` = \'' . $row['replyto'] . '\'
                     AND `timestamp` < \'' . $row['timestamp'] . '\'')
-                        ->fetch_row()[0];
+                    ->fetch_row()[0];
                 $row['subject'] = '[Re:' . ($replies + 1) . ']&nbsp;' . $row['subject'];
             }
             // converting sender and recipient IDs into links to their profiles
@@ -187,15 +189,16 @@ class Letters {
      * @param int|string $letter_id letter ID
      * @return boolean true if letter exists, otherwise false
      */
-    public function exists($letter_id) {
-        if (!ctype_digit((string) $letter_id)) {
+    public function exists($letter_id)
+    {
+        if (!ctype_digit((string)$letter_id)) {
             return false;
         }
         $sql = $GLOBALS['db']->query('
                     SELECT COUNT(*)
                     FROM `letters`
                     WHERE `id` = \'' . $letter_id . '\''
-                )->fetch_row();
+        )->fetch_row();
         if ($sql[0]) {
             return true;
         }
@@ -207,7 +210,8 @@ class Letters {
      * @param int|string $letter_id letter ID
      * @param string $folder folder
      */
-    public function view($letter_id, $folder) {
+    public function view($letter_id, $folder)
+    {
         $sql = $GLOBALS['db']->query('
                         SELECT `from`,
                         `to`,
@@ -215,13 +219,13 @@ class Letters {
                         `message`,
                         `flag`,
                         timestamp'
-                        . (($folder == 'inbox') ? ', `recipient_display`, `recipient_saved` as `saved`' : '')
-                        . (($folder == 'outbox' || $folder == 'sentbox') ? ', `sender_display`, `sender_saved` as `saved`' : '')
-                        . (($folder == 'savebox') ? ', `sender_saved`, `recipient_saved`' : '')
-                        . 'FROM `letters`
+            . (($folder == 'inbox') ? ', `recipient_display`, `recipient_saved` as `saved`' : '')
+            . (($folder == 'outbox' || $folder == 'sentbox') ? ', `sender_display`, `sender_saved` as `saved`' : '')
+            . (($folder == 'savebox') ? ', `sender_saved`, `recipient_saved`' : '')
+            . 'FROM `letters`
                         WHERE `id` = \'' . $letter_id . '\'
                         LIMIT 1')
-                ->fetch_assoc();
+            ->fetch_assoc();
         if ($sql === null || ($folder == 'inbox' && ($sql['to'] != $_SESSION['user_id'] || !$sql['recipient_display'])) || (($folder == 'sentbox' || $folder == 'outbox') && ($sql['from'] != $_SESSION['user_id'] || !$sql['sender_display'])) || ($folder == 'savebox' && ($sql['from'] != $_SESSION['user_id'] || !$sql['sender_saved']) && ($sql['to'] != $_SESSION['user_id'] || !$sql['recipient_saved']))) {
             $this->data['error'] = _('Letter not found.');
             return;
@@ -241,7 +245,8 @@ class Letters {
         }
     }
 
-    public function fetch($letters_id) {
+    public function fetch($letters_id)
+    {
         if (is_array($letters_id)) {
             //$sql = $GLOBALS['db']->query('SELECT ');
         } else {
@@ -252,7 +257,8 @@ class Letters {
         }
     }
 
-    public function edit() {
+    public function edit()
+    {
         $sql = $GLOBALS['db']->query('SELECT `to`,
                 `from`,
                 `subject`,
@@ -261,7 +267,7 @@ class Letters {
                 `flag`
                 FROM `letters`
                 WHERE `id` = \'' . $_REQUEST['edit'] . '\'')
-                ->fetch_assoc();
+            ->fetch_assoc();
         if ($sql['from'] != $_SESSION['user_id']) {
             Document::reload_msg(_('You don\'t have permission to edit this letter.'), $_SERVER['SCRIPT_NAME'] . '?folder=outbox&view=' . $_REQUEST['edit']);
         }
@@ -285,8 +291,8 @@ class Letters {
                 WHERE `id` = \'' . $_REQUEST['edit'] . '\'
                 AND `flag` = \'1\'');
             Document::reload_msg(
-                    _('Changes saved.'), $_SERVER['SCRIPT_NAME']
-                    . '?folder=outbox&view=' . $_REQUEST['edit']);
+                _('Changes saved.'), $_SERVER['SCRIPT_NAME']
+                . '?folder=outbox&view=' . $_REQUEST['edit']);
         }
     }
 
@@ -294,7 +300,8 @@ class Letters {
      * Removes letter from user's Savebox. Uses $_REQUEST['delete'] as letter ID.
      * @return boolean true on success, otherwise false
      */
-    private function unsave() {
+    private function unsave()
+    {
         $sql = $GLOBALS['db']->query('SELECT
                 `to`,
                 `from`
@@ -325,7 +332,8 @@ class Letters {
      * Removes letter. Uses $_REQUEST['delete'] as letter ID.
      * @param string $folder One of folders: inbox, outbox or sentbox.
      */
-    public function delete($folder) {
+    public function delete($folder)
+    {
         if ($folder == 'savebox') {
             if ($this->unsave()) {
                 Document::reload_msg(_('This letter has been removed from Savebox.'), $_SERVER['SCRIPT_NAME'] . '?folder=' . $folder . '&page=' . Document::s_get_page());
@@ -358,7 +366,8 @@ class Letters {
      * Saves letter. User $_REQUEST['save'] as letter ID.
      * @param string $folder One of folders: inbox, outbox or sentbox.
      */
-    public function save($folder) {
+    public function save($folder)
+    {
         $GLOBALS['db']->query('UPDATE `letters`
             SET `' . (($folder == 'inbox') ? 'recipient_saved' : 'sender_saved') . '` = \'1\'
             WHERE `id` = \'' . $_REQUEST['save'] . '\'
@@ -371,7 +380,8 @@ class Letters {
      * Sets variables for compose form. Sends letters.
      * @param int|string $replyto optional ID of letter to reply
      */
-    public function compose() {
+    public function compose()
+    {
         $this->u = Auth::get_u(null);
         if (isset($this->u)) {
             if ($this->u == $_SESSION['user_id']) {
@@ -406,7 +416,7 @@ class Letters {
                 AND `id` = \'' . $_REQUEST['compose'] . '\'')->fetch_row();
             if ($sql[0]) {
                 list($this->subject, $replyto, $this->replyto_count) = $GLOBALS['db']
-                        ->query('SELECT `subject`, `replyto` as `replyto_temp`,
+                    ->query('SELECT `subject`, `replyto` as `replyto_temp`,
                 (
                     SELECT COUNT(*)
                     FROM `letters`
@@ -414,7 +424,7 @@ class Letters {
                 ) as `reply_count`
                 FROM `letters`
                 WHERE `id` = \'' . $_REQUEST['compose'] . '\'')
-                        ->fetch_row();
+                    ->fetch_row();
                 if ($replyto === null) {
                     $replyto = $_REQUEST['compose'];
                 }
@@ -477,7 +487,8 @@ class Letters {
      * Adds error message to $this->error if value is not set or too long.
      * @return boolean false if value is not set or too long, otherwise true
      */
-    private function set_subject() {
+    private function set_subject()
+    {
         if (!isset($_POST['submit'])) {
             return false;
         } elseif (isset($_POST['subject'])) {
@@ -498,7 +509,8 @@ class Letters {
      * Adds error message to $this->error if value is not set or too long.
      * @return boolean false if value is not set or too long, otherwise true
      */
-    private function set_message() {
+    private function set_message()
+    {
         if (!isset($_POST['submit'])) {
             return false;
         } elseif (isset($_POST['message'])) {

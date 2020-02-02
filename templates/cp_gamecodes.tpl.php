@@ -36,15 +36,8 @@ if (empty($overview)) {
     echo '</div>';
 } else {
     echo '<div class="callout primary">';
-    foreach ($overview as $type => $codes) {
-        foreach ($codes as $amount => $count) {
-            echo $count, '&times;';
-            if ($type === 'premium') {
-                echo sprintf(ngettext('%d day Premium', '%d days Premium', $amount), $amount), '<br/>';
-            } else {
-                echo sprintf(_('%d Platinum'), $amount), '<br/>';
-            }
-        }
+    foreach ($overview as $amount => $count) {
+        echo $count, '&times;', sprintf(_('%d Platinum'), $amount), '<br/>';
     }
     echo '</div>';
 }
@@ -56,7 +49,7 @@ if (Perms::get(Perms::GAMECODES_ACTIVATE)) {
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
         <div class="callout primary">
             <label for="nickname"><?= _('Nickname') ?></label>
-            <input id="nickname" type="text" name="nickname" maxlength="10" value="<?= $nickname ?>"/>
+            <input id="nickname" type="text" name="nickname" maxlength="10" value=""/>
             <label for="world"><?= _('World') ?></label>
             <select id="world" name="world">
                 <option value=""><?= _('select world') ?></option>
@@ -70,32 +63,8 @@ if (Perms::get(Perms::GAMECODES_ACTIVATE)) {
                 }
                 ?>
             </select>
-            <label><?= _('Game code') ?></label>
-            <div class="input-group">
-                <select class="input-group-field" name="code_type">
-                    <option value=""><?= _('select code type') ?></option>
-                    <?php
-                    foreach ($overview as $type => $codes) {
-                        foreach (array_keys($codes) as $amount) {
-                            echo '<option value="', $type, ':', $amount, '"', ($type . ':' . $amount === $code_type ? ' selected' : ''), '>';
-                            if ($type === 'premium') {
-                                echo sprintf(ngettext('%d day Premium', '%d days Premium', $amount), $amount);
-                            } else {
-                                echo sprintf(_('%d Platinum'), $amount);
-                            }
-                            echo '</option>';
-                        }
-                    }
-                    ?>
-                </select>
-                <select class="input-group-field" name="multiplier">
-                    <?php
-                    for ($i = 1; $i <= 50; ++$i) {
-                        echo '<option value="', $i, '"', ($multiplier == $i ? ' selected' : ''), '>&times;', $i, '</option>';
-                    }
-                    ?>
-                </select>
-            </div>
+            <label for="amount"><?= _('Amount') ?></label>
+            <input id="amount" type="number" name="amount" value=""/>
             <input class="button primary" type="submit" value="<?= _('Activate') ?>"/>
         </div>
     </form>

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tibia-ME.net\n"
 "POT-Creation-Date: 2018-08-29 19:35+0300\n"
-"PO-Revision-Date: 2018-12-29 13:47+0100\n"
+"PO-Revision-Date: 2018-08-29 19:35+0300\n"
 "Last-Translator: Molodoy <molodoy3561@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
@@ -4396,7 +4396,7 @@ msgstr "Umowa Użytkownika"
 
 #: templates/agreement.tpl.php:3
 msgid "General"
-msgstr "Generalne"
+msgstr "Generalny"
 
 #: templates/agreement.tpl.php:5
 msgid ""
@@ -4431,7 +4431,7 @@ msgstr ""
 
 #: templates/agreement.tpl.php:13
 msgid "You are not allowed to share your account data (password) publicly."
-msgstr "Nie możesz publicznie udostępniać danych konta (hasła)."
+msgstr "Nie możesz publicznie udostępniać danych konta (hasła)"
 
 #: templates/agreement.tpl.php:18
 msgid ""
@@ -4503,7 +4503,7 @@ msgstr ""
 
 #: templates/agreement.tpl.php:42
 msgid "Only TibiaME screenshots are allowed at Screenshots section."
-msgstr "Tylko zrzuty ekranu z TibiaME są dozwolone w dziale Zrzuty ekranu."
+msgstr "Tylko zrzuty ekranu TibiaME są dozwolone w dziale Zrzuty ekranu."
 
 #: templates/agreement.tpl.php:43
 msgid "Artworks are not allowed."
@@ -4523,7 +4523,7 @@ msgstr "Prace powinny być powiązane z TibiaME."
 
 #: templates/agreement.tpl.php:50
 msgid "You are only allowed to upload your own artworks."
-msgstr "Możesz przesyłać tylko swoją pracę."
+msgstr "Możesz przesyłać tylko własne prace."
 
 #: templates/agreement.tpl.php:55
 msgid ""
@@ -5728,7 +5728,7 @@ msgstr "Czy na pewno chcesz usunąć ten post?"
 
 #: templates/forum_viewtopic.tpl.php:115
 msgid "Log in to post messages."
-msgstr "Zaloguj się aby dodawać posty."
+msgstr "Zaloguj się żeby dodawać posty."
 
 #: templates/friendlist.tpl.php:4
 msgid "Friendlist is empty."
@@ -6232,12 +6232,12 @@ msgstr "Następny poziom"
 
 #: templates/highscores_viewscores.tpl.php:16
 msgid "Global rank"
-msgstr "Globalna ranga"
+msgstr ""
 
 #: templates/highscores_viewscores.tpl.php:19
 #, php-format
 msgid "w%d rank"
-msgstr "Ranga na w%d"
+msgstr ""
 
 #: templates/highscores_viewscores.tpl.php:23
 msgid "PvP rank"
@@ -6305,7 +6305,7 @@ msgstr[2] "%d postaci"
 
 #: templates/highscores_worlds.tpl.php:15
 msgid "Max gain"
-msgstr "Największy przyrost"
+msgstr "Największy przyrost przyrost"
 
 #: templates/highscores_worlds.tpl.php:19
 msgid "Min gain"
@@ -6452,7 +6452,7 @@ msgstr "Ostatni raz byłeś/aś tu %s."
 
 #: templates/login_welcome.tpl.php:12
 msgid "What's new"
-msgstr "Co nowego?"
+msgstr "Co nowego"
 
 #: templates/login_welcome.tpl.php:17
 msgid "No news since your previous visit."
@@ -6752,7 +6752,7 @@ msgstr[2] "%d znajomych"
 msgid "%d notification"
 msgid_plural "%d notifications"
 msgstr[0] "%d powiadomienie"
-msgstr[1] "%d powiadomienia"
+msgstr[1] "%d powiadomień"
 msgstr[2] "%d powiadomień"
 
 #: templates/page_header.tpl.php:46 templates/page_header.tpl.php:97
@@ -7206,7 +7206,7 @@ msgstr "Lokalizacja: %s"
 #: templates/settings.tpl.php:113
 #, php-format
 msgid "Saved: %s"
-msgstr "Zapisano: %s"
+msgstr "Zapisanych: %s"
 
 #: templates/settings.tpl.php:118
 #, php-format

@@ -80,4 +80,11 @@ class Date
             'offset' => $transitions[1]['offset'] - $transitions[0]['offset']
         ];
     }
+
+    /**
+     * @deprecated
+     */
+    public static function get_timezone($ymd, $hour = 0, $timezone_name = null) {
+        $transitions = (new DateTimeZone($timezone_name ?? date_default_timezone_get()))->getTransitions(strtotime($ymd), strtotime(self::modify($ymd, 1)));
+    }
 }

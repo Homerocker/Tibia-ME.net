@@ -8,7 +8,8 @@
  * @autor Oleg Illarionov
  * @version 1.0-Tibia-ME.net
  */
-class vkapi {
+class vkapi
+{
 
     var $api_secret;
 
@@ -18,7 +19,8 @@ class vkapi {
 
     private $n = 0;
 
-    function __construct($app_id, $api_secret, $api_url = 'api.vk.com/api.php') {
+    function __construct($app_id, $api_secret, $api_url = 'api.vk.com/api.php')
+    {
         $this->app_id = $app_id;
         $this->api_secret = $api_secret;
         if (!strstr($api_url, 'http://'))
@@ -26,7 +28,8 @@ class vkapi {
         $this->api_url = $api_url;
     }
 
-    function api($method, $params = false) {
+    function api($method, $params = false)
+    {
         if (!$params)
             $params = array();
         $params['api_id'] = $this->app_id;
@@ -52,7 +55,8 @@ class vkapi {
         return $res;
     }
 
-    function params($params) {
+    function params($params)
+    {
         $pice = array();
         foreach ($params as $k => $v) {
             $pice[] = $k . '=' . urlencode($v);
@@ -60,7 +64,8 @@ class vkapi {
         return implode('&', $pice);
     }
 
-    private function backoff() {
+    private function backoff()
+    {
         if ($this->n === 5) {
             return false;
         }

@@ -106,8 +106,7 @@
     <div class="cell medium-6 large-4">
         <h4><?= _('Payment') ?></h4>
         <ul>
-            <li><? if ($premium_discount): ?><span class="label success">-<?= $premium_discount ?>
-                    %</span>&nbsp;<? endif; ?><a href="./premium.php"><?= _('Premium') ?></a></li>
+            <li><a href="./premium.php"><?= _('Premium') ?></a></li>
             <li><? if ($platinum_discount): ?><span class="label success">-<?= $platinum_discount ?>
                     %</span>&nbsp;<? endif; ?><a href="./platinum.php"><?= _('Platinum') ?></a></li>
         </ul>

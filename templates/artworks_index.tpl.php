@@ -33,7 +33,7 @@
         </div>
             </div>
         </div>
-    <?php endforeach; ?>
+    <? endforeach; ?>
     </div>
 <? endif;
 if (!isset($delete)):
