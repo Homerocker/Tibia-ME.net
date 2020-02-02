@@ -21,15 +21,9 @@ if ($gamecodes->get_mode() === GameCodes::MODE_ACTIVATE_CONFIRMATION) {
     $codes_available = $gamecodes->get_codes();
     $document->assign(array(
         'codes' => $gamecodes->codes,
-        'code_type' => $gamecodes->type . ':' . $gamecodes->amount,
         'codes_available' => $codes_available,
         'history' => $gamecodes->get_history(),
         'overview' => $gamecodes->get_overview($codes_available),
-        'nickname' => $gamecodes->nickname,
-        'world' => $gamecodes->world,
-        'multiplier' => $gamecodes->multiplier,
-        'type' => $gamecodes->type,
-        'amount' => $gamecodes->amount
     ));
     $document->display('cp_gamecodes');
 }

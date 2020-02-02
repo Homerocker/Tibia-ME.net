@@ -178,3 +178,14 @@ function chat_date(timestamp) {
     var date = new Date(timestamp);
     return pad(date.getDate(), 2) + '.' + pad(date.getMonth() + 1, 2) + '.' + date.getFullYear() + ' ' + pad(date.getHours(), 2) + ':' + pad(date.getMinutes(), 2) + ':' + pad(date.getSeconds(), 2);
 }
+
+function get_platinum_bundle(required_amount, currency) {
+    $.get('/api.php?call=get_platinum_bundle&required_amount=' + required_amount + '&currency=' + currency, function (data) {
+        data = $.parseJSON(data)['result'];
+        $("#amount_display").text(data.amount);
+        $("#amount").val(data.amount);
+        $("#price").text((currency === 'FK' ? 'USD' : currency) + ' ' + data.price);
+    }).done(function () {
+        
+    });
+}

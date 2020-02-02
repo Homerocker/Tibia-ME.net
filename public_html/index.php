@@ -102,11 +102,12 @@ if ($_SESSION['user_id']) {
     $char_id = $guild_name = null;
 }
 $gc_overview = (new GameCodes)->get_overview();
+// @todo verify what it does
 $platinum_discount = max(array_map(function ($arr) use ($gc_overview) {
-            return ((isset($gc_overview[array_search($arr, Pricing::$pricing)])
-                    || GameCodes::get_total($gc_overview) >= array_search($arr, Pricing::$pricing))
-                        ? $arr['discount_pct'] : 0);
-        }, Pricing::$pricing));
+            return ((isset($gc_overview[array_search($arr, Pricing::PRICES)])
+                    || GameCodes::get_total($gc_overview) >= array_search($arr, Pricing::PRICES))
+                        ? $arr[array_key_first($arr)]['discount_pct'] : 0);
+        }, Pricing::PRICES));
 $document->assign(array(
     'screenshots_total' => $screenshots_total[0],
     'screenshots_new' => $screenshots_new[0],
