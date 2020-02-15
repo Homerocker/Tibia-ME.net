@@ -3,15 +3,10 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/../config.php';
 if (isset($_POST['LMI_PREREQUEST']) && $_POST['LMI_PREREQUEST'] == 1) {
     $currency = substr($_POST['LMI_PAYEE_PURSE'], 0, 1);
-    if (!isset(Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']])) {
-        exit(_('Invalid product.'));
+    if ($_POST['AMOUNT'] != GameCodes::get_total(GameCodes::get_bundle($_POST['amount']))) {
+        exit(_('Product not available.'));
     }
-    $price = number_format(round((new Pricing)->get_rate('WM' . substr($_POST['LMI_PAYEE_PURSE'],
-                                    0, 1),
-                            Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']]['currency'],
-                            Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']]['price'])
-                    * (100 - Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']]['discount_pct'])
-                    / 100, 2), 2, '.', '');
+    $price = Pricing::get_price($_POST['TYPE'], $_POST['AMOUNT'],'WM' . substr($_POST['LMI_PAYEE_PURSE'], 0, 1));
     if ($price > $_POST['LMI_PAYMENT_AMOUNT']) {
         exit(_('Price changed.'));
     }
@@ -43,15 +38,10 @@ if (isset($_POST['LMI_PREREQUEST']) && $_POST['LMI_PREREQUEST'] == 1) {
             exit(_('Invalid request.'));
         }
     }
-    if (!isset(Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']])) {
-        exit(_('Invalid request.'));
+    if ($_POST['AMOUNT'] != GameCodes::get_total(GameCodes::get_bundle($_POST['amount']))) {
+        exit(_('Product not available.'));
     }
-    $price = number_format(round((new Pricing)->get_rate('WM' . substr($_POST['LMI_PAYEE_PURSE'],
-                                    0, 1),
-                            Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']]['currency'],
-                            Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']]['price'])
-                    * (100 - Pricing::$pricing[$_POST['TYPE']][$_POST['AMOUNT']]['discount_pct'])
-                    / 100, 2), 2, '.', '');
+    $price = Pricing::get_price($_POST['TYPE'], $_POST['AMOUNT'], 'WM' . substr($_POST['LMI_PAYEE_PURSE'], 0, 1));
     if ($price > $_POST['LMI_PAYMENT_AMOUNT']) {
         exit(_('Price changed.'));
     }
@@ -72,8 +62,8 @@ if (isset($_POST['LMI_PREREQUEST']) && $_POST['LMI_PREREQUEST'] == 1) {
         exit(_('Checksum mismatch.'));
     }
     $gc = new GameCodes;
-    $gc->activate($_POST['TYPE'] . ':' . $_POST['AMOUNT'], $_POST['NICKNAME'],
-            $_POST['WORLD'], 1, true);
+    $gc->activate($_POST['AMOUNT'], $_POST['NICKNAME'],
+            $_POST['WORLD'],true);
     exit;
 } elseif (isset($_GET['SIGN'])) {
     foreach ([
@@ -91,20 +81,16 @@ if (isset($_POST['LMI_PREREQUEST']) && $_POST['LMI_PREREQUEST'] == 1) {
     if ($_GET['SIGN'] != md5('36731:' . $_GET['AMOUNT'] . ':7vd0lik9:' . $_GET['MERCHANT_ORDER_ID'])) {
         exit("Signature mismatch.");
     }
-    if (!isset(Pricing::$pricing[$_GET['us_type']][$_GET['us_amount']])) {
-        exit("Price not found.");
+    if ($_GET['us_amount'] != GameCodes::get_total(GameCodes::get_bundle($_GET['us_amount']))) {
+        exit(_('Product not available.'));
     }
-    $price = number_format(round((new Pricing)->get_rate('WMZ',
-                            Pricing::$pricing[$_GET['us_type']][$_GET['us_amount']]['currency'],
-                            Pricing::$pricing[$_GET['us_type']][$_GET['us_amount']]['price'])
-                    * (100 - Pricing::$pricing[$_GET['us_type']][$_GET['us_amount']]['discount_pct'])
-                    / 100, 2), 2, '.', '');
+    $price = Pricing::get_price($_GET['us_type'], $_GET['us_amount'], 'WMZ');
     if ($price > $_GET['AMOUNT']) {
-        exit("Low amount.");
+        exit('Price changed.');
     }
     $gc = new GameCodes;
-    $result = $gc->activate($_GET['us_type'] . ':' . $_GET['us_amount'],
-            $_GET['us_nickname'], $_GET['us_world'], 1, true);
+    $result = $gc->activate($_GET['us_amount'],
+            $_GET['us_nickname'], $_GET['us_world'], true);
     exit(($result ? "YES" : "FAILURE"));
 }
 $doc = new Document(_('Payment'), array(
@@ -120,85 +106,38 @@ if (isset($_GET['success'])) {
     $doc->display('payment_method');
 } elseif (!isset($_GET['nickname']) || !isset($_GET['world']) || !isset($_GET['amount'])) {
     $doc->assign([
-        'currency' => $_GET['currency'],
-        'products' => (new GameCodes)->get_overview()
+        'currency' => $_GET['currency']
     ]);
     $doc->display('payment_product');
 } elseif (isset($_GET['amount'])) {
-    $pricing = new Pricing;
-    switch ($_GET['currency']) {
-        case 'WMR':
-            $doc->assign([
-                'LMI_PAYEE_PURSE' => 'R161889717079',
-                'LMI_PAYMENT_AMOUNT' => number_format(round($pricing->get_rate($_GET['currency'],
-                                        Pricing::$pricing[$type][$amount]['currency'],
-                                        Pricing::$pricing[$type][$amount]['price'])
-                                * (100 - Pricing::$pricing[$type][$amount]['discount_pct'])
-                                / 100, 2), 2, '.', '')
-            ]);
-            break;
-        case 'WMU':
-            $doc->assign([
-                'LMI_PAYEE_PURSE' => 'U425132255059',
-                'LMI_PAYMENT_AMOUNT' => number_format(round($pricing->get_rate($_GET['currency'],
-                                        Pricing::$pricing[$type][$amount]['currency'],
-                                        Pricing::$pricing[$type][$amount]['price'])
-                                * (100 - Pricing::$pricing[$type][$amount]['discount_pct'])
-                                / 100, 2), 2, '.', '')
-            ]);
-            break;
-        case 'WMZ':
-            $doc->assign([
-                'LMI_PAYEE_PURSE' => 'Z264253741048',
-                'LMI_PAYMENT_AMOUNT' => number_format(round($pricing->get_rate($_GET['currency'],
-                                        Pricing::$pricing[$amount]['currency'],
-                                        Pricing::$pricing[$amount]['price'])
-                                * (100 - Pricing::$pricing[$amount]['discount_pct'])
-                                / 100, 2), 2, '.', '')
-            ]);
-            break;
-        case 'WME':
-            $doc->assign([
-                'LMI_PAYEE_PURSE' => 'E192093820321',
-                'LMI_PAYMENT_AMOUNT' => number_format(round($pricing->get_rate($_GET['currency'],
-                                        Pricing::$pricing[$type][$amount]['currency'],
-                                        Pricing::$pricing[$type][$amount]['price'])
-                                * (100 - Pricing::$pricing[$type][$amount]['discount_pct'])
-                                / 100, 2), 2, '.', '')
-            ]);
-            break;
-        case 'FK':
-            $sum = number_format(round($pricing->get_rate('WMZ',
-                                    Pricing::$pricing[$type][$amount]['currency'],
-                                    Pricing::$pricing[$type][$amount]['price']) * (100
-                            - Pricing::$pricing[$type][$amount]['discount_pct'])
-                            / 100, 2), 2, '.', '');
-            $doc->assign([
-                'action' => 'https://www.free-kassa.ru/merchant/cash.php',
-                'sum' => $sum,
-                'desc' => ucfirst($type) . ' ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world'],
-                'sign' => md5('36731:' . $sum . ':ifb0rudi:' . ucfirst($type) . ' ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
-                'lang' => $_SESSION['locale'] == 'ru_RU' ? 'ru' : 'en',
-                'method' => 'GET'
-            ]);
-            break;
-        default:
-            $doc->display('invalid_request');
-            exit;
-    }
     if (in_array($_GET['currency'], ['WMR', 'WMU', 'WMZ', 'WME'])) {
         $doc->assign([
-            'LMI_PAYMENT_DESC_BASE64' => base64_encode(ucfirst($type) . ' ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
+            'LMI_PAYEE_PURSE' => Pricing::PURSES[$_GET['currency']],
+            'LMI_PAYMENT_AMOUNT' => Pricing::get_price('platinum', $_GET['amount'], $_GET['currency']),
+            'LMI_PAYMENT_DESC_BASE64' => base64_encode('Platinum ' . $_GET['amount'] . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
             'action' => 'https://merchant.' . ($_SESSION['locale'] == 'ru_RU' ? 'webmoney.ru'
                         : 'wmtransfer.com') . '/lmi/payment.asp',
             'method' => 'POST'
         ]);
+    } elseif ($_GET['currency'] == 'FK') {
+        $sum = Pricing::get_price('platinum', $_GET['amount'], $_GET['currency']);
+        $doc->assign([
+            'action' => 'https://www.free-kassa.ru/merchant/cash.php',
+            'sum' => $sum,
+            'desc' => 'Platinum ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world'],
+            'sign' => md5('36731:' . $sum . ':ifb0rudi:' . 'Platinum ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
+            'lang' => ($_SESSION['locale'] == 'ru_RU' ? 'ru' : 'en'),
+            'method' => 'GET'
+        ]);
+    } else {
+        $doc->display('invalid_request');
+        exit;
     }
     $doc->assign([
         'NICKNAME' => trim($_GET['nickname']),
         'WORLD' => $_GET['world'],
-        'TYPE' => $type,
-        'AMOUNT' => $amount
+        'TYPE' => 'platinum',
+        'AMOUNT' => $_GET['amount']
     ]);
     $doc->display('payment_confirm');
 } else {

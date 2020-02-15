@@ -14,21 +14,16 @@ function autoload($class)
         // relying on 3rd party loader
         return;
     } else {
-        if (!in_array($class,
-            ['TibiameComParser', 'TochkiSuParser', 'ExchangerRuParser',
-                'TibiameHexatComParser'])) {
-            $class = strtolower($class);
+        foreach ([$class, strtolower($class)] as $c) {
+            $c = __DIR__ . '/classes/' . $c . '.class.php';
+            if (file_exists($c) && is_readable($c)) {
+                require $c;
+                return true;
+            }
         }
-        //if (preg_match('@\\\\([\w]+)$@', $class, $matches)) {
-        //    $class = $matches[1];
-        //}
-        $class = __DIR__ . '/classes/' . $class . '.class.php';
     }
-    if ((file_exists($class) === false) || (is_readable($class) === false)) {
-        log_error('Can\'t load class ' . $class);
-        return false;
-    }
-    require $class;
+    log_error('Can\'t load class ' . $class);
+    return false;
 }
 
 function Bot()

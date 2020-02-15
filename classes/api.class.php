@@ -65,8 +65,8 @@ class API
     }
     
     private function get_platinum_bundle($required_amount, $currency) {
-        $bundle = GameCodes::get_total((new GameCodes)->get_bundle($required_amount));
-        return array_merge(['amount' => $bundle], Pricing::get_price('platinum', $bundle, $currency));
+        $amount = GameCodes::get_total((new GameCodes)->get_bundle($required_amount));
+        return array_merge(['amount' => $amount], Pricing::get_price('platinum', $amount, $currency));
     }
 
 }

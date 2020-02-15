@@ -49,6 +49,13 @@ class Pricing extends ExchangerRuParser {
         )
     );
 
+    const PURSES = [
+        'WMR' =>'R161889717079',
+        'WMZ' =>'Z264253741048',
+        'WME' =>'E192093820321',
+        'WMU' =>'U425132255059'
+    ];
+
     public function get_ISO_currency_code($wm_code) {
         switch ($wm_code) {
             case 'WME':
@@ -87,8 +94,7 @@ class Pricing extends ExchangerRuParser {
         // apply discount
         if (isset($discount_modifier)) {
             if ($product == 'platinum') {
-                $gc = new GameCodes;
-                if (empty($gc->get_overview()[$amount]) && $gc->get_total($gc->get_bundle($amount)) < $amount) {
+                if (empty(GameCodes::get_overview()[$amount]) && (new PlatinumBundle($amount))->get_amount() < $amount) {
                     $discount_modifier = 1;
                 }
             }
@@ -101,7 +107,7 @@ class Pricing extends ExchangerRuParser {
         }
         return [
             'price' => round($price, 2),
-            'discount_pct' => self::PRICES[$product][$amount]['discount_pct'] ?? 0
+            'discount_pct' => (self::PRICES[$product][$amount]['discount_pct'] ?? 0)
         ];
     }
 

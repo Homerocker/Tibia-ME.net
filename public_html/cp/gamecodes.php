@@ -18,7 +18,7 @@ if ($gamecodes->get_mode() === GameCodes::MODE_ACTIVATE_CONFIRMATION) {
     ));
     $document->display('cp_gamecodes_activate_confirm');
 } else {
-    $codes_available = $gamecodes->get_codes();
+    $codes_available = $gamecodes->get_codes_available();
     $document->assign(array(
         'codes' => $gamecodes->codes,
         'codes_available' => $codes_available,

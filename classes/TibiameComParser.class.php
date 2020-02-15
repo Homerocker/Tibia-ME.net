@@ -180,12 +180,12 @@ class TibiameComParser
 
     /**
      *
-     * @param string $code real game code
+     * @param string $code decrypted game code
      * @param $nickname
      * @param $world
      * @return boolean|string true on success, otherwise localized error message
      */
-    protected function gamecode_activate($code, $nickname, $world)
+    public static function gamecode_activate($code, $nickname, $world)
     {
         $dom = new DOMDocumentX;
         if (!$dom->loadHTMLFile('https://payments.cipsoft.com/tibiame/index.php?page=GameCode&action=useGameCode&CustomerID='

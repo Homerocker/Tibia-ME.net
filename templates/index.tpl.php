@@ -23,7 +23,7 @@
         <span id="news_collapse" class="display-none"><?= _('hide') ?></span>
     </button>
 </div>
-<h3><?= _('Chat') ?> (Beta)</h3>
+<h3><?= _('Chat') ?></h3>
 <div id="chat" class="callout secondary no-margin" style="height: 18rem; overflow-y: scroll;">
 </div>
 <form action="javascript:void(0)">
