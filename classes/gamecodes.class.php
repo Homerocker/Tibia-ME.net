@@ -87,6 +87,7 @@ class GameCodes extends TibiameComParser {
         return $overview;
     }
 
+    /**
     public function activate($amount, $nickname, $world,
             $confirmed = false) {
         if (!Auth::CheckNickname($nickname)) {
@@ -163,11 +164,14 @@ class GameCodes extends TibiameComParser {
                         $code) || preg_match('/^[\da-z]{5}\-?[\da-z]{5}\-?[\da-z]{5}\-?[\da-z]{5}$/i',
                         decrypt($code)));
     }
-    
+
+    /**
     public function get_mode() {
         return empty($this->errors) ? $this->mode : 0;
     }
-    
+     **/
+
+    /**
     public static function get_total($bundle = null) {
         if ($bundle === null) {
             $bundle = (new self)->get_overview();
@@ -178,4 +182,5 @@ class GameCodes extends TibiameComParser {
         }
         return $total;
     }
+     **/
 }
