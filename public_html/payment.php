@@ -123,9 +123,9 @@ if (isset($_GET['success'])) {
         $sum = Pricing::get_price('platinum', $_GET['amount'], $_GET['currency']);
         $doc->assign([
             'action' => 'https://www.free-kassa.ru/merchant/cash.php',
-            'sum' => $sum,
-            'desc' => 'Platinum ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world'],
-            'sign' => md5('36731:' . $sum . ':ifb0rudi:' . 'Platinum ' . $amount . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
+            'sum' => $sum['price'],
+            'desc' => 'Platinum ' . $_GET['amount'] . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world'],
+            'sign' => md5('36731:' . $sum['price'] . ':ifb0rudi:' . 'Platinum ' . $_GET['amount'] . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
             'lang' => ($_SESSION['locale'] == 'ru_RU' ? 'ru' : 'en'),
             'method' => 'GET'
         ]);

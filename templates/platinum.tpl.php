@@ -31,8 +31,8 @@
 <h3><?= _('Our prices') ?></h3>
 <div class="grid-x grid-padding-x grid-padding-y">
     <?php
-    foreach ($pricing::PRICES['platinum'] as $amount => $price_array) {
-        echo '<div class="cell large-4 medium-4 small-12">';
+    foreach (Pricing::PRICES['platinum'] as $amount => $price_array) {
+        echo '<div class="cell large-4 medium-4 small-6">';
         echo '<table>';
         echo '<thead>';
         echo '<tr>';
@@ -44,9 +44,9 @@
         echo '<tbody>';
         foreach (['WMR', 'WMU', 'WMZ', 'WME'] as $currency) {
             echo '<tr>';
-            echo '<td>' . $pricing->get_ISO_currency_code($currency) . '</td>';
+            echo '<td>' . Pricing::get_ISO_currency_code($currency) . '</td>';
             echo '<td>';
-            $price = $pricing->get_price('platinum', $amount, $currency);
+            $price = Pricing::get_price('platinum', $amount, $currency);
             echo $price['price'];
             if ($price['discount_pct']) {
                 echo ' <span class="small">(-' . $price['discount_pct'] . '%)</span>';

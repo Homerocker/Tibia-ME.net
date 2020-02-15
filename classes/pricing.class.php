@@ -4,7 +4,8 @@
  * @author Molodoy <molodoy3561@gmail.com>
  * @copyright (c) 2014, Tibia-ME.net
  */
-class Pricing extends ExchangerRuParser {
+class Pricing
+{
 
     const PRICES = array(
         'platinum' => array(
@@ -50,13 +51,14 @@ class Pricing extends ExchangerRuParser {
     );
 
     const PURSES = [
-        'WMR' =>'R161889717079',
-        'WMZ' =>'Z264253741048',
-        'WME' =>'E192093820321',
-        'WMU' =>'U425132255059'
+        'WMR' => 'R161889717079',
+        'WMZ' => 'Z264253741048',
+        'WME' => 'E192093820321',
+        'WMU' => 'U425132255059'
     ];
 
-    public function get_ISO_currency_code($wm_code) {
+    public static function get_ISO_currency_code($wm_code)
+    {
         switch ($wm_code) {
             case 'WME':
                 return 'EUR';
@@ -70,7 +72,8 @@ class Pricing extends ExchangerRuParser {
         return $wm_code;
     }
 
-    public static function get_price($product, $amount, $currency) {
+    public static function get_price($product, $amount, $currency, $bundle = false)
+    {
         if (isset(self::PRICES[$product][$amount])) {
             // get default price
             $price = self::PRICES[$product][$amount]['price'];
@@ -93,17 +96,15 @@ class Pricing extends ExchangerRuParser {
 
         // apply discount
         if (isset($discount_modifier)) {
-            if ($product == 'platinum') {
-                if (empty(GameCodes::get_overview()[$amount]) && (new PlatinumBundle($amount))->get_amount() < $amount) {
-                    $discount_modifier = 1;
-                }
+            if ($product == 'platinum' && empty(GameCodes::get_overview()[$amount]) && (new PlatinumBundle($amount))->get_amount() < $amount) {
+                $discount_modifier = 1;
             }
             $price *= $discount_modifier;
         }
 
         // convert price to other currency if necessary
         if ($currency != 'WME') {
-            $price = self::get_rate(($currency == 'FK' ? 'WMZ' : $currency), 'WME', $price);
+            $price = ExchangerRuParser::get_rate(($currency == 'FK' ? 'WMZ' : $currency), 'WME', $price);
         }
         return [
             'price' => round($price, 2),
