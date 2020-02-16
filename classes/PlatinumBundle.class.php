@@ -5,7 +5,7 @@ class PlatinumBundle extends GameCodes
 {
     private $bundle = [];
     private $amount = 0;
-    public function __construct($required_amount, $codes = null, $depth = 0) {
+    public function __construct(int $required_amount, $codes = null, $depth = 0) {
         if($codes === null) {
             $codes = $this->get_overview();
             krsort($codes, SORT_NUMERIC);
