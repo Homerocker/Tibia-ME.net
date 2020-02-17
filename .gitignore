@@ -27,3 +27,5 @@
 /public_html/uploads/screenshots/
 /public_html/uploads/themes/
 /public_html/myadmin/
+/public_html/myadmin/tmp/
+/public_html/myadmin/tmp/twig/
