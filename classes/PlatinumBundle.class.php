@@ -75,10 +75,13 @@ class PlatinumBundle extends GameCodes
      */
     public function activate($nickname, $world)
     {
+        if (!Auth::CheckNickname($nickname) || !Auth::check_world($world)) {
+            return 0;
+        }
         $GLOBALS['db']->query('LOCK TABLES gamecodes WRITE');
         if (!($bundle = $this->get_codes($this->bundle))) {
             $GLOBALS['db']->query('UNLOCK TABLES');
-            return false;
+            return 0;
         }
         $sql = $GLOBALS['db']->prepare('UPDATE gamecodes'
             . ' SET nickname = \'' . $nickname . '\', world = ' . $world . ', used_timestamp = '
@@ -86,9 +89,11 @@ class PlatinumBundle extends GameCodes
             . ', failed = ? WHERE code = ?', 'is');
         $activated = 0;
         foreach ($bundle as $amount => $codes) {
-            foreach ($codes as $code) {
+            foreach ($codes as $i => $code) {
                 if (TibiameComParser::gamecode_activate(decrypt($code), $nickname, $world)) {
                     $sql->execute($code, 0);
+                    $this->amount -= $amount;
+                    --$this->bundle[$amount];
                     $activated += $amount;
                 } else {
                     $sql->execute($code, 1);

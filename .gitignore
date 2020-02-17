@@ -19,7 +19,6 @@
 /templates/test.tpl.php
 /templates/highscores_server_info.tpl.php
 /nbproject/project.xml
-/templates/formfield.tpl.php
 /nbproject/project.properties
 /.gitignore
 /public_html/test/
@@ -27,3 +26,4 @@
 /public_html/uploads/photos/
 /public_html/uploads/screenshots/
 /public_html/uploads/themes/
+/public_html/myadmin/

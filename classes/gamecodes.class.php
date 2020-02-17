@@ -3,18 +3,7 @@
 class GameCodes extends TibiameComParser {
 
     private $errors = array();
-    public $codes, $mode;
-
-    const MODE_ACTIVATE_CONFIRMATION = 1, MODE_ACTIVATE_CONFIRMED = 2;
-
-    public function __construct() {
-        if (isset($_GET['nickname']) && isset($_GET['world']) && isset($_GET['amount']) && empty($this->errors) && Perms::get(Perms::GAMECODES_ACTIVATE)) {
-            $this->mode = self::MODE_ACTIVATE_CONFIRMATION;
-        } elseif (isset($_POST['nickname']) && isset($_POST['world']) && isset($_POST['amount'])
-                && empty($this->errors) && Perms::get(Perms::GAMECODES_ACTIVATE)) {
-            $this->mode = self::MODE_ACTIVATE_CONFIRMED;
-        }
-    }
+    public $codes;
 
     public function add($codes, $amount) {
         if (!ctype_digit((string) $amount) || !in_array($amount, [100, 210, 700, 2500])) {
@@ -37,8 +26,7 @@ class GameCodes extends TibiameComParser {
         foreach ($codes as $i => $code) {
             $codes[$i] = $code = encrypt(strtoupper(implode('-',
                                     str_split(str_replace('-', '', $code), 5))));
-            if ($GLOBALS['db']->query('SELECT COUNT(*) FROM gamecodes'
-                            . ' WHERE code = \'' . $code . '\'')->fetch_row()[0]
+            if ($GLOBALS['db']->query('SELECT COUNT(*) FROM gamecodes WHERE code = \'' . $code . '\'')->fetch_row()[0]
                     != 0) {
                 $this->errors[] = sprintf(_('%s is duplicate.'), decrypt($code));
             }
@@ -64,7 +52,7 @@ class GameCodes extends TibiameComParser {
     }
 
     public function get_history() {
-        $sql = $GLOBALS['db']->query('SELECT type, amount, nickname, world, code'
+        $sql = $GLOBALS['db']->query('SELECT amount, nickname, world, code'
                 . ', used_timestamp, modified_mod_id, failed'
                 . ' FROM gamecodes WHERE nickname IS NOT NULL'
                 . ' ORDER BY used_timestamp DESC');
