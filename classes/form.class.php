@@ -10,6 +10,10 @@ class Form
 {
     private $fields = [], $name;
 
+    /**
+     * Form constructor.
+     * @param $form_name
+     */
     public function __construct($form_name)
     {
         $this->name = $form_name;
@@ -44,15 +48,7 @@ class Form
                 continue;
             }
 
-            $field->value = $_REQUEST[$field->name] ?? null;
-            if ($field->required && $field->value === null) {
-                // required field not passed
-                $field->errors[] = _('Field is required.');
-                continue;
-            } else {
-                $field->value = trim($field->value);
-            }
-
+            $field->value = isset($_REQUEST[$field->name]) ? trim($_REQUEST[$field->name]) : null;
             $bytes = strlen($field->value);
             $chars = mb_strlen($field->value);
             if ($bytes === 0) {
@@ -63,18 +59,26 @@ class Form
                     // optional field is empty
                     continue;
                 }
-            } elseif ($field->element == 'input' || $field->element == 'textarea') {
-                if (isset($field->minlength) && $chars < $field->minlength) {
-                    $field->errors[] = _('Input is too short.');
-                } elseif ($bytes > 65535 || (isset($field->maxlength) && $chars > $field->maxlength)) {
-                    $field->errors[] = _('Input is too long.');
+            } else {
+                if ($field->element == 'input' || $field->element == 'textarea') {
+                    if (isset($field->minlength) && $chars < $field->minlength) {
+                        $field->errors[] = _('Input is too short.');
+                    } elseif ($bytes > 65535 || (isset($field->maxlength) && $chars > $field->maxlength)) {
+                        $field->errors[] = _('Input is too long.');
+                    }
+                } elseif ($field->element == 'select' && !array_key_exists($field->value, $field->options)) {
+                    $field->errors[] = _('Invalid input.');
                 }
-            } elseif ($field->element == 'select' && !array_key_exists($field->value, $field->options)) {
-                $field->errors[] = _('Invalid input.');
-            }
 
-            if (isset($field->pattern) && !preg_match($field->value, '^/' . $field->pattern . '/$')) {
-                $field->errors[] = _('Invalid input.');
+                if (isset($field->pattern) && !preg_match($field->value, '^/' . $field->pattern . '/$')) {
+                    $field->errors[] = _('Invalid input.');
+                }
+                foreach ($field->validate as $validate) {
+                    if (!$validate['handler']($field->value)) {
+                        $field->errors[] = $validate['error'] ?? _('Invalid input.');
+                    }
+                }
+                $field->errors = array_unique($field->errors);
             }
             if (!empty($field->errors) && $valid == true) {
                 $valid = false;
@@ -93,7 +97,7 @@ class Form
 
 class FormField
 {
-    public $id, $type, $name, $required, $value = '', $description = null, $events = [], $errors = [];
+    public $id, $type, $name, $required, $value = '', $description = null, $events = [], $validate = [], $errors = [];
 
     public function __construct($id, $name, $required)
     {
@@ -128,8 +132,18 @@ class FormField
         return $events;
     }
 
-    public function set_description($description) {
+    public function set_description($description): bool
+    {
         $this->description = $description;
+        return true;
+    }
+
+    public function validate($handler, $error_message = null): bool
+    {
+        $this->validate[] = [
+            'handler' => $handler,
+            'error' => $error_message
+        ];
         return true;
     }
 

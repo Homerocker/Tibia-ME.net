@@ -24,7 +24,7 @@
     </button>
 </div>
 <h3><?= _('Chat') ?></h3>
-<div id="chat" class="callout secondary no-margin" style="height: 18rem; overflow-y: scroll;">
+<div id="chat" class="callout secondary no-margin break-word" style="height: 18rem; overflow-y: scroll;">
 </div>
 <form action="javascript:void(0)">
 <div class="input-group">
@@ -41,32 +41,28 @@
 </script>
 <div class="grid-x grid-padding-x grid-padding-y">
     <div class="cell medium-6 large-4">
-        <h4 class="show-for-small-only">TibiaME</h4>
-        <img class="show-for-medium" src="/images/logo.png" alt=""/>
-        <!--<img src="/images/birthday_10.png" alt=""/>-->
         <ul>
-            <li><a href="./about.php"><?= _('What is TibiaME?') ?></a></li>
-            <!-- <li><a class="bb" href="./update.php"><b><?= _('Autumn Update 2017 Teaser') ?></b></a></li> -->
-            <li><a href="./calendar.php"><?= _('Events calendar') ?></a></li>
             <li><a href="./download"><b><?= _('Download') ?></b></a></li>
-        </ul>
-    </div>
-
-    <div class="cell medium-6 large-4">
-        <ul>
-            <li><a class="inline-flex" href="./forum"><?= _('Forum') ?>&nbsp;<span class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span class="label success">+<?= $forum_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./screenshots"><?= _('Screenshots') ?>&nbsp;<span class="label secondary"><?= $screenshots_total ?></span><?php if ($screenshots_new): ?><span class="label success">+<?= $screenshots_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./album"><?= _('Photo album') ?>&nbsp;<span class="label secondary"><?= $album_total ?></span><?php if ($album_new): ?><span class="label success">+<?= $album_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./themes"><?= _('Themes') ?> (S60v2)&nbsp;<span class="label secondary"><?= $themes_total ?></span><?php if ($themes_new): ?><span class="label success">+<?= $themes_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./artworks"><?= _('Artworks') ?>&nbsp;<span class="label secondary"><?= $artworks_total ?></span><?php if ($artworks_new): ?><span class="label success">+<?= $artworks_new ?></span><?php endif; ?></a></li>
+            <li><a href="./calendar.php"><?= _('Events calendar') ?></a></li>
+            <li><a href="./forum"><?= _('Forum') ?>&nbsp;<span class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span class="label success">+<?= $forum_new ?></span><?php endif; ?></a></li>
+            <li><a href="./screenshots"><?= _('Screenshots') ?>&nbsp;<span class="label secondary"><?= $screenshots_total ?></span><?php if ($screenshots_new): ?><span class="label success">+<?= $screenshots_new ?></span><?php endif; ?></a></li>
+            <li><a href="./album"><?= _('Photo album') ?>&nbsp;<span class="label secondary"><?= $album_total ?></span><?php if ($album_new): ?><span class="label success">+<?= $album_new ?></span><?php endif; ?></a></li>
+            <li><a href="./themes"><?= _('Themes') ?> (S60v2)&nbsp;<span class="label secondary"><?= $themes_total ?></span><?php if ($themes_new): ?><span class="label success">+<?= $themes_new ?></span><?php endif; ?></a></li>
+            <li><a href="./artworks"><?= _('Artworks') ?>&nbsp;<span class="label secondary"><?= $artworks_total ?></span><?php if ($artworks_new): ?><span class="label success">+<?= $artworks_new ?></span><?php endif; ?></a></li>
             <?php if ($_SESSION['user_id']): ?>
                 <li><a href="./user/memberlist.php"><?= _('Memberlist') ?></a></li>
             <?php endif; ?>
             <?php if (Perms::get(Perms::USERS_BAN)): ?>
                 <li><a href="./user/banishments.php?u=0"><?= _('Banlist') ?></a></li>
             <?php endif; ?>
-            <li><a href="./user/agreement.php"><?= _('User agreement') ?></a></li>
         </ul>
+    </div>
+
+
+    <div class="cell medium-6 large-8 hide-for-small-only">
+        <div class="callout">
+            <?= _('TibiaME is the first massively multiplayer online role-playing game for mobile devices. Come together with hundreds of players and experience adventures in a colourful virtual world! Along with your friends you explore the mysterious land of TibiaME, fight your way through hordes of evil creatures and solve ancient riddles to find untold treasures. With every monster you defeat you will grow in strength and power. TibiaME is based on the successful online role-playing game Tibia which attracts thousands of players every day.') ?>
+        </div>
     </div>
 
     <div class="cell medium-6 large-4">
@@ -127,6 +123,7 @@
         <ul>
             <li><a href="./contacts.php"><?= _('Contacts') ?></a></li>
             <li><a href="./staff.php"><?= _('Moderators') ?></a></li>
+            <li><a href="./user/agreement.php"><?= _('User agreement') ?></a></li>
             <?php if (Perms::get(Perms::CP_ACCESS)): ?>
                 <li><a href="./cp"><b><?= _('Control Panel') ?></b></a></li>
             <?php endif; ?>

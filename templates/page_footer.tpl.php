@@ -22,7 +22,7 @@
                 <? endif; ?>
             </div>
         </div>
-        <div class="callout secondary text-center">
+        <div class="callout secondary text-center no-margin">
             <?= _('Tibia and TibiaME are trademarks of <a href="http://www.cipsoft.com" target="_blank">CipSoft GmbH</a>, Germany.') ?><br/>
             <?php
             list($version, $date) = explode(' ',

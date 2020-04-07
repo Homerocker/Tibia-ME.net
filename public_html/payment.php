@@ -100,6 +100,7 @@ if (isset($_GET['success'])) {
 } else {
     $form = new Form('purchase');
     $form->addinput('nickname', 'text', 'nickname', 2, 10);
+    $form->field('nickname')->validate('Auth::CheckNickname');
     $form->addselect('world', 'world', function() {
         $worlds = [null => null];
         for ($i = 1; $i <= WORLDS; ++$i) {
