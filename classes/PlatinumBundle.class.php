@@ -91,12 +91,12 @@ class PlatinumBundle extends GameCodes
         foreach ($bundle as $amount => $codes) {
             foreach ($codes as $i => $code) {
                 if (TibiameComParser::gamecode_activate(decrypt($code), $nickname, $world)) {
-                    $sql->execute($code, 0);
+                    $sql->execute(0, $code);
                     $this->amount -= $amount;
                     --$this->bundle[$amount];
                     $activated += $amount;
                 } else {
-                    $sql->execute($code, 1);
+                    $sql->execute(1, $code);
                 }
             }
         }

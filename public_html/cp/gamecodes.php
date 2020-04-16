@@ -13,11 +13,17 @@ if (Perms::get(Perms::GAMECODES_ADD)) {
 }
 if (Perms::get(Perms::GAMECODES_ACTIVATE)) {
     $form_activate_confirm = new Form('bundle_activate_confirm');
-    $form_activate_confirm->addinput('nickname','hidden','nickname');
-    $form_activate_confirm->addinput('world','hidden','nickname');
-    $form_activate_confirm->addinput('amount','hidden','nickname');
+    $form_activate_confirm->addinput('nickname', 'hidden', 'nickname');
+    $form_activate_confirm->addinput('world', 'hidden', 'world');
+    $form_activate_confirm->addinput('amount', 'hidden', 'amount');
     if ($form_activate_confirm->submit()) {
-        //$gamecodes->activate($_POST['code_type'], $_POST['nickname'], $_POST['world'], $_POST['multiplier'], true);
+        $bundle = new PlatinumBundle($_POST['amount']);
+        $activated = $bundle->activate($_POST['nickname'], $_POST['world']);
+        if ($activated === true) {
+            Document::reload_msg(_('Gamecodes activated.'));
+        } else {
+            Document::reload_msg(sprintf(_('%d Platinum activated.'), $activated));
+        }
     }
 }
 $document = new Document(_('Game codes'), [array(_('Control Panel'), './')]);
