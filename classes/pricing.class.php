@@ -108,7 +108,7 @@ class Pricing
         }
         return [
             'price' => round($price, 2),
-            'discount_pct' => (self::PRICES[$product][$amount]['discount_pct'] ?? 0)
+            'discount_pct' => ($discount_modifier ? ((1 - $discount_modifier) * 100) : 0)
         ];
     }
 

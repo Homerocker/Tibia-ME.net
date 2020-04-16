@@ -35,7 +35,7 @@
         <script src="/foundation/js/vendor/what-input.min.js"></script>
         <script src="/foundation/js/vendor/foundation.min.js"></script>
         <script src="/foundation/js/jquery.blockUI.js"></script>
-        <script src="/foundation/js/app.js?308"></script>
+        <script src="/foundation/js/app.js?3011"></script>
         <script>
             if (Object.prototype.toString.call(window.operamini) === "[object OperaMini]") {
                 $("#content").prepend('<div class="callout alert text-center"><?= _('You are using Opera Mini in maximum compression mode. Some features may not work correctly. Please adjust your browser settings.') ?></div>');

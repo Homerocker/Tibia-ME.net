@@ -32,7 +32,7 @@
         echo '<thead>';
         echo '<tr>';
         echo '<td class="text-center" colspan="2">';
-        echo $amount;
+        printf('%d days', $amount);
         echo '</td>';
         echo '</tr>';
         echo '</thead>';

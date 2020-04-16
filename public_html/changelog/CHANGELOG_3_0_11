@@ -1,2 +1,10 @@
 ./foundation/*
 * updated Foundation and jQuery frameworks
+
+./foundation/js/app.js
+../templates/payment.tpl.php
+./payment.php
+../templates/page_footer.tpl.php
+public_html/platinum.php
+public_html/premium.php
+* payments core redesigned
