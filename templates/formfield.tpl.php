@@ -40,11 +40,10 @@ if ($field->type == 'submit') {
         <? endforeach; ?>
     </select>
 <? else: ?>
-    <input<?= (empty($class) ? '' : ' class="' . implode(' ', $class) . '"') ?> id="<?= $field->id ?>"
+    <input<?= ($field->disabled ? ' disabled="disabled"' : '') ?><?= (empty($class) ? '' : ' class="' . implode(' ', $class) . '"') ?> id="<?= $field->id ?>"
                                                                                 type="<?= $field->type ?>"
                                                                                 name="<?= $field->name ?>"
-                                                                                maxlength="<?= $field->maxlength ?>"
-                                                                                value="<?= ($field->type == 'submit' ? $label : htmlspecialchars($field->value)) ?>"<?= $field->get_events_string() ?>/>
+                                                                                maxlength="<?= $field->maxlength ?>" value="<?= ($field->type == 'submit' ? $label : htmlspecialchars($field->value)) ?>"<?= $field->get_events_string() ?>/>
 <? endif; ?>
 <? if (!empty($field->errors)): ?>
     <p class="form-error is-visible">

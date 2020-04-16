@@ -161,7 +161,7 @@ class FormField
 class FormInput extends FormField
 {
     public $element = 'input';
-    public $type, $minlength, $maxlength, $pattern;
+    public $type, $minlength, $maxlength, $pattern, $disabled = false;
 
     public function __construct($id, $type, $name, $minlength = null, $maxlength = null, $required = true, $pattern = null)
     {
@@ -170,6 +170,11 @@ class FormInput extends FormField
         $this->maxlength = $maxlength;
         $this->pattern = $pattern;
         parent::__construct($id, $name, $required);
+    }
+
+    public function set_disabled(bool $disabled): bool
+    {
+        return $this->disabled = $disabled;
     }
 }
 

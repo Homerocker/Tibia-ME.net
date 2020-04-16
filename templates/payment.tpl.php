@@ -5,9 +5,8 @@
         <? $form->field('currency')->display(_('Payment method')) ?>
         <? $form->field('desired_amount')->display(_('Platinum amount')) ?>
         <? $form->field('amount')->display() ?>
-        <div class="text-center b">You will receive <span id="amount_display">0</span> platinum for <span class="nowrap"
-                                                                                                          id="price">USD 0</span>.
-        </div>
+        <? printf(_('You will receive %s Platinum.'), '<span class="b" id="amount_display">0</span>') ?><br/>
+        <? printf(_('You will pay %s.'), '<span class="nowrap b" id="price">USD 0</span>') ?><br/>
         <? $form->field('submit')->display(_('Proceed')) ?>
     </div>
 </form>

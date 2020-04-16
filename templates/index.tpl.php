@@ -27,12 +27,15 @@
 <div id="chat" class="callout secondary no-margin break-word" style="height: 18rem; overflow-y: scroll;">
 </div>
 <form action="javascript:void(0)">
-<div class="input-group">
-    <input id="chat_message" class="input-group-field text-small" type="text" style="border-top: none;" placeholder="<?= _('Type your message') ?>" autocomplete="off" maxlength="600"/>
-    <div class="input-group-button">
-        <input type="submit" class="button small" onclick="chat_send('chat_message', '<?= $_SESSION['user_nickname'] ?>', <?= $_SESSION['user_world'] ?? 'null' ?>)" value="<?= _('Send') ?>"/>
+    <div class="input-group">
+        <input id="chat_message" class="input-group-field text-small" type="text" style="border-top: none;"
+               placeholder="<?= _('Type your message') ?>" autocomplete="off" maxlength="600"/>
+        <div class="input-group-button">
+            <input type="submit" class="button small"
+                   onclick="chat_send('chat_message', '<?= $_SESSION['user_nickname'] ?>', <?= $_SESSION['user_world'] ?? 'null' ?>)"
+                   value="<?= _('Send') ?>"/>
+        </div>
     </div>
-</div>
 </form>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -44,11 +47,21 @@
         <ul>
             <li><a href="./download"><b><?= _('Download') ?></b></a></li>
             <li><a href="./calendar.php"><?= _('Events calendar') ?></a></li>
-            <li><a href="./forum"><?= _('Forum') ?>&nbsp;<span class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span class="label success">+<?= $forum_new ?></span><?php endif; ?></a></li>
-            <li><a href="./screenshots"><?= _('Screenshots') ?>&nbsp;<span class="label secondary"><?= $screenshots_total ?></span><?php if ($screenshots_new): ?><span class="label success">+<?= $screenshots_new ?></span><?php endif; ?></a></li>
-            <li><a href="./album"><?= _('Photo album') ?>&nbsp;<span class="label secondary"><?= $album_total ?></span><?php if ($album_new): ?><span class="label success">+<?= $album_new ?></span><?php endif; ?></a></li>
-            <li><a href="./themes"><?= _('Themes') ?> (S60v2)&nbsp;<span class="label secondary"><?= $themes_total ?></span><?php if ($themes_new): ?><span class="label success">+<?= $themes_new ?></span><?php endif; ?></a></li>
-            <li><a href="./artworks"><?= _('Artworks') ?>&nbsp;<span class="label secondary"><?= $artworks_total ?></span><?php if ($artworks_new): ?><span class="label success">+<?= $artworks_new ?></span><?php endif; ?></a></li>
+            <li><a href="./forum"><?= _('Forum') ?>&nbsp;<span
+                            class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span
+                            class="label success">+<?= $forum_new ?></span><?php endif; ?></a></li>
+            <li><a href="./screenshots"><?= _('Screenshots') ?>&nbsp;<span
+                            class="label secondary"><?= $screenshots_total ?></span><?php if ($screenshots_new): ?><span
+                            class="label success">+<?= $screenshots_new ?></span><?php endif; ?></a></li>
+            <li><a href="./album"><?= _('Photo album') ?>&nbsp;<span
+                            class="label secondary"><?= $album_total ?></span><?php if ($album_new): ?><span
+                            class="label success">+<?= $album_new ?></span><?php endif; ?></a></li>
+            <li><a href="./themes"><?= _('Themes') ?> (S60v2)&nbsp;<span
+                            class="label secondary"><?= $themes_total ?></span><?php if ($themes_new): ?><span
+                            class="label success">+<?= $themes_new ?></span><?php endif; ?></a></li>
+            <li><a href="./artworks"><?= _('Artworks') ?>&nbsp;<span
+                            class="label secondary"><?= $artworks_total ?></span><?php if ($artworks_new): ?><span
+                            class="label success">+<?= $artworks_new ?></span><?php endif; ?></a></li>
             <?php if ($_SESSION['user_id']): ?>
                 <li><a href="./user/memberlist.php"><?= _('Memberlist') ?></a></li>
             <?php endif; ?>
