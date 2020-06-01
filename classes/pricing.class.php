@@ -53,8 +53,7 @@ class Pricing
     const PURSES = [
         'WMR' => 'R161889717079',
         'WMZ' => 'Z264253741048',
-        'WME' => 'E192093820321',
-        'WMU' => 'U425132255059'
+        'WME' => 'E192093820321'
     ];
 
     public static function get_ISO_currency_code($wm_code)
@@ -64,8 +63,6 @@ class Pricing
                 return 'EUR';
             case 'WMZ':
                 return 'USD';
-            case 'WMU':
-                return 'UAH';
             case 'WMR':
                 return 'RUB';
         }

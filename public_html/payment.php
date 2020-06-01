@@ -111,7 +111,6 @@ if (isset($_GET['success'])) {
     $form->addselect('currency', 'currency', [
         'FK' => 'FK (' . _('Credit Card') . ', Qiwi, Yandex, ' . _('etc.') . ')',
         'WMR' => 'WMR / ' . _('Ruble') . ' (' . _('Russia') . ')',
-        'WMU' => 'WMU / ' . _('Hryvnia') . ' (' . _('Ukraine') . ')',
         'WMZ' => 'WMZ / ' . _('US dollar') . ' (' . _('other') . ')',
         'WME' => 'WME / ' . _('Euro') . ' (' . _('other') . ')'
     ]);
@@ -120,7 +119,7 @@ if (isset($_GET['success'])) {
     $form->field('desired_amount')->event('oninput', 'get_platinum_bundle($(this).val(), $("#currency").val())');
     $form->field('desired_amount')->value(100);
     if ($form->submit()) {
-        if (in_array($_GET['currency'], ['WMR', 'WMU', 'WMZ', 'WME'])) {
+        if (in_array($_GET['currency'], ['WMR', 'WMZ', 'WME'])) {
             $doc->assign([
                 'LMI_PAYEE_PURSE' => Pricing::PURSES[$_GET['currency']],
                 'LMI_PAYMENT_AMOUNT' => Pricing::get_price('platinum', $_GET['amount'], $_GET['currency']),

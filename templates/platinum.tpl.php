@@ -42,7 +42,7 @@
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
-        foreach (['WMR', 'WMU', 'WMZ', 'WME'] as $currency) {
+        foreach (['WMR', 'WMZ', 'WME'] as $currency) {
             echo '<tr>';
             echo '<td>' . Pricing::get_ISO_currency_code($currency) . '</td>';
             echo '<td>';
