@@ -20,7 +20,7 @@ if (isset($_GET['httperror'])) {
     }
 }
 
-$document = new Document('Tibia-ME.net');
+$document = new Document(SITE_NAME);
 $sql = $db->query('SELECT *
     FROM `forumTopics`
     WHERE `forumID` = \'6\'

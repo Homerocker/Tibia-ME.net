@@ -2,12 +2,17 @@
 
 error_reporting(-1);
 
-if ($_SERVER['SERVER_NAME'] !== 'tibia-me.net' && $_SERVER['SERVER_NAME'] !== 'localhost'
-    && $_SERVER['SERVER_NAME'] !== 'tibiame.ddns.net' && $_SERVER['SERVER_NAME']
+define('SERVER_NAME', 'tibia-me.net');
+
+if ($_SERVER['SERVER_NAME'] !== SERVER_NAME && $_SERVER['SERVER_NAME'] !== 'localhost'
+    && $_SERVER['SERVER_NAME']
     !== '192.168.100.2') {
     header('Location: ' . $_SERVER['REQUEST_SCHEME'] . '://tibia-me.net' . $_SERVER['REQUEST_URI']);
     exit;
 }
+
+define('SITE_NAME', str_replace(['tibiame', 'tibia-me'], ['TibiaME', 'Tibia-ME'], SERVER_NAME));
+define('SERVER_ADMIN', 'support@' . SERVER_NAME);
 
 foreach ([
              'session.cookie_httponly' => 1,
@@ -17,8 +22,8 @@ foreach ([
              'zlib.output_compression' => 'On',
              'default_socket_timeout' => 10,
              'max_execution_time' => 30,
-             'user_agent' => 'Tibia-ME.net Parser',
-             'display_errors' => intval(!($_SERVER['SERVER_NAME'] == 'tibia-me.net')),
+             'user_agent' => SITE_NAME . ' Parser',
+             'display_errors' => (int)!($_SERVER['SERVER_NAME'] == SERVER_NAME),
              'session.sid_length' => 32,
              'session.sid_bits_per_character' => 5
          ] as $k => $v) {
