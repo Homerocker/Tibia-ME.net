@@ -27,7 +27,7 @@
             <?php
             list($version, $date) = explode(' ',
                     file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/changelog/CURRENT_VERSION'));
-            echo 'Tibia-ME.net <a href="/changelog/CHANGELOG_', str_replace('.', '_',
+            echo SITE_NAME . ' <a href="/changelog/CHANGELOG_', str_replace('.', '_',
                     $version), '">v', $version, '</a>&nbsp;', $date, '<br/>';
             ?>
         </div>

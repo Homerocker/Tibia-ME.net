@@ -282,11 +282,13 @@ class Notifications {
         switch ($type) {
             case 'letter':
                 $subject = _('New Private Message has arrived');
-                $message = sprintf(_("Hello %s,\r\n\r\nYou have received a new private message to your account on Tibia-ME.net and you have requested that you be notified on this event. You can view your new message by clicking on the following link:\r\nhttp://wap.tibia-me.net/user/letters.php\r\n\r\nRemember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.\r\nhttp://wap.tibia-me.net/user/settings.php\r\n\r\nKind Regards,\r\nTibia-ME.net Support\r\nhttp://wap.tibia-me.net"), $sql['nickname']);
+                // @TODO fix links
+                $message = sprintf(_("Hello %s,\r\n\r\nYou have received a new private message to your account on %s and you have requested that you be notified on this event. You can view your new message by clicking on the following link:\r\nhttp://wap.tibia-me.net/user/letters.php\r\n\r\nRemember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.\r\nhttp://wap.tibia-me.net/user/settings.php\r\n\r\nKind Regards,\r\nTibia-ME.net Support\r\nhttp://wap.tibia-me.net"), $sql['nickname'], SITE_NAME);
                 break;
             case 'lostpassword':
                 $subject = _('Password recovery confirmation');
-                $message = sprintf(_("Hello %s,\r\n\r\nYou have requested a new password for your account on Tibia-ME.net.\r\n\r\nClick the following link to continue new password activation:\r\nhttp://wap.tibia-me.net/user/lostpassword.php?user=%d&v=%s\r\n\r\nIf you did not request a new password, just ignore this message.\r\n\r\nKind Regards,\r\nTibia-ME.net Support\r\nhttp://wap.tibia-me.net"), $sql['nickname'], $user_id, func_get_arg(2));
+                // TODO fix links
+                $message = sprintf(_("Hello %s,\r\n\r\nYou have requested a new password for your account on %s.\r\n\r\nClick the following link to continue new password activation:\r\nhttp://wap.tibia-me.net/user/lostpassword.php?user=%d&v=%s\r\n\r\nIf you did not request a new password, just ignore this message.\r\n\r\nKind Regards,\r\nTibia-ME.net Support\r\nhttp://wap.tibia-me.net"), $sql['nickname'],SITE_NAME, $user_id, func_get_arg(2));
                 break;
             default:
                 log_error('unexpected notification type');
@@ -297,12 +299,12 @@ class Notifications {
         $subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
         User::set_locale($locale);
         $message = wordwrap($message, 70, "\r\n", true);
-        $headers = 'From: Tibia-ME.net Notifier <contact@tibia-me.net>' . "\r\n";
+        $headers = 'From: ' . SITE_NAME . ' Robot <' . SERVER_ADMIN . '>' . "\r\n";
         $headers .= 'Subject: ' . $subject . "\r\n";
-        $headers .= 'Reply-To: contact@tibia-me.net' . "\r\n";
+        $headers .= 'Reply-To: ' . SERVER_ADMIN . "\r\n";
         $headers .= 'Date: ' . date('r') . "\r\n";
         $headers .= 'Content-type: text/plain; charset=UTF-8';
-        return mail($sql['nickname'] . ' <' . $sql['email'] . '>', $subject, $message, $headers, '-fcontact@tibia-me.net');
+        return mail($sql['nickname'] . ' <' . $sql['email'] . '>', $subject, $message, $headers, '-f' . SERVER_ADMIN);
     }
 
     /**

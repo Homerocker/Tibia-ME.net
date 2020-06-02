@@ -7,7 +7,7 @@ define('SERVER_NAME', 'tibia-me.net');
 if ($_SERVER['SERVER_NAME'] !== SERVER_NAME && $_SERVER['SERVER_NAME'] !== 'localhost'
     && $_SERVER['SERVER_NAME']
     !== '192.168.100.2') {
-    header('Location: ' . $_SERVER['REQUEST_SCHEME'] . '://tibia-me.net' . $_SERVER['REQUEST_URI']);
+    header('Location: ' . $_SERVER['REQUEST_SCHEME'] . '://' . SERVER_NAME . $_SERVER['REQUEST_URI']);
     exit;
 }
 

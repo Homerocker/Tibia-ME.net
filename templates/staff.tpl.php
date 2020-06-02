@@ -23,5 +23,5 @@
     <b>Hindi</b><br/>
     <b>Tagalog</b></p>
     <p>All translators gain access to TibiaME closed Beta Tests available to official fansites.</p>
-    <p>Please send your applications to <span class="nowrap">contact@tibia-me.net</span>.</p>
+    <p>Please send your applications to <span class="nowrap"><?= SERVER_ADMIN ?></span>.</p>
 </div>

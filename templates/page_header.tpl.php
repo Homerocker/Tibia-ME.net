@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="author" content="Molodoy"/>
     <meta name="description" content="TibiaME - the first massively multiplayer online role-playing game for mobile phones"/>
-    <meta name="keywords" content="tibiame, tibia, game, roleplaying, rpg, online, mobile, mmorpg, massively, multiplayer, tibia-me, molodoy, molodoy3561, tibia-me.net, highscores, top, screenshots, pvp, guild"/>
+    <meta name="keywords" content="tibiame, tibia, game, roleplaying, rpg, online, mobile, mmorpg, massively, multiplayer, tibia-me, molodoy, molodoy3561, <?= SERVER_NAME ?>, highscores, top, screenshots, pvp, guild"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css"/>
     <link rel="stylesheet" type="text/css" href="/foundation/css/app.css?305"/>
@@ -159,6 +159,6 @@
             
             <noscript>
                 <div class="callout alert text-center">
-                    <?= _('Tibia-ME.net requires Javascript to work correctly. Please enable it in your browser settings.') ?>
+                    <?= sprintf(_('%s requires Javascript to work correctly. Please enable it in your browser settings.'), SITE_NAME) ?>
                 </div>
             </noscript>
