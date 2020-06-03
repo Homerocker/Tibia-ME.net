@@ -11,7 +11,19 @@ if (Perms::get(Perms::GAMECODES_ADD)) {
         $gamecodes->add($_POST['gamecodes'], $_POST['amount']);
     }
 }
+
 if (Perms::get(Perms::GAMECODES_ACTIVATE)) {
+    $form_activate = new Form('activate_bundle');
+    $form_activate->addinput('nickname', 'text', 'nickname', 2, 10);
+    $form_activate->addselect('world', 'world', function () {
+        $worlds = [null => null];
+        for ($i = 1; $i <= WORLDS; ++$i) {
+            $worlds[$i] = $i;
+        }
+        return $worlds;
+    });
+    $form_activate->addinput('amount', 'number', 'amount');
+
     $form_activate_confirm = new Form('bundle_activate_confirm');
     $form_activate_confirm->addinput('nickname', 'hidden', 'nickname');
     $form_activate_confirm->addinput('world', 'hidden', 'world');
@@ -24,24 +36,16 @@ if (Perms::get(Perms::GAMECODES_ACTIVATE)) {
         } else {
             Document::reload_msg(sprintf(_('%d Platinum activated.'), $activated));
         }
+    } elseif ($form_activate->submit()) {
+        $bundle = new PlatinumBundle($_GET['amount']);
     }
 }
 $document = new Document(_('Game codes'), [array(_('Control Panel'), './')]);
 
-$form_activate = new Form('activate_bundle');
-$form_activate->addinput('nickname', 'text', 'nickname', 2, 10);
-$form_activate->addselect('world', 'world', function () {
-    $worlds = [null => null];
-    for ($i = 1; $i <= WORLDS; ++$i) {
-        $worlds[$i] = $i;
-    }
-    return $worlds;
-});
-$form_activate->addinput('amount', 'number', 'amount');
 if (Perms::get(Perms::GAMECODES_ACTIVATE) && $form_activate->submit()) {
     $form_activate_confirm->field('nickname')->value($form_activate->field('nickname')->value());
     $form_activate_confirm->field('world')->value($form_activate->field('world')->value());
-    $form_activate_confirm->field('amount')->value($form_activate->field('amount')->value());
+    $form_activate_confirm->field('amount')->value($bundle->get_amount());
     $document->assign(array(
         'form' => $form_activate_confirm
     ));

@@ -98,10 +98,13 @@ if (isset($_GET['success'])) {
 } elseif (isset($_GET['fail'])) {
     $doc->display('payment_fail');
 } else {
+    if (empty(GameCodes::get_codes_available())) {
+        Document::reload_msg(_('Product is currently out of stock.'), './platinum.php');
+    }
     $form = new Form('purchase');
     $form->addinput('nickname', 'text', 'nickname', 2, 10);
     $form->field('nickname')->validate('Auth::CheckNickname');
-    $form->addselect('world', 'world', static function() {
+    $form->addselect('world', 'world', static function () {
         $worlds = [null => null];
         for ($i = 1; $i <= WORLDS; ++$i) {
             $worlds[$i] = $i;
@@ -151,6 +154,5 @@ if (isset($_GET['success'])) {
         $doc->display('payment_confirm');
     } else {
         $doc->assign('form', $form);
-        $doc->display('payment');
     }
 }

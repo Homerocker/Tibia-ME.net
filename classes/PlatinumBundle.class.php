@@ -14,6 +14,9 @@ class PlatinumBundle extends GameCodes
             }
             $codes = array_values($codes);
         }
+        if (empty($codes)) {
+            return;
+        }
         $val1 = 0;
         for ($i = (int) min(ceil($required_amount / $codes[$depth]['amount']), $codes[$depth]['n']); $i >= 0; --$i) {
             $val2 = $codes[$depth]['amount'] * $i;

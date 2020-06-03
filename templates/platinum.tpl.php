@@ -1,28 +1,50 @@
-<h3><?= _('What is Platinum?') ?></h3>
+<h3><?= _('What is VIP?') ?></h3>
 <div class="callout primary">
-    <?= _('Included') ?>:
+    VIP is <b>permanent</b> character status that you receive after any purchase (any amount of Platinum or Premium).
     <ul>
-        <li><?= _('+50% Experience') ?></li>
-        <li><?= _('Possibility to get listed in the Highscores') ?></li>
-        <li><?= _('Always get online, even when the game server is full') ?></li>
-    </ul>
-    <?= _('Buyable') ?>:
-    <ul>
-        <li><?= _('Life insurance with 50%, 80% or 100% of EP loss protection upon death') ?></li>
-        <li><?= _('Full access to individual islands') ?></li>
-        <li><?= _('Portal usage') ?></li>
-        <li><?= _('Up to 40 additional friendlist slots') ?></li>
-        <li><?= _('Up to 40 additional mailbox slots') ?></li>
-        <li><?= _('Up to 20 trade offers') ?></li>
-        <li><?= _('Up to 6 additional depot pages') ?></li>
-        <li><?= _('Additional Rerolls') ?></li>
-        <li><?= _('Guild founding') ?></li>
+        <li>Priority Login</li>
+        <li>Stamina Bonus (+50% Experience)</li>
+        <li>Highscores</li>
     </ul>
 </div>
+<h3><?= _('What is Premium?') ?></h3>
+<div class="callout primary">
+    Premium is renewable subscription that gives you <b>temporary</b> access to most of game features. When your Premium time expires
+    your character remains VIP.
+    <ul>
+        <li>Full access to additional islands</li>
+        <li>Portal usage</li>
+        <li>20 friendlist slots</li>
+        <li>20 ignorelist slots</li>
+        <li>20 letters in Mailbox</li>
+        <li>10 trade offers</li>
+        <li>9 depot pages</li>
+        <li>50% of EP loss protection upon death (can be upgraded to 80% or 100%)</li>
+        <li>Guild Founding</li>
+        <li>8 Platinum per day of your Premium Time! (Example: 30 days * 8 Platinum = 240 Platinum)</li>
+    </ul>
+</div>
+<h3><?= _('What is Platinum?') ?></h3>
+<div class="callout primary">
+    Platinum is game currency that allows you to buy <b>permanent</b> access to game features of your choice.
+    <ul>
+        <li>Buy permanent access to individual islands</li>
+        <li>Buy portal usage permanently</li>
+        <li>Buy up to 50 friendlist slots</li>
+        <li>Buy up to 50 letters in Mailbox</li>
+        <li>Buy up to 20 trade offers</li>
+        <li>Buy up to 9 depot pages</li>
+        <li>Buy a life insurance with 50%, 80% or 100% of EP loss protection upon death</li>
+        <li>Buy additional Rerolls whenever you need them</li>
+        <li>Buy guild founding</li>
+    </ul>
+</div>
+
 <h3><?= _('How to buy') ?></h3>
 <div class="callout primary">
-    <?= sprintf(_('Visit www.tibiame.com or <a href="%s">buy from us</a>. Our prices may differ. We accept WebMoney, PayPal, wire transfers and more! Please check our <a href="%s">User Agreement</a> before you purchase from us.'),
-            './payment.php', './user/agreement.php?redirect=' . $_SERVER['PHP_SELF'] . '#payments')
+
+    <?= sprintf(_('Visit %s or <a href="%s">buy from us</a>. Our prices may differ. We accept WebMoney, PayPal, wire transfers and more! Please check our <a href="%s">User Agreement</a> before you purchase from us.'),
+        '<a href="https://payments.cipsoft.com/tibiame/?section=payment" target="_blank">www.tibiame.com</a>', './payment.php', './user/agreement.php?redirect=' . $_SERVER['PHP_SELF'] . '#payments')
     ?>
     <div class="button-group align-center">
         <a class="button primary" href="./payment.php"><?= _('Purchase') ?></a>
