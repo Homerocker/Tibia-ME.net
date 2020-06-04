@@ -89,9 +89,8 @@ if (isset($_POST['LMI_PREREQUEST']) && $_POST['LMI_PREREQUEST'] == 1) {
 
     exit(($bundle->activate($_GET['us_nickname'], $_GET['us_world']) === true ? "YES" : "FAILURE"));
 }
-$doc = new Document(_('Payment'), array(
-    array(_('Platinum'), './platinum.php'),
-    array(_('Premium'), './premium.php')
+$doc = new Document(_('Purchase'), array(
+    array(_('Premium & Platinum'), './premiumplatinum.php')
 ));
 if (isset($_GET['success'])) {
     $doc->display('payment_success');
@@ -99,7 +98,7 @@ if (isset($_GET['success'])) {
     $doc->display('payment_fail');
 } else {
     if (empty(GameCodes::get_codes_available())) {
-        Document::reload_msg(_('Product is currently out of stock.'), './platinum.php');
+        Document::reload_msg(_('Product is currently out of stock.'), './premiumplatinum.php');
     }
     $form = new Form('purchase');
     $form->addinput('nickname', 'text', 'nickname', 2, 10);
@@ -125,14 +124,14 @@ if (isset($_GET['success'])) {
         if (in_array($_GET['currency'], ['WMR', 'WMZ', 'WME'])) {
             $doc->assign([
                 'LMI_PAYEE_PURSE' => Pricing::PURSES[$_GET['currency']],
-                'LMI_PAYMENT_AMOUNT' => Pricing::get_price('platinum', $_GET['amount'], $_GET['currency']),
+                'LMI_PAYMENT_AMOUNT' => Pricing::get_price($_GET['amount'], $_GET['currency']),
                 'LMI_PAYMENT_DESC_BASE64' => base64_encode('Platinum ' . $_GET['amount'] . ' ' . trim($_GET['nickname']) . ' w' . $_GET['world']),
                 'action' => 'https://merchant.' . ($_SESSION['locale'] == 'ru_RU' ? 'webmoney.ru'
                         : 'wmtransfer.com') . '/lmi/payment.asp',
                 'method' => 'POST'
             ]);
         } elseif ($_GET['currency'] == 'FK') {
-            $sum = Pricing::get_price('platinum', $_GET['amount'], $_GET['currency']);
+            $sum = Pricing::get_price($_GET['amount'], $_GET['currency']);
             $doc->assign([
                 'action' => 'https://www.free-kassa.ru/merchant/cash.php',
                 'sum' => $sum['price'],

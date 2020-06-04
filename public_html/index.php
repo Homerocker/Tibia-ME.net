@@ -102,10 +102,10 @@ if ($_SESSION['user_id']) {
     $char_id = $guild_name = null;
 }
 $platinum_discount = max(array_map(function ($arr) {
-    $amount = array_search($arr, Pricing::PRICES['platinum']);
+    $amount = array_search($arr, Pricing::PRICES);
             return ((new PlatinumBundle($amount))->get_amount() >= $amount)
                         ? $arr['discount_pct'] : 0;
-        }, Pricing::PRICES['platinum']));
+        }, Pricing::PRICES));
 $document->assign(array(
     'screenshots_total' => $screenshots_total[0],
     'screenshots_new' => $screenshots_new[0],

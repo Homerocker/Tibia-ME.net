@@ -46,6 +46,8 @@
     <div class="cell medium-6 large-4">
         <ul>
             <li><a href="./download"><b><?= _('Download') ?></b></a></li>
+            <li><? if ($platinum_discount): ?><span class="label success">-<?= $platinum_discount ?>
+                    %</span>&nbsp;<? endif; ?><a href="./premiumplatinum.php"><?= _('Premium & Platinum') ?></a></li>
             <li><a href="./calendar.php"><?= _('Events calendar') ?></a></li>
             <li><a href="./forum"><?= _('Forum') ?>&nbsp;<span
                             class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span
@@ -109,15 +111,6 @@
             <li><a href="./gamecontent/skills.php?vocation=warrior"><?= _('Skills') ?></a></li>
             <li><a href="./gamecontent/pets.php"><?= _('Pets') ?></a></li>
             <li><a href="./gamecontent/food.php"><?= _('Food and potions') ?></a></li>
-        </ul>
-    </div>
-
-    <div class="cell medium-6 large-4">
-        <h4><?= _('Payment') ?></h4>
-        <ul>
-            <li><a href="./premium.php"><?= _('Premium') ?></a></li>
-            <li><? if ($platinum_discount): ?><span class="label success">-<?= $platinum_discount ?>
-                    %</span>&nbsp;<? endif; ?><a href="./platinum.php"><?= _('Platinum') ?></a></li>
         </ul>
     </div>
 

@@ -108,6 +108,6 @@ class PlatinumBundle extends GameCodes
     }
 
     public function get_price($currency) {
-        return Pricing::get_price('platinum', $this->amount, $currency);
+        return Pricing::get_price($this->amount, $currency);
     }
 }

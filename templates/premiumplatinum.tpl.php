@@ -40,26 +40,27 @@
     </ul>
 </div>
 
-<h3><?= _('How to buy') ?></h3>
-<div class="callout primary">
-
-    <?= sprintf(_('Visit %s or <a href="%s">buy from us</a>. Our prices may differ. We accept WebMoney, PayPal, wire transfers and more! Please check our <a href="%s">User Agreement</a> before you purchase from us.'),
-        '<a href="https://payments.cipsoft.com/tibiame/?section=payment" target="_blank">www.tibiame.com</a>', './payment.php', './user/agreement.php?redirect=' . $_SERVER['PHP_SELF'] . '#payments')
-    ?>
-    <div class="button-group align-center">
-        <a class="button primary" href="./payment.php"><?= _('Purchase') ?></a>
-    </div>
+<div class="button-group align-center">
+    <? if (!empty(GameCodes::get_codes_available())): ?>
+        <a class="button primary" href="./payment.php"><? printf(_('Buy on %s'), 'tibia-me.net') ?></a>
+    <? endif; ?>
+    <a class="button primary" target="_blank" href="https://payments.cipsoft.com/tibiame/?section=payment"><? printf(_('Buy on %s'), 'tibiame.com') ?></a>
 </div>
+<? $codes = GameCodes::get_overview() ?>
+<? if (!empty($codes)): ?>
 <h3><?= _('Our prices') ?></h3>
 <div class="grid-x grid-padding-x grid-padding-y">
     <?php
-    foreach (Pricing::PRICES['platinum'] as $amount => $price_array) {
+    foreach (Pricing::PRICES as $amount => $price_array) {
+        if (!isset($codes[$amount])) {
+            continue;
+        }
         echo '<div class="cell large-4 medium-4 small-6">';
         echo '<table>';
         echo '<thead>';
         echo '<tr>';
         echo '<td class="text-center" colspan="2">';
-        echo $amount;
+        printf(_('%d Platinum '), $amount);
         echo '</td>';
         echo '</tr>';
         echo '</thead>';
@@ -68,7 +69,7 @@
             echo '<tr>';
             echo '<td>' . Pricing::get_ISO_currency_code($currency) . '</td>';
             echo '<td>';
-            $price = Pricing::get_price('platinum', $amount, $currency);
+            $price = Pricing::get_price($amount, $currency);
             echo $price['price'];
             if ($price['discount_pct']) {
                 echo ' <span class="small">(-' . $price['discount_pct'] . '%)</span>';
@@ -82,3 +83,4 @@
     }
     ?>
 </div>
+<? endif; ?>
