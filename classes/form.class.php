@@ -8,7 +8,17 @@
  */
 class Form
 {
-    public $fields = [];
+    private $fields = [], $name;
+
+    /**
+     * Form constructor.
+     * @param $form_name
+     */
+    public function __construct($form_name)
+    {
+        $this->name = $form_name;
+        $this->fields['submit'] = new FormInput($this->name, 'submit', $this->name);
+    }
 
     public function addinput($id, $type, $name, $minlength = null, $maxlength = null, $required = true, $pattern = null)
     {
@@ -20,9 +30,14 @@ class Form
         $this->fields[$id] = new FormSelect($id, $name, $options, $required);
     }
 
+    public function addtextarea($id, $name, $rows = 5, $maxlength = null, $required = true)
+    {
+        $this->fields[$id] = new FormTextarea($id, $name, $rows, $maxlength, $required);
+    }
+
     public function submit()
     {
-        if (!isset($_REQUEST['submit'])) {
+        if (!isset($_REQUEST[$this->name])) {
             return false;
         }
 
@@ -33,15 +48,7 @@ class Form
                 continue;
             }
 
-            $field->value = $_REQUEST[$field->name] ?? null;
-            if ($field->required && $field->value === null) {
-                // required field not passed
-                $field->errors[] = _('Field is required.');
-                continue;
-            } else {
-                $field->value = trim($field->value);
-            }
-
+            $field->value = isset($_REQUEST[$field->name]) ? trim($_REQUEST[$field->name]) : null;
             $bytes = strlen($field->value);
             $chars = mb_strlen($field->value);
             if ($bytes === 0) {
@@ -52,18 +59,26 @@ class Form
                     // optional field is empty
                     continue;
                 }
-            } elseif ($field->type == 'input' || $field->type == 'textarea') {
-                if ($chars < $field->minlength) {
-                    $field->errors[] = _('Input is too short.');
-                } elseif ($bytes > 65535 || $chars > $field->maxlength) {
-                    $field->errors[] = _('Input is too long.');
+            } else {
+                if ($field->element == 'input' || $field->element == 'textarea') {
+                    if (isset($field->minlength) && $chars < $field->minlength) {
+                        $field->errors[] = _('Input is too short.');
+                    } elseif ($bytes > 65535 || (isset($field->maxlength) && $chars > $field->maxlength)) {
+                        $field->errors[] = _('Input is too long.');
+                    }
+                } elseif ($field->element == 'select' && !array_key_exists($field->value, $field->options)) {
+                    $field->errors[] = _('Invalid input.');
                 }
-            } elseif ($field->type == 'select' && !array_key_exists($field->value, $field->options)) {
-                $field->errors[] = _('Invalid input.');
-            }
 
-            if (isset($field->pattern) && !preg_match($field->value, '^/' . $field->pattern . '/$')) {
-                $field->errors[] = _('Invalid input.');
+                if (isset($field->pattern) && !preg_match($field->value, '^/' . $field->pattern . '/$')) {
+                    $field->errors[] = _('Invalid input.');
+                }
+                foreach ($field->validate as $validate) {
+                    if (!$validate['handler']($field->value)) {
+                        $field->errors[] = $validate['error'] ?? _('Invalid input.');
+                    }
+                }
+                $field->errors = array_unique($field->errors);
             }
             if (!empty($field->errors) && $valid == true) {
                 $valid = false;
@@ -73,18 +88,63 @@ class Form
         return $valid;
     }
 
+    public function field($id)
+    {
+        return $this->fields[$id];
+    }
+
 }
 
 class FormField
 {
-    public $id, $type, $name, $required, $value = '', $errors = [];
+    public $id, $type, $name, $required, $value = '', $description = null, $events = [], $validate = [], $errors = [];
 
-    public function __construct($id, $type, $name, $required)
+    public function __construct($id, $name, $required)
     {
         $this->id = $id;
-        $this->type = $type;
         $this->name = $name;
         $this->required = $required;
+    }
+
+    public function event($event, $handler): bool
+    {
+        if (!in_array($event, ['onupdate', 'oninput', 'onchange', 'onclick'])) {
+            return false;
+        }
+        $this->events[$event] = $handler;
+        return true;
+    }
+
+    public function value($value = null)
+    {
+        if ($value) {
+            $this->value = $value;
+        }
+        return $this->value;
+    }
+
+    public function get_events_string(): string
+    {
+        $events = '';
+        foreach ($this->events as $event => $handler) {
+            $events .= ' ' . $event . '="' . htmlspecialchars($handler) . '"';
+        }
+        return $events;
+    }
+
+    public function set_description($description): bool
+    {
+        $this->description = $description;
+        return true;
+    }
+
+    public function validate($handler, $error_message = null): bool
+    {
+        $this->validate[] = [
+            'handler' => $handler,
+            'error' => $error_message
+        ];
+        return true;
     }
 
     public function display($label = null)
@@ -100,35 +160,49 @@ class FormField
 
 class FormInput extends FormField
 {
-    public $minlength, $maxlength, $pattern;
+    public $element = 'input';
+    public $type, $minlength, $maxlength, $pattern, $disabled = false;
 
-    public function __construct($id, $type, $name, $minlength, $maxlength, $required, $pattern)
+    public function __construct($id, $type, $name, $minlength = null, $maxlength = null, $required = true, $pattern = null)
     {
-        parent::__construct($id, $type, $name, $required);
+        $this->type = $type;
         $this->minlength = $minlength;
         $this->maxlength = $maxlength;
         $this->pattern = $pattern;
+        parent::__construct($id, $name, $required);
+    }
+
+    public function set_disabled(bool $disabled): bool
+    {
+        return $this->disabled = $disabled;
     }
 }
 
 class FormSelect extends FormField
 {
+    public $element = 'select';
     public $options;
 
     public function __construct($id, $name, $options, $required)
     {
-        parent::__construct($id, 'select', $name, $required);
-        $this->options = $options;
+        if ($options instanceof Closure) {
+            $this->options = $options();
+        } else {
+            $this->options = $options;
+        }
+        parent::__construct($id, $name, $required);
     }
 }
 
 class FormTextarea extends FormField
 {
-    public $rows;
+    public $element = 'textarea';
+    public $rows, $maxlength;
 
-    public function __construct($id, $name, $rows = 5, $required)
+    public function __construct($id, $name, $rows, $maxlength, $required)
     {
-        parent::__construct($id, 'textarea', $name, $required);
         $this->rows = $rows;
+        $this->maxlength = $maxlength;
+        parent::__construct($id, $name, $required);
     }
 }

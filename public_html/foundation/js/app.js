@@ -184,7 +184,7 @@ function get_platinum_bundle(required_amount, currency) {
         data = $.parseJSON(data)['result'];
         $("#amount_display").text(data.amount);
         $("#amount").val(data.amount);
-        $("#price").text(data.price);
+        $("#price").text((currency === 'FK' ? 'USD' : currency) + ' ' + data.price);
     }).done(function () {
         
     });

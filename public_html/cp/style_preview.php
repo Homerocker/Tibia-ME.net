@@ -1,6 +1,6 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/../config.php';
-$document = new Document('Tibia-ME.net', array(
+$document = new Document(SITE_NAME, array(
     array('Navigation link', './'),
     array('Navigation text')
 ));

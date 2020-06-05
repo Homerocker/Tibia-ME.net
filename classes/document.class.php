@@ -21,7 +21,7 @@ class Document extends Templates
      * opens buffer, stores page header, user menu, notifications, banishment message, maintenance work message, etc.
      * @param string $page_title page title
      */
-    public function __construct($page_title = 'Tibia-ME.net', $navi = null,
+    public function __construct($page_title = SITE_NAME, $navi = null,
                                 $show_ads = true)
     {
         ob_start();

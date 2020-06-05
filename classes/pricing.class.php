@@ -4,75 +4,62 @@
  * @author Molodoy <molodoy3561@gmail.com>
  * @copyright (c) 2014, Tibia-ME.net
  */
-class Pricing extends ExchangerRuParser {
+class Pricing
+{
 
     const PRICES = array(
-        'platinum' => array(
-            100 => array(
-                'price' => 0.99,
-                'discount_pct' => 30
-            ),
-            210 => array(
-                'price' => 1.99,
-                'discount_pct' => 25
-            ),
-            700 => array(
-                'price' => 4.99,
-                'discount_pct' => 22
-            ),
-            2500 => array(
-                'price' => 14.99,
-                'discount_pct' => 20
-            ),
-            9000 => array(
-                'price' => 39.99,
-                'discount_pct' => 18
-            )
+        100 => array(
+            'price' => 0.99,
+            'discount_pct' => 30
         ),
-        'premium' => array(
-            7 => array(
-                'price' => 1.99,
-                'discount_pct' => 0
-            ),
-            30 => array(
-                'price' => 4.99,
-                'discount_pct' => 0
-            ),
-            60 => array(
-                'price' => 7.99,
-                'discount_pct' => 0
-            ),
-            120 => array(
-                'price' => 14.99,
-                'discount_pct' => 0
-            )
+        210 => array(
+            'price' => 1.99,
+            'discount_pct' => 25
+        ),
+        700 => array(
+            'price' => 4.99,
+            'discount_pct' => 22
+        ),
+        2500 => array(
+            'price' => 14.99,
+            'discount_pct' => 20
+        ),
+        9000 => array(
+            'price' => 39.99,
+            'discount_pct' => 18
         )
     );
 
-    public function get_ISO_currency_code($wm_code) {
+    const PURSES = [
+        'WMR' => 'R161889717079',
+        'WMZ' => 'Z264253741048',
+        'WME' => 'E192093820321'
+    ];
+
+    public static function get_ISO_currency_code($wm_code)
+    {
         switch ($wm_code) {
             case 'WME':
                 return 'EUR';
             case 'WMZ':
                 return 'USD';
-            case 'WMU':
-                return 'UAH';
             case 'WMR':
                 return 'RUB';
         }
         return $wm_code;
     }
 
-    public function get_price($product, $amount, $currency) {
-        if (isset(self::PRICES[$product][$amount])) {
+    public static function get_price($amount, $currency, $bundle = false)
+    {
+        if (isset(self::PRICES[$amount])) {
             // get default price
-            $price = self::PRICES[$product][$amount]['price'];
-            if (!empty(self::PRICES[$product][$amount]['discount_pct'])) {
-                $discount_modifier = 1 - self::PRICES[$product][$amount]['discount_pct'] / 100;
+            $price = self::PRICES[$amount]['price'];
+            if (!empty(self::PRICES[$amount]['discount_pct'])) {
+                $discount_modifier = 1 - self::PRICES[$amount]['discount_pct'] / 100;
             }
         } else {
             // calculate price for custom amount of game currency
-            $prices = self::PRICES[$product];
+            $prices = self::PRICES;
             krsort($prices);
             foreach ($prices as $amount1 => $prices1) {
                 if ($amount >= $amount1) {
@@ -86,23 +73,19 @@ class Pricing extends ExchangerRuParser {
 
         // apply discount
         if (isset($discount_modifier)) {
-            if ($product == 'platinum') {
-                $gc = new GameCodes;
-                if (empty($gc->get_overview()[$amount]) && $gc->get_total($gc->get_bundle($amount)) < $amount) {
-                    $discount_modifier = 1;
-                }
+            if (empty(GameCodes::get_overview()[$amount]) && (new PlatinumBundle($amount))->get_amount() < $amount) {
+                $discount_modifier = 1;
             }
             $price *= $discount_modifier;
         }
 
         // convert price to other currency if necessary
         if ($currency != 'WME') {
-            $price = $this->get_rate($currency, 'WME', $price);
+            $price = ExchangerRuParser::get_rate(($currency == 'FK' ? 'WMZ' : $currency), 'WME', $price);
         }
         return [
             'price' => round($price, 2),
-            'currency' => $currency,
-            'discount_pct' => self::PRICES[$product][$amount]['discount_pct'] ?? 0
+            'discount_pct' => ($discount_modifier ? ((1 - $discount_modifier) * 100) : 0)
         ];
     }
 

@@ -180,30 +180,30 @@ class TibiameComParser
 
     /**
      *
-     * @param string $code real game code
+     * @param string $code decrypted game code
      * @param $nickname
      * @param $world
-     * @return boolean|string true on success, otherwise localized error message
+     * @return boolean
      */
-    protected function gamecode_activate($code, $nickname, $world)
+    public static function gamecode_activate($code, $nickname, $world)
     {
         $dom = new DOMDocumentX;
         if (!$dom->loadHTMLFile('https://payments.cipsoft.com/tibiame/index.php?page=GameCode&action=useGameCode&CustomerID='
-            . $nickname . '%40' . $world . '&GameCode=' . str_replace('-', '', $code) . '&Language=en&Country=BY&markup=xhtmlmp')) {
-            return _('Unknown error.');
+                    . $nickname . '%40' . $world . '&GameCode=' . str_replace('-', '', $code) . '&Language=en&Country=BY&markup=xhtmlmp')) {
+            return false;
         }
         $dom = $dom->getElementById('Content');
         if ($dom === null) {
-            return _('Unknown error.');
+            return false;
         }
         $dom = $dom->nodeValue;
         if (strpos($dom, 'UnknownGameCode') !== false) {
-            return _('Unknown game code.');
+            return false;
         }
         if (strpos($dom, 'The Game Code has been activated.') !== false) {
             return true;
         }
-        return _('Unknown error.');
+        return false;
     }
 
 }

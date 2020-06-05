@@ -1,27 +1,17 @@
 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
     <div class="callout primary">
         <?= _('Nickname') ?>:<br/>
-        <b><?= $nickname ?></b><br/>
+        <b><?= htmlspecialchars($form->field('nickname')->value()) ?></b><br/>
         <?= _('World') ?>:<br/>
-        <b><?= $world ?></b><br/>
-        <?= _('Game code') ?>:<br/>
-        <b>
-        <?php
-        list($type, $amount) = explode(':', $code_type);
-        if ($type === 'premium') {
-            echo sprintf(ngettext('%d day Premium', '%d days Premium', $amount*$multiplier), $amount*$multiplier), '<br/>';
-        } else {
-            echo sprintf(_('%d Platinum'), $amount*$multiplier), '<br/>';
-        }
-        ?>
-        </b>
-        <input type="hidden" name="nickname" value="<?= $nickname ?>"/>
-        <input type="hidden" name="world" value="<?= $world ?>"/>
-        <input type="hidden" name="code_type" value="<?= $code_type ?>"/>
-        <input type="hidden" name="multiplier" value="<?= $multiplier ?>"/>
+        <b><?= htmlspecialchars($form->field('world')->value()) ?></b><br/>
+        <?= _('Amount') ?>:<br/>
+        <b><?= htmlspecialchars($form->field('amount')->value()) ?></b>
+        <? $form->field('nickname')->display() ?>
+        <? $form->field('world')->display() ?>
+        <? $form->field('amount')->display() ?>
         <div class="button-group">
-                <input class="button alert" type="submit" value="<?= _('Confirm') ?>"/>
-                <a class="button warning" href="<?= $_SERVER['PHP_SELF'] ?>"><?= _('Cancel') ?></a>
+            <? $form->field('submit')->display(_('Confirm')) ?>
+            <a class="button warning" href="<?= $_SERVER['PHP_SELF'] ?>"><?= _('Cancel') ?></a>
         </div>
     </div>
 </form>

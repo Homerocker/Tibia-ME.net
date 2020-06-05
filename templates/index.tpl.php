@@ -23,16 +23,19 @@
         <span id="news_collapse" class="display-none"><?= _('hide') ?></span>
     </button>
 </div>
-<h3><?= _('Chat') ?> (Beta)</h3>
-<div id="chat" class="callout secondary no-margin" style="height: 18rem; overflow-y: scroll;">
+<h3><?= _('Chat') ?></h3>
+<div id="chat" class="callout secondary no-margin break-word" style="height: 18rem; overflow-y: scroll;">
 </div>
 <form action="javascript:void(0)">
-<div class="input-group">
-    <input id="chat_message" class="input-group-field text-small" type="text" style="border-top: none;" placeholder="<?= _('Type your message') ?>" autocomplete="off" maxlength="600"/>
-    <div class="input-group-button">
-        <input type="submit" class="button small" onclick="chat_send('chat_message', '<?= $_SESSION['user_nickname'] ?>', <?= $_SESSION['user_world'] ?? 'null' ?>)" value="<?= _('Send') ?>"/>
+    <div class="input-group">
+        <input id="chat_message" class="input-group-field text-small" type="text" style="border-top: none;"
+               placeholder="<?= _('Type your message') ?>" autocomplete="off" maxlength="600"/>
+        <div class="input-group-button">
+            <input type="submit" class="button small"
+                   onclick="chat_send('chat_message', '<?= $_SESSION['user_nickname'] ?>', <?= $_SESSION['user_world'] ?? 'null' ?>)"
+                   value="<?= _('Send') ?>"/>
+        </div>
     </div>
-</div>
 </form>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -41,32 +44,40 @@
 </script>
 <div class="grid-x grid-padding-x grid-padding-y">
     <div class="cell medium-6 large-4">
-        <h4 class="show-for-small-only">TibiaME</h4>
-        <img class="show-for-medium" src="/images/logo.png" alt=""/>
-        <!--<img src="/images/birthday_10.png" alt=""/>-->
         <ul>
-            <li><a href="./about.php"><?= _('What is TibiaME?') ?></a></li>
-            <!-- <li><a class="bb" href="./update.php"><b><?= _('Autumn Update 2017 Teaser') ?></b></a></li> -->
-            <li><a href="./calendar.php"><?= _('Events calendar') ?></a></li>
             <li><a href="./download"><b><?= _('Download') ?></b></a></li>
-        </ul>
-    </div>
-
-    <div class="cell medium-6 large-4">
-        <ul>
-            <li><a class="inline-flex" href="./forum"><?= _('Forum') ?>&nbsp;<span class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span class="label success">+<?= $forum_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./screenshots"><?= _('Screenshots') ?>&nbsp;<span class="label secondary"><?= $screenshots_total ?></span><?php if ($screenshots_new): ?><span class="label success">+<?= $screenshots_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./album"><?= _('Photo album') ?>&nbsp;<span class="label secondary"><?= $album_total ?></span><?php if ($album_new): ?><span class="label success">+<?= $album_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./themes"><?= _('Themes') ?> (S60v2)&nbsp;<span class="label secondary"><?= $themes_total ?></span><?php if ($themes_new): ?><span class="label success">+<?= $themes_new ?></span><?php endif; ?></a></li>
-            <li><a class="inline-flex" href="./artworks"><?= _('Artworks') ?>&nbsp;<span class="label secondary"><?= $artworks_total ?></span><?php if ($artworks_new): ?><span class="label success">+<?= $artworks_new ?></span><?php endif; ?></a></li>
+            <li><? if ($platinum_discount): ?><span class="label success">-<?= $platinum_discount ?>
+                    %</span>&nbsp;<? endif; ?><a href="./premiumplatinum.php"><?= _('Premium & Platinum') ?></a></li>
+            <li><a href="./calendar.php"><?= _('Events calendar') ?></a></li>
+            <li><a href="./forum"><?= _('Forum') ?>&nbsp;<span
+                            class="label secondary"><?= $forum_total ?></span><?php if ($forum_new): ?><span
+                            class="label success">+<?= $forum_new ?></span><?php endif; ?></a></li>
+            <li><a href="./screenshots"><?= _('Screenshots') ?>&nbsp;<span
+                            class="label secondary"><?= $screenshots_total ?></span><?php if ($screenshots_new): ?><span
+                            class="label success">+<?= $screenshots_new ?></span><?php endif; ?></a></li>
+            <li><a href="./album"><?= _('Photo album') ?>&nbsp;<span
+                            class="label secondary"><?= $album_total ?></span><?php if ($album_new): ?><span
+                            class="label success">+<?= $album_new ?></span><?php endif; ?></a></li>
+            <li><a href="./themes"><?= _('Themes') ?> (S60v2)&nbsp;<span
+                            class="label secondary"><?= $themes_total ?></span><?php if ($themes_new): ?><span
+                            class="label success">+<?= $themes_new ?></span><?php endif; ?></a></li>
+            <li><a href="./artworks"><?= _('Artworks') ?>&nbsp;<span
+                            class="label secondary"><?= $artworks_total ?></span><?php if ($artworks_new): ?><span
+                            class="label success">+<?= $artworks_new ?></span><?php endif; ?></a></li>
             <?php if ($_SESSION['user_id']): ?>
                 <li><a href="./user/memberlist.php"><?= _('Memberlist') ?></a></li>
             <?php endif; ?>
             <?php if (Perms::get(Perms::USERS_BAN)): ?>
                 <li><a href="./user/banishments.php?u=0"><?= _('Banlist') ?></a></li>
             <?php endif; ?>
-            <li><a href="./user/agreement.php"><?= _('User agreement') ?></a></li>
         </ul>
+    </div>
+
+
+    <div class="cell medium-6 large-8 hide-for-small-only">
+        <div class="callout">
+            <?= _('TibiaME is the first massively multiplayer online role-playing game for mobile devices. Come together with hundreds of players and experience adventures in a colourful virtual world! Along with your friends you explore the mysterious land of TibiaME, fight your way through hordes of evil creatures and solve ancient riddles to find untold treasures. With every monster you defeat you will grow in strength and power. TibiaME is based on the successful online role-playing game Tibia which attracts thousands of players every day.') ?>
+        </div>
     </div>
 
     <div class="cell medium-6 large-4">
@@ -104,6 +115,7 @@
     </div>
 
     <div class="cell medium-6 large-4">
+<<<<<<< HEAD
         <h4><?= _('Payment') ?></h4>
         <ul>
             <li><a href="./premium.php"><?= _('Premium') ?></a></li>
@@ -113,6 +125,8 @@
     </div>
 
     <div class="cell medium-6 large-4">
+=======
+>>>>>>> origin/master
         <h4><?= _('Related sites') ?></h4>
         <ul>
             <li><a href="http://www.tibiame.com" target="_blank"><?= _('Official website') ?></a></li>
@@ -127,6 +141,7 @@
         <ul>
             <li><a href="./contacts.php"><?= _('Contacts') ?></a></li>
             <li><a href="./staff.php"><?= _('Moderators') ?></a></li>
+            <li><a href="./user/agreement.php"><?= _('User agreement') ?></a></li>
             <?php if (Perms::get(Perms::CP_ACCESS)): ?>
                 <li><a href="./cp"><b><?= _('Control Panel') ?></b></a></li>
             <?php endif; ?>

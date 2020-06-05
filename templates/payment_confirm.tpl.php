@@ -1,10 +1,8 @@
 <form action="<?= $action ?>" method="<?= $method ?>">
     <div class="callout primary">
-        <?= _('Nickname') ?>:<br/>
-        <b><?= $NICKNAME ?></b><br/>
+        <?= _('Nickname') ?>: <b><?= $NICKNAME ?></b><br/>
         <?= _('World') ?>: <b><?= $WORLD ?></b><br/>
-        <?= _('Product') ?>:<br/>
-        <b><?= ucfirst($TYPE) ?> <?= $AMOUNT ?></b><br/>
+        <?= _('Product') ?>: <b><?= ucfirst($TYPE) ?> <?= $AMOUNT ?></b><br/>
         <?php
         if ($_GET['currency'] == 'FK') {
             echo '<input type="hidden" name="m" value="36731"/>'
