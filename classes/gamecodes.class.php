@@ -3,31 +3,25 @@
 class GameCodes extends TibiameComParser {
 
     private $errors = array();
-    public $codes, $type, $amount, $nickname, $world, $mode, $multiplier;
+    public $codes, $amount, $nickname, $world, $mode;
 
     const MODE_ACTIVATE_CONFIRMATION = 1, MODE_ACTIVATE_CONFIRMED = 2;
 
     public function __construct() {
-        if (isset($_GET['nickname']) && isset($_GET['world']) && isset($_GET['code_type'])
-                && isset($_GET['multiplier']) && empty($this->errors) && Perms::get(Perms::GAMECODES_ACTIVATE)) {
+        if (isset($_GET['nickname']) && isset($_GET['world']) && isset($_GET['amount']) && empty($this->errors) && Perms::get(Perms::GAMECODES_ACTIVATE)) {
             $this->mode = self::MODE_ACTIVATE_CONFIRMATION;
-        } elseif (isset($_POST['nickname']) && isset($_POST['world']) && isset($_POST['code_type'])
-                && isset($_POST['multiplier']) && empty($this->errors) && Perms::get(Perms::GAMECODES_ACTIVATE)) {
+        } elseif (isset($_POST['nickname']) && isset($_POST['world']) && isset($_POST['amount'])
+                && empty($this->errors) && Perms::get(Perms::GAMECODES_ACTIVATE)) {
             $this->mode = self::MODE_ACTIVATE_CONFIRMED;
         }
     }
 
-    public function add($codes, $type, $amount) {
-        list($this->codes, $this->type, $this->amount) = func_get_args();
-        if ($type !== 'platinum' && $type !== 'premium') {
-            $this->errors[] = _('Invalid game codes type.');
-        }
-        if (!ctype_digit((string) $amount) || ($type === 'platinum'
-                && !in_array($amount, [100, 210, 700, 2500])) || ($type === 'premium'
-                && !in_array($amount, [30, 120]))) {
+    public function add($codes, $amount) {
+        $this->codes = $codes;
+        $this->amount = $amount;
+        if (!ctype_digit((string) $amount) || !in_array($amount, [100, 210, 700, 2500])) {
             $this->errors[] = _('Invalid amount.');
         }
-        $this->codes = $codes;
         $codes = explode("\n", $codes);
         foreach ($codes as $i => $code) {
             $codes[$i] = $code = trim($code);
@@ -55,8 +49,8 @@ class GameCodes extends TibiameComParser {
             Document::msg($this->errors);
             return;
         }
-        $GLOBALS['db']->query('INSERT INTO gamecodes (code, type, amount, added_mod_id) VALUES (\'' . implode('\', \'' . $type . '\', ' . $amount . ', ' . $_SESSION['user_id'] . '), (\'',
-                        $codes) . '\', \'' . $type . '\', ' . $amount . ', ' . $_SESSION['user_id'] . ')');
+        $GLOBALS['db']->query('INSERT INTO gamecodes (code, amount, added_mod_id) VALUES (\'' . implode('\', ' . $amount . ', ' . $_SESSION['user_id'] . '), (\'',
+                        $codes) . '\', ' . $amount . ', ' . $_SESSION['user_id'] . ')');
         Document::reload_msg(sprintf(ngettext('%d game code added.',
                                 '%d game codes added.', count($codes)),
                         count($codes)));
@@ -67,7 +61,7 @@ class GameCodes extends TibiameComParser {
      * @return array all available game codes
      */
     public function get_codes() {
-        return $GLOBALS['db']->query('SELECT code, type, amount, added_mod_id, failed'
+        return $GLOBALS['db']->query('SELECT code, amount, added_mod_id, failed'
                 . ' FROM gamecodes WHERE nickname IS NULL')->fetch_all(MYSQLI_ASSOC);
     }
 
@@ -89,44 +83,30 @@ class GameCodes extends TibiameComParser {
         }
         $overview = array();
         foreach ($codes as $code) {
-            if (isset($overview[$code['type']][$code['amount']])) {
-                ++$overview[$code['type']][$code['amount']];
-            } else {
-                $overview[$code['type']][$code['amount']] = 1;
-            }
+            $overview[$code['amount']] = ($overview[$code['amount']] ?? 0) + 1;
         }
-        foreach ($overview as $type => $amounts) {
-            ksort($amounts);
-            $overview[$type] = $amounts;
-        }
+        ksort($overview);
         return $overview;
     }
 
-    public function activate($code_type, $nickname, $world, $multiplier,
+    public function activate($amount, $nickname, $world,
             $confirmed = false) {
+        $this->amount = $amount;
         $this->nickname = $nickname;
         $this->world = $world;
-        if (strpos($code_type, ':') !== false) {
-            list($this->type, $this->amount) = explode(':', $code_type);
-        }
-        $this->multiplier = $multiplier;
         if (!Auth::CheckNickname($nickname)) {
             $this->errors[] = _('Invalid nickname.');
         }
         if (!Auth::check_world($world)) {
             $this->errors[] = _('Invalid world.');
         }
-        if (($this->type !== 'platinum' && $this->type !== 'premium') || !ctype_digit($this->amount)) {
-            $this->errors[] = _('Invalid game code type.');
+        // @todo check if required bundle still exists before confirming payment
+        if (!ctype_digit($this->amount)) {
+            $this->errors[] = _('Invalid amount.');
         } else {
-            $codes = $this->get_overview();
-            if (!isset($codes[$this->type][$this->amount])) {
-                $this->errors[] = _('Game code is not available.');
-            }
-            if (!ctype_digit((string) $multiplier) || $multiplier < 1) {
-                $this->errors[] = _('Invalid multiplier.');
-            } elseif ($codes[$this->type][$this->amount] < $this->multiplier) {
-                $this->errors[] = _('No enough game codes available.');
+            $codes = $this->get_bundle($amount);
+            if ($this->get_platinum_sum($codes) != $amount) {
+                $this->errors[] = _('Requested game codes are no longer available.');
             }
         }
         if (!empty($this->errors)) {
@@ -139,7 +119,7 @@ class GameCodes extends TibiameComParser {
         }
 
         $GLOBALS['db']->query('LOCK TABLES gamecodes WRITE');
-        $sql = $GLOBALS['db']->query('SELECT code FROM gamecodes WHERE type = \'' . $this->type . '\' AND amount = ' . $this->amount . ' AND nickname IS NULL LIMIT ' . $multiplier);
+        $sql = $GLOBALS['db']->query('SELECT code FROM gamecodes WHERE amount = ' . $this->amount . ' AND nickname IS NULL LIMIT ' . $multiplier);
         if ($GLOBALS['db']->affected_rows != $multiplier) {
             Document::msg($this->errors[] = _('No enough game codes available.'));
             $GLOBALS['db']->query('UNLOCK TABLES');
@@ -203,18 +183,51 @@ class GameCodes extends TibiameComParser {
         return empty($this->errors) ? $this->mode : 0;
     }
     
-    public static function get_platinum_sum($overview = null) {
-        if ($overview === null) {
-            $overview = (new self)->get_overview();
+    public static function get_total($codes = null) {
+        if ($codes === null) {
+            $codes = (new self)->get_overview();
         }
-        if (!isset($overview['platinum'])) {
-            return 0;
+        $total = 0;
+        foreach ($codes as $amount => $n) {
+            $total += $amount * $n;
         }
-        $sum = 0;
-        foreach ($overview['platinum'] as $amount => $count) {
-            $sum+=$amount*$count;
+        return $total;
+    }
+    
+    public function get_bundle($required_amount) {
+        $codes = $this->get_overview();
+        krsort($codes, SORT_NUMERIC);
+        array_walk($codes, function(&$v, $k) {
+            $v = ['amount' => $k, 'n' => $v];
+        });
+        $codes = array_values($codes);
+        $result = [];
+        foreach ($codes as $i => $v) {
+            if ($required_amount < self::get_total($result)) {
+                do {
+                    $result2 = $result;
+                    if (empty($result2[$codes[$i - 1]['amount']])) {
+                        break;
+                    }
+                    --$result2[$codes[$i - 1]['amount']];
+                    
+                    $current_codes_n = min(ceil(($required_amount - self::get_total($result2)) / $v['amount']), $v['n']);
+                    $result2[$v['amount']] = ($result2[$v['amount']] ?? 0) + $current_codes_n;
+                    if (self::get_total($result2) < self::get_total($result)) {
+                        $result = $result2;
+                    } else {
+                        break;
+                    }
+                } while (true);
+            } else {
+                $current_codes_n = min(ceil(($required_amount - self::get_total($result)) / $v['amount']), $v['n']);
+                $result[$v['amount']] = $current_codes_n;
+            }
+            if ($required_amount == self::get_total($result)) {
+                break;
+            }
         }
-        return $sum;
+        return $result;
     }
 
 }

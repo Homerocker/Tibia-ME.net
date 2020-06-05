@@ -4,7 +4,8 @@
  * @author Molodoy <molodoy3561@gmail.com>
  * @copyright 2012 (c) Tibia-ME.net
  */
-class User {
+class User
+{
 
     public $data = array();
     public $count = 0;
@@ -16,7 +17,8 @@ class User {
      * @param string $dateformat The format of the outputted date string. See date() formatting options.
      * @return string date depending on user timezone, and format and timestamp if specified
      */
-    public static function date($timestamp = null, $dateformat = 'd.m.Y H:i') {
+    public static function date($timestamp = null, $dateformat = 'd.m.Y H:i')
+    {
         if ($timestamp === null) {
             $timestamp = $_SERVER['REQUEST_TIME'];
         }
@@ -29,7 +31,8 @@ class User {
      * @param int|string $userID
      * @return boolean true if gender and vocation are specified, otherwise false
      */
-    public static function gender_icon($user_id) {
+    public static function gender_icon($user_id)
+    {
         $sql = $GLOBALS['db']->query('
             SELECT `gender`,
             `vocation`
@@ -59,14 +62,15 @@ class User {
      * @param int|string $user_id
      * @return string html code of online status message
      */
-    public static function online_status($user_id) {
+    public static function online_status($user_id)
+    {
         $sql = $GLOBALS['db']->query('
             SELECT `lastvisit`,
             `whereis`
             FROM `user_profile`
             WHERE `id` = \'' . $user_id . '\'')->fetch_assoc();
         if ($_SERVER['REQUEST_TIME'] - $sql['lastvisit'] < 300 && $sql['whereis']
-                != '/user/out.php') {
+            != '/user/out.php') {
             return '[<span class="green small" style="font-weight: bold;">' . _('Online') . '</span>]';
         } else {
             return '[<span class="red small" style="font-weight: bold;">' . _('Offline') . '</span>]';
@@ -77,8 +81,9 @@ class User {
      * @deprecated
      * @see User::get_display_name()
      */
-    public static function get_link($user_id, $link = 1) {
-        if (!ctype_digit((string) $user_id)) {
+    public static function get_link($user_id, $link = 1)
+    {
+        if (!ctype_digit((string)$user_id)) {
             return false;
         }
         if (!$link || !$user_id) {
@@ -104,18 +109,19 @@ class User {
 
         if ($link) {
             return '<a href="/user/profile.php?u=' . $user_id . '"' . ($sql['color']
-                        ? ' class="' . $sql['color'] . '"' : '') . '>' . $nickname . '</a>';
+                    ? ' class="' . $sql['color'] . '"' : '') . '>' . $nickname . '</a>';
         } else {
             return $sql['color'] ? '<span class="' . $sql['color'] . '">' . $nickname . '</span>'
-                        : $nickname;
+                : $nickname;
         }
     }
 
     /**
      * @return string|boolean name and world string
      */
-    public static function get_display_name($user_id) {
-        if (!ctype_digit((string) $user_id)) {
+    public static function get_display_name($user_id)
+    {
+        if (!ctype_digit((string)$user_id)) {
             return false;
         }
         if ($user_id == 0) {
@@ -140,11 +146,12 @@ class User {
         }
 
         return $sql['color'] ? '<span class="' . $sql['color'] . '">' . $nickname . '</span>'
-                    : $nickname;
+            : $nickname;
     }
 
     public function memberlist($online_only = 0, $search_nickname = null,
-            $search_world = null) {
+                               $search_world = null)
+    {
         $this->total_counter = $GLOBALS['db']->query('SELECT COUNT(*)
             FROM `users`')->fetch_row()[0];
         $sql = 'SELECT `users`.`id` FROM `users`';
@@ -172,7 +179,7 @@ class User {
                     $sql .= ' `world` = \'' . $search_world . '\'';
                 }
                 $this->search_results = $GLOBALS['db']
-                                ->query('SELECT COUNT(*) ' . $sql)->fetch_row()[0];
+                    ->query('SELECT COUNT(*) ' . $sql)->fetch_row()[0];
                 $this->pages = ceil($this->search_results / 80);
             } else {
                 $this->pages = ceil($this->total_counter / 80);
@@ -203,12 +210,13 @@ class User {
      * @param boolean $escape_string toggles string escaping
      * @return int|boolean user ID or false
      */
-    public static function get_id($nickname, $world, $escape_string = true) {
+    public static function get_id($nickname, $world, $escape_string = true)
+    {
         $nickname = preg_replace('/(.*)-(.*)/i', "\$2", $nickname);
         $sql = $GLOBALS['db']->query('SELECT `id`
             FROM `users`
             WHERE `nickname` = \'' . ($escape_string ? $GLOBALS['db']->real_escape_string($nickname)
-                            : $nickname) . '\'
+                : $nickname) . '\'
             AND `world` = \'' . ($escape_string ? intval($world) : $world) . '\'
             LIMIT 1')->fetch_row();
         if ($sql === null) {
@@ -222,15 +230,16 @@ class User {
      * @param int|string $user_id valid user ID
      * @return boolean true is user is online, otherwise false
      */
-    public static function get_status($user_id) {
+    public static function get_status($user_id)
+    {
         $sql = $GLOBALS['db']
-                        ->query('SELECT `lastvisit`,
+            ->query('SELECT `lastvisit`,
                             `whereis`
                             FROM `user_profile`
                             WHERE `id` = \'' . $user_id . '\'
                             LIMIT 1')->fetch_assoc();
         if ($_SERVER['REQUEST_TIME'] - $sql['lastvisit'] < 300 && $sql['whereis']
-                != '/user/out.php') {
+            != '/user/out.php') {
             return true;
         }
         return false;
@@ -241,8 +250,9 @@ class User {
      * @param int|string $user_id user ID
      * @return boolean|array a numerical array with user nickname and world on success, otherwise false
      */
-    public static function get_data($user_id) {
-        if (!ctype_digit((string) $user_id)) {
+    public static function get_data($user_id)
+    {
+        if (!ctype_digit((string)$user_id)) {
             return false;
         }
         $sql = $GLOBALS['db']->query('
@@ -259,7 +269,8 @@ class User {
      * Fetches users with specific rank.
      * @param string $rank case-sensitive rank name (see Ranks::get_id_by_name())
      */
-    public function fetch_by_rank($rank) {
+    public function fetch_by_rank($rank)
+    {
         $sql = $sql = $GLOBALS['db']->query('SELECT `id`
             FROM `user_profile`
             WHERE `rank` = ' . Ranks::get_id_by_name($rank));
@@ -272,11 +283,12 @@ class User {
     /**
      * @param null|string $locale in language_territory format
      */
-    public static function set_locale($locale = null) {
+    public static function set_locale($locale = null)
+    {
         if ($locale !== null && array_key_exists($locale, LOCALES)) {
             $_SESSION['locale'] = $locale;
         } elseif (isset($_GET['lang']) && array_key_exists($_GET['lang'],
-                        LOCALES)) {
+                LOCALES)) {
             if (!$_SESSION['user_id']) {
                 $_SESSION['locale'] = $_GET['lang'];
             }
@@ -289,8 +301,8 @@ class User {
         if (!setlocale(LC_ALL, $locale . '.utf8', $locale . '.UTF-8', $locale)) {
             log_error('could not set locale ' . $locale);
             if ($locale != DEFAULT_LOCALE && !setlocale(LC_ALL,
-                            DEFAULT_LOCALE . '.utf8', DEFAULT_LOCALE . '.UTF-8',
-                            DEFAULT_LOCALE)) {
+                    DEFAULT_LOCALE . '.utf8', DEFAULT_LOCALE . '.UTF-8',
+                    DEFAULT_LOCALE)) {
                 log_error('could not set default locale ' . DEFAULT_LOCALE);
             }
         }
@@ -299,7 +311,8 @@ class User {
         }
     }
 
-    private static function get_header_locale(): string {
+    private static function get_header_locale(): string
+    {
         if (!isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             return DEFAULT_LOCALE;
         }
@@ -316,16 +329,18 @@ class User {
     /**
      * @return string value for xml:lang based on current user locale
      */
-    public static function get_xml_lang() {
+    public static function get_xml_lang()
+    {
         $locale = explode('_',
-                (isset($_GET['lang']) && array_key_exists($_GET['lang'], LOCALES))
-                    ?
+            (isset($_GET['lang']) && array_key_exists($_GET['lang'], LOCALES))
+                ?
                 $_GET['lang'] : (isset($_SESSION['locale']) ? $_SESSION['locale']
-                    : DEFAULT_LOCALE));
+                : DEFAULT_LOCALE));
         return $locale[0];
     }
 
-    public static function rank($userID) {
+    public static function rank($userID)
+    {
         $rank = $GLOBALS['db']->query('SELECT ranks.name, ranks.color FROM user_profile, ranks WHERE ranks.id = user_profile.rank AND user_profile.id = ' . $userID)->fetch_assoc();
         if ($rank['color'] !== null) {
             return '<span class="' . $rank['color'] . '">' . _($rank['name']) . '</span>';
@@ -334,12 +349,13 @@ class User {
     }
 
     /**
-     * 
+     *
      * @deprecated since version 2.10.0
      */
-    public static function is_opera_mini() {
+    public static function is_opera_mini()
+    {
         return (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'],
-                        'Opera Mini') !== false || (strpos($_SERVER['HTTP_USER_AGENT'],
+                    'Opera Mini') !== false || (strpos($_SERVER['HTTP_USER_AGENT'],
                         'OPR') !== false && strpos($_SERVER['HTTP_USER_AGENT'],
                         'Mobile') !== false)));
     }
@@ -350,7 +366,8 @@ class User {
      * @param int $target_id
      * @param int $like 1 for like, 0 for dislike, -1 for unvote
      */
-    public static function like($target_type, $target_id, $like) {
+    public static function like($target_type, $target_id, $like)
+    {
         switch ($target_type) {
             case 'photo':
                 if (!Album::photo_exists($target_id)) {
@@ -392,7 +409,7 @@ class User {
             $GLOBALS['db']->query('INSERT INTO `likes` (`user_id`, `type`, `target_id`, `like`) VALUES (\'' . $_SESSION['user_id'] . '\', \'' . $target_type . '\', \'' . $target_id . '\', \'' . $like . '\')');
             if ($like == 1) {
                 Notifications::create($target_type . 'Like', $target_id,
-                        $authorID);
+                    $authorID);
             }
         } else {
             // removing entry from unviewed notifications

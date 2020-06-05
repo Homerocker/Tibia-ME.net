@@ -10,7 +10,7 @@ fixed JS errors and "Calculating" message hang if null items returned
 * display dummy icon if item is null
 * correctly remove item from comparison and item icon and stats when last available item is ignored
 * [fix] fixed bug that didn't let calculator update stats after last available item was added to ignore list
-* unignoring item will add that item to current set if it has better stats than currently selected item,
+* unignoring item will add that item to current set if it has better summary stats (selected stats only) than currently selected item,
 or if appropriate slot is empty
 
 ../templates/settings.tpl.php

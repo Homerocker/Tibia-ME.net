@@ -31,28 +31,32 @@
 <h3><?= _('Our prices') ?></h3>
 <div class="grid-x grid-padding-x grid-padding-y">
     <?php
-    if (isset($prices)) {
-        foreach ($prices as $amount => $price_array) {
-            echo '<div class="cell large-4 medium-4 small-12">';
-            echo '<table>';
-            echo '<thead>';
+    foreach ($pricing::PRICES['platinum'] as $amount => $price_array) {
+        echo '<div class="cell large-4 medium-4 small-12">';
+        echo '<table>';
+        echo '<thead>';
+        echo '<tr>';
+        echo '<td class="text-center" colspan="2">';
+        echo $amount;
+        echo '</td>';
+        echo '</tr>';
+        echo '</thead>';
+        echo '<tbody>';
+        foreach (['WMR', 'WMU', 'WMZ', 'WME'] as $currency) {
             echo '<tr>';
-            echo '<td class="text-center" colspan="2">';
-            echo $amount;
+            echo '<td>' . $pricing->get_ISO_currency_code($currency) . '</td>';
+            echo '<td>';
+            $price = $pricing->get_price('platinum', $amount, $currency);
+            echo $price['price'];
+            if ($price['discount_pct']) {
+                echo ' <span class="small">(-' . $price['discount_pct'] . '%)</span>';
+            }
             echo '</td>';
             echo '</tr>';
-            echo '</thead>';
-            echo '<tbody>';
-            foreach ($price_array as $currency => $price) {
-                echo '<tr>';
-                echo '<td>' . $currency . '</td>';
-                echo '<td>' . $price . '</td>';
-                echo '</tr>';
-            }
-            echo '</tbody>';
-            echo '</table>';
-            echo '</div>';
         }
+        echo '</tbody>';
+        echo '</table>';
+        echo '</div>';
     }
     ?>
 </div>

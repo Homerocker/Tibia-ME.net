@@ -1,7 +1,6 @@
 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
     <div class="callout primary">
-        <?= _('If desired product is not listed here you may contact us to purchase it with different payment method.') ?><br/>
-        <select name="product">
+        <!--<select name="product">
             <?php
             if (empty($products)) {
                 echo '<option value="">',_('No items to display.'),'</option>';
@@ -14,13 +13,13 @@
                         } else {
                             echo sprintf(_('%d Platinum'), $amount);
                         }
-                        echo ' (', number_format(round((new Pricing)->get_rate(($_GET['currency'] == 'FK' ? 'WMZ' : $_GET['currency']), Pricing::$pricing[$type][$amount]['currency'], Pricing::$pricing[$type][$amount]['price']) * (100 - Pricing::$pricing[$type][$amount]['discount_pct']) / 100, 2), 2, '.', ''), ($_GET['currency'] == 'FK' ? 'USD' : $_GET['currency']), ')';
+                        echo ' (', number_format(round((new Pricing)->get_rate(($_GET['currency'] == 'FK' ? 'WMZ' : $_GET['currency']), 'WME', Pricing::$pricing[$type][$amount]['price']) * (100 - Pricing::$pricing[$type][$amount]['discount_pct']) / 100, 2), 2, '.', ''), ($_GET['currency'] == 'FK' ? 'USD' : $_GET['currency']), ')';
                         echo '</option>';
                     }
                 }
             }
             ?>
-        </select>
+        </select>-->
         <label for="nickname"><?= _('Nickname') ?></label>
         <input id="nickname" type="text" name="nickname" maxlength="10"/>
         <label for="world"><?= _('World') ?></label>
@@ -32,7 +31,16 @@
             }
             ?>
         </select>
+        <label for="desired_amount"><?= _('Platinum amount') ?></label>
+        <input id="desired_amount" type="number" value="100" oninput="get_platinum_bundle($(this).val(), '<?= $_GET['currency'] ?>')"/>
+        <div class="text-center b">You will receive <span id="amount_display">0</span> platinum for <?= ($_GET['currency'] == "FK" ? "USD" : $_GET['currency']) ?>&nbsp;<span id="price">0</span>.</div>
+        <input type="hidden" id="amount" name="amount" value="100"/>
         <input type="hidden" name="currency" value="<?= $_GET['currency'] ?>"/>
         <input class="button primary" type="submit" value="<?= _('Proceed') ?>"/>
     </div>
 </form>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        get_platinum_bundle($("#desired_amount").val(), "<?= $_GET['currency'] ?>");
+    });
+</script>

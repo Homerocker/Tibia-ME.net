@@ -6,7 +6,7 @@
  */
 class ExchangerRuParser {
 
-    private $exchtypes = array(
+    const EXCHTYPES = array(
         'WMZWMR' => 1,
         'WMRWMZ' => 2,
         'WMZWME' => 3,
@@ -43,14 +43,15 @@ class ExchangerRuParser {
         'WMXWMU' => 40
     );
 
-    public function get_rate($currency_in, $currency_out, $amount_out) {
+    protected function get_rate($currency_in, $currency_out, $amount_out) {
         if ($currency_in === $currency_out) {
             return $amount_out;
         }
         if (($dom = Cache::read($currency_out . $currency_in, 43200, 'ExchangerRu')) === false) {
             $dom = new DOMDocument;
-            $dom->loadXML(curl_get_contents('https://wm.exchanger.ru/asp/XMLWMList.asp?exchtype='
-                            . $this->exchtypes[$currency_out . $currency_in]));
+            $dom->loadXML(
+                    curl_get_contents('https://wm.exchanger.ru/asp/XMLWMList.asp?exchtype='
+                            . self::EXCHTYPES[$currency_out . $currency_in]));
             $dom = $dom->getElementsByTagName('WMExchnagerQuerys')->item(0);
             if (!$dom) {
                 return null;
@@ -59,7 +60,8 @@ class ExchangerRuParser {
                 log_error('$exchtypes[' . $currency_out . $currency_in . '] seems to contain invalid exchtype id');
                 return null;
             }
-            $dom = str_replace(',', '.', $dom->getElementsByTagName('query')->item(0)->getAttribute('outinrate'));
+            $dom = str_replace(',', '.', $dom->getElementsByTagName('query')
+                            ->item(0)->getAttribute('outinrate'));
             Cache::write($dom, $currency_out . $currency_in, 'ExchangerRu');
         }
         return $amount_out * $dom / (100 - 0.8) * 100;

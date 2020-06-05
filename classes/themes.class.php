@@ -8,7 +8,8 @@
  * @copyright Copyright (c) 2008, Tibia-ME.net
  * @version 2.2
  */
-class Themes {
+class Themes
+{
 
     /**
      * @var int count of elements on current page
@@ -32,13 +33,14 @@ class Themes {
      * @param int|string $limit count of themes per page
      * @param int|string $user_id optional ID of user whos themes we should fetch
      */
-    public function fetch($limit = 5, $user_id = null) {
+    public function fetch($limit = 5, $user_id = null)
+    {
         $this->pages = $GLOBALS['db']->query('
                         SELECT COUNT(*)
                         FROM `themes`
                         ' . (($user_id !== null) ? 'WHERE `authorID` = \'' . $user_id . '\''
-                            : ''))
-                ->fetch_row();
+                : ''))
+            ->fetch_row();
         $this->pages = ceil($this->pages[0] / $limit);
         $sql = $GLOBALS['db']->query('
                 SELECT *,
@@ -50,7 +52,7 @@ class Themes {
                 ) as `comments`
                 FROM `themes`
                 ' . (($user_id !== null) ? ' WHERE `authorID` = \'' . $user_id . '\''
-                    : '') . '
+                : '') . '
                 ORDER BY `themes`.`timestamp` DESC
                 LIMIT ' . ((Document::s_get_page($this->pages) - 1) * $limit) . ', ' . $limit
         );
@@ -61,15 +63,15 @@ class Themes {
             $this->data[] = $row;
             if ($this->data[$this->count]['screenshot'] !== null) {
                 $this->data[$this->count]['thumbnail'] = Images::thumbnail(
-                                $_SERVER['DOCUMENT_ROOT'] . UPLOAD_DIR . '/themes/' . $this->data[$this->count]['screenshot'],
-                                CACHE_DIR
-                                . '/themes', THEME_WIDTH, THEME_QUALITY
+                    $_SERVER['DOCUMENT_ROOT'] . UPLOAD_DIR . '/themes/' . $this->data[$this->count]['screenshot'],
+                    CACHE_DIR
+                    . '/themes', THEME_WIDTH, THEME_QUALITY
                 );
             } else {
                 $this->data[$this->count]['thumbnail'] = null;
             }
             if (isset($downloadable) || (($this->data[$this->count]['status'] == 'checked'
-                    || $this->data[$this->count]['status'] == 'tested') || $this->AuthorID($this->data[$this->count]['id'])
+                        || $this->data[$this->count]['status'] == 'tested') || $this->AuthorID($this->data[$this->count]['id'])
                     == $_SESSION['user_id'])) {
                 $this->data[$this->count]['downloadable'] = 1;
             } else {
@@ -85,7 +87,8 @@ class Themes {
         }
     }
 
-    public function fetch_edit($theme_id) {
+    public function fetch_edit($theme_id)
+    {
         $sql = $GLOBALS['db']->query('
                     SELECT `authorID`,
                     `screenshot`,
@@ -95,15 +98,15 @@ class Themes {
                     FROM `themes`
                     WHERE `id` = \'' . $theme_id . '\'
                     LIMIT 1'
-                )->fetch_assoc();
+        )->fetch_assoc();
         $this->data = $sql;
         if ($this->data['screenshot'] !== null) {
             $this->data['screenshot'] = '/uploads/themes/'
-                    . $this->data['screenshot'];
+                . $this->data['screenshot'];
             $this->data['thumbnail'] = Images::thumbnail(
-                            $_SERVER['DOCUMENT_ROOT'] . $this->data['screenshot'],
-                            CACHE_DIR
-                            . '/themes', THEME_WIDTH, THEME_QUALITY
+                $_SERVER['DOCUMENT_ROOT'] . $this->data['screenshot'],
+                CACHE_DIR
+                . '/themes', THEME_WIDTH, THEME_QUALITY
             );
         } else {
             $this->data['thumbnail'] = null;
@@ -112,7 +115,7 @@ class Themes {
             $downloadable = $editable = 1;
         }
         if (isset($downloadable) || (($this->data['status'] == 'checked' || $this->data['status']
-                == 'tested') || $this->AuthorID($theme_id) == $_SESSION['user_id'])) {
+                    == 'tested') || $this->AuthorID($theme_id) == $_SESSION['user_id'])) {
             $this->data['downloadable'] = 1;
         } else {
             $this->data['downloadable'] = 0;
@@ -130,7 +133,8 @@ class Themes {
      * @param int|string $themeID theme ID
      * @return int user ID
      */
-    public static function AuthorID($themeID) {
+    public static function AuthorID($themeID)
+    {
         $sql = $GLOBALS['db']->query('select `authorID`
             from `themes`
             where `id` = \'' . $themeID . '\'')->fetch_row();
@@ -142,8 +146,9 @@ class Themes {
      * @param int|string $theme_id variable to be checked
      * @return boolean true if variable is correct theme ID, otherwise false
      */
-    public static function Exists($theme_id) {
-        if (!ctype_digit((string) $theme_id)) {
+    public static function Exists($theme_id)
+    {
+        if (!ctype_digit((string)$theme_id)) {
             return false;
         }
         $sql = $GLOBALS['db']->query('select COUNT(*)
@@ -161,16 +166,17 @@ class Themes {
      * @param int|string $theme_id theme ID, may be unsafe
      * @return boolean|string user ID if theme exists, otherwise false
      */
-    public static function get_owner_id($theme_id) {
-        if (!ctype_digit((string) $theme_id)) {
+    public static function get_owner_id($theme_id)
+    {
+        if (!ctype_digit((string)$theme_id)) {
             return false;
         }
         $sql = $GLOBALS['db']
-                ->query('SELECT `authorID`
+            ->query('SELECT `authorID`
                     FROM `themes`
                     WHERE `id` = \'' . $theme_id . '\'
                     LIMIT 1')
-                ->fetch_row();
+            ->fetch_row();
         if ($sql === null) {
             return false;
         }
@@ -186,10 +192,11 @@ class Themes {
      * If not specified, function will fetch this data from the database
      * @return boolean true
      */
-    public static function remove($theme_id, $file = null) {
+    public static function remove($theme_id, $file = null)
+    {
         if (!isset($file)) {
             $file = $GLOBALS['db']
-                            ->query('SELECT CONCAT(`s60_hash`, \'.sis\'),
+                ->query('SELECT CONCAT(`s60_hash`, \'.sis\'),
                 `screenshot`
                 FROM `themes`
                 WHERE `id` = \'' . $theme_id . '\'')->fetch_row();
@@ -207,7 +214,8 @@ class Themes {
         return true;
     }
 
-    public static function edit() {
+    public static function edit()
+    {
         $sql = $GLOBALS['db']->query('
                     SELECT CONCAT(`s60_hash`, \'.sis\') as `s60_file`,
                     `authorID`,
@@ -215,15 +223,15 @@ class Themes {
                     `status`
                     FROM `themes`
                     WHERE `id` = \'' . $_REQUEST['theme_id'] . '\''
-                )->fetch_assoc();
+        )->fetch_assoc();
         if (!Perms::get(Perms::THEMES_MOD) && $_SESSION['user_id'] != $sql['authorID']) {
             Document::reload($_SERVER['SCRIPT_NAME'] . '?theme_id=' . $_REQUEST['theme_id']);
         }
         if (isset($_POST['delete'])) {
             Themes::remove($_REQUEST['theme_id'],
-                    array($sql['s60_file'], $sql['screenshot']));
+                array($sql['s60_file'], $sql['screenshot']));
             Document::reload_msg(_('Theme has been deleted.'),
-                    './?page=' . Document::s_get_page());
+                './?page=' . Document::s_get_page());
         }
         if (isset($_POST['status']) && Perms::get(Perms::THEMES_MOD) && ($_POST['status']
                 == 'moderation' || $_POST['status'] == 'tested' || $_POST['status']
@@ -242,10 +250,10 @@ class Themes {
                 unlink($_SERVER['DOCUMENT_ROOT'] . UPLOAD_DIR . '/themes/' . $sql['screenshot']);
             }
             $screenshot = Uploader::upload('screenshot',
-                            array('type' => 'image', 'upload_dir' => '/themes'));
+                array('type' => 'image', 'upload_dir' => '/themes'));
             if ($screenshot['error'] !== false) {
                 Document::reload_msg($screenshot['error'],
-                        $_SERVER['SCRIPT_NAME'] . '?theme_id=' . $_REQUEST['theme_id'] . '&page=' . Document::s_get_page());
+                    $_SERVER['SCRIPT_NAME'] . '?theme_id=' . $_REQUEST['theme_id'] . '&page=' . Document::s_get_page());
             }
             $screenshot = '\'' . $screenshot['filename'] . '\'';
         } else {
@@ -258,7 +266,7 @@ class Themes {
             `screenshot` = ' . $screenshot . '
             WHERE `id` = \'' . $_REQUEST['theme_id'] . '\'');
         Document::reload_msg(_('Changes saved.'),
-                $_SERVER['SCRIPT_NAME'] . '?theme_id=' . $_REQUEST['theme_id'] . '&page=' . Document::s_get_page());
+            $_SERVER['SCRIPT_NAME'] . '?theme_id=' . $_REQUEST['theme_id'] . '&page=' . Document::s_get_page());
     }
 
 }

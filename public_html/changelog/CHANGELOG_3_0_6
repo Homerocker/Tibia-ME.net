@@ -3,7 +3,7 @@
 * DB::quote() deprecated
 
 ../classes/highscoresupdater.class.php
-* [cancelled] implemented DB::prepared_query()
+* implemented DB::prepared_query()
 
 ../core.php
 * curl_get_contents(): adjusted exponential backoff for better compatibility with tibiame.com

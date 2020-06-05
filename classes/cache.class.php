@@ -4,7 +4,8 @@
  * @author Molodoy <molodoy3561@gmail.com>
  * @copyright (c) 2013, Tibia-ME.net
  */
-class Cache {
+class Cache
+{
 
     /**
      * Recursive analogue for rmdir()
@@ -12,7 +13,8 @@ class Cache {
      * @return boolean true or false
      * @deprecated
      */
-    public static function rmtree($dir) {
+    public static function rmtree($dir)
+    {
         if (empty($dir) || !is_dir($dir)) {
             return false;
         }
@@ -29,7 +31,8 @@ class Cache {
      * @param string $parent_folder
      * @return string|boolean
      */
-    private function is_sub_dir($path = NULL, $parent_folder = SITE_PATH) {
+    private function is_sub_dir($path = NULL, $parent_folder = SITE_PATH)
+    {
 
         //Get directory path minus last folder
         $dir = dirname($path);
@@ -42,7 +45,7 @@ class Cache {
         $folder = preg_replace('/[^a-z0-9\.\-_]/i', '', $folder);
 
         //If this is a bad path or a bad end folder name
-        if (!$dir OR ! $folder OR $folder === '.') {
+        if (!$dir OR !$folder OR $folder === '.') {
             return FALSE;
         }
 
@@ -63,7 +66,8 @@ class Cache {
      * @param string|null $subdir cache subdir
      * @param boolean $serialize true to serialize $data
      */
-    public static function write($data, $filename, $subdir = null) {
+    public static function write($data, $filename, $subdir = null)
+    {
         $path = $_SERVER['DOCUMENT_ROOT'] . CACHE_DIR . '/';
         if ($subdir !== null) {
             $path .= $subdir . '/';
@@ -89,7 +93,8 @@ class Cache {
      * Warning: This function may return Boolean FALSE, but may also return a non-Boolean value which evaluates to FALSE.
      * Use the === operator for testing the return value of this function.
      */
-    public static function read($filename, $timeout = 0, $subdir = null) {
+    public static function read($filename, $timeout = 0, $subdir = null)
+    {
         $path = $_SERVER['DOCUMENT_ROOT'] . CACHE_DIR . '/';
         if ($subdir !== null) {
             $path .= $subdir . '/';
@@ -106,7 +111,8 @@ class Cache {
         return file_get_contents($path);
     }
 
-    public static function getFile($filename, $subdir = null) {
+    public static function getFile($filename, $subdir = null)
+    {
         $path = CACHE_DIR;
         if ($subdir !== null) {
             $path .= '/' . $subdir;
@@ -118,7 +124,8 @@ class Cache {
         return $path;
     }
 
-    private static function get_extension($filename) {
+    private static function get_extension($filename)
+    {
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if ($ext === null || substr($ext, -1) != '.') {
             return '.dat';
@@ -126,7 +133,8 @@ class Cache {
         return 'dat';
     }
 
-    public static function touch($filename, $subdir = null) {
+    public static function touch($filename, $subdir = null)
+    {
         $ext = self::get_extension($filename);
         $path = $_SERVER['DOCUMENT_ROOT'] . CACHE_DIR . ($subdir === null ? '' : '/' . $subdir) . '/' . $filename . $ext;
         if (file_exists($path)) {

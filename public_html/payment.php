@@ -118,14 +118,13 @@ if (isset($_GET['success'])) {
 } elseif (!isset($_GET['currency']) || !in_array($_GET['currency'],
                 ['WMR', 'WMU', 'WMZ', 'WME', 'FK'])) {
     $doc->display('payment_method');
-} elseif (!isset($_GET['nickname']) || !isset($_GET['world']) || !isset($_GET['product'])) {
+} elseif (!isset($_GET['nickname']) || !isset($_GET['world']) || !isset($_GET['amount'])) {
     $doc->assign([
         'currency' => $_GET['currency'],
         'products' => (new GameCodes)->get_overview()
     ]);
     $doc->display('payment_product');
-} elseif (isset($_GET['product']) && strpos($_GET['product'], ':') !== false && count(list($type, $amount)
-        = explode(':', $_GET['product'])) == 2 && isset(Pricing::$pricing[$type][$amount])) {
+} elseif (isset($_GET['amount'])) {
     $pricing = new Pricing;
     switch ($_GET['currency']) {
         case 'WMR':
@@ -152,9 +151,9 @@ if (isset($_GET['success'])) {
             $doc->assign([
                 'LMI_PAYEE_PURSE' => 'Z264253741048',
                 'LMI_PAYMENT_AMOUNT' => number_format(round($pricing->get_rate($_GET['currency'],
-                                        Pricing::$pricing[$type][$amount]['currency'],
-                                        Pricing::$pricing[$type][$amount]['price'])
-                                * (100 - Pricing::$pricing[$type][$amount]['discount_pct'])
+                                        Pricing::$pricing[$amount]['currency'],
+                                        Pricing::$pricing[$amount]['price'])
+                                * (100 - Pricing::$pricing[$amount]['discount_pct'])
                                 / 100, 2), 2, '.', '')
             ]);
             break;

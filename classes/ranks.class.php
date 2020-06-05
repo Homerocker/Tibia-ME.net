@@ -4,12 +4,13 @@
  * @author Molodoy <molodoy3561@gmail.com>
  * @copyright (c) 2013, Tibia-ME.net
  */
-class Ranks {
+class Ranks
+{
 
     public $id, $name, $prefix, $color, $perms = array(), $error = array(), $mode, $rank_id;
 
     const MODE_DEL_GET = 1, MODE_EDIT_GET = 2, MODE_DEL_POST = 3, MODE_EDIT_POST
-            = 4, MODE_ADD_POST = 5;
+        = 4, MODE_ADD_POST = 5;
 
     public static $colors = array(
         'inherit' => '-',
@@ -19,12 +20,13 @@ class Ranks {
         'red' => 'red'
     );
 
-    public function __construct() {
+    public function __construct()
+    {
         if (isset($_POST['delete']) && self::exists($_POST['delete'])) {
             $this->mode = self::MODE_DEL_POST;
             $this->rank_id = $_POST['delete'];
         } elseif (isset($_POST['edit']) && isset($_POST['name']) && isset($_POST['prefix'])
-                && isset($_POST['color']) && self::exists($_POST['edit'])) {
+            && isset($_POST['color']) && self::exists($_POST['edit'])) {
             $this->mode = self::MODE_EDIT_POST;
             $this->rank_id = $_POST['edit'];
         } elseif (isset($_GET['delete']) && self::exists($_GET['delete'])) {
@@ -34,7 +36,7 @@ class Ranks {
             $this->mode = self::MODE_EDIT_GET;
             $this->rank_id = $_GET['edit'];
         } elseif (isset($_POST['add']) && isset($_POST['name']) && isset($_POST['prefix'])
-                && isset($_POST['color'])) {
+            && isset($_POST['color'])) {
             $this->mode = self::MODE_ADD_POST;
         }
     }
@@ -43,7 +45,8 @@ class Ranks {
      * @param string $rank_name case-sensitive rank name
      * @return int rank id
      */
-    public static function get_id_by_name($rank_name) {
+    public static function get_id_by_name($rank_name)
+    {
         return $GLOBALS['db']->query('SELECT id FROM ranks WHERE name = ' . $GLOBALS['db']->quote($rank_name))->fetch_row()[0];
     }
 
@@ -51,7 +54,8 @@ class Ranks {
      * @param int $id should be safe to use in MySQL query
      * @return null|array
      */
-    public function get($id = null) {
+    public function get($id = null)
+    {
         if ($this->name !== null || $id === null) {
             return array(
                 'id' => $this->id,
@@ -67,8 +71,8 @@ class Ranks {
                 $perms[] = $perm_id[0];
             }
             return array_merge($GLOBALS['db']->query('SELECT id, name, prefix, color'
-                            . ' FROM ranks WHERE id = ' . $id)->fetch_assoc(),
-                    array('perms' => $perms));
+                . ' FROM ranks WHERE id = ' . $id)->fetch_assoc(),
+                array('perms' => $perms));
         }
     }
 
@@ -78,7 +82,8 @@ class Ranks {
      * @param int $restrict rank id to restrict permissions to. Only ranks with same or lower permissions will be returned.
      * @return array
      */
-    public static function get_list($exclude = null, $restrict = null) {
+    public static function get_list($exclude = null, $restrict = null)
+    {
         $sql = 'SELECT id, name, prefix, color FROM ranks';
         if ($exclude !== null) {
             $sql .= ' WHERE id != ' . $exclude;
@@ -98,7 +103,8 @@ class Ranks {
         }
     }
 
-    public function save() {
+    public function save()
+    {
         $args = func_get_args();
         list($this->id, $this->name, $this->prefix, $this->color, $this->perms) = array_map(function ($arg) {
             if (is_string($arg)) {
@@ -111,7 +117,7 @@ class Ranks {
         } elseif (isset($this->name[20])) {
             $this->error[] = _('Rank name is too long.');
         } elseif (($this->id === null || $this->name !== $GLOBALS['db']->query('SELECT name FROM ranks WHERE id = ' . $this->id)->fetch_row()[0]) && $GLOBALS['db']->query('SELECT COUNT(*) FROM ranks WHERE name = '
-                        . $GLOBALS['db']->quote($this->name))->fetch_row()[0] > 0) {
+                . $GLOBALS['db']->quote($this->name))->fetch_row()[0] > 0) {
             $this->error[] = _('This name is already in use.');
         }
         if (!empty($this->prefix) && !preg_match('/[a-z]/i', $this->prefix)) {
@@ -121,11 +127,11 @@ class Ranks {
             $this->error[] = _('Prefix is too long.');
         }
         if (!empty($this->color) && !array_key_exists($this->color,
-                        self::$colors)) {
+                self::$colors)) {
             $this->error[] = _('Invalid color.');
         }
         if (!empty(array_diff($this->perms,
-                                (new ReflectionClass('Perms'))->getConstants()))) {
+            (new ReflectionClass('Perms'))->getConstants()))) {
             $this->error[] = _('Invalid permissions.');
         }
         if (!empty($this->error)) {
@@ -133,37 +139,39 @@ class Ranks {
         }
         if ($this->id === null) {
             $GLOBALS['db']->query('INSERT INTO ranks (name, prefix, color)'
-                    . ' VALUES (' . $GLOBALS['db']->quote($this->name) . ', '
-                    . $GLOBALS['db']->quote($this->prefix) . ', '
-                    . $GLOBALS['db']->quote($this->color) . ')');
+                . ' VALUES (' . $GLOBALS['db']->quote($this->name) . ', '
+                . $GLOBALS['db']->quote($this->prefix) . ', '
+                . $GLOBALS['db']->quote($this->color) . ')');
             if (!empty($this->perms)) {
                 $this->id = $GLOBALS['db']->insert_id;
             }
             (new GettextExtraMessages('ranks', true))->add($this->name);
         } else {
             $GLOBALS['db']->query('UPDATE ranks SET name = '
-                    . $GLOBALS['db']->quote($this->name) . ', prefix = '
-                    . $GLOBALS['db']->quote($this->prefix) . ', color = '
-                    . $GLOBALS['db']->quote($this->color) . ' WHERE id = ' . $this->id);
+                . $GLOBALS['db']->quote($this->name) . ', prefix = '
+                . $GLOBALS['db']->quote($this->prefix) . ', color = '
+                . $GLOBALS['db']->quote($this->color) . ' WHERE id = ' . $this->id);
             $GLOBALS['db']->query('DELETE FROM ranks_perms WHERE rank_id = ' . $this->id);
         }
         if (!empty($this->perms)) {
             $GLOBALS['db']->query('INSERT INTO ranks_perms (rank_id, perm_id)'
-                    . ' VALUES (' . $this->id . ', ' . implode('), (' . $this->id
-                            . ', ', $this->perms) . ')');
+                . ' VALUES (' . $this->id . ', ' . implode('), (' . $this->id
+                    . ', ', $this->perms) . ')');
         }
         return true;
     }
 
     /**
-     * 
+     *
      * @param int $rank_id should be safe to use in MySQL query
      */
-    public function count_users($rank_id) {
+    public function count_users($rank_id)
+    {
         return $GLOBALS['db']->query('SELECT COUNT(*) FROM user_profile WHERE rank = ' . $rank_id)->fetch_row()[0];
     }
 
-    public function delete($id, $assign = 1) {
+    public function delete($id, $assign = 1)
+    {
         if ($assign != $id && Ranks::exists($assign)) {
             $GLOBALS['db']->query('UPDATE user_profile SET rank = ' . $assign . ' WHERE rank = ' . $id);
         }
@@ -173,8 +181,9 @@ class Ranks {
         return true;
     }
 
-    public static function exists($id) {
-        if (!ctype_digit((string) $id)) {
+    public static function exists($id)
+    {
+        if (!ctype_digit((string)$id)) {
             return false;
         }
         return $GLOBALS['db']->query('SELECT COUNT(*) FROM ranks WHERE id = ' . $id)->fetch_row()[0];
@@ -183,7 +192,8 @@ class Ranks {
     /**
      * @return array
      */
-    public static function get_perms($rank_id) {
+    public static function get_perms($rank_id)
+    {
         $sql = $GLOBALS['db']->query('SELECT perm_id FROM ranks_perms WHERE rank_id = ' . $rank_id);
         $perms = array();
         while ($row = $sql->fetch_row()) {

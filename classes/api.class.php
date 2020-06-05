@@ -22,6 +22,15 @@ class API
             case 'chat_update':
                 $this->chat_update($_GET['last_id'] ?? 0);
                 break;
+            case 'get_platinum_bundle':
+                if (empty($_GET['required_amount'])) {
+                    $this->output('Amount not specified.');
+                }
+                if (empty($_GET['currency'])) {
+                    $this->output('Currency not specified.');
+                }
+                $this->output($this->get_platinum_bundle($_GET['required_amount'], $_GET['currency']));
+                break;
             default:
                 $this->output('Unrecognized call method.');
         }
@@ -53,6 +62,11 @@ class API
         $message = htmlspecialchars(trim($message));
         $GLOBALS['db']->query('INSERT INTO chat (user_id, user_nickname, message, timestamp) VALUES (' . $GLOBALS['db']->quote($_SESSION['user_id'] ? $_SESSION['user_id'] : null) . ', ' . $GLOBALS['db']->quote($_SESSION['user_id'] ? null : $_SESSION['user_nickname']) . ', ' . $GLOBALS['db']->quote($message) . ', ' . $_SERVER['REQUEST_TIME'] . ')');
         return ($GLOBALS['db']->affected_rows == 1);
+    }
+    
+    private function get_platinum_bundle($required_amount, $currency) {
+        $bundle = GameCodes::get_total((new GameCodes)->get_bundle($required_amount));
+        return ['amount' => $bundle, 'price' => Pricing::get_converted_price(Gamecodes::get_price($bundle), $currency)];
     }
 
 }
