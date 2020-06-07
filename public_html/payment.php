@@ -153,5 +153,6 @@ if (isset($_GET['success'])) {
         $doc->display('payment_confirm');
     } else {
         $doc->assign('form', $form);
+        $doc->display('payment');
     }
 }
