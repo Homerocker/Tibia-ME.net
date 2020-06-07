@@ -115,18 +115,6 @@
     </div>
 
     <div class="cell medium-6 large-4">
-<<<<<<< HEAD
-        <h4><?= _('Payment') ?></h4>
-        <ul>
-            <li><a href="./premium.php"><?= _('Premium') ?></a></li>
-            <li><? if ($platinum_discount): ?><span class="label success">-<?= $platinum_discount ?>
-                    %</span>&nbsp;<? endif; ?><a href="./platinum.php"><?= _('Platinum') ?></a></li>
-        </ul>
-    </div>
-
-    <div class="cell medium-6 large-4">
-=======
->>>>>>> origin/master
         <h4><?= _('Related sites') ?></h4>
         <ul>
             <li><a href="http://www.tibiame.com" target="_blank"><?= _('Official website') ?></a></li>
