@@ -1,2 +1,6 @@
 <?php
-_('Beta Tester');
+_('User');
+_('Creator');
+_('Moderator');
+_('Acting Administrator');
+_('Translator');
