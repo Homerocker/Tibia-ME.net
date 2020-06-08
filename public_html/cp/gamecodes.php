@@ -5,7 +5,7 @@ if (Perms::get(Perms::GAMECODES_ADD)) {
     $form_add = new Form('add_gamecodes');
     $form_add->addtextarea('gamecodes', 'gamecodes', 10);
     $form_add->field('gamecodes')->set_description(_('each game code on a new line'));
-    $form_add->addinput('amount', 'number', 'amount');
+    $form_add->addselect('amount', 'amount', [100 => 100, 210 => 210, 700 => 700, 2500 => 2500, 9000 => 9000]);
     $form_add->field('submit')->event('onclick', 'return confirm(\'' . _('Are you sure you want to add specified gamecodes?') . '\')');
     if ($form_add->submit()) {
         $gamecodes->add($_POST['gamecodes'], $_POST['amount']);
