@@ -30,7 +30,7 @@ if ($field->type == 'submit') {
 <? if ($field->element == 'textarea'): ?>
     <textarea<?= (empty($class) ? '' : ' class="' . implode(' ', $class) . '"') ?> id="<?= $field->id ?>" name="<?= $field->name ?>" rows="<?= $field->rows ?>"><?= htmlspecialchars($field->value) ?></textarea>
 <? elseif ($field->element == 'select'): ?>
-    <select<?= (empty($class) ? '' : ' class="' . implode(' ', $class) . '"') ?> id="<?= $field->id ?>">
+    <select<?= (empty($class) ? '' : ' class="' . implode(' ', $class) . '"') ?> id="<?= $field->id ?>" name="<?= $field->name ?>">
         <? if (!$field->required): ?>
             <option value=""></option>
         <? endif; ?>
