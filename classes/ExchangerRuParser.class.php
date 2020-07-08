@@ -43,7 +43,7 @@ class ExchangerRuParser {
         'WMXWMU' => 40
     );
 
-    protected function get_rate($currency_in, $currency_out, $amount_out) {
+    public static function get_rate($currency_in, $currency_out, $amount_out) {
         if ($currency_in === $currency_out) {
             return $amount_out;
         }

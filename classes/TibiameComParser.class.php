@@ -189,7 +189,7 @@ class TibiameComParser
     {
         $dom = new DOMDocumentX;
         if (!$dom->loadHTMLFile('https://payments.cipsoft.com/tibiame/index.php?page=GameCode&action=useGameCode&CustomerID='
-                    . $nickname . '%40' . $world . '&GameCode=' . str_replace('-', '', $code) . '&Language=en&Country=BY&markup=xhtmlmp')) {
+            . $nickname . '%40' . $world . '&GameCode=' . str_replace('-', '', $code) . '&Language=en&Country=BY&markup=xhtmlmp')) {
             return false;
         }
         $dom = $dom->getElementById('Content');
@@ -197,12 +197,10 @@ class TibiameComParser
             return false;
         }
         $dom = $dom->nodeValue;
-        if (strpos($dom, 'UnknownGameCode') !== false) {
-            return false;
-        }
         if (strpos($dom, 'The Game Code has been activated.') !== false) {
             return true;
         }
+        $dom->saveHTMLFile($_SERVER['DOCUMENT_ROOT'] . '/' . uniqid('PAYMENT') . '.html');
         return false;
     }
 
