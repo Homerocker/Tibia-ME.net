@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tibia-ME.net\n"
-"POT-Creation-Date: 2020-07-08 18:09+0300\n"
-"PO-Revision-Date: 2020-07-08 18:10+0300\n"
+"POT-Creation-Date: 2020-07-08 19:41+0300\n"
+"PO-Revision-Date: 2020-07-08 19:41+0300\n"
 "Last-Translator: Molodoy <molodoy3561@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -52,7 +52,7 @@ msgstr "Hasło jest za długie."
 
 #: classes/album.class.php:573 classes/artworks.class.php:153
 #: classes/forum.class.php:731 classes/letters.class.php:294
-#: classes/profile.class.php:203 classes/profile.class.php:525
+#: classes/profile.class.php:200 classes/profile.class.php:522
 #: classes/themes.class.php:268 public_html/album/photos.php:122
 #: public_html/calendar.php:8 public_html/cp/ranks.php:9
 #: public_html/cp/ranks.php:18 public_html/forum/posting.php:107
@@ -637,67 +637,67 @@ msgstr ""
 msgid "Avatar removed."
 msgstr "Awatar usunięty."
 
-#: classes/profile.class.php:264
+#: classes/profile.class.php:261
 msgid "Invalid birth day."
 msgstr "Nieprawidłowa data urodzenia."
 
-#: classes/profile.class.php:270 classes/profile.class.php:276
+#: classes/profile.class.php:267 classes/profile.class.php:273
 msgid "Invalid birth month."
 msgstr "Nieprawidłowy miesiąc urodzenia."
 
-#: classes/profile.class.php:311
+#: classes/profile.class.php:308
 msgid "Name is too long."
 msgstr "Nazwa jest za długa."
 
-#: classes/profile.class.php:323
+#: classes/profile.class.php:320
 msgid "Invalid gender."
 msgstr "Nieprawidłowa płeć."
 
-#: classes/profile.class.php:359
+#: classes/profile.class.php:356
 msgid "Invalid rank."
 msgstr "Nieprawidłowa ranga."
 
-#: classes/profile.class.php:371
+#: classes/profile.class.php:368
 msgid "WhatsApp number is too long."
 msgstr "Numer WhatsApp jest za długi."
 
-#: classes/profile.class.php:384
+#: classes/profile.class.php:381
 msgid "Invalid ICQ."
 msgstr "Nieprawidłowy ICQ."
 
-#: classes/profile.class.php:396
+#: classes/profile.class.php:393
 msgid "Yahoo ID is too short."
 msgstr "Yahoo ID jest za krótki."
 
-#: classes/profile.class.php:398
+#: classes/profile.class.php:395
 msgid "Yahoo ID is too long."
 msgstr "Yahoo ID jest za długi."
 
-#: classes/profile.class.php:410
+#: classes/profile.class.php:407
 msgid "Skype ID is too short."
 msgstr "Skype ID jest za krótki."
 
-#: classes/profile.class.php:412
+#: classes/profile.class.php:409
 msgid "Skype ID is too long."
 msgstr "Skype ID jest za długi."
 
-#: classes/profile.class.php:427
+#: classes/profile.class.php:424
 msgid "Invalid relationship status."
 msgstr "Nieprawidłowy status związku."
 
-#: classes/profile.class.php:438
+#: classes/profile.class.php:435
 msgid "Invalid vocation."
 msgstr "Nieprawidłowe powołanie."
 
-#: classes/profile.class.php:449
+#: classes/profile.class.php:446
 msgid "Signature is too long."
 msgstr "Podpis jest za długi."
 
-#: classes/profile.class.php:461
+#: classes/profile.class.php:458
 msgid "Invalid E-mail."
 msgstr "Niewłaściwy e-mail."
 
-#: classes/profile.class.php:491
+#: classes/profile.class.php:488
 msgid "Guild name is too long."
 msgstr "Nazwa gildii jest za długa."
 
@@ -805,7 +805,7 @@ msgstr "Online"
 msgid "Offline"
 msgstr "Offline"
 
-#: classes/user.class.php:128 config.php:143
+#: classes/user.class.php:128 config.php:144
 msgid "Guest"
 msgstr "Gość"
 
@@ -4105,6 +4105,7 @@ msgstr "Postacie"
 
 #: public_html/scores/search.php:5 public_html/scores/viewscores.php:12
 #: templates/agreement.tpl.php:22 templates/index.tpl.php:84
+#: templates/premiumplatinum.tpl.php:7
 msgid "Highscores"
 msgstr "Najlepsze wyniki"
 
@@ -6812,15 +6813,156 @@ msgstr "Twoja płatność została pomyślnie zakończona."
 msgid "What is VIP?"
 msgstr "Czym jest Premium?"
 
+#: templates/premiumplatinum.tpl.php:3
+msgid ""
+"VIP is <b>permanent</b> character status that you receive after any purchase "
+"(any amount of Platinum or Premium)."
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:5
+msgid "Priority Login"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:6
+#, fuzzy
+#| msgid "+50% Experience"
+msgid "Stamina Bonus (+50% Experience)"
+msgstr "+50% Doświadczenia"
+
 #: templates/premiumplatinum.tpl.php:10
 msgid "What is Premium?"
 msgstr "Czym jest Premium?"
 
-#: templates/premiumplatinum.tpl.php:27
+#: templates/premiumplatinum.tpl.php:12
+msgid ""
+"Premium is renewable subscription that gives you <b>temporary</b> access to "
+"most of game features. When your Premium time expires your character remains "
+"VIP."
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:14
+#, fuzzy
+#| msgid "Full access to individual islands"
+msgid "Full access to additional islands"
+msgstr "Pełny dostęp do poszczególnych wysp"
+
+#: templates/premiumplatinum.tpl.php:15
+msgid "Portal usage"
+msgstr "Korzystanie z portalu"
+
+#: templates/premiumplatinum.tpl.php:16
+#, fuzzy
+#| msgid "Up to 40 additional friendlist slots"
+msgid "20 friendlist slots"
+msgstr "Do 40 dodatkowych miejsc na liście znajomych"
+
+#: templates/premiumplatinum.tpl.php:17
+msgid "20 ignorelist slots"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:18
+msgid "20 letters in Mailbox"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:19
+msgid "10 trade offers"
+msgstr "10 ofert handlowych"
+
+#: templates/premiumplatinum.tpl.php:20
+msgid "9 depot pages"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:21
+#, fuzzy
+#| msgid ""
+#| "Life insurance with 50% of EP loss protection upon death (can be upgraded "
+#| "to 80% or 100%)"
+msgid "50% of EP loss protection upon death (can be upgraded to 80% or 100%)"
+msgstr ""
+"Ubezpieczenie z 50% ochrony przed utratą doświadczenia po śmierci (można "
+"zwiększyć do 80% lub 100%)"
+
+#: templates/premiumplatinum.tpl.php:22
+#, fuzzy
+#| msgid "Guild founding"
+msgid "Guild Founding"
+msgstr "Założenie gildii"
+
+#: templates/premiumplatinum.tpl.php:23
+#, fuzzy
+#| msgid ""
+#| "8 Platinum per day of your Premium Time (Example: 30 days * 8 Platinum = "
+#| "240 Platinum)"
+msgid ""
+"8 Platinum per day of your Premium time (Example: 30 days * 8 Platinum = 240 "
+"Platinum)"
+msgstr ""
+"8 platyn dziennie na Twój czas Premium (przykład: 30 dni * 8 platyn = 240 "
+"platyn)"
+
+#: templates/premiumplatinum.tpl.php:26
 msgid "What is Platinum?"
 msgstr "Czym jest Platyna?"
 
-#: templates/premiumplatinum.tpl.php:45 templates/premiumplatinum.tpl.php:47
+#: templates/premiumplatinum.tpl.php:28
+msgid ""
+"Platinum is game currency that allows you to buy <b>permanent</b> access to "
+"game features of your choice."
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:30
+#, fuzzy
+#| msgid "Full access to individual islands"
+msgid "Buy permanent access to individual islands"
+msgstr "Pełny dostęp do poszczególnych wysp"
+
+#: templates/premiumplatinum.tpl.php:31
+msgid "Buy portal usage permanently"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:32
+#, fuzzy
+#| msgid "Up to 40 additional friendlist slots"
+msgid "Buy up to 50 friendlist slots"
+msgstr "Do 40 dodatkowych miejsc na liście znajomych"
+
+#: templates/premiumplatinum.tpl.php:33
+msgid "Buy up to 50 letters in Mailbox"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:34
+#, fuzzy
+#| msgid "Up to 20 trade offers"
+msgid "Buy up to 20 trade offers"
+msgstr "Do 20 ofert handlowych"
+
+#: templates/premiumplatinum.tpl.php:35
+#, fuzzy
+#| msgid "Up to 6 additional depot pages"
+msgid "Buy up to 9 depot pages"
+msgstr "Do 6 dodatkowych stron w depozycie"
+
+#: templates/premiumplatinum.tpl.php:36
+#, fuzzy
+#| msgid ""
+#| "Life insurance with 50%, 80% or 100% of EP loss protection upon death"
+msgid ""
+"Buy a life insurance with 50%, 80% or 100% of EP loss protection upon death"
+msgstr ""
+"Ubezpieczenie z 50%, 80% lub 100% ochrony przed utratą doświadczenia po "
+"śmierci"
+
+#: templates/premiumplatinum.tpl.php:37
+msgid "Buy additional Rerolls whenever you need them"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:38
+#, fuzzy
+#| msgid "Guild founding"
+msgid "Buy guild founding"
+msgstr "Założenie gildii"
+
+#: templates/premiumplatinum.tpl.php:44 templates/premiumplatinum.tpl.php:47
 #, fuzzy, php-format
 #| msgid "%s on %s"
 msgid "Buy on %s"
@@ -7225,9 +7367,6 @@ msgstr "Brak zarejestrowanych użytkowników online."
 #~ msgid "Included"
 #~ msgstr "Korzyści"
 
-#~ msgid "+50% Experience"
-#~ msgstr "+50% Doświadczenia"
-
 #~ msgid "Possibility to get listed in the Highscores"
 #~ msgstr "Możliwość bycia zapisanym w najlepszych wynikach"
 
@@ -7237,35 +7376,11 @@ msgstr "Brak zarejestrowanych użytkowników online."
 #~ msgid "Buyable"
 #~ msgstr "Do kupienia"
 
-#~ msgid ""
-#~ "Life insurance with 50%, 80% or 100% of EP loss protection upon death"
-#~ msgstr ""
-#~ "Ubezpieczenie z 50%, 80% lub 100% ochrony przed utratą doświadczenia po "
-#~ "śmierci"
-
-#~ msgid "Full access to individual islands"
-#~ msgstr "Pełny dostęp do poszczególnych wysp"
-
-#~ msgid "Portal usage"
-#~ msgstr "Korzystanie z portalu"
-
-#~ msgid "Up to 40 additional friendlist slots"
-#~ msgstr "Do 40 dodatkowych miejsc na liście znajomych"
-
 #~ msgid "Up to 40 additional mailbox slots"
 #~ msgstr "Do 40 dodatkowych miejsc skrzynki pocztowej"
 
-#~ msgid "Up to 20 trade offers"
-#~ msgstr "Do 20 ofert handlowych"
-
-#~ msgid "Up to 6 additional depot pages"
-#~ msgstr "Do 6 dodatkowych stron w depozycie"
-
 #~ msgid "Additional Rerolls"
 #~ msgstr "Dodatkowe Rerolle"
-
-#~ msgid "Guild founding"
-#~ msgstr "Założenie gildii"
 
 #~ msgid "How to buy"
 #~ msgstr "Jak kupić"
@@ -7281,13 +7396,6 @@ msgstr "Brak zarejestrowanych użytkowników online."
 #~ "wiele więcej! Przed zakupem u nas sprawdź naszą <a href=\"%s\"> Umowę "
 #~ "Użytkownika </a>."
 
-#~ msgid ""
-#~ "Life insurance with 50% of EP loss protection upon death (can be upgraded "
-#~ "to 80% or 100%)"
-#~ msgstr ""
-#~ "Ubezpieczenie z 50% ochrony przed utratą doświadczenia po śmierci (można "
-#~ "zwiększyć do 80% lub 100%)"
-
 #~ msgid "Full access to all islands"
 #~ msgstr "Pełny dostęp do wszystkich wysp"
 
@@ -7296,16 +7404,6 @@ msgstr "Brak zarejestrowanych użytkowników online."
 
 #~ msgid "Receive up to 20 letters in your inbox (instead of 10)"
 #~ msgstr "Otrzymaj do 20 listów (zamiast 10)"
-
-#~ msgid "10 trade offers"
-#~ msgstr "10 ofert handlowych"
-
-#~ msgid ""
-#~ "8 Platinum per day of your Premium Time (Example: 30 days * 8 Platinum = "
-#~ "240 Platinum)"
-#~ msgstr ""
-#~ "8 platyn dziennie na Twój czas Premium (przykład: 30 dni * 8 platyn = 240 "
-#~ "platyn)"
 
 #, php-format
 #~ msgid ""

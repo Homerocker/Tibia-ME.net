@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tibia-ME.net\n"
-"POT-Creation-Date: 2020-07-08 18:11+0300\n"
-"PO-Revision-Date: 2020-07-08 18:11+0300\n"
+"POT-Creation-Date: 2020-07-08 19:42+0300\n"
+"PO-Revision-Date: 2020-07-08 19:42+0300\n"
 "Last-Translator: Molodoy <molodoy3561@gmail.com>\n"
 "Language-Team: Molodoy <molodoy@tibia-me.net>\n"
 "Language: ms_BN\n"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: classes/album.class.php:573 classes/artworks.class.php:153
 #: classes/forum.class.php:731 classes/letters.class.php:294
-#: classes/profile.class.php:203 classes/profile.class.php:525
+#: classes/profile.class.php:200 classes/profile.class.php:522
 #: classes/themes.class.php:268 public_html/album/photos.php:122
 #: public_html/calendar.php:8 public_html/cp/ranks.php:9
 #: public_html/cp/ranks.php:18 public_html/forum/posting.php:107
@@ -575,67 +575,67 @@ msgstr ""
 msgid "Avatar removed."
 msgstr ""
 
-#: classes/profile.class.php:264
+#: classes/profile.class.php:261
 msgid "Invalid birth day."
 msgstr ""
 
-#: classes/profile.class.php:270 classes/profile.class.php:276
+#: classes/profile.class.php:267 classes/profile.class.php:273
 msgid "Invalid birth month."
 msgstr ""
 
-#: classes/profile.class.php:311
+#: classes/profile.class.php:308
 msgid "Name is too long."
 msgstr ""
 
-#: classes/profile.class.php:323
+#: classes/profile.class.php:320
 msgid "Invalid gender."
 msgstr ""
 
-#: classes/profile.class.php:359
+#: classes/profile.class.php:356
 msgid "Invalid rank."
 msgstr ""
 
-#: classes/profile.class.php:371
+#: classes/profile.class.php:368
 msgid "WhatsApp number is too long."
 msgstr ""
 
-#: classes/profile.class.php:384
+#: classes/profile.class.php:381
 msgid "Invalid ICQ."
 msgstr ""
 
-#: classes/profile.class.php:396
+#: classes/profile.class.php:393
 msgid "Yahoo ID is too short."
 msgstr ""
 
-#: classes/profile.class.php:398
+#: classes/profile.class.php:395
 msgid "Yahoo ID is too long."
 msgstr ""
 
-#: classes/profile.class.php:410
+#: classes/profile.class.php:407
 msgid "Skype ID is too short."
 msgstr ""
 
-#: classes/profile.class.php:412
+#: classes/profile.class.php:409
 msgid "Skype ID is too long."
 msgstr ""
 
-#: classes/profile.class.php:427
+#: classes/profile.class.php:424
 msgid "Invalid relationship status."
 msgstr ""
 
-#: classes/profile.class.php:438
+#: classes/profile.class.php:435
 msgid "Invalid vocation."
 msgstr ""
 
-#: classes/profile.class.php:449
+#: classes/profile.class.php:446
 msgid "Signature is too long."
 msgstr ""
 
-#: classes/profile.class.php:461
+#: classes/profile.class.php:458
 msgid "Invalid E-mail."
 msgstr ""
 
-#: classes/profile.class.php:491
+#: classes/profile.class.php:488
 msgid "Guild name is too long."
 msgstr ""
 
@@ -743,7 +743,7 @@ msgstr ""
 msgid "Offline"
 msgstr ""
 
-#: classes/user.class.php:128 config.php:143
+#: classes/user.class.php:128 config.php:144
 msgid "Guest"
 msgstr ""
 
@@ -3256,6 +3256,7 @@ msgstr ""
 
 #: public_html/scores/search.php:5 public_html/scores/viewscores.php:12
 #: templates/agreement.tpl.php:22 templates/index.tpl.php:84
+#: templates/premiumplatinum.tpl.php:7
 msgid "Highscores"
 msgstr ""
 
@@ -5803,15 +5804,121 @@ msgstr ""
 msgid "What is VIP?"
 msgstr ""
 
+#: templates/premiumplatinum.tpl.php:3
+msgid ""
+"VIP is <b>permanent</b> character status that you receive after any purchase "
+"(any amount of Platinum or Premium)."
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:5
+msgid "Priority Login"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:6
+msgid "Stamina Bonus (+50% Experience)"
+msgstr ""
+
 #: templates/premiumplatinum.tpl.php:10
 msgid "What is Premium?"
 msgstr ""
 
-#: templates/premiumplatinum.tpl.php:27
+#: templates/premiumplatinum.tpl.php:12
+msgid ""
+"Premium is renewable subscription that gives you <b>temporary</b> access to "
+"most of game features. When your Premium time expires your character remains "
+"VIP."
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:14
+msgid "Full access to additional islands"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:15
+msgid "Portal usage"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:16
+msgid "20 friendlist slots"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:17
+msgid "20 ignorelist slots"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:18
+msgid "20 letters in Mailbox"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:19
+msgid "10 trade offers"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:20
+msgid "9 depot pages"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:21
+msgid "50% of EP loss protection upon death (can be upgraded to 80% or 100%)"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:22
+msgid "Guild Founding"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:23
+msgid ""
+"8 Platinum per day of your Premium time (Example: 30 days * 8 Platinum = 240 "
+"Platinum)"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:26
 msgid "What is Platinum?"
 msgstr ""
 
-#: templates/premiumplatinum.tpl.php:45 templates/premiumplatinum.tpl.php:47
+#: templates/premiumplatinum.tpl.php:28
+msgid ""
+"Platinum is game currency that allows you to buy <b>permanent</b> access to "
+"game features of your choice."
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:30
+msgid "Buy permanent access to individual islands"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:31
+msgid "Buy portal usage permanently"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:32
+msgid "Buy up to 50 friendlist slots"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:33
+msgid "Buy up to 50 letters in Mailbox"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:34
+msgid "Buy up to 20 trade offers"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:35
+msgid "Buy up to 9 depot pages"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:36
+msgid ""
+"Buy a life insurance with 50%, 80% or 100% of EP loss protection upon death"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:37
+msgid "Buy additional Rerolls whenever you need them"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:38
+msgid "Buy guild founding"
+msgstr ""
+
+#: templates/premiumplatinum.tpl.php:44 templates/premiumplatinum.tpl.php:47
 #, php-format
 msgid "Buy on %s"
 msgstr ""

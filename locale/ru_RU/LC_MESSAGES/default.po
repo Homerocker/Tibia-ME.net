@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tibia-ME.net\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-08 17:59+0300\n"
-"PO-Revision-Date: 2020-07-08 18:00+0300\n"
+"POT-Creation-Date: 2020-07-08 19:37+0300\n"
+"PO-Revision-Date: 2020-07-08 19:41+0300\n"
 "Last-Translator: Molodoy <molodoy3561@gmail.com>\n"
 "Language-Team: Molodoy <molodoy@tibia-me.net>\n"
 "Language: ru_RU\n"
@@ -52,7 +52,7 @@ msgstr "Слишком длинный пароль."
 
 #: classes/album.class.php:573 classes/artworks.class.php:153
 #: classes/forum.class.php:731 classes/letters.class.php:294
-#: classes/profile.class.php:203 classes/profile.class.php:525
+#: classes/profile.class.php:200 classes/profile.class.php:522
 #: classes/themes.class.php:268 public_html/album/photos.php:122
 #: public_html/calendar.php:8 public_html/cp/ranks.php:9
 #: public_html/cp/ranks.php:18 public_html/forum/posting.php:107
@@ -619,67 +619,67 @@ msgstr ""
 msgid "Avatar removed."
 msgstr "Аватар удален."
 
-#: classes/profile.class.php:264
+#: classes/profile.class.php:261
 msgid "Invalid birth day."
 msgstr "Неверный день рождения."
 
-#: classes/profile.class.php:270 classes/profile.class.php:276
+#: classes/profile.class.php:267 classes/profile.class.php:273
 msgid "Invalid birth month."
 msgstr "Неверный месяц рождения."
 
-#: classes/profile.class.php:311
+#: classes/profile.class.php:308
 msgid "Name is too long."
 msgstr "Слишком длинное имя."
 
-#: classes/profile.class.php:323
+#: classes/profile.class.php:320
 msgid "Invalid gender."
 msgstr "Неверный пол."
 
-#: classes/profile.class.php:359
+#: classes/profile.class.php:356
 msgid "Invalid rank."
 msgstr "Неверный ранг."
 
-#: classes/profile.class.php:371
+#: classes/profile.class.php:368
 msgid "WhatsApp number is too long."
 msgstr "Слишком длинный номер WhatsApp."
 
-#: classes/profile.class.php:384
+#: classes/profile.class.php:381
 msgid "Invalid ICQ."
 msgstr "Неверный ICQ."
 
-#: classes/profile.class.php:396
+#: classes/profile.class.php:393
 msgid "Yahoo ID is too short."
 msgstr "Слишком короткий Yahoo ID."
 
-#: classes/profile.class.php:398
+#: classes/profile.class.php:395
 msgid "Yahoo ID is too long."
 msgstr "Слишком длинный Yahoo ID."
 
-#: classes/profile.class.php:410
+#: classes/profile.class.php:407
 msgid "Skype ID is too short."
 msgstr "Слишком короткий Skype ID."
 
-#: classes/profile.class.php:412
+#: classes/profile.class.php:409
 msgid "Skype ID is too long."
 msgstr "Слишком длинный Skype ID."
 
-#: classes/profile.class.php:427
+#: classes/profile.class.php:424
 msgid "Invalid relationship status."
 msgstr "Неверное семейное положение."
 
-#: classes/profile.class.php:438
+#: classes/profile.class.php:435
 msgid "Invalid vocation."
 msgstr "Неверный класс."
 
-#: classes/profile.class.php:449
+#: classes/profile.class.php:446
 msgid "Signature is too long."
 msgstr "Слишком длинная подпись."
 
-#: classes/profile.class.php:461
+#: classes/profile.class.php:458
 msgid "Invalid E-mail."
 msgstr "Неверный E-mail."
 
-#: classes/profile.class.php:491
+#: classes/profile.class.php:488
 msgid "Guild name is too long."
 msgstr "Слишком длинное название гильдии."
 
@@ -787,7 +787,7 @@ msgstr "Онлайн"
 msgid "Offline"
 msgstr "Офлайн"
 
-#: classes/user.class.php:128 config.php:143
+#: classes/user.class.php:128 config.php:144
 msgid "Guest"
 msgstr "Гость"
 
@@ -3673,24 +3673,8 @@ msgid "Deals fire damage to and debuffs the enemy."
 msgstr "Наносит огненный урон и ослабляет противника."
 
 #: gettextextras/ranks.php:2
-msgid "User"
-msgstr "Пользователь"
-
-#: gettextextras/ranks.php:3 templates/staff.tpl.php:1
-msgid "Creator"
-msgstr "Создатель"
-
-#: gettextextras/ranks.php:4 templates/themes_edit.tpl.php:43
-msgid "Moderator"
-msgstr "Модератор"
-
-#: gettextextras/ranks.php:5
-msgid "Acting Administrator"
-msgstr "и.о. администратора"
-
-#: gettextextras/ranks.php:6
-msgid "Translator"
-msgstr "Переводчик"
+msgid "Beta Tester"
+msgstr "Бета Тестер"
 
 #: gettextextras/slots.php:2 gettextextras/slots_uc.php:2
 msgid "Head"
@@ -4132,6 +4116,7 @@ msgstr "Персонажи"
 
 #: public_html/scores/search.php:5 public_html/scores/viewscores.php:12
 #: templates/agreement.tpl.php:22 templates/index.tpl.php:84
+#: templates/premiumplatinum.tpl.php:7
 msgid "Highscores"
 msgstr "Рекорды"
 
@@ -6842,15 +6827,134 @@ msgstr "Ваш платеж успешно выполнен."
 msgid "What is VIP?"
 msgstr "Что такое VIP?"
 
+#: templates/premiumplatinum.tpl.php:3
+msgid ""
+"VIP is <b>permanent</b> character status that you receive after any purchase "
+"(any amount of Platinum or Premium)."
+msgstr ""
+"VIP – <b>постоянный</b> статус персонажа, который Вы получаете после любой "
+"оплаты (любое количество Платины или Премиума)."
+
+#: templates/premiumplatinum.tpl.php:5
+msgid "Priority Login"
+msgstr "Вход без очереди"
+
+#: templates/premiumplatinum.tpl.php:6
+msgid "Stamina Bonus (+50% Experience)"
+msgstr "Бонус стамины (+50% опыта)"
+
 #: templates/premiumplatinum.tpl.php:10
 msgid "What is Premium?"
 msgstr "Что такое Премиум?"
 
-#: templates/premiumplatinum.tpl.php:27
+#: templates/premiumplatinum.tpl.php:12
+msgid ""
+"Premium is renewable subscription that gives you <b>temporary</b> access to "
+"most of game features. When your Premium time expires your character remains "
+"VIP."
+msgstr ""
+"Премиум – обновляемая подписка, которая дает Вам <b>временный</b> доступ к "
+"большинству игровых функций. Когда время Премиум заканчивается, Ваш персонаж "
+"остается VIP."
+
+#: templates/premiumplatinum.tpl.php:14
+msgid "Full access to additional islands"
+msgstr "Полный доступ к дополнительным островам"
+
+#: templates/premiumplatinum.tpl.php:15
+msgid "Portal usage"
+msgstr "Возможность пользоваться порталами"
+
+#: templates/premiumplatinum.tpl.php:16
+msgid "20 friendlist slots"
+msgstr "20 слотов для друзей"
+
+#: templates/premiumplatinum.tpl.php:17
+msgid "20 ignorelist slots"
+msgstr "20 слотов в списке игнора"
+
+#: templates/premiumplatinum.tpl.php:18
+msgid "20 letters in Mailbox"
+msgstr "20 слотов для писем"
+
+#: templates/premiumplatinum.tpl.php:19
+msgid "10 trade offers"
+msgstr "10 слотов для торговли"
+
+#: templates/premiumplatinum.tpl.php:20
+msgid "9 depot pages"
+msgstr "9 страниц на складе"
+
+#: templates/premiumplatinum.tpl.php:21
+msgid "50% of EP loss protection upon death (can be upgraded to 80% or 100%)"
+msgstr ""
+"Страхование жизни с сохранением 50% потерянного опыта при смерти (может быть "
+"улучшено до 80% или 100%)"
+
+#: templates/premiumplatinum.tpl.php:22
+msgid "Guild Founding"
+msgstr "Возможность создавать гильдию"
+
+#: templates/premiumplatinum.tpl.php:23
+msgid ""
+"8 Platinum per day of your Premium time (Example: 30 days * 8 Platinum = 240 "
+"Platinum)"
+msgstr ""
+"8 Платины за каждый день Премиума (например 30 дней * 8 Платины = 240 "
+"Платины)"
+
+#: templates/premiumplatinum.tpl.php:26
 msgid "What is Platinum?"
 msgstr "Что такое Платина?"
 
-#: templates/premiumplatinum.tpl.php:45 templates/premiumplatinum.tpl.php:47
+#: templates/premiumplatinum.tpl.php:28
+msgid ""
+"Platinum is game currency that allows you to buy <b>permanent</b> access to "
+"game features of your choice."
+msgstr ""
+"Платина – игровая валюта, за которую можно купить <b>постоянный</b> доступ к "
+"выбранным Вами игровым функциям."
+
+#: templates/premiumplatinum.tpl.php:30
+msgid "Buy permanent access to individual islands"
+msgstr "Купите полный доступ к отдельным островам"
+
+#: templates/premiumplatinum.tpl.php:31
+msgid "Buy portal usage permanently"
+msgstr "Купите постоянную возможность пользоваться порталами"
+
+#: templates/premiumplatinum.tpl.php:32
+msgid "Buy up to 50 friendlist slots"
+msgstr "Купите до 50 слотов в списке друзей"
+
+#: templates/premiumplatinum.tpl.php:33
+msgid "Buy up to 50 letters in Mailbox"
+msgstr "Купите до 50 слотов для писем"
+
+#: templates/premiumplatinum.tpl.php:34
+msgid "Buy up to 20 trade offers"
+msgstr "Купите до 20 слотов для торговли"
+
+#: templates/premiumplatinum.tpl.php:35
+msgid "Buy up to 9 depot pages"
+msgstr "Купите до 9 страниц на складе"
+
+#: templates/premiumplatinum.tpl.php:36
+msgid ""
+"Buy a life insurance with 50%, 80% or 100% of EP loss protection upon death"
+msgstr ""
+"Купите страхование жизни с сохранением 50%, 80% или 100% потерянного опыта "
+"при смерти"
+
+#: templates/premiumplatinum.tpl.php:37
+msgid "Buy additional Rerolls whenever you need them"
+msgstr "Купите возможность сбросить изученные навыки в любое время"
+
+#: templates/premiumplatinum.tpl.php:38
+msgid "Buy guild founding"
+msgstr "Купите возможность создавать гильдию"
+
+#: templates/premiumplatinum.tpl.php:44 templates/premiumplatinum.tpl.php:47
 #, php-format
 msgid "Buy on %s"
 msgstr "Купить на %s"
@@ -7076,6 +7180,10 @@ msgstr "Сохранен: %s"
 msgid "Last visit: %s"
 msgstr "Последнее посещение: %s"
 
+#: templates/staff.tpl.php:1
+msgid "Creator"
+msgstr "Создатель"
+
 #: templates/staff.tpl.php:13
 msgid "Translators"
 msgstr "Переводчики"
@@ -7107,6 +7215,10 @@ msgstr "Проверен"
 #: templates/themes_index.tpl.php:35
 msgid "Tested"
 msgstr "Протестирован"
+
+#: templates/themes_edit.tpl.php:43
+msgid "Moderator"
+msgstr "Модератор"
 
 #: templates/themes_edit.tpl.php:46
 msgid "Replace screenshot"
@@ -7157,6 +7269,15 @@ msgstr "Кто онлайн"
 #: templates/viewonline.tpl.php:5
 msgid "No registered users online."
 msgstr "Нет зарегистрированных пользователей онлайн."
+
+#~ msgid "User"
+#~ msgstr "Пользователь"
+
+#~ msgid "Acting Administrator"
+#~ msgstr "и.о. администратора"
+
+#~ msgid "Translator"
+#~ msgstr "Переводчик"
 
 #, php-format
 #~ msgid "%d Platinum "
@@ -7239,9 +7360,6 @@ msgstr "Нет зарегистрированных пользователей �
 #~ msgid "Included"
 #~ msgstr "Включено"
 
-#~ msgid "+50% Experience"
-#~ msgstr "+50% опыта"
-
 #~ msgid "Possibility to get listed in the Highscores"
 #~ msgstr "Возможность попасть в ТОП 100"
 
@@ -7251,35 +7369,11 @@ msgstr "Нет зарегистрированных пользователей �
 #~ msgid "Buyable"
 #~ msgstr "Можно купить"
 
-#~ msgid ""
-#~ "Life insurance with 50%, 80% or 100% of EP loss protection upon death"
-#~ msgstr ""
-#~ "Страхование жизни с сохранением 50%, 80% или 100% от потерянного опыта "
-#~ "при смерти"
-
-#~ msgid "Full access to individual islands"
-#~ msgstr "Полный доступ к отдельным островам"
-
-#~ msgid "Portal usage"
-#~ msgstr "Возможность пользоваться порталами"
-
-#~ msgid "Up to 40 additional friendlist slots"
-#~ msgstr "До 40 дополнительных слотов в списке друзей"
-
 #~ msgid "Up to 40 additional mailbox slots"
 #~ msgstr "До 40 дополнительных слотов в сообщениях"
 
-#~ msgid "Up to 20 trade offers"
-#~ msgstr "До 20 слотов на аукционе"
-
-#~ msgid "Up to 6 additional depot pages"
-#~ msgstr "До 6 дополнительных страниц на складе"
-
 #~ msgid "Additional Rerolls"
 #~ msgstr "Дополнительные рероллы"
-
-#~ msgid "Guild founding"
-#~ msgstr "Возможность создать гильдию"
 
 #~ msgid "How to buy"
 #~ msgstr "Как купить"
@@ -7295,13 +7389,6 @@ msgstr "Нет зарегистрированных пользователей �
 #~ "другие способы оплаты! Пожалуйста, просмотрите <a href=\"%s"
 #~ "\">Пользовательское соглашение</a> перед покупкой у нас."
 
-#~ msgid ""
-#~ "Life insurance with 50% of EP loss protection upon death (can be upgraded "
-#~ "to 80% or 100%)"
-#~ msgstr ""
-#~ "Страхование жизни с сохранением 50% от потерянного опыта при смерти "
-#~ "(может быть улучшено до 80% или 100%)"
-
 #~ msgid "Full access to all islands"
 #~ msgstr "Полный доступ ко всем островам"
 
@@ -7312,16 +7399,6 @@ msgstr "Нет зарегистрированных пользователей �
 
 #~ msgid "Receive up to 20 letters in your inbox (instead of 10)"
 #~ msgstr "Возможность хранить до 20 входящих писем (вместо 10)"
-
-#~ msgid "10 trade offers"
-#~ msgstr "10 слотов на аукционе"
-
-#~ msgid ""
-#~ "8 Platinum per day of your Premium Time (Example: 30 days * 8 Platinum = "
-#~ "240 Platinum)"
-#~ msgstr ""
-#~ "8 Платины за каждый день Премиума (например 30 дней * 8 Платины = 240 "
-#~ "Платины)"
 
 #, php-format
 #~ msgid ""
@@ -7409,9 +7486,6 @@ msgstr "Нет зарегистрированных пользователей �
 
 #~ msgid "Set avatar"
 #~ msgstr "Сделать аватаром"
-
-#~ msgid "Beta Test"
-#~ msgstr "Бета Тест"
 
 #~ msgid "Invalid game ID."
 #~ msgstr "Неверный ID игры."
@@ -8362,9 +8436,6 @@ msgstr "Нет зарегистрированных пользователей �
 
 #~ msgid "Yes"
 #~ msgstr "Да"
-
-#~ msgid "Goto page"
-#~ msgstr "Стр."
 
 #~ msgid "You are not authorized."
 #~ msgstr "Вы не авторизованы."
