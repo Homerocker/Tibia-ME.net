@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tibia-ME.net\n"
-"POT-Creation-Date: 2018-08-29 19:35+0300\n"
-"PO-Revision-Date: 2018-08-29 19:35+0300\n"
+"POT-Creation-Date: 2020-07-08 18:09+0300\n"
+"PO-Revision-Date: 2020-07-08 18:10+0300\n"
 "Last-Translator: Molodoy <molodoy3561@gmail.com>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
@@ -24,19 +24,6 @@ msgstr ""
 #: templates/screenshots_index.tpl.php:56
 msgid "Comments"
 msgstr "Komentarze"
-
-#: classes/TibiameComParser.class.php:193
-#: classes/TibiameComParser.class.php:197
-#: classes/TibiameComParser.class.php:206 classes/album.class.php:680
-#: classes/album.class.php:684 classes/uploader.class.php:40
-#: classes/uploader.class.php:150 classes/uploader.class.php:169
-#: public_html/cp/sync.php:9
-msgid "Unknown error."
-msgstr "Nieznany błąd."
-
-#: classes/TibiameComParser.class.php:201
-msgid "Unknown game code."
-msgstr "Nieznany kod gry."
 
 #: classes/album.class.php:526 classes/calendar.class.php:48
 msgid "Title is too long."
@@ -85,6 +72,12 @@ msgstr "Brak określonego tytułu albumu."
 msgid "Album created."
 msgstr "Album utworzony."
 
+#: classes/album.class.php:680 classes/album.class.php:684
+#: classes/uploader.class.php:40 classes/uploader.class.php:150
+#: classes/uploader.class.php:169 public_html/cp/sync.php:9
+msgid "Unknown error."
+msgstr "Nieznany błąd."
+
 #: classes/album.class.php:689
 msgid "Rotated image already exists."
 msgstr "Odwrócony obraz już istnieje."
@@ -107,12 +100,12 @@ msgid "Artwork has been uploaded."
 msgstr "Grafika została przesłana."
 
 #: classes/auth.class.php:9 classes/auth.class.php:69
-#: classes/gamecodes.class.php:114
+#: public_html/payment.php:13
 msgid "Invalid nickname."
 msgstr "Nieprawidłowy przydomek."
 
 #: classes/auth.class.php:12 classes/auth.class.php:72
-#: classes/gamecodes.class.php:117
+#: public_html/payment.php:16
 msgid "Invalid world."
 msgstr "Nieprawidłowy świat."
 
@@ -253,11 +246,11 @@ msgstr "Grudzień"
 #: public_html/album/photos.php:26 public_html/album/photos.php:68
 #: public_html/album/photos.php:101 public_html/album/photos.php:167
 #: public_html/cp/sync.php:6 public_html/forum/posting.php:281
-#: public_html/gamecontent/skills.php:6 public_html/payment.php:43
-#: public_html/payment.php:47 public_html/payment.php:88
-#: public_html/scores/viewscores.php:5 public_html/scores/viewscores.php:10
-#: public_html/screenshots/index.php:14 public_html/themes/download.php:4
-#: public_html/themes/edit.php:5 templates/invalid_request.tpl.php:2
+#: public_html/gamecontent/skills.php:6 public_html/payment.php:37
+#: public_html/payment.php:75 public_html/scores/viewscores.php:5
+#: public_html/scores/viewscores.php:10 public_html/screenshots/index.php:14
+#: public_html/themes/download.php:4 public_html/themes/edit.php:5
+#: templates/invalid_request.tpl.php:2
 msgid "Invalid request."
 msgstr "Nieprawidłowe żądanie."
 
@@ -301,6 +294,15 @@ msgstr "Powiadomienie o pracach konserwacyjnych zostało wyłączone."
 msgid "Maintenance work notification has been updated."
 msgstr "Powiadomienie o pracach konserwacyjnych zostało zaktualizowane."
 
+#: classes/db.class.php:22
+msgid "Could not connect to database. Try again in few minutes."
+msgstr "Nie można połączyć się z bazą danych. Spróbuj ponownie za kilka minut."
+
+#: classes/db.class.php:25
+#, php-format
+msgid "Could not load character set %s."
+msgstr "Nie można załadować zestawu znaków %s."
+
 #: classes/filesystem.class.php:24
 #, php-format
 msgid "%s GB"
@@ -333,19 +335,20 @@ msgstr[0] "%s bajt"
 msgstr[1] "%s bajty"
 msgstr[2] "%s bajtów"
 
-#: classes/form.class.php:39 classes/form.class.php:50
+#: classes/form.class.php:57
 msgid "Field is required."
 msgstr "To pole jest wymagane."
 
-#: classes/form.class.php:57
+#: classes/form.class.php:65
 msgid "Input is too short."
 msgstr "Wejście jest za długie."
 
-#: classes/form.class.php:59
+#: classes/form.class.php:67
 msgid "Input is too long."
 msgstr "Wejście jest za krótkie."
 
-#: classes/form.class.php:62 classes/form.class.php:66
+#: classes/form.class.php:70 classes/form.class.php:74
+#: classes/form.class.php:78
 msgid "Invalid input."
 msgstr "Nieprawidłowe wejście."
 
@@ -438,67 +441,30 @@ msgstr "Ten użytkownik nie jest w Twojej liście znajomych."
 msgid "User has been removed from your friendlist."
 msgstr "Użytkownik został usunięty z Twojej listy znajomych."
 
-#: classes/gamecodes.class.php:23
-msgid "Invalid game codes type."
-msgstr "Nieprawidłowy rodzaj kodu."
-
-#: classes/gamecodes.class.php:28
+#: classes/gamecodes.class.php:10
 msgid "Invalid amount."
 msgstr "Nieprawidłowa kwota."
 
-#: classes/gamecodes.class.php:38
+#: classes/gamecodes.class.php:19
 msgid "Some of game codes are invalid."
 msgstr "Kilka z kodów jest nieważne."
 
-#: classes/gamecodes.class.php:43
+#: classes/gamecodes.class.php:24
 msgid "No valid game codes specified."
 msgstr "Nie podano prawidłowych kodów."
 
-#: classes/gamecodes.class.php:51
+#: classes/gamecodes.class.php:31
 #, php-format
 msgid "%s is duplicate."
 msgstr "%s jest duplikatem."
 
-#: classes/gamecodes.class.php:60
+#: classes/gamecodes.class.php:40
 #, php-format
 msgid "%d game code added."
 msgid_plural "%d game codes added."
 msgstr[0] "%d kod dodany."
 msgstr[1] "%d kody dodane."
 msgstr[2] "%d kodów dodanych."
-
-#: classes/gamecodes.class.php:120
-msgid "Invalid game code type."
-msgstr "Nieprawidłowy typ kodu."
-
-#: classes/gamecodes.class.php:124
-msgid "Game code is not available."
-msgstr "Kod nie jest dostępny."
-
-#: classes/gamecodes.class.php:127
-msgid "Invalid multiplier."
-msgstr "Nieprawidłowy mnożnik."
-
-#: classes/gamecodes.class.php:129 classes/gamecodes.class.php:144
-msgid "No enough game codes available."
-msgstr "Brak wystarczających kodów."
-
-#: classes/gamecodes.class.php:164
-#, php-format
-msgid "%d game code has been activated."
-msgid_plural "%d game codes have been activated."
-msgstr[0] "%d kod został aktywowany."
-msgstr[1] "%d kody zostały aktywowane."
-msgstr[2] "%d kodów zostało aktywowane."
-
-#: classes/gamecodes.class.php:170
-msgid "Game code has been activated."
-msgstr "Kod został aktywowany."
-
-#: classes/gamecodes.class.php:181
-#, php-format
-msgid "%d of %d game codes have been activated."
-msgstr "%d z %d kodów zostało aktywowanych."
 
 #: classes/letters.class.php:230
 msgid "Letter not found."
@@ -573,18 +539,33 @@ msgstr "Brak określonej wiadomości."
 msgid "Message is too long."
 msgstr "Wiadomość jest za długa."
 
-#: classes/notifications.class.php:283
+#: classes/notifications.class.php:284
 msgid "New Private Message has arrived"
 msgstr "Przyszła nowa wiadomość prywatna"
 
-#: classes/notifications.class.php:284
-#, php-format
+#: classes/notifications.class.php:286
+#, fuzzy, php-format
+#| msgid ""
+#| "Hello %s,\r\n"
+#| "\r\n"
+#| "You have received a new private message to your account on Tibia-ME.net "
+#| "and you have requested that you be notified on this event. You can view "
+#| "your new message by clicking on the following link:\r\n"
+#| "http://wap.tibia-me.net/user/letters.php\r\n"
+#| "\r\n"
+#| "Remember that you can always choose not to be notified of new messages by "
+#| "changing the appropriate setting in your profile.\r\n"
+#| "http://wap.tibia-me.net/user/settings.php\r\n"
+#| "\r\n"
+#| "Kind Regards,\r\n"
+#| "Tibia-ME.net Support\r\n"
+#| "http://wap.tibia-me.net"
 msgid ""
 "Hello %s,\r\n"
 "\r\n"
-"You have received a new private message to your account on Tibia-ME.net and "
-"you have requested that you be notified on this event. You can view your new "
-"message by clicking on the following link:\r\n"
+"You have received a new private message to your account on %s and you have "
+"requested that you be notified on this event. You can view your new message "
+"by clicking on the following link:\r\n"
 "http://wap.tibia-me.net/user/letters.php\r\n"
 "\r\n"
 "Remember that you can always choose not to be notified of new messages by "
@@ -606,16 +587,29 @@ msgstr ""
 "Tibia-ME.net Support \r\n"
 "http://wap.tibia-me.net"
 
-#: classes/notifications.class.php:287
+#: classes/notifications.class.php:289
 msgid "Password recovery confirmation"
 msgstr "Potwierdzenie odzyskiwania hasła"
 
-#: classes/notifications.class.php:288
-#, php-format
+#: classes/notifications.class.php:291
+#, fuzzy, php-format
+#| msgid ""
+#| "Hello %s,\r\n"
+#| "\r\n"
+#| "You have requested a new password for your account on Tibia-ME.net.\r\n"
+#| "\r\n"
+#| "Click the following link to continue new password activation:\r\n"
+#| "http://wap.tibia-me.net/user/lostpassword.php?user=%d&v=%s\r\n"
+#| "\r\n"
+#| "If you did not request a new password, just ignore this message.\r\n"
+#| "\r\n"
+#| "Kind Regards,\r\n"
+#| "Tibia-ME.net Support\r\n"
+#| "http://wap.tibia-me.net"
 msgid ""
 "Hello %s,\r\n"
 "\r\n"
-"You have requested a new password for your account on Tibia-ME.net.\r\n"
+"You have requested a new password for your account on %s.\r\n"
 "\r\n"
 "Click the following link to continue new password activation:\r\n"
 "http://wap.tibia-me.net/user/lostpassword.php?user=%d&v=%s\r\n"
@@ -744,7 +738,7 @@ msgstr "Akceptuj"
 #: templates/album_move.tpl.php:15 templates/album_password.tpl.php:8
 #: templates/album_rotate.tpl.php:10 templates/calendar_edit.tpl.php:111
 #: templates/comments_report.tpl.php:16
-#: templates/cp_gamecodes_activate_confirm.tpl.php:24
+#: templates/cp_gamecodes_activate_confirm.tpl.php:14
 #: templates/cp_ranks_delete.tpl.php:24 templates/cp_ranks_edit_add.tpl.php:57
 #: templates/forum_createtopic.tpl.php:20 templates/forum_postedit.tpl.php:10
 #: templates/forum_quote.tpl.php:17 templates/forum_topicedit.tpl.php:39
@@ -811,32 +805,23 @@ msgstr "Online"
 msgid "Offline"
 msgstr "Offline"
 
-#: classes/user.class.php:128 config.php:150
+#: classes/user.class.php:128 config.php:143
 msgid "Guest"
 msgstr "Gość"
 
-#: config.php:33
+#: config.php:38
 msgid "Could not start session."
 msgstr "Nie można rozpocząć sesji."
 
-#: config.php:46
-msgid "Could not connect to database. Try again in few minutes."
-msgstr "Nie można połączyć się z bazą danych. Spróbuj ponownie za kilka minut."
-
-#: config.php:49
-#, php-format
-msgid "Could not load character set %s."
-msgstr "Nie można załadować zestawu znaków %s."
-
-#: core.php:242
+#: core.php:237
 msgid "Updating highscores."
 msgstr "Aktualizowanie wyników."
 
-#: core.php:243
+#: core.php:238
 msgid "Maintenance work."
 msgstr "Praca konserwacyjna."
 
-#: core.php:244
+#: core.php:239
 #, php-format
 msgid "Come back in %d hour."
 msgid_plural "Come back in %d hours."
@@ -844,7 +829,7 @@ msgstr[0] "Wróć za %d godzinę."
 msgstr[1] "Wróć za %d godziny."
 msgstr[2] "Wróć za %d godzin."
 
-#: core.php:246
+#: core.php:241
 #, php-format
 msgid "Come back in %d minute."
 msgid_plural "Come back in %d minutes."
@@ -852,7 +837,7 @@ msgstr[0] "Wróć za %d minutę."
 msgstr[1] "Wróć za %d minuty."
 msgstr[2] "Wróć za %d minut."
 
-#: core.php:248
+#: core.php:243
 msgid "Come back later."
 msgstr "Wróć później."
 
@@ -3668,24 +3653,8 @@ msgid "Deals fire damage to and debuffs the enemy."
 msgstr "Zadaje wrogom obrażenia od ognia oraz debuff."
 
 #: gettextextras/ranks.php:2
-msgid "User"
-msgstr "Użytkownik"
-
-#: gettextextras/ranks.php:3 templates/staff.tpl.php:1
-msgid "Creator"
-msgstr "Twórca"
-
-#: gettextextras/ranks.php:4 templates/themes_edit.tpl.php:43
-msgid "Moderator"
-msgstr "Moderator"
-
-#: gettextextras/ranks.php:5
-msgid "Acting Administrator"
-msgstr "Pełniący obowiązki administratora"
-
-#: gettextextras/ranks.php:6
-msgid "Translator"
-msgstr "Tłumacz"
+msgid "Beta Tester"
+msgstr ""
 
 #: gettextextras/slots.php:2 gettextextras/slots_uc.php:2
 msgid "Head"
@@ -3711,14 +3680,10 @@ msgstr "Spodnie"
 msgid "Ring"
 msgstr "Pierśnień"
 
-#: public_html/about.php:3 templates/about.tpl.php:1 templates/index.tpl.php:50
-msgid "What is TibiaME?"
-msgstr "Czym jest TibiaME?"
-
 #: public_html/album/albums.php:33 public_html/album/albums.php:51
 #: public_html/album/comments.php:5 public_html/album/index.php:9
 #: public_html/album/photos.php:214 public_html/album/search.php:5
-#: templates/agreement.tpl.php:16 templates/index.tpl.php:62
+#: templates/agreement.tpl.php:16 templates/index.tpl.php:58
 msgid "Photo album"
 msgstr "Album zdjęć"
 
@@ -3819,7 +3784,7 @@ msgid "Calendar"
 msgstr "Kalendarz"
 
 #: public_html/contacts.php:3 templates/contacts.tpl.php:1
-#: templates/index.tpl.php:133
+#: templates/index.tpl.php:130
 msgid "Contacts"
 msgstr "Kontakt"
 
@@ -3836,14 +3801,36 @@ msgstr "Panel sterowania"
 msgid "Delete"
 msgstr "Usuń"
 
-#: public_html/cp/gamecodes.php:11 templates/cp_gamecodes.tpl.php:7
+#: public_html/cp/gamecodes.php:7
+msgid "each game code on a new line"
+msgstr "każdy kod gry w nowej linii"
+
+#: public_html/cp/gamecodes.php:9
+#, fuzzy
+#| msgid "Are you sure you want to decline this friend request?"
+msgid "Are you sure you want to add specified gamecodes?"
+msgstr "Czy na pewno chcesz odrzucić to zaproszenie?"
+
+#: public_html/cp/gamecodes.php:35
+#, fuzzy
+#| msgid "Game code has been activated."
+msgid "Gamecodes activated."
+msgstr "Kod został aktywowany."
+
+#: public_html/cp/gamecodes.php:37
+#, fuzzy, php-format
+#| msgid "%d Platinum"
+msgid "%d Platinum activated."
+msgstr "%d Platyn"
+
+#: public_html/cp/gamecodes.php:43 templates/cp_gamecodes.tpl.php:7
 #: templates/cp_index.tpl.php:16
 msgid "Game codes"
 msgstr "Kody gry"
 
-#: public_html/cp/gamecodes.php:11 public_html/cp/index.php:13
+#: public_html/cp/gamecodes.php:43 public_html/cp/index.php:13
 #: public_html/cp/maintenance.php:6 public_html/cp/ranks.php:21
-#: templates/cp_index.tpl.php:1 templates/index.tpl.php:136
+#: templates/cp_index.tpl.php:1 templates/index.tpl.php:134
 msgid "Control Panel"
 msgstr "Panel sterowania"
 
@@ -3877,13 +3864,12 @@ msgstr "NIE ZNALEZIONO"
 msgid "Sync complete."
 msgstr "Synchronizacja zakończona."
 
-#: public_html/download/index.php:3 templates/index.tpl.php:53
+#: public_html/download/index.php:3 templates/index.tpl.php:48
 #: templates/themes_index.tpl.php:55
 msgid "Download"
 msgstr "Pobierz"
 
 #: public_html/emoticons.php:3 templates/emoticons.tpl.php:2
-#: templates/index.tpl.php:68
 msgid "Emoticons"
 msgstr "Emotikony"
 
@@ -3891,7 +3877,7 @@ msgstr "Emotikony"
 #: public_html/forum/posting.php:173 public_html/forum/search.php:9
 #: public_html/forum/viewforum.php:20 public_html/forum/viewtopic.php:76
 #: templates/agreement.tpl.php:53 templates/forum_createtopic.tpl.php:3
-#: templates/index.tpl.php:60
+#: templates/index.tpl.php:52
 msgid "Forum"
 msgstr "Forum"
 
@@ -4015,21 +4001,21 @@ msgid "Armour Calc"
 msgstr "Kalkulator zbroi"
 
 #: public_html/gamecontent/food.php:4 templates/game_content_food.tpl.php:2
-#: templates/index.tpl.php:106
+#: templates/index.tpl.php:113
 msgid "Food and potions"
 msgstr "Jedzenie i mikstury"
 
-#: public_html/gamecontent/pets.php:4 templates/index.tpl.php:105
+#: public_html/gamecontent/pets.php:4 templates/index.tpl.php:112
 msgid "Pets"
 msgstr "Zwierzaki"
 
-#: public_html/gamecontent/weapons.php:4 templates/index.tpl.php:100
+#: public_html/gamecontent/weapons.php:4 templates/index.tpl.php:107
 msgid "Weapons"
 msgstr "Bronie"
 
 #: public_html/guilds/index.php:5 public_html/scores/guilds.php:15
 #: public_html/scores/hunters.php:22 templates/highscores_guilds.tpl.php:1
-#: templates/index.tpl.php:91
+#: templates/index.tpl.php:98
 msgid "Guilds"
 msgstr "Gildie"
 
@@ -4043,42 +4029,65 @@ msgstr "Nie masz uprawnień dostępu do <i>%s</i> na tym serwerze."
 msgid "File <i>%s</i> not found on this server."
 msgstr "Nie znaleziono pliku <i>%s</i> na tym serwerze."
 
-#: public_html/payment.php:7
-msgid "Invalid product."
-msgstr "Nieprawidłowy produkt."
+#: public_html/payment.php:7 public_html/payment.php:42
+#: public_html/payment.php:84
+#, fuzzy
+#| msgid "Game code is not available."
+msgid "Product not available."
+msgstr "Kod nie jest dostępny."
 
-#: public_html/payment.php:16 public_html/payment.php:56
+#: public_html/payment.php:10 public_html/payment.php:45
 msgid "Price changed."
 msgstr "Cena zmieniona."
 
-#: public_html/payment.php:21
-#, php-format
-msgid "Error: %s"
-msgstr "Błąd: %s"
-
-#: public_html/payment.php:72
+#: public_html/payment.php:61
 msgid "Checksum mismatch."
 msgstr "Niedopasowanie sumy kontrolnej."
 
-#: public_html/payment.php:110 templates/index.tpl.php:111
-msgid "Payment"
-msgstr "Płatność"
+#: public_html/payment.php:92
+msgid "Purchase"
+msgstr "Kup"
 
-#: public_html/payment.php:111 public_html/payment/platinum.php:4
-#: public_html/payment/premium.php:5 public_html/platinum.php:4
-#: public_html/premium.php:4 templates/cp_gamecodes.tpl.php:12
-#: templates/index.tpl.php:116
-msgid "Platinum"
-msgstr "Platyna"
+#: public_html/payment.php:93 public_html/premiumplatinum.php:4
+#: templates/index.tpl.php:50
+#, fuzzy
+#| msgid "%d Platinum"
+msgid "Premium & Platinum"
+msgstr "%d Platyn"
 
-#: public_html/payment.php:112 public_html/payment/platinum.php:5
-#: public_html/payment/premium.php:4 public_html/platinum.php:4
-#: public_html/premium.php:4 templates/cp_gamecodes.tpl.php:15
-#: templates/cp_gamecodes.tpl.php:17 templates/index.tpl.php:114
-msgid "Premium"
-msgstr "Premium"
+#: public_html/payment.php:101
+msgid "Product is currently out of stock."
+msgstr ""
 
-#: public_html/scores/achievements.php:6 templates/index.tpl.php:90
+#: public_html/payment.php:114
+msgid "Credit Card"
+msgstr "Karta Kredytowa"
+
+#: public_html/payment.php:114
+msgid "etc."
+msgstr "itp."
+
+#: public_html/payment.php:115
+msgid "Ruble"
+msgstr "Rubli"
+
+#: public_html/payment.php:115
+msgid "Russia"
+msgstr "Rosja"
+
+#: public_html/payment.php:116
+msgid "US dollar"
+msgstr "Dolar amerykański"
+
+#: public_html/payment.php:116 public_html/payment.php:117
+msgid "other"
+msgstr "inne"
+
+#: public_html/payment.php:117
+msgid "Euro"
+msgstr "Euro"
+
+#: public_html/scores/achievements.php:6 templates/index.tpl.php:97
 msgid "Achievements"
 msgstr "Osiągnięcia"
 
@@ -4086,7 +4095,7 @@ msgstr "Osiągnięcia"
 msgid "Guild not found."
 msgstr "Nie odnaleziono gildii."
 
-#: public_html/scores/hunters.php:22 templates/index.tpl.php:88
+#: public_html/scores/hunters.php:22 templates/index.tpl.php:95
 msgid "Hunters"
 msgstr "Łowcy"
 
@@ -4095,22 +4104,22 @@ msgid "Characters"
 msgstr "Postacie"
 
 #: public_html/scores/search.php:5 public_html/scores/viewscores.php:12
-#: templates/agreement.tpl.php:22 templates/index.tpl.php:77
+#: templates/agreement.tpl.php:22 templates/index.tpl.php:84
 msgid "Highscores"
 msgstr "Najlepsze wyniki"
 
 #: public_html/scores/top100.php:4 templates/highscores_top100.tpl.php:1
-#: templates/index.tpl.php:87
+#: templates/index.tpl.php:94
 msgid "TOP 100"
 msgstr "TOP 100"
 
-#: public_html/scores/worlds.php:4 templates/index.tpl.php:92
+#: public_html/scores/worlds.php:4 templates/index.tpl.php:99
 msgid "Worlds"
 msgstr "Światy"
 
 #: public_html/screenshots/comments.php:5 public_html/screenshots/index.php:79
 #: public_html/screenshots/index.php:105 templates/agreement.tpl.php:40
-#: templates/index.tpl.php:61 templates/profile.tpl.php:448
+#: templates/index.tpl.php:55 templates/profile.tpl.php:448
 #: templates/profile.tpl.php:450
 msgid "Screenshots"
 msgstr "Zrzuty ekranu"
@@ -4135,7 +4144,7 @@ msgstr "Zrzut ekranu został przesłany."
 msgid "My screenshots"
 msgstr "Moje zrzuty ekranu"
 
-#: public_html/staff.php:5 templates/index.tpl.php:134
+#: public_html/staff.php:5 templates/index.tpl.php:131
 #: templates/staff.tpl.php:5
 msgid "Moderators"
 msgstr "Moderatorzy"
@@ -4143,7 +4152,7 @@ msgstr "Moderatorzy"
 #: public_html/themes/comments.php:5 public_html/themes/edit.php:10
 #: public_html/themes/index.php:29 public_html/themes/index.php:33
 #: public_html/themes/index.php:37 public_html/themes/upload.php:41
-#: templates/index.tpl.php:63 templates/profile.tpl.php:453
+#: templates/index.tpl.php:61 templates/profile.tpl.php:453
 #: templates/profile.tpl.php:455
 msgid "Themes"
 msgstr "Motywy"
@@ -4340,7 +4349,7 @@ msgstr "Resetowanie hasła"
 msgid "Users online"
 msgstr "Użytkownicy online"
 
-#: public_html/user/memberlist.php:12 templates/index.tpl.php:66
+#: public_html/user/memberlist.php:12 templates/index.tpl.php:68
 msgid "Memberlist"
 msgstr "Lista członków"
 
@@ -4371,32 +4380,13 @@ msgstr "Zarejestuj"
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: templates/about.tpl.php:3
-msgid ""
-"TibiaME is the first massively multiplayer online role-playing game for "
-"mobile devices. Come together with hundreds of players and experience "
-"adventures in a colourful virtual world! Along with your friends you explore "
-"the mysterious land of TibiaME, fight your way through hordes of evil "
-"creatures and solve ancient riddles to find untold treasures. With every "
-"monster you defeat you will grow in strength and power. TibiaME is based on "
-"the successful online role-playing game Tibia which attracts thousands of "
-"players every day."
-msgstr ""
-"TibiaME to pierwsza wirtualna gra fabularna dla wielu graczy na urządzenia "
-"mobilne. Dołącz do setek graczy i przeżyj przygody w kolorowym wirtualnym "
-"świecie! Wraz z przyjaciółmi odkrywasz tajemniczą krainę TibiaME, walczysz z "
-"hordami złych stworzeń i rozwiązujesz starożytne zagadki, by znaleźć "
-"niezliczone skarby. Z każdym pokonanym potworem będziesz rosnąć w siłę i "
-"moc. TibiaME opiera się na udanej internetowej grze fabularnej Tibia, która "
-"każdego dnia przyciąga tysiące graczy."
-
-#: templates/agreement.tpl.php:1 templates/index.tpl.php:72
+#: templates/agreement.tpl.php:1 templates/index.tpl.php:132
 msgid "User agreement"
 msgstr "Umowa Użytkownika"
 
 #: templates/agreement.tpl.php:3
 msgid "General"
-msgstr "Generalny"
+msgstr "Generalne"
 
 #: templates/agreement.tpl.php:5
 msgid ""
@@ -4431,7 +4421,7 @@ msgstr ""
 
 #: templates/agreement.tpl.php:13
 msgid "You are not allowed to share your account data (password) publicly."
-msgstr "Nie możesz publicznie udostępniać danych konta (hasła)"
+msgstr "Nie możesz publicznie udostępniać danych konta (hasła)."
 
 #: templates/agreement.tpl.php:18
 msgid ""
@@ -4503,7 +4493,7 @@ msgstr ""
 
 #: templates/agreement.tpl.php:42
 msgid "Only TibiaME screenshots are allowed at Screenshots section."
-msgstr "Tylko zrzuty ekranu TibiaME są dozwolone w dziale Zrzuty ekranu."
+msgstr "Tylko zrzuty ekranu z TibiaME są dozwolone w dziale Zrzuty ekranu."
 
 #: templates/agreement.tpl.php:43
 msgid "Artworks are not allowed."
@@ -4523,7 +4513,7 @@ msgstr "Prace powinny być powiązane z TibiaME."
 
 #: templates/agreement.tpl.php:50
 msgid "You are only allowed to upload your own artworks."
-msgstr "Możesz przesyłać tylko własne prace."
+msgstr "Możesz przesyłać tylko swoją pracę."
 
 #: templates/agreement.tpl.php:55
 msgid ""
@@ -4816,7 +4806,7 @@ msgid "by comments"
 msgstr "według komentarzy"
 
 #: templates/album_index.tpl.php:9 templates/banishments_banform.tpl.php:5
-#: templates/cp_gamecodes.tpl.php:60
+#: templates/cp_gamecodes.tpl.php:38
 #: templates/cp_gamecodes_activate_confirm.tpl.php:5
 #: templates/highscores_achievements.tpl.php:3
 #: templates/highscores_guilds.tpl.php:4 templates/highscores_guilds.tpl.php:20
@@ -4828,7 +4818,7 @@ msgstr "według komentarzy"
 #: templates/letters_edit.tpl.php:16 templates/login.tpl.php:6
 #: templates/lostpassword_step1.tpl.php:6
 #: templates/lostpassword_step2.tpl.php:6 templates/memberlist.tpl.php:7
-#: templates/payment_confirm.tpl.php:5 templates/payment_product.tpl.php:26
+#: templates/payment.tpl.php:4 templates/payment_confirm.tpl.php:4
 #: templates/profile.tpl.php:41 templates/register.tpl.php:6
 msgid "World"
 msgstr "Świat"
@@ -4877,7 +4867,7 @@ msgid "Move"
 msgstr "Przenieś"
 
 #: templates/album_password.tpl.php:7
-#: templates/cp_gamecodes_activate_confirm.tpl.php:23
+#: templates/cp_gamecodes_activate_confirm.tpl.php:13
 #: templates/highscores_achievements.tpl.php:20
 #: templates/highscores_guilds.tpl.php:12
 #: templates/highscores_hunters_characters.tpl.php:29
@@ -4949,13 +4939,13 @@ msgid "Profile"
 msgstr "Profil"
 
 #: templates/album_searchbox.tpl.php:4 templates/banishments_banform.tpl.php:3
-#: templates/cp_gamecodes.tpl.php:58
+#: templates/cp_gamecodes.tpl.php:37
 #: templates/cp_gamecodes_activate_confirm.tpl.php:3
 #: templates/highscores_searchbox.tpl.php:3
 #: templates/letters_compose.tpl.php:15 templates/letters_edit.tpl.php:14
 #: templates/login.tpl.php:4 templates/lostpassword_step1.tpl.php:4
 #: templates/lostpassword_step2.tpl.php:4 templates/memberlist.tpl.php:3
-#: templates/payment_confirm.tpl.php:3 templates/payment_product.tpl.php:24
+#: templates/payment.tpl.php:3 templates/payment_confirm.tpl.php:3
 #: templates/register.tpl.php:4
 msgid "Nickname"
 msgstr "Pseudonim"
@@ -5020,7 +5010,7 @@ msgstr "Powód"
 msgid "Message"
 msgstr "Wiadomość"
 
-#: templates/banishments_banform.tpl.php:27 templates/cp_gamecodes.tpl.php:10
+#: templates/banishments_banform.tpl.php:27
 #: templates/game_content_armours.tpl.php:48
 #: templates/game_content_spells.tpl.php:9
 #: templates/game_content_weapons.tpl.php:19
@@ -5287,98 +5277,67 @@ msgstr "Czy na pewno chcesz zgłosić ten komentarz za naruszenie zasad?"
 msgid "Report"
 msgstr "Zgłoś"
 
-#: templates/cp_gamecodes.tpl.php:4 templates/cp_gamecodes.tpl.php:23
+#: templates/cp_gamecodes.tpl.php:4 templates/cp_gamecodes.tpl.php:9
 #: templates/cp_ranks.tpl.php:26
 msgid "Add"
 msgstr "Dodaj"
 
-#: templates/cp_gamecodes.tpl.php:8
-msgid "each game code on a new line"
-msgstr "każdy kod gry w nowej linii"
-
-#: templates/cp_gamecodes.tpl.php:21 templates/game_content_spells.tpl.php:49
+#: templates/cp_gamecodes.tpl.php:8 templates/cp_gamecodes.tpl.php:39
+#: templates/cp_gamecodes_activate_confirm.tpl.php:7
+#: templates/game_content_spells.tpl.php:49
 msgid "Amount"
 msgstr "Ilość"
 
-#: templates/cp_gamecodes.tpl.php:30
+#: templates/cp_gamecodes.tpl.php:16
 msgid "Overview"
 msgstr "Przeglądaj"
 
-#: templates/cp_gamecodes.tpl.php:35 templates/cp_gamecodes.tpl.php:111
-#: templates/cp_gamecodes.tpl.php:148
-#: templates/game_content_armours.tpl.php:104
+#: templates/cp_gamecodes.tpl.php:21 templates/cp_gamecodes.tpl.php:52
+#: templates/cp_gamecodes.tpl.php:85 templates/game_content_armours.tpl.php:104
 #: templates/game_content_food.tpl.php:14
 #: templates/game_content_monsters.tpl.php:28
 #: templates/game_content_skills.tpl.php:12
 #: templates/game_content_spells.tpl.php:40
 #: templates/game_content_weapons.tpl.php:61
-#: templates/payment_product.tpl.php:7
 msgid "No items to display."
 msgstr "Brak przedmiotów do wyświetlenia."
 
-#: templates/cp_gamecodes.tpl.php:43 templates/cp_gamecodes.tpl.php:82
-#: templates/cp_gamecodes.tpl.php:129 templates/cp_gamecodes.tpl.php:160
-#: templates/cp_gamecodes_activate_confirm.tpl.php:12
-#: templates/payment_product.tpl.php:13
-#, php-format
-msgid "%d day Premium"
-msgid_plural "%d days Premium"
-msgstr[0] "%d dzień Premium"
-msgstr[1] "%d dni Premium"
-msgstr[2] "%d dni Premium"
-
-#: templates/cp_gamecodes.tpl.php:45 templates/cp_gamecodes.tpl.php:84
-#: templates/cp_gamecodes.tpl.php:131 templates/cp_gamecodes.tpl.php:162
-#: templates/cp_gamecodes_activate_confirm.tpl.php:14
-#: templates/payment_product.tpl.php:15
+#: templates/cp_gamecodes.tpl.php:26 templates/cp_gamecodes.tpl.php:69
+#: templates/cp_gamecodes.tpl.php:96 templates/premiumplatinum.tpl.php:63
 #, php-format
 msgid "%d Platinum"
 msgstr "%d Platyn"
 
-#: templates/cp_gamecodes.tpl.php:54 templates/cp_gamecodes.tpl.php:99
+#: templates/cp_gamecodes.tpl.php:33 templates/cp_gamecodes.tpl.php:40
 msgid "Activate"
 msgstr "Aktywuj"
 
-#: templates/cp_gamecodes.tpl.php:62 templates/login.tpl.php:8
-#: templates/lostpassword_step1.tpl.php:8 templates/register.tpl.php:8
-msgid "select world"
-msgstr "wybierz świat"
-
-#: templates/cp_gamecodes.tpl.php:73
-#: templates/cp_gamecodes_activate_confirm.tpl.php:7
-msgid "Game code"
-msgstr "Kod gry"
-
-#: templates/cp_gamecodes.tpl.php:76
-msgid "select code type"
-msgstr "wybierz typ kodu"
-
-#: templates/cp_gamecodes.tpl.php:106
+#: templates/cp_gamecodes.tpl.php:47
 msgid "History"
 msgstr "Historia"
 
-#: templates/cp_gamecodes.tpl.php:117
+#: templates/cp_gamecodes.tpl.php:58
 msgid "FAILURE"
 msgstr "NIEPOWODZENIE"
 
-#: templates/cp_gamecodes.tpl.php:119
+#: templates/cp_gamecodes.tpl.php:60
 msgid "SUCCESS"
 msgstr "SUKCES"
 
-#: templates/cp_gamecodes.tpl.php:133
+#: templates/cp_gamecodes.tpl.php:70
 msgid "world"
 msgstr "świat"
 
-#: templates/cp_gamecodes.tpl.php:134
+#: templates/cp_gamecodes.tpl.php:71
 #, php-format
 msgid "Used by: %s"
 msgstr "Użyty przez: %s"
 
-#: templates/cp_gamecodes.tpl.php:143
+#: templates/cp_gamecodes.tpl.php:80
 msgid "Available"
 msgstr "Dostępny"
 
-#: templates/cp_gamecodes.tpl.php:164
+#: templates/cp_gamecodes.tpl.php:97
 #, php-format
 msgid "Added by %s"
 msgstr "Dodany przez %s"
@@ -5624,7 +5583,7 @@ msgstr[0] "%d post"
 msgstr[1] "%d posty"
 msgstr[2] "%d postów"
 
-#: templates/forum_quote.tpl.php:16 templates/index.tpl.php:34
+#: templates/forum_quote.tpl.php:16 templates/index.tpl.php:36
 #: templates/letters_compose.tpl.php:52
 msgid "Send"
 msgstr "Wyślij"
@@ -5728,7 +5687,7 @@ msgstr "Czy na pewno chcesz usunąć ten post?"
 
 #: templates/forum_viewtopic.tpl.php:115
 msgid "Log in to post messages."
-msgstr "Zaloguj się żeby dodawać posty."
+msgstr "Zaloguj się aby dodawać posty."
 
 #: templates/friendlist.tpl.php:4
 msgid "Friendlist is empty."
@@ -6059,7 +6018,7 @@ msgstr "Obrona"
 #: templates/highscores_hunters_characters.tpl.php:43
 #: templates/highscores_hunters_guilds.tpl.php:30
 #: templates/highscores_pvp.tpl.php:24 templates/highscores_top100.tpl.php:36
-#: templates/highscores_viewscores.tpl.php:124
+#: templates/highscores_viewscores.tpl.php:125
 #: templates/highscores_worlds.tpl.php:4 templates/highscores_worlds.tpl.php:38
 msgid "No data."
 msgstr "Brak danych."
@@ -6232,12 +6191,12 @@ msgstr "Następny poziom"
 
 #: templates/highscores_viewscores.tpl.php:16
 msgid "Global rank"
-msgstr ""
+msgstr "Globalna ranga"
 
 #: templates/highscores_viewscores.tpl.php:19
 #, php-format
 msgid "w%d rank"
-msgstr ""
+msgstr "Ranga na w%d"
 
 #: templates/highscores_viewscores.tpl.php:23
 msgid "PvP rank"
@@ -6305,7 +6264,7 @@ msgstr[2] "%d postaci"
 
 #: templates/highscores_worlds.tpl.php:15
 msgid "Max gain"
-msgstr "Największy przyrost przyrost"
+msgstr "Największy przyrost"
 
 #: templates/highscores_worlds.tpl.php:19
 msgid "Min gain"
@@ -6319,7 +6278,7 @@ msgstr "pokaż wszystko"
 msgid "hide"
 msgstr "ukryj"
 
-#: templates/index.tpl.php:27
+#: templates/index.tpl.php:26
 msgid "Chat"
 msgstr "Czat"
 
@@ -6328,54 +6287,65 @@ msgid "Type your message"
 msgstr "Wpisz swoją wiadomość"
 
 #: templates/index.tpl.php:51
-msgid "Autumn Update 2017 Teaser"
-msgstr "Zwiastun Jesiennej Aktualizacji 2017"
-
-#: templates/index.tpl.php:52
 msgid "Events calendar"
 msgstr "Kalendarz wydarzeń"
 
-#: templates/index.tpl.php:58
-msgid "Community"
-msgstr "Społeczność"
-
-#: templates/index.tpl.php:70
+#: templates/index.tpl.php:71
 msgid "Banlist"
 msgstr "Lista banów"
 
-#: templates/index.tpl.php:97
+#: templates/index.tpl.php:79
+msgid ""
+"TibiaME is the first massively multiplayer online role-playing game for "
+"mobile devices. Come together with hundreds of players and experience "
+"adventures in a colourful virtual world! Along with your friends you explore "
+"the mysterious land of TibiaME, fight your way through hordes of evil "
+"creatures and solve ancient riddles to find untold treasures. With every "
+"monster you defeat you will grow in strength and power. TibiaME is based on "
+"the successful online role-playing game Tibia which attracts thousands of "
+"players every day."
+msgstr ""
+"TibiaME to pierwsza wirtualna gra fabularna dla wielu graczy na urządzenia "
+"mobilne. Dołącz do setek graczy i przeżyj przygody w kolorowym wirtualnym "
+"świecie! Wraz z przyjaciółmi odkrywasz tajemniczą krainę TibiaME, walczysz z "
+"hordami złych stworzeń i rozwiązujesz starożytne zagadki, by znaleźć "
+"niezliczone skarby. Z każdym pokonanym potworem będziesz rosnąć w siłę i "
+"moc. TibiaME opiera się na udanej internetowej grze fabularnej Tibia, która "
+"każdego dnia przyciąga tysiące graczy."
+
+#: templates/index.tpl.php:104
 msgid "Encyclopedia"
 msgstr "Encyklopedia"
 
-#: templates/index.tpl.php:99
+#: templates/index.tpl.php:106
 msgid "Armour Calculator"
 msgstr "Przelicznik Zbroi"
 
-#: templates/index.tpl.php:101
+#: templates/index.tpl.php:108
 msgid "Armours"
 msgstr "Zbroje"
 
-#: templates/index.tpl.php:102
+#: templates/index.tpl.php:109
 msgid "Monsters"
 msgstr "Potwory"
 
-#: templates/index.tpl.php:103
+#: templates/index.tpl.php:110
 msgid "Spells"
 msgstr "Czary"
 
-#: templates/index.tpl.php:104
+#: templates/index.tpl.php:111
 msgid "Skills"
 msgstr "Umiejętności"
 
-#: templates/index.tpl.php:121
+#: templates/index.tpl.php:118
 msgid "Related sites"
 msgstr "Powiązane strony"
 
-#: templates/index.tpl.php:123
+#: templates/index.tpl.php:120
 msgid "Official website"
 msgstr "Oficjalna strona"
 
-#: templates/index.tpl.php:131
+#: templates/index.tpl.php:128
 msgid "About us"
 msgstr "O nas"
 
@@ -6436,6 +6406,11 @@ msgstr "Lubię"
 msgid "Dislike"
 msgstr "Nie lubię"
 
+#: templates/login.tpl.php:8 templates/lostpassword_step1.tpl.php:8
+#: templates/register.tpl.php:8
+msgid "select world"
+msgstr "wybierz świat"
+
 #: templates/login.tpl.php:18
 msgid "Remember me on this device."
 msgstr "Zapamiętaj na tym urządeniu."
@@ -6452,7 +6427,7 @@ msgstr "Ostatni raz byłeś/aś tu %s."
 
 #: templates/login_welcome.tpl.php:12
 msgid "What's new"
-msgstr "Co nowego"
+msgstr "Co nowego?"
 
 #: templates/login_welcome.tpl.php:17
 msgid "No news since your previous visit."
@@ -6752,7 +6727,7 @@ msgstr[2] "%d znajomych"
 msgid "%d notification"
 msgid_plural "%d notifications"
 msgstr[0] "%d powiadomienie"
-msgstr[1] "%d powiadomień"
+msgstr[1] "%d powiadomienia"
 msgstr[2] "%d powiadomień"
 
 #: templates/page_header.tpl.php:46 templates/page_header.tpl.php:97
@@ -6768,9 +6743,13 @@ msgid "Log out"
 msgstr "Wyloguj"
 
 #: templates/page_header.tpl.php:162
+#, fuzzy, php-format
+#| msgid ""
+#| "Tibia-ME.net requires Javascript to work correctly. Please enable it in "
+#| "your browser settings."
 msgid ""
-"Tibia-ME.net requires Javascript to work correctly. Please enable it in your "
-"browser settings."
+"%s requires Javascript to work correctly. Please enable it in your browser "
+"settings."
 msgstr ""
 "Tibia-ME.net wymaga Javascript do poprawnego działania. Włącz go w "
 "ustawieniach przeglądarki."
@@ -6783,11 +6762,35 @@ msgstr "wstecz"
 msgid "next"
 msgstr "dalej"
 
-#: templates/payment_confirm.tpl.php:6
+#: templates/payment.tpl.php:5
+msgid "Payment method"
+msgstr "Metoda płatności"
+
+#: templates/payment.tpl.php:6
+#, fuzzy
+#| msgid "Platinum"
+msgid "Platinum amount"
+msgstr "Platyna"
+
+#: templates/payment.tpl.php:8
+#, php-format
+msgid "You will receive %s Platinum."
+msgstr ""
+
+#: templates/payment.tpl.php:9
+#, php-format
+msgid "You will pay %s."
+msgstr ""
+
+#: templates/payment.tpl.php:10
+msgid "Proceed"
+msgstr "Zrealizowano"
+
+#: templates/payment_confirm.tpl.php:5
 msgid "Product"
 msgstr "Produkt"
 
-#: templates/payment_confirm.tpl.php:24
+#: templates/payment_confirm.tpl.php:22
 msgid "Proceed to payment"
 msgstr "Przejdź do płatności"
 
@@ -6799,202 +6802,33 @@ msgstr ""
 "Twoja płatność nie została zakończona. Jeśli uważasz, że to pomyłka, "
 "skontaktuj się z nami."
 
-#: templates/payment_method.tpl.php:3
-msgid "Payment method"
-msgstr "Metoda płatności"
-
-#: templates/payment_method.tpl.php:5
-msgid "Credit Card"
-msgstr "Karta Kredytowa"
-
-#: templates/payment_method.tpl.php:5
-msgid "etc."
-msgstr "itp."
-
-#: templates/payment_method.tpl.php:6
-msgid "Ruble"
-msgstr "Rubli"
-
-#: templates/payment_method.tpl.php:6
-msgid "Russia"
-msgstr "Rosja"
-
-#: templates/payment_method.tpl.php:7
-msgid "Hryvnia"
-msgstr "Hrywna"
-
-#: templates/payment_method.tpl.php:7
-msgid "Ukraine"
-msgstr "Ukraina"
-
-#: templates/payment_method.tpl.php:8
-msgid "US dollar"
-msgstr "Dolar amerykański"
-
-#: templates/payment_method.tpl.php:8 templates/payment_method.tpl.php:9
-msgid "other"
-msgstr "inne"
-
-#: templates/payment_method.tpl.php:9
-msgid "Euro"
-msgstr "Euro"
-
-#: templates/payment_method.tpl.php:11 templates/payment_product.tpl.php:36
-msgid "Proceed"
-msgstr "Zrealizowano"
-
-#: templates/payment_product.tpl.php:3
-msgid ""
-"If desired product is not listed here you may contact us to purchase it with "
-"different payment method."
-msgstr ""
-"Jeśli tego produktu nie ma na liście, możesz skontaktować się z nami, aby "
-"kupić go za pomocą innej metody płatności."
-
 #: templates/payment_success.tpl.php:2
 msgid "Your payment has been completed successfully."
 msgstr "Twoja płatność została pomyślnie zakończona."
 
-#: templates/platinum.tpl.php:1
-msgid "What is Platinum?"
-msgstr "Czym jest Platyna?"
+#: templates/premiumplatinum.tpl.php:1
+#, fuzzy
+#| msgid "What is Premium?"
+msgid "What is VIP?"
+msgstr "Czym jest Premium?"
 
-#: templates/platinum.tpl.php:3
-msgid "Included"
-msgstr "Korzyści"
-
-#: templates/platinum.tpl.php:5 templates/premium.tpl.php:4
-msgid "+50% Experience"
-msgstr "+50% Doświadczenia"
-
-#: templates/platinum.tpl.php:6 templates/premium.tpl.php:8
-msgid "Possibility to get listed in the Highscores"
-msgstr "Możliwość bycia zapisanym w najlepszych wynikach"
-
-#: templates/platinum.tpl.php:7 templates/premium.tpl.php:12
-msgid "Always get online, even when the game server is full"
-msgstr "Zawsze się zalogujesz, nawet jeśli serwer jest pełny"
-
-#: templates/platinum.tpl.php:9
-msgid "Buyable"
-msgstr "Do kupienia"
-
-#: templates/platinum.tpl.php:11
-msgid "Life insurance with 50%, 80% or 100% of EP loss protection upon death"
-msgstr ""
-"Ubezpieczenie z 50%, 80% lub 100% ochrony przed utratą doświadczenia po "
-"śmierci"
-
-#: templates/platinum.tpl.php:12
-msgid "Full access to individual islands"
-msgstr "Pełny dostęp do poszczególnych wysp"
-
-#: templates/platinum.tpl.php:13 templates/premium.tpl.php:7
-msgid "Portal usage"
-msgstr "Korzystanie z portalu"
-
-#: templates/platinum.tpl.php:14
-msgid "Up to 40 additional friendlist slots"
-msgstr "Do 40 dodatkowych miejsc na liście znajomych"
-
-#: templates/platinum.tpl.php:15
-msgid "Up to 40 additional mailbox slots"
-msgstr "Do 40 dodatkowych miejsc skrzynki pocztowej"
-
-#: templates/platinum.tpl.php:16
-msgid "Up to 20 trade offers"
-msgstr "Do 20 ofert handlowych"
-
-#: templates/platinum.tpl.php:17
-msgid "Up to 6 additional depot pages"
-msgstr "Do 6 dodatkowych stron w depozycie"
-
-#: templates/platinum.tpl.php:18
-msgid "Additional Rerolls"
-msgstr "Dodatkowe Rerolle"
-
-#: templates/platinum.tpl.php:19 templates/premium.tpl.php:9
-msgid "Guild founding"
-msgstr "Założenie gildii"
-
-#: templates/platinum.tpl.php:22 templates/premium.tpl.php:17
-msgid "How to buy"
-msgstr "Jak kupić"
-
-#: templates/platinum.tpl.php:24
-#, php-format
-msgid ""
-"Visit www.tibiame.com or <a href=\"%s\">buy from us</a>. Our prices may "
-"differ. We accept WebMoney, PayPal, wire transfers and more! Please check "
-"our <a href=\"%s\">User Agreement</a> before you purchase from us."
-msgstr ""
-"Odwiedź www.tibiame.com lub <a href=\"%s\"> kup od nas </a>. Nasze ceny mogą "
-"się różnić. Akceptujemy WebMoney, PayPal, przelewy elektroniczne i wiele "
-"więcej! Przed zakupem u nas sprawdź naszą <a href=\"%s\"> Umowę Użytkownika "
-"</a>."
-
-#: templates/platinum.tpl.php:28
-msgid "Purchase"
-msgstr "Kup"
-
-#: templates/platinum.tpl.php:31 templates/premium.tpl.php:25
-msgid "Our prices"
-msgstr "Nasze ceny"
-
-#: templates/premium.tpl.php:1
+#: templates/premiumplatinum.tpl.php:10
 msgid "What is Premium?"
 msgstr "Czym jest Premium?"
 
-#: templates/premium.tpl.php:5
-msgid ""
-"Life insurance with 50% of EP loss protection upon death (can be upgraded to "
-"80% or 100%)"
-msgstr ""
-"Ubezpieczenie z 50% ochrony przed utratą doświadczenia po śmierci (można "
-"zwiększyć do 80% lub 100%)"
+#: templates/premiumplatinum.tpl.php:27
+msgid "What is Platinum?"
+msgstr "Czym jest Platyna?"
 
-#: templates/premium.tpl.php:6
-msgid "Full access to all islands"
-msgstr "Pełny dostęp do wszystkich wysp"
+#: templates/premiumplatinum.tpl.php:45 templates/premiumplatinum.tpl.php:47
+#, fuzzy, php-format
+#| msgid "%s on %s"
+msgid "Buy on %s"
+msgstr "%s na %s"
 
-#: templates/premium.tpl.php:10
-msgid "More entries in your friends and ignorelist (20 instead of 10)"
-msgstr "Więcej miejsc w liście znajomych i ignorowanych (20 zamiast 10)"
-
-#: templates/premium.tpl.php:11
-msgid "Receive up to 20 letters in your inbox (instead of 10)"
-msgstr "Otrzymaj do 20 listów (zamiast 10)"
-
-#: templates/premium.tpl.php:13
-msgid "10 trade offers"
-msgstr "10 ofert handlowych"
-
-#: templates/premium.tpl.php:14
-msgid ""
-"8 Platinum per day of your Premium Time (Example: 30 days * 8 Platinum = 240 "
-"Platinum)"
-msgstr ""
-"8 platyn dziennie na Twój czas Premium (przykład: 30 dni * 8 platyn = 240 "
-"platyn)"
-
-#: templates/premium.tpl.php:20
-#, php-format
-msgid ""
-"Visit www.tibiame.com or <a href=\"%s\">contact us</a>. Our prices may "
-"differ. We accept WebMoney, PayPal and bank transfers. Please check our <a "
-"href=\"%s\">User Agreement</a> before you purchase from us."
-msgstr ""
-"Odwiedź www.tibiame.com lub <a href=\"%s\"> skontaktuj się z nami </a>. "
-"Nasze ceny mogą się różnić. Akceptujemy WebMoney, PayPal i przelewy bankowe. "
-"Przed zakupem u nas sprawdź naszą <a href=\"%s\"> Umowę Użytkownika </a>."
-
-#: templates/premium.tpl.php:35
-#, php-format
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] "%d dzień"
-msgstr[1] "%d dni"
-msgstr[2] "%d dni"
+#: templates/premiumplatinum.tpl.php:51
+msgid "Our prices"
+msgstr "Nasze ceny"
 
 #: templates/profile.tpl.php:33
 msgid "Are you sure you want to remove avatar?"
@@ -7206,12 +7040,16 @@ msgstr "Lokalizacja: %s"
 #: templates/settings.tpl.php:113
 #, php-format
 msgid "Saved: %s"
-msgstr "Zapisanych: %s"
+msgstr "Zapisano: %s"
 
 #: templates/settings.tpl.php:118
 #, php-format
 msgid "Last visit: %s"
 msgstr "Ostatnia wizyta: %s"
+
+#: templates/staff.tpl.php:1
+msgid "Creator"
+msgstr "Twórca"
 
 #: templates/staff.tpl.php:13
 msgid "Translators"
@@ -7244,6 +7082,10 @@ msgstr "Sprawdzone"
 #: templates/themes_index.tpl.php:35
 msgid "Tested"
 msgstr "Testowane"
+
+#: templates/themes_edit.tpl.php:43
+msgid "Moderator"
+msgstr "Moderator"
 
 #: templates/themes_edit.tpl.php:46
 msgid "Replace screenshot"
@@ -7296,6 +7138,192 @@ msgstr "Kto jest online"
 #: templates/viewonline.tpl.php:5
 msgid "No registered users online."
 msgstr "Brak zarejestrowanych użytkowników online."
+
+#~ msgid "Unknown game code."
+#~ msgstr "Nieznany kod gry."
+
+#~ msgid "Invalid game codes type."
+#~ msgstr "Nieprawidłowy rodzaj kodu."
+
+#~ msgid "Invalid game code type."
+#~ msgstr "Nieprawidłowy typ kodu."
+
+#~ msgid "Invalid multiplier."
+#~ msgstr "Nieprawidłowy mnożnik."
+
+#~ msgid "No enough game codes available."
+#~ msgstr "Brak wystarczających kodów."
+
+#, php-format
+#~ msgid "%d game code has been activated."
+#~ msgid_plural "%d game codes have been activated."
+#~ msgstr[0] "%d kod został aktywowany."
+#~ msgstr[1] "%d kody zostały aktywowane."
+#~ msgstr[2] "%d kodów zostało aktywowane."
+
+#, php-format
+#~ msgid "%d of %d game codes have been activated."
+#~ msgstr "%d z %d kodów zostało aktywowanych."
+
+#~ msgid "User"
+#~ msgstr "Użytkownik"
+
+#~ msgid "Acting Administrator"
+#~ msgstr "Pełniący obowiązki administratora"
+
+#~ msgid "Translator"
+#~ msgstr "Tłumacz"
+
+#~ msgid "What is TibiaME?"
+#~ msgstr "Czym jest TibiaME?"
+
+#~ msgid "Invalid product."
+#~ msgstr "Nieprawidłowy produkt."
+
+#, php-format
+#~ msgid "Error: %s"
+#~ msgstr "Błąd: %s"
+
+#~ msgid "Payment"
+#~ msgstr "Płatność"
+
+#~ msgid "Premium"
+#~ msgstr "Premium"
+
+#, php-format
+#~ msgid "%d day Premium"
+#~ msgid_plural "%d days Premium"
+#~ msgstr[0] "%d dzień Premium"
+#~ msgstr[1] "%d dni Premium"
+#~ msgstr[2] "%d dni Premium"
+
+#~ msgid "Game code"
+#~ msgstr "Kod gry"
+
+#~ msgid "select code type"
+#~ msgstr "wybierz typ kodu"
+
+#~ msgid "Autumn Update 2017 Teaser"
+#~ msgstr "Zwiastun Jesiennej Aktualizacji 2017"
+
+#~ msgid "Community"
+#~ msgstr "Społeczność"
+
+#~ msgid "Hryvnia"
+#~ msgstr "Hrywna"
+
+#~ msgid "Ukraine"
+#~ msgstr "Ukraina"
+
+#~ msgid ""
+#~ "If desired product is not listed here you may contact us to purchase it "
+#~ "with different payment method."
+#~ msgstr ""
+#~ "Jeśli tego produktu nie ma na liście, możesz skontaktować się z nami, aby "
+#~ "kupić go za pomocą innej metody płatności."
+
+#~ msgid "Included"
+#~ msgstr "Korzyści"
+
+#~ msgid "+50% Experience"
+#~ msgstr "+50% Doświadczenia"
+
+#~ msgid "Possibility to get listed in the Highscores"
+#~ msgstr "Możliwość bycia zapisanym w najlepszych wynikach"
+
+#~ msgid "Always get online, even when the game server is full"
+#~ msgstr "Zawsze się zalogujesz, nawet jeśli serwer jest pełny"
+
+#~ msgid "Buyable"
+#~ msgstr "Do kupienia"
+
+#~ msgid ""
+#~ "Life insurance with 50%, 80% or 100% of EP loss protection upon death"
+#~ msgstr ""
+#~ "Ubezpieczenie z 50%, 80% lub 100% ochrony przed utratą doświadczenia po "
+#~ "śmierci"
+
+#~ msgid "Full access to individual islands"
+#~ msgstr "Pełny dostęp do poszczególnych wysp"
+
+#~ msgid "Portal usage"
+#~ msgstr "Korzystanie z portalu"
+
+#~ msgid "Up to 40 additional friendlist slots"
+#~ msgstr "Do 40 dodatkowych miejsc na liście znajomych"
+
+#~ msgid "Up to 40 additional mailbox slots"
+#~ msgstr "Do 40 dodatkowych miejsc skrzynki pocztowej"
+
+#~ msgid "Up to 20 trade offers"
+#~ msgstr "Do 20 ofert handlowych"
+
+#~ msgid "Up to 6 additional depot pages"
+#~ msgstr "Do 6 dodatkowych stron w depozycie"
+
+#~ msgid "Additional Rerolls"
+#~ msgstr "Dodatkowe Rerolle"
+
+#~ msgid "Guild founding"
+#~ msgstr "Założenie gildii"
+
+#~ msgid "How to buy"
+#~ msgstr "Jak kupić"
+
+#, php-format
+#~ msgid ""
+#~ "Visit www.tibiame.com or <a href=\"%s\">buy from us</a>. Our prices may "
+#~ "differ. We accept WebMoney, PayPal, wire transfers and more! Please check "
+#~ "our <a href=\"%s\">User Agreement</a> before you purchase from us."
+#~ msgstr ""
+#~ "Odwiedź www.tibiame.com lub <a href=\"%s\"> kup od nas </a>. Nasze ceny "
+#~ "mogą się różnić. Akceptujemy WebMoney, PayPal, przelewy elektroniczne i "
+#~ "wiele więcej! Przed zakupem u nas sprawdź naszą <a href=\"%s\"> Umowę "
+#~ "Użytkownika </a>."
+
+#~ msgid ""
+#~ "Life insurance with 50% of EP loss protection upon death (can be upgraded "
+#~ "to 80% or 100%)"
+#~ msgstr ""
+#~ "Ubezpieczenie z 50% ochrony przed utratą doświadczenia po śmierci (można "
+#~ "zwiększyć do 80% lub 100%)"
+
+#~ msgid "Full access to all islands"
+#~ msgstr "Pełny dostęp do wszystkich wysp"
+
+#~ msgid "More entries in your friends and ignorelist (20 instead of 10)"
+#~ msgstr "Więcej miejsc w liście znajomych i ignorowanych (20 zamiast 10)"
+
+#~ msgid "Receive up to 20 letters in your inbox (instead of 10)"
+#~ msgstr "Otrzymaj do 20 listów (zamiast 10)"
+
+#~ msgid "10 trade offers"
+#~ msgstr "10 ofert handlowych"
+
+#~ msgid ""
+#~ "8 Platinum per day of your Premium Time (Example: 30 days * 8 Platinum = "
+#~ "240 Platinum)"
+#~ msgstr ""
+#~ "8 platyn dziennie na Twój czas Premium (przykład: 30 dni * 8 platyn = 240 "
+#~ "platyn)"
+
+#, php-format
+#~ msgid ""
+#~ "Visit www.tibiame.com or <a href=\"%s\">contact us</a>. Our prices may "
+#~ "differ. We accept WebMoney, PayPal and bank transfers. Please check our "
+#~ "<a href=\"%s\">User Agreement</a> before you purchase from us."
+#~ msgstr ""
+#~ "Odwiedź www.tibiame.com lub <a href=\"%s\"> skontaktuj się z nami </a>. "
+#~ "Nasze ceny mogą się różnić. Akceptujemy WebMoney, PayPal i przelewy "
+#~ "bankowe. Przed zakupem u nas sprawdź naszą <a href=\"%s\"> Umowę "
+#~ "Użytkownika </a>."
+
+#, php-format
+#~ msgid "%d day"
+#~ msgid_plural "%d days"
+#~ msgstr[0] "%d dzień"
+#~ msgstr[1] "%d dni"
+#~ msgstr[2] "%d dni"
 
 #~ msgid "Restores hitpoints"
 #~ msgstr "Odnawia punkty życia"
