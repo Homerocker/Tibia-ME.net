@@ -38,6 +38,7 @@ if (!session_start()) {
     exit(_('Could not start session.'));
 }
 
+require __DIR__ . '/secret.php';
 require __DIR__ . '/core.php';
 spl_autoload_register('autoload', true, true);
 
