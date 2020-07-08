@@ -1,1 +1,0 @@
-ALTER TABLE `gamecodes` DROP `type`;
