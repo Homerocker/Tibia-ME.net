@@ -60,7 +60,7 @@
         echo '<thead>';
         echo '<tr>';
         echo '<td class="text-center" colspan="2">';
-        printf(_('%d Platinum '), $amount);
+        printf(_('%d Platinum'), $amount);
         echo '</td>';
         echo '</tr>';
         echo '</thead>';
