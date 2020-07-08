@@ -31,3 +31,4 @@
 /public_html/myadmin/tmp/twig/
 /browscap.ini
 /public_html/myadmin/tmp/
+/secret.php
