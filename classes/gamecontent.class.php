@@ -1134,7 +1134,6 @@ class GameContent
             }
         }
         unlink($_SERVER['DOCUMENT_ROOT'] . '/../sync_' . $cat . '.lock');
-        exit("ok");
         return true;
     }
 
