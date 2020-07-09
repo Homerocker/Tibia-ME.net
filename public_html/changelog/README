@@ -17,5 +17,5 @@ php-browscap for tokens info
 php_imagick for BMP support since 2.8.25
 php_exif
 Intl since version 2.9.0c
-PHPExcel
-ZURB Foundation 6.4.3
+ZURB Foundation 6.x.x
+PhpSpreadsheet

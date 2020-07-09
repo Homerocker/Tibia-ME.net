@@ -1,0 +1,7 @@
+../PHPExcel/*
+../classes/gamecontent.class.php
+../gamecontent_xls/*
+* replaced PHPExcel with its successor PhpSpreadsheet
+* corrected wrong stats and typos for few items
+
+Released on Jul 9, 2020.

@@ -120,7 +120,7 @@ class TochkiSuParser {
                                     switch ($cat) {
                                         case 'monsters':
                                             // dropped items here, skipping for now
-                                            continue;
+                                            break;
                                         case 'weapons':
                                         case 'helmets':
                                         case 'armours':

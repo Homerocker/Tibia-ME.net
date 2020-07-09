@@ -62,6 +62,7 @@ define('THEME_QUALITY', 80);
 define('WORLDS', file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../worlds.dat'));
 define('ARMOUR_SLOTS', array('head', 'shield', 'legs', 'torso', 'amulet', 'ring'));
 define('DMG_ELEMENTS', array('hit', 'fire', 'ice', 'energy', 'soul'));
+define('ISLANDS', ['Aurea', 'St. Nivalis', 'Solahmar', 'Solahmar Isles', 'Circusia', 'Ashmor', 'Fabulara', 'Yabutu', 'Doratia', 'Starfish Island', 'Colossea', 'Banuna', 'Lybera', 'Castle Rock', 'Ephialtis', 'Erebos', 'Riftion', 'Treasure Island', 'Stadium Island', 'Hunterra', 'Vargos', 'Saepira', 'Phoenix Haven']);
 define('UPLOAD_DIR', '/uploads');
 define('UPLOADS_JPEG_MAX_QUALITY', 94);
 define('BBCODE_IMG_QUALITY', 80);
