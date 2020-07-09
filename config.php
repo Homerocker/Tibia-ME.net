@@ -18,7 +18,7 @@ foreach ([
              'session.cookie_httponly' => 1,
              'session.gc_maxlifetime' => 1200,
              'session.cookie_lifetime' => 0,
-             'memory_limit' => '320M',
+             'memory_limit' => '500M',
              'zlib.output_compression' => 'On',
              'default_socket_timeout' => 10,
              'max_execution_time' => 30,
