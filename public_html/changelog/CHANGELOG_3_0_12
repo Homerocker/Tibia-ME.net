@@ -1,6 +1,7 @@
 ../PHPExcel/*
 ../classes/gamecontent.class.php
 ../gamecontent_xls/*
+../config.php
 * replaced PHPExcel with its successor PhpSpreadsheet
 * corrected wrong stats and typos for few items
 
