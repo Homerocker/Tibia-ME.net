@@ -823,8 +823,7 @@ class GameContent
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/../sync_' . $cat . '.lock')) {
             return false;
         }
-        // @todo uncomment
-        //touch($_SERVER['DOCUMENT_ROOT'] . '/../sync_' . $cat . '.lock');
+        touch($_SERVER['DOCUMENT_ROOT'] . '/../sync_' . $cat . '.lock');
         set_time_limit(600);
         switch ($cat) {
             case 'skills_warrior':
@@ -851,8 +850,6 @@ class GameContent
         $rows = $this->xls->getActiveSheet()->getHighestRow();
         $cols = Coordinate::columnIndexFromString($this->xls->getActiveSheet()->getHighestColumn());
         for ($row = $this->sync_files[$cat]['start_row']; $row <= $rows; ++$row) {
-            // @todo remove
-            echo $row, "<br/>";
             if ($cat == 'spells' || $cat == 'food') {
                 $cell = $this->xls->getActiveSheet()->getCellByColumnAndRow(1,
                     $row);
