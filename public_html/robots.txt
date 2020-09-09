@@ -6,3 +6,5 @@ Disallow: /uploads/photos
 Disallow: /cache/photos
 Disallow: /images/icons
 Disallow: /user/fblink.php
+Disallow: /api.php
+Disallow: /gamecontent/api.php
