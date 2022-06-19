@@ -16,6 +16,7 @@
     <li><a href="/user/profile.php?u=47689"><?= User::get_display_name(47689) ?></a> (Português)</li>
     <li><a href="/user/profile.php?u=47248"><?= User::get_display_name(47248) ?></a> (Polish)</li>
 </ul>
+<!--
 <div class="callout primary">
     <p><span class="red">We are actively searching for new translators for the following languages:</span><br/>
     <b>Indonesian</b><br/>
@@ -25,3 +26,4 @@
     <p>All translators gain access to TibiaME closed Beta Tests available to official fansites.</p>
     <p>Please send your applications to <span class="nowrap"><?= SERVER_ADMIN ?></span>.</p>
 </div>
+-->
