@@ -1,0 +1,7 @@
+../classes/TochkiSuParser.class.php
+../classes/gamecontent.class.php
+../templates/index.tpl.php
+* removed Tochki.su/TibiaME references and dependent features
+* feel loneliness and surge of nostalgia
+
+Released on Aug 18, 2022.

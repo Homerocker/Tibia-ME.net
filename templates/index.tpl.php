@@ -118,9 +118,6 @@
         <h4><?= _('Related sites') ?></h4>
         <ul>
             <li><a href="http://www.tibiame.com" target="_blank"><?= _('Official website') ?></a></li>
-            <li class="show-for-small-only"><a href="http://tochki.su/tibiame/mobile/"
-                                               target="_blank">Tochki.su/TibiaME</a></li>
-            <li class="show-for-medium"><a href="http://tochki.su/tibiame/" target="_blank">Tochki.su/TibiaME</a></li>
         </ul>
     </div>
 

@@ -1085,7 +1085,7 @@ class GameContent
                 }
                 if ($cat !== 'monsters') {
                     if ($cat == 'food') {
-                        $data[$j]['icon'] = TochkiSuParser::get_food_icon($data[$j]['name']);
+                        $data[$j]['icon'] = null;
                     } elseif ($cat == 'armours') {
                         $stats = [];
                         foreach (DMG_ELEMENTS as $element) {
@@ -1236,7 +1236,7 @@ class GameContent
                     $skill = null;
                 }
                 list($spell_hit, $spell_fire, $spell_ice, $spell_energy, $spell_soul)
-                    = TochkiSuParser::get_monster_spell_elements($monster_name);
+                    = array(null, null, null, null, null);
                 return array($skill, $spell, $spell_hit, $spell_fire, $spell_ice,
                     $spell_energy, $spell_soul);
             }
